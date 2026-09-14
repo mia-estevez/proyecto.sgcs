@@ -14,10 +14,28 @@
 
 .hero-contenido {
     width: 80%;
-    color: white;
+    color: #724319;
 }
 
 .hero h1 {
     font-size: 48px;
     line-height: 1.5;
+}
+
+/* ==================== CATEGORÍAS ==================== */
+
+.categorias {
+    width: 100%;
+    padding: 60px 65px;
+    background-color: #feeac7;
+}
+
+.titulo-seccion {
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h2 {
+    color: #724319;
+    font-size: 28px;
+    font-weight: 500;
 }
