@@ -87,3 +87,46 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    width: 100%;
+    background-color: #d88180 ;
+    color: #75421f;
+    margin-top: 50px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 65px;
+}
+
+.footer-titulo p {
+    font-size: 20%;
+    font-weight: bold;
+}
+
+.footer-redes,
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-redes a:hover,
+.footer-enlaces a:hover {
+    text-decoration: underline;
+}
+
+.footer-derechos {
+    border-top: 1px solid rgba(117, 66, 31, 0.3);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-derechos p {
+    font-size: 13px;
+}
