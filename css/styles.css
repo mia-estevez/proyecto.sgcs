@@ -185,9 +185,12 @@ footer {
 }
 
 .footer-redes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 35px);
+    grid-template-rows: repeat(2, 35px);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
 }
 
 .footer-redes a {
@@ -706,4 +709,53 @@ footer {
     color: #75421f;
 
     font-size: 17px;
+}
+
+/* =========================================
+   PÁGINA ACTIVA EN EL MENÚ
+   ========================================= */
+
+.menu-desplegable a.pagina-activa {
+    color: #8f9456;
+    font-weight: bold;
+}
+
+/* =========================================
+   PÁGINAS EN CONSTRUCCIÓN
+   ========================================= */
+
+.pagina-construccion {
+    min-height: 500px;
+
+    padding: 80px 65px;
+
+    background-color: #feeac7;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.pagina-construccion h1 {
+    color: #75421f;
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.pagina-construccion p {
+    max-width: 600px;
+
+    color: #555555;
+
+    font-size: 18px;
+
+    line-height: 1.6;
 }

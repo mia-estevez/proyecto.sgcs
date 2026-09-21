@@ -120,6 +120,30 @@ function activarMenu() {
 
     });
 
+    // =========================================
+    // MARCAR PÁGINA ACTUAL
+    // =========================================
+
+    const enlacesMenu =
+        document.querySelectorAll(".menu-desplegable a");
+
+    const paginaActual =
+        window.location.pathname;
+
+
+    enlacesMenu.forEach(function (enlace) {
+
+        const rutaEnlace =
+            new URL(enlace.href).pathname;
+
+        if (rutaEnlace === paginaActual) {
+
+            enlace.classList.add("pagina-activa");
+
+        }
+
+    });
+
 }
 
 
