@@ -23,11 +23,38 @@ if (navbar) {
 
             navbar.innerHTML = contenido;
 
+            // Configurar las rutas del navbar
+            configurarRutasNavbar();
+
             // Una vez cargado el navbar,
             // activamos el menú
             activarMenu();
 
         });
+
+}
+
+
+// =========================================
+// CONFIGURAR RUTAS DEL NAVBAR
+// =========================================
+
+function configurarRutasNavbar() {
+
+    const enlaces =
+        document.querySelectorAll("[data-ruta]");
+
+
+    enlaces.forEach(function (enlace) {
+
+        const ruta =
+            enlace.getAttribute("data-ruta");
+
+
+        enlace.href =
+            rutaBase + ruta;
+
+    });
 
 }
 
@@ -60,6 +87,11 @@ function activarMenu() {
 
     const menuDesplegable =
         document.getElementById("menu-desplegable");
+
+
+    if (!botonMenu || !menuDesplegable) {
+        return;
+    }
 
 
     botonMenu.addEventListener("click", function () {
@@ -120,6 +152,7 @@ function activarMenu() {
 
     });
 
+
     // =========================================
     // MARCAR PÁGINA ACTUAL
     // =========================================
@@ -135,6 +168,7 @@ function activarMenu() {
 
         const rutaEnlace =
             new URL(enlace.href).pathname;
+
 
         if (rutaEnlace === paginaActual) {
 
