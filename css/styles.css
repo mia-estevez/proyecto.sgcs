@@ -1,3 +1,6 @@
+/* =========================================
+   Página Inicio/Index
+   ========================================= */
 html,
 body {
     width: 100%;
@@ -223,4 +226,257 @@ footer {
 
 .menu-desplegable a:hover {
     background-color: #e9959a;
+}
+
+/* =========================================
+   PÁGINA - GESTIÓN DE LA CALIDAD
+   ========================================= */
+
+.intro-calidad {
+    width: 100%;
+    padding: 70px 65px;
+    background-color: #feeac7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    box-sizing: border-box;
+}
+
+.texto-calidad {
+    width: 55%;
+}
+
+.texto-calidad h1 {
+    color: #75421f;
+    font-size: 44px;
+    margin-bottom: 25px;
+}
+
+.texto-calidad h2 {
+    color: #75421f;
+    font-size: 27px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.texto-calidad p {
+    color: #444444;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.imagen-calidad {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-calidad img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/* ======== CARACTERÍSTICAS DE CALIDAD =========== */
+
+.caracteristicas-calidad {
+    width: 100%;
+    padding: 65px;
+    background-color: #feeac7;
+    box-sizing: border-box;
+}
+
+.caracteristicas-calidad > h2 {
+    color: #75421f;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.descripcion-calidad {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* ===================== TARJETAS ISO ============================ */
+
+.acordeon-calidad {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #dfb8a7;
+    background-color: #fce4e6;
+}
+
+
+/* Botón de la tarjeta */
+
+.acordeon-titulo {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #75421f;
+    text-align: left;
+}
+
+
+/* Parte izquierda */
+
+.acordeon-titulo > div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.acordeon-titulo i {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #f8d6d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #75421f;
+}
+
+.acordeon-titulo h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.acordeon-titulo p {
+    font-size: 15px;
+    color: #555555;
+}
+
+
+/* Signo + */
+
+.acordeon-titulo span {
+    font-size: 32px;
+    font-weight: 300;
+    color: #75421f;
+}
+
+
+/* ==================== CONTENIDO OCULTO DEL ACORDEÓN ========================== */
+
+.acordeon-contenido {
+    display: none;
+    padding: 0 30px 30px;
+    color: #555555;
+}
+
+.acordeon-contenido h4 {
+    color: #75421f;
+    font-size: 19px;
+    margin: 20px 0 10px;
+}
+
+.acordeon-contenido p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.acordeon-contenido ul {
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+
+/* ================== TARJETA ABIERTA ======================== */
+
+.acordeon-calidad.activo .acordeon-contenido {
+    display: block;
+}
+
+.acordeon-calidad.activo .acordeon-titulo span {
+    transform: rotate(45deg);
+}
+
+/* ================================= MÉTRICAS DE LA CALIDAD ======================================== */
+
+.metricas-calidad {
+    width: 100%;
+    padding: 65px;
+    background-color: #feeac7;
+    box-sizing: border-box;
+}
+
+.metricas-calidad h2 {
+    color: #75421f;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.metricas-calidad > p {
+    max-width: 950px;
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.metricas-calidad h3 {
+    color: #75421f;
+    font-size: 21px;
+    margin: 25px 0 12px;
+}
+
+.metricas-calidad ul {
+    max-width: 900px;
+    padding-left: 25px;
+    color: #555555;
+    line-height: 1.8;
+}
+
+
+/* ================== EJEMPLO DE MÉTRICA =========================== */
+
+.ejemplo-metrica {
+    max-width: 900px;
+    margin: 35px 0;
+    padding: 30px;
+    background-color: #f7b1b0;
+    border-left: 6px solid #75421f;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.ejemplo-metrica h3 {
+    margin-top: 0;
+}
+
+.ejemplo-metrica p {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========== FÓRMULA ====================== */
+
+.formula-metrica {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 15px 20px;
+    background-color: #dce8d7;
+    border-radius: 8px;
+    color: #75421f;
+    font-size: 17px;
 }
