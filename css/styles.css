@@ -154,18 +154,21 @@ footer {
     font-weight: bold;
 }
 
-.footer-redes,
-.footer-enlaces {
+.footer-redes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-.footer-redes a:hover,
-.footer-enlaces a:hover {
-    text-decoration: underline;
+.footer-redes a {
+    color: #75421f;
+    text-decoration: none;
+    font-size: 22px;
 }
 
+.footer-redes a:hover {
+    transform: scale(1.15);
+}
 .footer-derechos {
     border-top: 1px solid rgba(117, 66, 31, 0.3);
     text-align: center;
