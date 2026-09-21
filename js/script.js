@@ -137,13 +137,13 @@ acordeones.forEach(function (acordeon) {
         acordeon.querySelector(".acordeon-titulo");
 
 
-    boton.addEventListener("click", function () {
+    acordeon.addEventListener("click", function () {
 
         const estabaAbierto =
             acordeon.classList.contains("activo");
 
 
-        // Cerramos todos
+        // Cerramos todas
 
         acordeones.forEach(function (otroAcordeon) {
 
@@ -152,7 +152,7 @@ acordeones.forEach(function (acordeon) {
         });
 
 
-        // Abrimos la seleccionada
+        // Si estaba cerrado, lo abrimos
 
         if (!estabaAbierto) {
 
