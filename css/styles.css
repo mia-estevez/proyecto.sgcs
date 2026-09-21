@@ -295,6 +295,20 @@ footer {
     background-color: #e9959a;
 }
 
+/* =========== PÁGINA ACTIVA EN EL MENÚ ==================== */
+
+.menu-desplegable a.pagina-activa {
+    color: #8f9456;
+    font-weight: bold;
+}
+
+/* ======= PÁGINA ACTIVA - GESTIÓN DE LA CALIDAD ======== */
+
+.submenu-btn.pagina-activa {
+    color: #717542;
+    font-weight: bold;
+}
+
 
 /* ================ SUBMENÚ - GESTIÓN DE LA CALIDAD ========================= */
 
@@ -712,12 +726,376 @@ footer {
 }
 
 /* =========================================
-   PÁGINA ACTIVA EN EL MENÚ
+   PÁGINA - TÉCNICAS DE ASEGURAMIENTO
    ========================================= */
 
-.menu-desplegable a.pagina-activa {
-    color: #8f9456;
+.pagina-tecnicas {
+    width: 100%;
+    background-color: #feeac7;
+}
+
+
+/* ============= INTRODUCCIÓN ====================== */
+
+.intro-tecnicas {
+    width: 100%;
+    padding: 40px 65px 30px;
+
+    display: grid;
+    grid-template-columns: 58% 42%;
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+
+.texto-tecnicas {
+    color: #555555;
+}
+
+
+.numero-seccion {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    background-color: #cad182;
+
+    border-radius: 20px;
+
+    color: #555555;
+
+    font-size: 13px;
     font-weight: bold;
+}
+
+
+.texto-tecnicas h1 {
+    color: #724319;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    margin: 10px 0 15px;
+}
+
+
+.texto-tecnicas h2 {
+    color: #555555;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.texto-tecnicas p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+
+/* =============== PROCESO DE CALIDAD ========================= */
+
+.proceso-calidad {
+    width: 100%;
+    padding: 14px;
+    background-color: #cad182;
+    border: 1px solid #d88180;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+    box-sizing: border-box;
+    margin: 18px 0;
+}
+
+
+.proceso-calidad div {
+    color: #724319;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    line-height: 1.3;
+}
+
+
+.proceso-calidad span {
+    color: #555555;
+
+    font-size: 20px;
+}
+
+
+.texto-final-tecnicas {
+    margin-top: 8px;
+}
+
+
+/* ============= PROCESO DE ASEGURAMIENTO ======================== */
+
+.bloque-aseguramiento {
+    padding: 20px;
+    background-color: #cad182;
+    border: 1px solid #d88180;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.bloque-aseguramiento h2 {
+    color: #26634f;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+
+.bloque-aseguramiento > p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+.bloque-aseguramiento h3 {
+    color: #26634f;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+
+/* =============== NIVELES DE PRUEBA ======================== */
+
+.niveles-prueba {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.niveles-prueba div {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #b7bd74;
+    border: 1px solid #c8dfbd;
+    border-radius: 18px;
+    padding: 4px 9px;
+    box-sizing: border-box;
+}
+
+
+.niveles-prueba span {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #c0ca63;
+    color: #724319;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+.niveles-prueba p {
+    color: #000000;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* ============== SECCIONES DE PRUEBAS =============================== */
+
+.seccion-pruebas,
+.tipos-pruebas {
+    margin: 0 65px 25px;
+    padding: 18px;
+    background-color: #cad182;
+    border: 1px solid #82864c;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.titulo-bloque {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #26634f;
+    margin-bottom: 12px;
+}
+
+
+.titulo-bloque i {
+    color: #26634f;
+
+    font-size: 18px;
+}
+
+
+.titulo-bloque h2 {
+    margin: 0;
+
+    font-size: 19px;
+
+    color: #26634f;
+}
+
+
+/* ================= TÉCNICAS DE PRUEBA ==================== */
+
+.contenedor-tecnicas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.tecnica-card {
+    position: relative;
+
+    padding: 18px;
+
+    background-color: #c3c987;
+
+    border: 1px solid #d88180;
+
+    border-radius: 9px;
+
+    box-sizing: border-box;
+}
+
+
+.tecnica-card h3 {
+    color: #26634f;
+
+    font-size: 18px;
+
+    margin: 0 0 10px;
+}
+
+
+.tecnica-card h4 {
+    color: #26634f;
+
+    font-size: 14px;
+
+    margin: 12px 0 6px;
+}
+
+
+.tecnica-card p {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 9px;
+}
+
+
+.tecnica-card ul {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+
+.tecnica-card li {
+    margin-bottom: 3px;
+}
+
+
+/* ======================= IMÁGENES - CAJA NEGRA Y CAJA BLANCA============================== */
+
+.imagen-tecnica {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.imagen-tecnica img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* ================ TIPOS DE PRUEBAS ======================== */
+
+.contenedor-tipos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.tipo-card {
+    padding: 18px;
+
+    background-color: #c3c987;
+
+    border: 1px solid #d88180;
+
+    border-radius: 9px;
+}
+
+
+.tipo-card h3 {
+    color: #26634f;
+
+    font-size: 18px;
+
+    margin: 0 0 9px;
+}
+
+
+.tipo-card p,
+.tipo-card li {
+    color: #26634f;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.tipo-card p {
+    margin-bottom: 8px;
+}
+
+
+.tipo-card ul {
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.tipo-card li {
+    margin-bottom: 3px;
 }
 
 /* =========================================

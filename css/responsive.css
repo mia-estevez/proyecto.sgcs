@@ -560,3 +560,146 @@
     }
 
 }
+
+/* =========================================
+   RESPONSIVE - TÉCNICAS DE ASEGURAMIENTO
+   ========================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .intro-tecnicas {
+        padding: 35px;
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-pruebas,
+    .tipos-pruebas {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .intro-tecnicas {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .texto-tecnicas h1 {
+        font-size: 30px;
+    }
+
+
+    .texto-tecnicas h2 {
+        font-size: 21px;
+    }
+
+
+    .texto-tecnicas p {
+        font-size: 15px;
+    }
+
+
+    .proceso-calidad {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 15px;
+    }
+
+
+    .proceso-calidad div {
+        font-size: 11px;
+    }
+
+
+    .proceso-calidad span {
+        font-size: 18px;
+    }
+
+
+    .bloque-aseguramiento {
+        padding: 18px;
+    }
+
+
+    .seccion-pruebas,
+    .tipos-pruebas {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 15px;
+    }
+
+
+    .contenedor-tecnicas,
+    .contenedor-tipos {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tecnica-card,
+    .tipo-card {
+        padding: 16px;
+    }
+
+
+    .flujo-caja {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .flujo-blanco {
+        gap: 4px;
+    }
+
+
+    .flujo-blanco span {
+        font-size: 10px;
+    }
+
+}
+
+
+/* CELULARES MUY PEQUEÑOS */
+
+@media (max-width: 400px) {
+
+    .intro-tecnicas {
+        padding: 35px 15px;
+    }
+
+
+    .texto-tecnicas h1 {
+        font-size: 27px;
+    }
+
+
+    .seccion-pruebas,
+    .tipos-pruebas {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    .proceso-calidad {
+        padding: 12px 8px;
+    }
+
+
+    .proceso-calidad div {
+        font-size: 10px;
+    }
+
+}

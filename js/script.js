@@ -164,6 +164,9 @@ function activarMenu() {
         window.location.pathname;
 
 
+    let perteneceAGestionCalidad = false;
+
+
     enlacesMenu.forEach(function (enlace) {
 
         const rutaEnlace =
@@ -174,9 +177,33 @@ function activarMenu() {
 
             enlace.classList.add("pagina-activa");
 
+
+            // Comprobar si pertenece a Gestión de la calidad
+
+            if (
+                rutaEnlace.includes("/paginas/calidad.html") ||
+                rutaEnlace.includes("/paginas/tecnicas-calidad.html") ||
+                rutaEnlace.includes("/paginas/herramientas-calidad.html")
+            ) {
+
+                perteneceAGestionCalidad = true;
+
+            }
+
         }
 
     });
+
+
+    // =========================================
+    // MARCAR GESTIÓN DE LA CALIDAD
+    // =========================================
+
+    if (perteneceAGestionCalidad && botonSubmenu) {
+
+        botonSubmenu.classList.add("pagina-activa");
+
+    }
 
 }
 
