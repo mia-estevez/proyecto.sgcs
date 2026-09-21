@@ -1,9 +1,51 @@
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+
+header {
+    width: 100%;
+    background-color: #f4a6aa;
+}
+
+.navbar {
+    width: 100%;
+    height: 120px;
+    background-color: #f4a6aa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 65px;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #75421f;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 /* ==================== BANNER ==================== */
 
 .hero {
     width: 100%;
     height: 440px;
-    background-image: url("../img/banner.jpeg");
+    background-image: url("../img/banner.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -14,7 +56,7 @@
 
 .hero-contenido {
     width: 80%;
-    color: #724319;
+    color: #000000;
 }
 
 .hero h1 {
@@ -22,12 +64,14 @@
     line-height: 1.5;
 }
 
+
 /* ==================== CATEGORÍAS ==================== */
 
 .categorias {
     width: 100%;
     padding: 60px 65px;
     background-color: #feeac7;
+    box-sizing: border-box;
 }
 
 .titulo-seccion {
@@ -50,14 +94,13 @@
 
 .imagen-tarjeta {
     width: 100%;
-    height: 190px;
+    height: auto;
 }
 
 .imagen-tarjeta img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5%;
+    height: auto;
+    display: block;
 }
 
 .tarjeta h3 {
@@ -92,12 +135,14 @@
 
 footer {
     width: 100%;
-    background-color: #d88180 ;
+    background-color: #f4a6aa;
     color: #75421f;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 .footer-contenido {
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -129,4 +174,50 @@ footer {
 
 .footer-derechos p {
     font-size: 13px;
+}
+
+/* ========== MENÚ HAMBURGUESA ============== */
+
+.menu {
+    position: relative;
+    margin-left: auto;
+}
+
+
+.menu-btn {
+    width: 48px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #75421f;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Menú desplegable */
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 280px;
+    background-color: #f4a6aa;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu-desplegable a {
+    display: block;
+    padding: 12px 18px;
+    color: #75421f;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu-desplegable a:hover {
+    background-color: #e9959a;
 }
