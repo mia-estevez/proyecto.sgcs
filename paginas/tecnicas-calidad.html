@@ -2,42 +2,496 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/styles.css">
+
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <title>Técnicas de Aseguramiento de la Calidad</title>
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- ==================== NAVBAR ==================== -->
+
     <div id="navbar"></div>
 
 
-    <!-- CONTENIDO -->
-    <main>
 
-        <section class="pagina-construccion">
+    <!-- ==================== CONTENIDO ==================== -->
 
-            <h1>Página en construcción</h1>
+    <main class="pagina-tecnicas">
 
-            <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
-            </p>
+
+        <!-- ==================== INTRODUCCIÓN ==================== -->
+
+        <section class="intro-tecnicas">
+
+            <div class="texto-tecnicas">
+
+                <span class="numero-seccion">
+                    02 — TÉCNICAS
+                </span>
+
+                <h1>
+                    Técnicas de Aseguramiento de la Calidad
+                </h1>
+
+
+                <h2>
+                    ¿Qué es el aseguramiento de la Calidad?
+                </h2>
+
+                <p>
+                    El Aseguramiento de la Calidad del Software (SQA)
+                    comprende las actividades destinadas a garantizar
+                    que tanto el proceso como el producto cumplan
+                    determinados criterios de calidad.
+                </p>
+
+                <p>
+                    La idea no es esperar hasta el final para descubrir
+                    errores.
+                </p>
+
+
+                <!-- PROCESO -->
+
+                <div class="proceso-calidad">
+
+                    <div>
+                        Desarrollo
+                    </div>
+
+                    <span>→</span>
+
+                    <div>
+                        Pruebas
+                    </div>
+
+                    <span>→</span>
+
+                    <div>
+                        Detección<br>
+                        de problemas
+                    </div>
+
+                    <span>→</span>
+
+                    <div>
+                        Corrección
+                    </div>
+
+                    <span>→</span>
+
+                    <div>
+                        Nuevas pruebas
+                    </div>
+
+                </div>
+
+
+                <p class="texto-final-tecnicas">
+                    La atención continua a la excelencia permite utilizar
+                    técnicas destinadas a detectar errores anticipadamente.
+                </p>
+
+            </div>
+
+
+
+            <!-- ==================== PROCESO DE ASEGURAMIENTO ==================== -->
+
+            <div class="bloque-aseguramiento">
+
+                <h2>
+                    Proceso de aseguramiento
+                </h2>
+
+                <p>
+                    El Aseguramiento de la Calidad del Software (SQA)
+                    comprende las actividades destinadas a garantizar
+                    que tanto el proceso como el producto cumplan
+                    determinados criterios de calidad.
+                </p>
+
+
+                <h3>
+                    Niveles de prueba
+                </h3>
+
+
+                <div class="niveles-prueba">
+
+                    <div>
+                        <span>1</span>
+                        <p>
+                            Pruebas de componentes o unitarias
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>2</span>
+                        <p>
+                            Pruebas de integración de componentes
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>3</span>
+                        <p>
+                            Pruebas del sistema
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>4</span>
+                        <p>
+                            Pruebas de integración de sistemas
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>5</span>
+                        <p>
+                            Pruebas de aceptación
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
+
+
+
+        <!-- ==================== TÉCNICAS DE PRUEBA ==================== -->
+
+        <section class="seccion-pruebas">
+
+
+            <div class="titulo-bloque">
+
+                <i class="fa-solid fa-vial"></i>
+
+                <h2>
+                    Técnicas de prueba
+                </h2>
+
+            </div>
+
+
+            <div class="contenedor-tecnicas">
+
+
+                <!-- ==================== CAJA NEGRA ==================== -->
+
+                <article class="tecnica-card">
+
+                    <h3>
+                        Caja Negra
+                    </h3>
+
+
+                    <p>
+                        La técnica de Caja Negra permite evaluar el
+                        comportamiento del software sin conocer ni
+                        analizar cómo está implementado internamente.
+                    </p>
+
+                    <p>
+                        El tester se concentra en las entradas que
+                        recibe el sistema y en las salidas que produce,
+                        verificando que el resultado coincida con
+                        lo esperado.
+                    </p>
+
+
+                    <h4>
+                        ¿Qué se analiza?
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Entradas y salidas del sistema.
+                        </li>
+
+                        <li>
+                            Comportamiento de las funciones.
+                        </li>
+
+                        <li>
+                            Resultados esperados y obtenidos.
+                        </li>
+
+                        <li>
+                            Casos correctos e incorrectos.
+                        </li>
+
+                    </ul>
+
+
+                    <!-- FLUJO CAJA NEGRA -->
+
+                    <div class="flujo-caja">
+
+                        <span>
+                            Entradas
+                        </span>
+
+                        <b>
+                            →
+                        </b>
+
+                        <strong>
+                            Sistema<br>
+                            <small>
+                                (caja negra)
+                            </small>
+                        </strong>
+
+                        <b>
+                            →
+                        </b>
+
+                        <span>
+                            Salidas
+                        </span>
+
+                    </div>
+
+
+                    <h4>
+                        Ejemplo:
+                    </h4>
+
+                    <p>
+                        Introduzco usuario y contraseña →
+                        presiono “Ingresar” →
+                        compruebo si el sistema permite acceder
+                        correctamente o muestra un mensaje de error.
+                    </p>
+
+                </article>
+
+
+
+                <!-- ==================== CAJA BLANCA ==================== -->
+
+                <article class="tecnica-card">
+
+                    <h3>
+                        Caja Blanca
+                    </h3>
+
+
+                    <p>
+                        La técnica de Caja Blanca analiza la estructura
+                        interna del software, teniendo en cuenta cómo
+                        está construido y cómo se ejecutan sus
+                        instrucciones.
+                    </p>
+
+                    <p>
+                        Para realizar este tipo de prueba es necesario
+                        conocer el código fuente y su lógica interna.
+                        Se busca comprobar que los diferentes caminos
+                        y condiciones del programa funcionen
+                        correctamente.
+                    </p>
+
+
+                    <h4>
+                        Se pueden analizar:
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Condiciones.
+                        </li>
+
+                        <li>
+                            Caminos de ejecución.
+                        </li>
+
+                        <li>
+                            Instrucciones.
+                        </li>
+
+                        <li>
+                            Bucles.
+                        </li>
+
+                        <li>
+                            Cobertura de código.
+                        </li>
+
+                    </ul>
+
+
+                    <!-- FLUJO CAJA BLANCA -->
+
+                    <div class="flujo-blanco">
+
+                        <span>
+                            Código fuente
+                        </span>
+
+                        <span>
+                            ↓
+                        </span>
+
+                        <span>
+                            Condiciones
+                        </span>
+
+                        <span>
+                            ↓
+                        </span>
+
+                        <span>
+                            Caminos
+                        </span>
+
+                        <span>
+                            ↓
+                        </span>
+
+                        <span>
+                            Instrucciones
+                        </span>
+
+                        <span>
+                            ↓
+                        </span>
+
+                        <span>
+                            Resultados
+                        </span>
+
+                    </div>
+
+
+                    <h4>
+                        Ejemplo:
+                    </h4>
+
+                    <p>
+                        Se analiza el código de un inicio de sesión
+                        para comprobar qué ocurre cuando los datos
+                        son correctos, incorrectos o están incompletos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== TIPOS DE PRUEBAS ==================== -->
+
+        <section class="tipos-pruebas">
+
+
+            <div class="titulo-bloque">
+
+                <i class="fa-solid fa-vial-circle-check"></i>
+
+                <h2>
+                    Tipos de pruebas
+                </h2>
+
+            </div>
+
+
+            <div class="contenedor-tipos">
+
+
+                <!-- ==================== FUNCIONALES ==================== -->
+
+                <article class="tipo-card">
+
+                    <h3>
+                        Pruebas funcionales
+                    </h3>
+
+                    <p>
+                        Comprueban que el sistema realice correctamente
+                        sus funciones.
+                    </p>
+
+                </article>
+
+
+
+                <!-- ==================== NO FUNCIONALES ==================== -->
+
+                <article class="tipo-card">
+
+                    <h3>
+                        Pruebas no funcionales
+                    </h3>
+
+                    <p>
+                        Evalúan características como:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Rendimiento.
+                        </li>
+
+                        <li>
+                            Seguridad.
+                        </li>
+
+                        <li>
+                            Usabilidad.
+                        </li>
+
+                        <li>
+                            Compatibilidad.
+                        </li>
+
+                        <li>
+                            Disponibilidad.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
 
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- ==================== FOOTER ==================== -->
+
     <div id="footer"></div>
 
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
 
     <script src="../js/script.js"></script>
 
