@@ -1,6 +1,7 @@
 /* =========================================
-   Página Inicio/Index
+   PÁGINA INICIO / INDEX
    ========================================= */
+
 html,
 body {
     width: 100%;
@@ -21,6 +22,10 @@ footer {
 }
 
 
+/* =========================================
+   NAVBAR
+   ========================================= */
+
 header {
     width: 100%;
     background-color: #f4a6aa;
@@ -30,9 +35,11 @@ header {
     width: 100%;
     height: 120px;
     background-color: #f4a6aa;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 65px;
     box-sizing: border-box;
 }
@@ -43,17 +50,21 @@ header {
     font-weight: 500;
 }
 
-/* ==================== BANNER ==================== */
+
+/* ============== BANNER =========================== */
 
 .hero {
     width: 100%;
     height: 440px;
+
     background-image: url("../img/banner.png");
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 }
 
@@ -68,12 +79,14 @@ header {
 }
 
 
-/* ==================== CATEGORÍAS ==================== */
+/* ================= CATEGORÍAS ========================== */
 
 .categorias {
     width: 100%;
     padding: 60px 65px;
+
     background-color: #feeac7;
+
     box-sizing: border-box;
 }
 
@@ -87,7 +100,8 @@ header {
     font-weight: 500;
 }
 
-/* ==================== TARJETAS ==================== */
+
+/* ====================== TARJETAS =========================== */
 
 .contenedor-tarjetas {
     display: grid;
@@ -122,6 +136,7 @@ header {
 .tarjeta ul {
     margin: 0 20px 20px;
     padding-left: 20px;
+
     color: #555555;
     line-height: 1.6;
 }
@@ -129,12 +144,21 @@ header {
 .tarjeta a {
     display: inline-block;
     margin-left: 20px;
+
     color: #75421f;
     font-weight: bold;
     text-decoration: none;
 }
 
-/* ==================== FOOTER ==================== */
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+#footer {
+    width: 100%;
+    background-color: #f4a6aa;
+}
 
 footer {
     width: 100%;
@@ -146,14 +170,17 @@ footer {
 .footer-contenido {
     width: 100%;
     box-sizing: border-box;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
     padding: 40px 65px;
 }
 
-.footer-titulo p {
-    font-size: 20%;
+.footer-titulo h2 {
+    color: #75421f;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -172,54 +199,91 @@ footer {
 .footer-redes a:hover {
     transform: scale(1.15);
 }
+
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-enlaces a {
+    color: #75421f;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-enlaces a:hover {
+    color: #ffffff;
+}
+
 .footer-derechos {
     border-top: 1px solid rgba(117, 66, 31, 0.3);
+
     text-align: center;
+
     padding: 20px;
+
+    background-color: #f4a6aa;
 }
 
 .footer-derechos p {
+    color: #75421f;
     font-size: 13px;
+    margin: 0;
 }
 
-/* ========== MENÚ HAMBURGUESA ============== */
+
+/* ======================= MENÚ HAMBURGUESA =========================== */
 
 .menu {
     position: relative;
     margin-left: auto;
 }
 
-
 .menu-btn {
     width: 48px;
     height: 40px;
+
     border: none;
     border-radius: 8px;
+
     background-color: #75421f;
     color: white;
+
     font-size: 22px;
     cursor: pointer;
 }
 
-/* Menú desplegable */
+
+/* ===================== MENÚ DESPLEGABLE ============================== */
 
 .menu-desplegable {
     display: none;
+
     position: absolute;
     top: 50px;
     right: 0;
+
     width: 280px;
+
     background-color: #f4a6aa;
+
     border-radius: 8px;
+
     padding: 10px 0;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
     z-index: 1000;
 }
 
 .menu-desplegable a {
     display: block;
+
     padding: 12px 18px;
+
     color: #75421f;
+
     text-decoration: none;
     font-size: 15px;
 }
@@ -228,18 +292,102 @@ footer {
     background-color: #e9959a;
 }
 
+
+/* ================ SUBMENÚ - GESTIÓN DE LA CALIDAD ========================= */
+
+.menu-item {
+    width: 100%;
+}
+
+.submenu-btn {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #75421f;
+
+    padding: 12px 18px;
+
+    font-size: 15px;
+    text-align: left;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submenu-btn:hover {
+    background-color: #e9959a;
+}
+
+.submenu-btn span {
+    font-size: 22px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* Submenú cerrado */
+
+.submenu {
+    display: none;
+
+    background-color: #ef9fa5;
+}
+
+
+/* Opciones del submenú */
+
+.submenu a {
+    display: block;
+
+    padding: 10px 18px 10px 45px;
+
+    color: #75421f;
+
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background-color: #e9959a;
+}
+
+
+/* Submenú abierto */
+
+.submenu.activo {
+    display: block;
+}
+
+
+/* Girar la flechita */
+
+.submenu-btn.activo span {
+    transform: rotate(90deg);
+}
+
+
 /* =========================================
    PÁGINA - GESTIÓN DE LA CALIDAD
    ========================================= */
 
 .intro-calidad {
     width: 100%;
+
     padding: 70px 65px;
+
     background-color: #feeac7;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 60px;
+
     box-sizing: border-box;
 }
 
@@ -249,26 +397,34 @@ footer {
 
 .texto-calidad h1 {
     color: #75421f;
+
     font-size: 44px;
+
     margin-bottom: 25px;
 }
 
 .texto-calidad h2 {
     color: #75421f;
+
     font-size: 27px;
+
     margin-bottom: 20px;
+
     font-weight: 500;
 }
 
 .texto-calidad p {
     color: #444444;
+
     font-size: 17px;
     line-height: 1.7;
+
     margin-bottom: 20px;
 }
 
 .imagen-calidad {
     width: 40%;
+
     display: flex;
     justify-content: center;
 }
@@ -276,43 +432,58 @@ footer {
 .imagen-calidad img {
     width: 100%;
     max-width: 430px;
+
     height: auto;
+
     display: block;
+
     border-radius: 12px;
 }
 
 
-/* ======== CARACTERÍSTICAS DE CALIDAD =========== */
+/* ========== CARACTERÍSTICAS DE CALIDAD ======= */
 
 .caracteristicas-calidad {
     width: 100%;
+
     padding: 65px;
+
     background-color: #feeac7;
+
     box-sizing: border-box;
 }
 
 .caracteristicas-calidad > h2 {
     color: #75421f;
+
     font-size: 36px;
+
     margin-bottom: 15px;
 }
 
 .descripcion-calidad {
     color: #555555;
+
     font-size: 17px;
     line-height: 1.6;
+
     margin-bottom: 35px;
 }
 
 
-/* ===================== TARJETAS ISO ============================ */
+/* ================ TARJETAS ISO ============================== */
 
 .acordeon-calidad {
     width: 100%;
+
     margin-bottom: 20px;
+
     border-radius: 12px;
+
     overflow: hidden;
+
     border: 1px solid #dfb8a7;
+
     background-color: #fce4e6;
 }
 
@@ -321,14 +492,21 @@ footer {
 
 .acordeon-titulo {
     width: 100%;
+
     border: none;
+
     background: transparent;
+
     padding: 22px 25px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     cursor: pointer;
+
     color: #75421f;
+
     text-align: left;
 }
 
@@ -337,29 +515,38 @@ footer {
 
 .acordeon-titulo > div {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 }
 
 .acordeon-titulo i {
     width: 55px;
     height: 55px;
+
     border-radius: 10px;
+
     background-color: #f8d6d9;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 25px;
+
     color: #75421f;
 }
 
 .acordeon-titulo h3 {
     font-size: 22px;
+
     margin-bottom: 5px;
 }
 
 .acordeon-titulo p {
     font-size: 15px;
+
     color: #555555;
 }
 
@@ -368,38 +555,47 @@ footer {
 
 .acordeon-titulo span {
     font-size: 32px;
+
     font-weight: 300;
+
     color: #75421f;
 }
 
 
-/* ==================== CONTENIDO OCULTO DEL ACORDEÓN ========================== */
+/* =================== CONTENIDO OCULTO DEL ACORDEÓN ========================== */
 
 .acordeon-contenido {
     display: none;
+
     padding: 0 30px 30px;
+
     color: #555555;
 }
 
 .acordeon-contenido h4 {
     color: #75421f;
+
     font-size: 19px;
+
     margin: 20px 0 10px;
 }
 
 .acordeon-contenido p {
     font-size: 16px;
+
     line-height: 1.6;
+
     margin-bottom: 15px;
 }
 
 .acordeon-contenido ul {
     padding-left: 25px;
+
     line-height: 1.8;
 }
 
 
-/* ================== TARJETA ABIERTA ======================== */
+/* =================== TARJETA ABIERTA ==================== */
 
 .acordeon-calidad.activo .acordeon-contenido {
     display: block;
@@ -409,52 +605,75 @@ footer {
     transform: rotate(45deg);
 }
 
-/* ================================= MÉTRICAS DE LA CALIDAD ======================================== */
+
+/* =========================================
+   MÉTRICAS DE LA CALIDAD
+   ========================================= */
 
 .metricas-calidad {
     width: 100%;
+
     padding: 65px;
+
     background-color: #feeac7;
+
     box-sizing: border-box;
 }
 
 .metricas-calidad h2 {
     color: #75421f;
+
     font-size: 36px;
+
     margin-bottom: 20px;
 }
 
 .metricas-calidad > p {
     max-width: 950px;
+
     color: #555555;
+
     font-size: 17px;
+
     line-height: 1.7;
+
     margin-bottom: 22px;
 }
 
 .metricas-calidad h3 {
     color: #75421f;
+
     font-size: 21px;
+
     margin: 25px 0 12px;
 }
 
 .metricas-calidad ul {
     max-width: 900px;
+
     padding-left: 25px;
+
     color: #555555;
+
     line-height: 1.8;
 }
 
 
-/* ================== EJEMPLO DE MÉTRICA =========================== */
+/* ============== EJEMPLO DE MÉTRICA ============================== */
 
 .ejemplo-metrica {
     max-width: 900px;
+
     margin: 35px 0;
+
     padding: 30px;
+
     background-color: #f7b1b0;
+
     border-left: 6px solid #75421f;
+
     border-radius: 10px;
+
     box-sizing: border-box;
 }
 
@@ -464,19 +683,27 @@ footer {
 
 .ejemplo-metrica p {
     color: #555555;
+
     font-size: 16px;
+
     line-height: 1.6;
 }
 
 
-/* =========== FÓRMULA ====================== */
+/* ============= FÓRMULA ============================ */
 
 .formula-metrica {
     display: inline-block;
+
     margin: 10px 0 20px;
+
     padding: 15px 20px;
+
     background-color: #dce8d7;
+
     border-radius: 8px;
+
     color: #75421f;
+
     font-size: 17px;
 }
