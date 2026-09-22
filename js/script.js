@@ -248,3 +248,22 @@ acordeones.forEach(function (acordeon) {
     });
 
 });
+
+// =========================================
+// TARJETAS INTERACTIVAS
+// CAJA NEGRA / CAJA BLANCA
+// =========================================
+
+const tarjetasFlip =
+    document.querySelectorAll(".flip-card");
+
+
+tarjetasFlip.forEach(function (tarjeta) {
+
+    tarjeta.addEventListener("click", function () {
+
+        tarjeta.classList.toggle("activa");
+
+    });
+
+});

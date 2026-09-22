@@ -205,76 +205,119 @@
 
                 <!-- ==================== CAJA NEGRA ==================== -->
 
-                <article class="tecnica-card">
+                <article class="tecnica-card flip-card">
 
-                    <h3>
-                        Caja Negra
-                    </h3>
+                    <div class="flip-card-interior">
 
 
-                    <p>
-                        La técnica de Caja Negra permite evaluar el
-                        comportamiento del software sin conocer ni
-                        analizar cómo está implementado internamente.
-                    </p>
+                        <!-- FRENTE -->
+
+                        <div class="flip-card-frente">
+
+                            <h3>
+                                Caja Negra
+                            </h3>
 
 
-                    <p>
-                        El tester se concentra en las entradas que
-                        recibe el sistema y en las salidas que produce,
-                        verificando que el resultado coincida con
-                        lo esperado.
-                    </p>
+                            <p>
+                                La técnica de Caja Negra permite evaluar el
+                                comportamiento del software sin conocer ni
+                                analizar cómo está implementado internamente.
+                            </p>
 
 
-                    <h4>
-                        ¿Qué se analiza?
-                    </h4>
+                            <p>
+                                El tester se concentra en las entradas que
+                                recibe el sistema y en las salidas que produce,
+                                verificando que el resultado coincida con
+                                lo esperado.
+                            </p>
 
 
-                    <ul>
-
-                        <li>
-                            Entradas y salidas del sistema.
-                        </li>
-
-                        <li>
-                            Comportamiento de las funciones.
-                        </li>
-
-                        <li>
-                            Resultados esperados y obtenidos.
-                        </li>
-
-                        <li>
-                            Casos correctos e incorrectos.
-                        </li>
-
-                    </ul>
+                            <h4>
+                                ¿Qué se analiza?
+                            </h4>
 
 
-                    <!-- IMAGEN CAJA NEGRA -->
+                            <ul>
 
-                    <div class="imagen-tecnica">
+                                <li>
+                                    Entradas y salidas del sistema.
+                                </li>
 
-                        <img
-                            src="../img/cajaNegra.png"
-                            alt="Gráfico de Caja Negra">
+                                <li>
+                                    Comportamiento de las funciones.
+                                </li>
+
+                                <li>
+                                    Resultados esperados y obtenidos.
+                                </li>
+
+                                <li>
+                                    Casos correctos e incorrectos.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="indicacion-flip">
+
+                                <i class="fa-solid fa-hand-pointer"></i>
+
+                                <span>
+                                    Hacé clic para ver el ejemplo
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DORSO -->
+
+                        <div class="flip-card-dorso">
+
+                            <h3>
+                                Caja Negra
+                            </h3>
+
+
+                            <div class="imagen-tecnica">
+
+                                <img
+                                    src="../img/cajaNegra.png"
+                                    alt="Gráfico de Caja Negra">
+
+                            </div>
+
+
+                            <h4>
+                                Ejemplo:
+                            </h4>
+
+
+                            <p>
+                                Introduzco usuario y contraseña →
+                                presiono “Ingresar” →
+                                compruebo si el sistema permite acceder
+                                correctamente o muestra un mensaje de error.
+                            </p>
+
+
+                            <div class="indicacion-flip">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+
+                                <span>
+                                    Hacé clic para volver
+                                </span>
+
+                            </div>
+
+                        </div>
 
                     </div>
-
-
-                    <h4>
-                        Ejemplo:
-                    </h4>
-
-
-                    <p>
-                        Introduzco usuario y contraseña →
-                        presiono “Ingresar” →
-                        compruebo si el sistema permite acceder
-                        correctamente o muestra un mensaje de error.
-                    </p>
 
                 </article>
 
@@ -282,86 +325,127 @@
 
                 <!-- ==================== CAJA BLANCA ==================== -->
 
-                <article class="tecnica-card">
+                <article class="tecnica-card flip-card">
 
-                    <h3>
-                        Caja Blanca
-                    </h3>
+                    <div class="flip-card-interior">
 
 
-                    <p>
-                        La técnica de Caja Blanca analiza la estructura
-                        interna del software, teniendo en cuenta cómo
-                        está construido y cómo se ejecutan sus
-                        instrucciones.
-                    </p>
+                        <!-- FRENTE -->
+
+                        <div class="flip-card-frente">
+
+                            <h3>
+                                Caja Blanca
+                            </h3>
 
 
-                    <p>
-                        Para realizar este tipo de prueba es necesario
-                        conocer el código fuente y su lógica interna.
-                        Se busca comprobar que los diferentes caminos
-                        y condiciones del programa funcionen
-                        correctamente.
-                    </p>
+                            <p>
+                                La técnica de Caja Blanca analiza la estructura
+                                interna del software, teniendo en cuenta cómo
+                                está construido y cómo se ejecutan sus
+                                instrucciones.
+                            </p>
 
 
-                    <h4>
-                        Se pueden analizar:
-                    </h4>
+                            <p>
+                                Para realizar este tipo de prueba es necesario
+                                conocer el código fuente y su lógica interna.
+                                Se busca comprobar que los diferentes caminos
+                                y condiciones del programa funcionen
+                                correctamente.
+                            </p>
 
 
-                    <ul>
-
-                        <li>
-                            Condiciones.
-                        </li>
-
-                        <li>
-                            Caminos de ejecución.
-                        </li>
-
-                        <li>
-                            Instrucciones.
-                        </li>
-
-                        <li>
-                            Bucles.
-                        </li>
-
-                        <li>
-                            Cobertura de código.
-                        </li>
-
-                    </ul>
+                            <h4>
+                                Se pueden analizar:
+                            </h4>
 
 
-                    <!-- IMAGEN CAJA BLANCA -->
+                            <ul>
 
-                    <div class="imagen-tecnica">
+                                <li>
+                                    Condiciones.
+                                </li>
 
-                        <img
-                            src="../img/cajaBlanca.png"
-                            alt="Gráfico de Caja Blanca">
+                                <li>
+                                    Caminos de ejecución.
+                                </li>
+
+                                <li>
+                                    Instrucciones.
+                                </li>
+
+                                <li>
+                                    Bucles.
+                                </li>
+
+                                <li>
+                                    Cobertura de código.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="indicacion-flip">
+
+                                <i class="fa-solid fa-hand-pointer"></i>
+
+                                <span>
+                                    Hacé clic para ver el ejemplo
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DORSO -->
+
+                        <div class="flip-card-dorso">
+
+                            <h3>
+                                Caja Blanca
+                            </h3>
+
+
+                            <div class="imagen-tecnica">
+
+                                <img
+                                    src="../img/cajaBlanca.png"
+                                    alt="Gráfico de Caja Blanca">
+
+                            </div>
+
+
+                            <h4>
+                                Ejemplo:
+                            </h4>
+
+
+                            <p>
+                                Se analiza el código de un inicio de sesión
+                                para comprobar qué ocurre cuando los datos
+                                son correctos, incorrectos o están incompletos.
+                            </p>
+
+
+                            <div class="indicacion-flip">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+
+                                <span>
+                                    Hacé clic para volver
+                                </span>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-
-                    <h4>
-                        Ejemplo:
-                    </h4>
-
-
-                    <p>
-                        Se analiza el código de un inicio de sesión
-                        para comprobar qué ocurre cuando los datos
-                        son correctos, incorrectos o están incompletos.
-                    </p>
-
                 </article>
-
             </div>
-
         </section>
 
 

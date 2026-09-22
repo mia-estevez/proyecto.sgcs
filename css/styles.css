@@ -1028,23 +1028,204 @@ footer {
 }
 
 
-/* ======================= IMÁGENES - CAJA NEGRA Y CAJA BLANCA============================== */
+/* ==================== CAJA NEGRA Y CAJA BLANCA ============================== */
 
-.imagen-tecnica {
+/* === TARJETAS INTERACTIVAS ==== */
+
+.flip-card {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+
+    min-height: 520px;
+}
+
+
+.flip-card-interior {
+    position: relative;
+
     width: 100%;
+    height: 100%;
+    min-height: 520px;
+
+    transition: transform 0.6s ease;
+
+    transform-style: preserve-3d;
+}
+
+
+/* FRENTE Y DORSO */
+
+.flip-card-frente,
+.flip-card-dorso {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px;
+
+    border-radius: 9px;
+
+    background-color: #edf6e8;
+
+    border: 1px solid #c8dfbd;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    overflow: hidden;
+}
+
+
+/* FRENTE */
+
+.flip-card-frente {
     display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* DORSO */
+
+.flip-card-dorso {
+    transform: rotateY(180deg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* GIRAR TARJETA */
+
+.flip-card.activa .flip-card-interior {
+    transform: rotateY(180deg);
+}
+
+
+/* TEXTOS */
+
+.flip-card h3 {
+    color: #26634f;
+
+    font-size: 18px;
+
+    margin: 0 0 10px;
+}
+
+
+.flip-card h4 {
+    color: #26634f;
+
+    font-size: 14px;
+
+    margin: 12px 0 6px;
+}
+
+
+.flip-card p {
+    color: #555555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin: 0 0 9px;
+}
+
+
+.flip-card ul {
+    color: #555555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    padding-left: 20px;
+
+    margin-top: 5px;
+}
+
+
+.flip-card li {
+    margin-bottom: 3px;
+}
+
+
+/* IMAGEN DEL DORSO */
+
+.flip-card-dorso .imagen-tecnica {
+    width: 100%;
+
+    min-height: 280px;
+
+    display: flex;
+
     justify-content: center;
     align-items: center;
-    margin: 15px 0;
+
+    margin: 5px 0 10px;
 }
 
-.imagen-tecnica img {
+
+.flip-card-dorso .imagen-tecnica img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
+    max-height: 320px;
+
     height: auto;
+
+    object-fit: contain;
+
     display: block;
+
     border-radius: 8px;
 }
+
+
+/* INDICACIÓN DE INTERACCIÓN */
+
+.indicacion-flip {
+    margin-top: auto;
+
+    width: 100%;
+
+    padding-top: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #39966a;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+.indicacion-flip i {
+    font-size: 14px;
+}
+
 
 
 /* ================ TIPOS DE PRUEBAS ======================== */
@@ -1080,7 +1261,7 @@ footer {
 
 .tipo-card p,
 .tipo-card li {
-    color: #26634f;
+    color: #555555;
 
     font-size: 13px;
 
