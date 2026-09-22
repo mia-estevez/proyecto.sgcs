@@ -732,6 +732,8 @@ footer {
 .pagina-tecnicas {
     width: 100%;
     background-color: #feeac7;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
 
@@ -928,6 +930,10 @@ footer {
     border: 1px solid #82864c;
     border-radius: 10px;
     box-sizing: border-box;
+}
+
+.tipos-pruebas {
+    margin-bottom: 0;
 }
 
 
