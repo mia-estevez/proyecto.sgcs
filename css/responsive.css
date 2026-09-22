@@ -770,3 +770,121 @@
     }
 
 }
+
+/* =========================================
+   RESPONSIVE - HERRAMIENTAS DE CALIDAD
+   ========================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .intro-herramientas {
+        padding: 35px;
+    }
+
+    .filtros-herramientas {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .contenedor-herramientas {
+        padding: 0 35px;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .pagina-herramientas {
+        padding-bottom: 20px;
+    }
+
+    .intro-herramientas {
+        padding: 40px 20px 25px;
+    }
+
+    .intro-herramientas h1 {
+        font-size: 30px;
+    }
+
+    .intro-herramientas h2 {
+        font-size: 21px;
+    }
+
+    .intro-herramientas p {
+        font-size: 15px;
+    }
+
+    .filtros-herramientas {
+        padding: 5px 20px 25px;
+
+        gap: 8px;
+    }
+
+    .filtro-herramienta {
+        padding: 8px 13px;
+
+        font-size: 13px;
+    }
+
+    .contenedor-herramientas {
+        padding: 0 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .herramienta-card {
+        min-height: 360px;
+
+        padding: 18px;
+    }
+
+    .logo-herramienta {
+        height: 90px;
+    }
+
+    .herramienta-card h3 {
+        font-size: 19px;
+    }
+
+    .herramienta-card p,
+    .herramienta-card ul {
+        font-size: 14px;
+    }
+
+}
+
+
+/* CELULARES MUY PEQUEÑOS */
+
+@media (max-width: 400px) {
+
+    .intro-herramientas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .filtros-herramientas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contenedor-herramientas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .filtro-herramienta {
+        font-size: 12px;
+    }
+
+}

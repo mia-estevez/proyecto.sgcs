@@ -267,3 +267,64 @@ tarjetasFlip.forEach(function (tarjeta) {
     });
 
 });
+
+// =========================================
+// FILTROS - HERRAMIENTAS DE CALIDAD
+// =========================================
+
+const botonesFiltro =
+    document.querySelectorAll(".filtro-herramienta");
+
+const herramientas =
+    document.querySelectorAll(".herramienta-card");
+
+
+botonesFiltro.forEach(function (boton) {
+
+    boton.addEventListener("click", function () {
+
+        const filtro =
+            boton.getAttribute("data-filtro");
+
+
+        // =========================================
+        // MARCAR FILTRO ACTIVO
+        // =========================================
+
+        botonesFiltro.forEach(function (otroBoton) {
+
+            otroBoton.classList.remove("activo");
+
+        });
+
+        boton.classList.add("activo");
+
+
+        // =========================================
+        // MOSTRAR / OCULTAR HERRAMIENTAS
+        // =========================================
+
+        herramientas.forEach(function (herramienta) {
+
+            const categoria =
+                herramienta.getAttribute("data-categoria");
+
+
+            if (
+                filtro === "todas" ||
+                categoria === filtro
+            ) {
+
+                herramienta.classList.remove("oculta");
+
+            } else {
+
+                herramienta.classList.add("oculta");
+
+            }
+
+        });
+
+    });
+
+});

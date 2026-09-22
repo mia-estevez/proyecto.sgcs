@@ -2,41 +2,399 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/styles.css">
+
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <title>Herramientas de Calidad</title>
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- ==================== NAVBAR ==================== -->
+
     <div id="navbar"></div>
 
 
-    <!-- CONTENIDO -->
-    <main>
 
-        <section class="pagina-construccion">
+    <!-- ==================== CONTENIDO ==================== -->
 
-            <h1>Página en construcción</h1>
+    <main class="pagina-herramientas">
+
+
+        <!-- ==================== INTRODUCCIÓN ==================== -->
+
+        <section class="intro-herramientas">
+
+            <span class="numero-seccion">
+                03 — HERRAMIENTAS
+            </span>
+
+            <h1>
+                Herramientas de Calidad
+            </h1>
+
+            <h2>
+                ¿Qué son las herramientas de calidad?
+            </h2>
 
             <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
+                Son herramientas que permiten gestionar pruebas,
+                realizar seguimiento de errores y tareas, y analizar
+                diferentes aspectos relacionados con la calidad del software.
             </p>
 
         </section>
 
+
+
+        <!-- ==================== FILTROS ==================== -->
+
+        <section class="filtros-herramientas">
+
+            <button
+                class="filtro-herramienta activo"
+                data-filtro="todas">
+
+                Ver Todas
+
+            </button>
+
+
+            <button
+                class="filtro-herramienta"
+                data-filtro="bug-trackers">
+
+                Bug Trackers
+
+            </button>
+
+
+            <button
+                class="filtro-herramienta"
+                data-filtro="testing">
+
+                Testing
+
+            </button>
+
+
+            <button
+                class="filtro-herramienta"
+                data-filtro="calidad">
+
+                Calidad de código
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ==================== HERRAMIENTAS ==================== -->
+
+        <section class="contenedor-herramientas">
+
+
+            <!-- ==================== JIRA ==================== -->
+
+            <article
+                class="herramienta-card"
+                data-categoria="bug-trackers">
+
+                <div class="logo-herramienta">
+
+                    <img
+                        src="../img/logoJira.png"
+                        alt="Logo de Jira"
+                        class="logo-jira"
+                    >
+
+                </div>
+
+
+                <h3>
+                    JIRA
+                </h3>
+
+
+                <p>
+                    Permite registrar, asignar y hacer seguimiento
+                    de errores o tareas.
+                </p>
+
+
+                <p>
+                    Por ejemplo, un bug puede registrarse con:
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Descripción.
+                    </li>
+
+                    <li>
+                        Prioridad.
+                    </li>
+
+                    <li>
+                        Versión.
+                    </li>
+
+                    <li>
+                        Capturas.
+                    </li>
+
+                    <li>
+                        Estado.
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://www.atlassian.com/es/software/jira?campaign=19324540226&adgroup=143040524765&targetid=kwd-855725830&matchtype=e&network=g&device=c&keyword=jira"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-herramienta">
+
+                    Ver más
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ==================== GITHUB ISSUES ==================== -->
+
+            <article
+                class="herramienta-card"
+                data-categoria="bug-trackers">
+
+                <div class="logo-herramienta">
+
+                    <img
+                        src="../img/logoGithub.png"
+                        alt="Logo de GitHub Issues">
+
+                </div>
+
+
+                <h3>
+                    GitHub Issues
+                </h3>
+
+
+                <p>
+                    Permite registrar y hacer seguimiento de:
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Errores.
+                    </li>
+
+                    <li>
+                        Tareas.
+                    </li>
+
+                    <li>
+                        Mejoras.
+                    </li>
+
+                    <li>
+                        Ideas.
+                    </li>
+
+                    <li>
+                        Solicitudes.
+                    </li>
+
+                </ul>
+
+
+                <p>
+                    También permite organizar el trabajo mediante
+                    proyectos, etiquetas, responsables y otras
+                    características.
+                </p>
+
+
+                <a
+                    href="https://github.com/features/issues?locale=es-419"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-herramienta">
+
+                    Ver más
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ==================== TESTRAIL ==================== -->
+
+            <article
+                class="herramienta-card"
+                data-categoria="testing">
+
+                <div class="logo-herramienta">
+
+                    <img
+                        src="../img/logoTestRail.png"
+                        alt="Logo de TestRail">
+
+                </div>
+
+
+                <h3>
+                    TestRail
+                </h3>
+
+
+                <p>
+                    Está orientado a la gestión de pruebas.
+                </p>
+
+
+                <p>
+                    Permite:
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Crear casos de prueba.
+                    </li>
+
+                    <li>
+                        Organizar suites.
+                    </li>
+
+                    <li>
+                        Ejecutar pruebas.
+                    </li>
+
+                    <li>
+                        Registrar resultados.
+                    </li>
+
+                    <li>
+                        Analizar defectos.
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://www.testrail.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-herramienta">
+
+                    Ver más
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ==================== SONARQUBE ==================== -->
+
+            <article
+                class="herramienta-card"
+                data-categoria="calidad">
+
+                <div class="logo-herramienta">
+
+                    <img
+                        src="../img/logoSonarqube.png"
+                        alt="Logo de SonarQube">
+
+                </div>
+
+
+                <h3>
+                    SonarQube
+                </h3>
+
+
+                <p>
+                    Analiza código y permite detectar aspectos como:
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Bugs.
+                    </li>
+
+                    <li>
+                        Vulnerabilidades.
+                    </li>
+
+                    <li>
+                        Problemas de mantenibilidad.
+                    </li>
+
+                    <li>
+                        Code smells.
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://www.sonarsource.com/es/products/sonarqube/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-herramienta">
+
+                    Ver más
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+        </section>
+
+
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- ==================== FOOTER ==================== -->
+
     <div id="footer"></div>
 
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
 
     <script src="../js/script.js"></script>
 

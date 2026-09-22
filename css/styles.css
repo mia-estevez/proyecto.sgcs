@@ -1073,9 +1073,9 @@ footer {
 
     border-radius: 9px;
 
-    background-color: #edf6e8;
+    background-color: #c3c987;
 
-    border: 1px solid #c8dfbd;
+    border: 1px solid #d88180;
 
     backface-visibility: hidden;
 
@@ -1283,6 +1283,218 @@ footer {
 
 .tipo-card li {
     margin-bottom: 3px;
+}
+
+/* =========================================
+   PÁGINA - HERRAMIENTAS DE CALIDAD
+   ========================================= */
+
+.pagina-herramientas {
+    width: 100%;
+    background-color: #feeac7;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+
+/* ======================== INTRODUCCIÓN ======================== */
+
+.intro-herramientas {
+    padding: 40px 65px 25px;
+    box-sizing: border-box;
+}
+
+
+.intro-herramientas .numero-seccion {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #cad182;
+    border-radius: 20px;
+    color: #555555;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.intro-herramientas h1 {
+    color: #75421f;
+    font-size: 36px;
+    margin: 10px 0 8px;
+}
+
+
+.intro-herramientas h2 {
+    color: #555555;
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+
+.intro-herramientas p {
+    max-width: 750px;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ===================== FILTROS =========================== */
+
+.filtros-herramientas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 65px 25px;
+    box-sizing: border-box;
+}
+
+
+.filtro-herramienta {
+    border: 1px solid #d88180;
+    border-radius: 20px;
+    padding: 9px 18px;
+    background-color: #ecf3a2;
+    color: #26634f;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.filtro-herramienta:hover {
+    background-color: #dcefd4;
+}
+
+
+.filtro-herramienta.activo {
+    background-color: #cad182;
+    color: white;
+    border-color: #26634f;
+}
+
+
+/* =================== CONTENEDOR DE HERRAMIENTAS =========================== */
+
+.contenedor-herramientas {
+    width: 100%;
+    padding: 0 65px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+
+/* ======================== TARJETAS ============================= */
+
+.herramienta-card {
+    min-height: 370px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #c3c987;
+    border: 1px solid #d88180;
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.herramienta-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(117, 66, 31, 0.12);
+}
+
+
+/* ========================= LOGOS =============================== */
+
+.logo-herramienta {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-herramienta img {
+    width: 150px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.logo-herramienta img.logo-jira {
+    width: 105px;
+    height: 95px;
+}
+
+
+/* ================== CONTENIDO DE TARJETAS ========================= */
+
+.herramienta-card h3 {
+    color: #26634f;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+
+.herramienta-card p {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+}
+
+
+.herramienta-card ul {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 20px;
+    margin: 3px 0 10px;
+}
+
+
+.herramienta-card li {
+    margin-bottom: 3px;
+}
+
+
+/* =================== BOTÓN VER MÁS =========================== */
+
+.boton-herramienta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background-color: #724319;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.boton-herramienta:hover {
+    background-color: #75421f;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================TARJETAS OCULTAS POR FILTRO ================ */
+.herramienta-card.oculta {
+    display: none;
 }
 
 /* =========================================
