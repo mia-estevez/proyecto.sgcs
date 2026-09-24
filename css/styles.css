@@ -1216,49 +1216,134 @@ footer {
     margin-bottom: 10px;
 }
 
+/* ========================================= NIVELES DE PRUEBA - ACORDEÓN ========================================= */
 
-/* =============== NIVELES DE PRUEBA ======================== */
-
-.niveles-prueba {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+.nivel-prueba {
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 
-.niveles-prueba div {
-    min-height: 32px;
+.nivel-prueba-boton {
+    width: 100%;
+    min-height: 38px;
+
+    padding: 0 10px;
+
     display: flex;
     align-items: center;
-    background-color: #b7bd74;
-    border: 1px solid #c8dfbd;
-    border-radius: 18px;
-    padding: 4px 9px;
-    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+
+    background-color: #bfc57b;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.2s ease;
 }
 
 
-.niveles-prueba span {
-    width: 26px;
-    height: 26px;
-    margin-right: 10px;
+.nivel-prueba-boton:hover {
+    background-color: #c9cf88;
+}
+
+
+/* NÚMERO */
+
+.numero-nivel {
+    width: 28px;
+    height: 28px;
+
     flex-shrink: 0;
-    border-radius: 50%;
-    background-color: #c0ca63;
-    color: #724319;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background-color: #cad182;
+
+    color: #75421f;
+
     font-weight: bold;
 }
 
 
-.niveles-prueba p {
-    color: #000000;
+/* NOMBRE */
+
+.nombre-nivel {
+    flex: 1;
+
+    color: #222222;
+
+    font-size: 14px;
+}
+
+
+/* FLECHA */
+
+.flecha-nivel {
+    width: 25px;
+
+    color: #75421f;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    text-align: center;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* DEFINICIÓN */
+
+.definicion-nivel {
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 45px;
+
+    background-color: rgba(255, 255, 255, 0.18);
+
+    border-radius: 0 0 15px 15px;
+
+    transition:
+        max-height 0.3s ease,
+        padding 0.3s ease;
+}
+
+
+.definicion-nivel p {
+    margin: 0;
+
+    color: #555555;
 
     font-size: 13px;
+    line-height: 1.5;
+}
 
-    margin: 0;
+
+/* NIVEL ABIERTO */
+
+.nivel-prueba.activo .definicion-nivel {
+    max-height: 100px;
+
+    padding: 10px 45px 12px;
+}
+
+
+.nivel-prueba.activo .flecha-nivel {
+    transform: rotate(45deg);
 }
 
 

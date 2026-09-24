@@ -405,3 +405,44 @@ tarjetasMetrica.forEach(function (tarjeta) {
     });
 
 });
+
+// =========================================
+// NIVELES DE PRUEBA
+// =========================================
+
+const nivelesPrueba =
+    document.querySelectorAll(".nivel-prueba");
+
+
+nivelesPrueba.forEach(function (nivel) {
+
+    const boton =
+        nivel.querySelector(".nivel-prueba-boton");
+
+
+    boton.addEventListener("click", function () {
+
+        const estabaAbierto =
+            nivel.classList.contains("activo");
+
+
+        // Cerramos todos los niveles
+
+        nivelesPrueba.forEach(function (otroNivel) {
+
+            otroNivel.classList.remove("activo");
+
+        });
+
+
+        // Si estaba cerrado, lo abrimos
+
+        if (!estabaAbierto) {
+
+            nivel.classList.add("activo");
+
+        }
+
+    });
+
+});
