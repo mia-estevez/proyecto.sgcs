@@ -516,11 +516,8 @@ footer {
 
 .caracteristicas-calidad {
     width: 100%;
-
-    padding: 65px;
-
+    padding: 65px 65px 25px;
     background-color: #feeac7;
-
     box-sizing: border-box;
 }
 
@@ -683,20 +680,15 @@ footer {
 
 .metricas-calidad {
     width: 100%;
-
-    padding: 65px;
-
+    padding: 30px 65px 65px;
     background-color: #feeac7;
-
     box-sizing: border-box;
 }
 
 .metricas-calidad h2 {
     color: #75421f;
-
     font-size: 36px;
-
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
 
 .metricas-calidad > p {
