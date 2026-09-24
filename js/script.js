@@ -94,7 +94,13 @@ function activarMenu() {
     }
 
 
-    botonMenu.addEventListener("click", function () {
+    // =========================================
+    // ABRIR / CERRAR MENÚ PRINCIPAL
+    // =========================================
+
+    botonMenu.addEventListener("click", function (evento) {
+
+        evento.stopPropagation();
 
         if (menuDesplegable.style.display === "block") {
 
@@ -124,10 +130,13 @@ function activarMenu() {
 
         botonSubmenu.addEventListener("click", function (evento) {
 
+            // Evita que el clic cierre el menú principal
             evento.stopPropagation();
 
+            // Abrir / cerrar submenu
             submenuCalidad.classList.toggle("activo");
 
+            // Girar la flecha
             botonSubmenu.classList.toggle("activo");
 
         });
@@ -160,27 +169,40 @@ function activarMenu() {
     const enlacesMenu =
         document.querySelectorAll(".menu-desplegable a");
 
+
     const paginaActual =
         window.location.pathname;
+
 
     const hashActual =
         window.location.hash;
 
+
+    // Enlace principal de Gestión
+    const enlaceGestion =
+        document.querySelector(".menu-calidad-principal");
+
+
     let perteneceAGestionCalidad = false;
+
 
     enlacesMenu.forEach(function (enlace) {
 
         const urlEnlace =
             new URL(enlace.href);
 
+
         const rutaEnlace =
             urlEnlace.pathname;
+
 
         const hashEnlace =
             urlEnlace.hash;
 
 
-        // Comprobar página y sección
+        // =========================================
+        // COMPROBAR PÁGINA Y SECCIÓN
+        // =========================================
 
         if (
             rutaEnlace === paginaActual &&
@@ -190,7 +212,9 @@ function activarMenu() {
             enlace.classList.add("pagina-activa");
 
 
-            // Si pertenece a Gestión de la calidad
+            // =========================================
+            // SI ES UNA SECCIÓN DE GESTIÓN
+            // =========================================
 
             if (
                 hashEnlace === "#fundamentos" ||
@@ -213,10 +237,25 @@ function activarMenu() {
 
     if (
         perteneceAGestionCalidad &&
-        botonSubmenu
+        enlaceGestion
     ) {
 
-        botonSubmenu.classList.add("pagina-activa");
+        enlaceGestion.classList.add("pagina-activa");
+
+    }
+
+
+    // =========================================
+    // SI ESTAMOS EN CALIDAD.HTML
+    // MARCAR GESTIÓN PRINCIPAL
+    // =========================================
+
+    if (
+        paginaActual.endsWith("/paginas/calidad.html") &&
+        enlaceGestion
+    ) {
+
+        enlaceGestion.classList.add("pagina-activa");
 
     }
 
@@ -264,6 +303,7 @@ acordeones.forEach(function (acordeon) {
 
 });
 
+
 // =========================================
 // TARJETAS INTERACTIVAS
 // CAJA NEGRA / CAJA BLANCA
@@ -283,12 +323,14 @@ tarjetasFlip.forEach(function (tarjeta) {
 
 });
 
+
 // =========================================
 // FILTROS - HERRAMIENTAS DE CALIDAD
 // =========================================
 
 const botonesFiltro =
     document.querySelectorAll(".filtro-herramienta");
+
 
 const herramientas =
     document.querySelectorAll(".herramienta-card");
@@ -311,6 +353,7 @@ botonesFiltro.forEach(function (boton) {
             otroBoton.classList.remove("activo");
 
         });
+
 
         boton.classList.add("activo");
 
@@ -343,6 +386,7 @@ botonesFiltro.forEach(function (boton) {
     });
 
 });
+
 
 // =========================================
 // FLIP CARD - MÉTRICAS
