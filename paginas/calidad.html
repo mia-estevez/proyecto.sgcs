@@ -2,432 +2,1770 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/styles.css">
+
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <title>Gestión de la calidad del software</title>
+
 </head>
+
 
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <div id="navbar"></div>
 
-
-    <!-- CONTENIDO PRINCIPAL -->
     <main>
+        <!-- =================================================
+            GESTIÓN DE CALIDAD + FUNDAMENTOS
+        ================================================== -->
 
-        <!-- INTRODUCCIÓN -->
-        <section class="intro-calidad">
+        <section class="pagina-calidad" id="fundamentos">
 
-            <div class="texto-calidad">
 
-                <h1>Gestión de la calidad del software</h1>
+            <!-- ================= INTRODUCCIÓN GESTIÓN ================= -->
 
-                <h2>¿Qué es la calidad del software?</h2>
+            <section class="intro-calidad">
 
-                <p>
-                    La calidad del software se refiere al grado en que un sistema
-                    cumple con los requisitos definidos y satisface las necesidades
-                    de los usuarios, además de presentar características que permitan
-                    que sea confiable, seguro, mantenible y fácil de utilizar.
+
+                <div class="texto-calidad">
+
+
+                    <h1>
+                        Gestión de la calidad del software
+                    </h1>
+
+
+                    <h2>
+                        ¿Qué es la calidad del software?
+                    </h2>
+
+
+                    <p>
+                        La calidad del software se refiere al grado en que un sistema
+                        cumple con los requisitos definidos y satisface las necesidades
+                        de los usuarios, además de presentar características que permitan
+                        que sea confiable, seguro, mantenible y fácil de utilizar.
+                    </p>
+
+
+                    <p>
+                        No se trata solamente de que el programa funcione. Un software
+                        puede cumplir su función principal y, aun así, presentar problemas
+                        relacionados con el rendimiento, la seguridad, la facilidad de uso
+                        o el mantenimiento.
+                    </p>
+
+
+                    <p>
+                        Por este motivo, la calidad debe considerarse durante todo el
+                        proceso de desarrollo, desde la definición de los requisitos
+                        hasta la evaluación y mantenimiento del producto.
+                    </p>
+
+
+                </div>
+
+
+                <div class="imagen-calidad">
+
+                    <img
+                        src="../img/calidad-software.png"
+                        alt="Gestión de la calidad del software"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FUNDAMENTOS DE CALIDAD
+            ================================================== -->
+
+            <section class="caracteristicas-calidad">
+
+                <span class="numero-seccion">
+                    01 — FUNDAMENTOS
+                </span>
+
+                <h2>
+                    Fundamentos de calidad
+                </h2>
+
+
+                <p class="descripcion-calidad">
+                    Las normas y modelos de calidad permiten analizar diferentes
+                    aspectos de un producto de software. De esta manera, la calidad
+                    no se evalúa solamente por si el programa funciona, sino también
+                    por cómo funciona, qué tan fácil es utilizarlo y mantenerlo,
+                    entre otros aspectos.
                 </p>
 
-                <p>
-                    No se trata solamente de que el programa funcione. Un software
-                    puede cumplir su función principal y, aun así, presentar problemas
-                    relacionados con el rendimiento, la seguridad, la facilidad de uso
-                    o el mantenimiento.
-                </p>
+
+
+                <!-- ================= ISO 9126 ================= -->
+
+                <article class="acordeon-calidad">
+
+
+                    <button class="acordeon-titulo">
+
+
+                        <div>
+
+
+                            <i class="fa-regular fa-file-lines"></i>
+
+
+                            <div>
+
+                                <h3>
+                                    ISO/IEC 9126
+                                </h3>
+
+                                <p>
+                                    Modelo histórico de calidad del software
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span>
+                            +
+                        </span>
+
+
+                    </button>
+
+
+
+                    <div class="acordeon-contenido">
+
+
+                        <h4>
+                            ¿Qué es la ISO/IEC 9126?
+                        </h4>
+
+
+                        <p>
+                            La ISO/IEC 9126 fue una norma internacional utilizada
+                            para establecer un modelo de calidad de los productos
+                            de software. Su objetivo era proporcionar características
+                            que permitieran evaluar y describir la calidad de un
+                            producto de manera organizada.
+                        </p>
+
+
+                        <p>
+                            El modelo dividía la calidad del software en seis
+                            características principales. Cada una permitía analizar
+                            un aspecto diferente del producto.
+                        </p>
+
+
+
+                        <h4>
+                            Características principales
+                        </h4>
+
+
+
+                        <div class="lista-caracteristicas">
+
+
+                            <div>
+
+                                <strong>
+                                    Funcionalidad
+                                </strong>
+
+                                <p>
+                                    Evalúa si el software proporciona las funciones
+                                    necesarias para cumplir con los requisitos y
+                                    necesidades de los usuarios.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Fiabilidad
+                                </strong>
+
+                                <p>
+                                    Se relaciona con la capacidad del sistema para
+                                    mantener un funcionamiento correcto y estable
+                                    durante un período determinado.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Usabilidad
+                                </strong>
+
+                                <p>
+                                    Considera qué tan fácil resulta para los usuarios
+                                    comprender, aprender y utilizar el software.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Eficiencia
+                                </strong>
+
+                                <p>
+                                    Analiza el rendimiento del sistema y la cantidad
+                                    de recursos que utiliza para realizar sus funciones.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Mantenibilidad
+                                </strong>
+
+                                <p>
+                                    Evalúa qué tan fácil es analizar, corregir,
+                                    modificar o actualizar el software.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Portabilidad
+                                </strong>
+
+                                <p>
+                                    Se refiere a la facilidad con la que el software
+                                    puede trasladarse y adaptarse a diferentes
+                                    entornos o plataformas.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <h4>
+                            Importancia
+                        </h4>
+
+
+                        <p>
+                            La ISO/IEC 9126 permitió contar con una referencia común
+                            para describir y evaluar la calidad del software.
+                            Actualmente es considerada una norma histórica y su
+                            modelo fue reemplazado por la evolución de la familia
+                            SQuaRE.
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- ================= ISO 25000 ================= -->
+
+                <article class="acordeon-calidad">
+
+
+                    <button class="acordeon-titulo">
+
+
+                        <div>
+
+
+                            <i class="fa-regular fa-file-lines"></i>
+
+
+                            <div>
+
+                                <h3>
+                                    ISO/IEC 25000 / SQuaRE
+                                </h3>
+
+                                <p>
+                                    Familia de normas para la calidad del software
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span>
+                            +
+                        </span>
+
+
+                    </button>
+
+
+
+                    <div class="acordeon-contenido">
+
+
+                        <h4>
+                            ¿Qué es ISO/IEC 25000?
+                        </h4>
+
+
+                        <p>
+                            ISO/IEC 25000 forma parte de la familia SQuaRE
+                            (Systems and software Quality Requirements and Evaluation).
+                            Esta familia reúne normas relacionadas con los requisitos,
+                            modelos, medición y evaluación de la calidad de productos
+                            de software.
+                        </p>
+
+
+                        <p>
+                            Su objetivo es proporcionar una estructura para especificar
+                            los requisitos de calidad y poder medir y evaluar diferentes
+                            aspectos de un producto de software.
+                        </p>
+
+
+
+                        <h4>
+                            Modelo de calidad
+                        </h4>
+
+
+                        <p>
+                            Dentro de la familia SQuaRE se encuentra ISO/IEC 25010,
+                            que define un modelo para evaluar la calidad de los
+                            productos de software. La versión actual del modelo
+                            contempla nueve características.
+                        </p>
+
+
+
+                        <h4>
+                            Características de calidad
+                        </h4>
+
+
+
+                        <div class="lista-caracteristicas">
+
+
+                            <div>
+
+                                <strong>
+                                    Adecuación funcional
+                                </strong>
+
+                                <p>
+                                    Evalúa si el sistema proporciona las funciones
+                                    necesarias para satisfacer las necesidades
+                                    especificadas.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Eficiencia de desempeño
+                                </strong>
+
+                                <p>
+                                    Analiza el rendimiento del sistema en relación
+                                    con los recursos que utiliza, como tiempo y memoria.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Compatibilidad
+                                </strong>
+
+                                <p>
+                                    Evalúa la capacidad del software para funcionar
+                                    junto con otros sistemas y compartir información.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Capacidad de interacción
+                                </strong>
+
+                                <p>
+                                    Se relaciona con la facilidad con la que los
+                                    usuarios pueden interactuar con el sistema
+                                    de forma efectiva.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Fiabilidad
+                                </strong>
+
+                                <p>
+                                    Considera la capacidad del sistema para mantener
+                                    un funcionamiento correcto bajo determinadas
+                                    condiciones.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Seguridad
+                                </strong>
+
+                                <p>
+                                    Analiza la capacidad del sistema para proteger
+                                    la información y controlar el acceso a los datos
+                                    y funciones.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Mantenibilidad
+                                </strong>
+
+                                <p>
+                                    Evalúa la facilidad para analizar, modificar,
+                                    corregir y mantener el software.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Flexibilidad
+                                </strong>
+
+                                <p>
+                                    Se refiere a la capacidad del software para
+                                    adaptarse a cambios en diferentes contextos
+                                    y necesidades.
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Protección
+                                </strong>
+
+                                <p>
+                                    Considera la capacidad del sistema para evitar
+                                    situaciones que puedan provocar daños a personas,
+                                    bienes o al entorno.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <h4>
+                            Importancia
+                        </h4>
+
+
+                        <p>
+                            La familia SQuaRE permite utilizar criterios organizados
+                            para especificar, medir y evaluar la calidad de los
+                            productos de software, facilitando una evaluación más
+                            completa del sistema.
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MÉTRICAS DE CALIDAD
+            ================================================== -->
+
+            <section class="metricas-calidad">
+
+                <div class="contenido-metricas">
+
+                    <!-- ================= TEXTO ================= -->
+
+                    <div class="texto-metricas">
+
+                        <h2>
+                            Métricas de la calidad
+                        </h2>
+
+                        <p>
+                            Una métrica de software es una medida que permite obtener
+                            información objetiva sobre algún aspecto del software o de
+                            su desarrollo.
+                        </p>
+
+                        <h3>
+                            Por ejemplo:
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Cantidad de errores encontrados.
+                            </li>
+
+                            <li>
+                                Cantidad de errores corregidos.
+                            </li>
+
+                            <li>
+                                Porcentaje de pruebas exitosas.
+                            </li>
+
+                            <li>
+                                Cobertura de pruebas.
+                            </li>
+
+                            <li>
+                                Tiempo promedio para corregir un defecto.
+                            </li>
+
+                            <li>
+                                Cantidad de defectos por tamaño del software.
+                            </li>
+
+                            <li>
+                                Tiempo de respuesta.
+                            </li>
+
+                            <li>
+                                Disponibilidad del sistema.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ================= IMÁGENES ================= -->
+
+                    <div class="contenedor-metricas-imagenes">
+
+
+                        <!-- ===== FLIP CARD ===== -->
+
+                        <article class="flip-metrica">
+
+                            <div class="flip-metrica-interior">
+
+
+                                <!-- FRENTE -->
+
+                                <div class="flip-metrica-frente">
+
+                                    <img
+                                        src="../img/metrica1.png"
+                                        alt="La calidad del software">
+
+                                    <span class="indicacion-metrica">
+                                        <i class="fa-solid fa-hand-pointer"></i>
+                                        Hacé clic para ver más
+                                    </span>
+
+                                </div>
+
+
+                                <!-- DORSO -->
+
+                                <div class="flip-metrica-dorso">
+
+                                    <img
+                                        src="../img/metrica3.png"
+                                        alt="Métricas de calidad al programar"
+                                    >
+                                </div>
+
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- ===== IMAGEN NORMAL ===== -->
+
+                        <article class="tarjeta-metrica">
+
+                            <img
+                                src="../img/metrica2.png"
+                                alt="Indicador de medición de calidad">
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= EJEMPLO ================= -->
+
+                <div class="ejemplo-metrica">
+
+                    <h3>
+                        Ejemplo
+                    </h3>
+
+                    <p>
+                        Supongamos que tenemos:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            100 casos de prueba.
+                        </li>
+
+                        <li>
+                            90 fueron exitosos.
+                        </li>
+
+                        <li>
+                            10 fallaron.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Podemos calcular:
+                    </p>
+
+                    <div class="formula-metrica">
+
+                        <strong>
+                            Porcentaje de pruebas exitosas =
+                            90 / 100 × 100 = 90 %
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Esto nos permite tener una medida objetiva del estado
+                        de las pruebas.
+                    </p>
+
+                </div>
+
+
 
                 <p>
-                    Por este motivo, la calidad debe considerarse durante todo el
-                    proceso de desarrollo, desde la definición de los requisitos
-                    hasta la evaluación y mantenimiento del producto.
+                    Las métricas son importantes porque permiten medir, comparar
+                    y detectar problemas, en lugar de basarnos solamente en
+                    opiniones.
                 </p>
 
-            </div>
+
+                <p>
+                    La familia ISO/IEC 25000 contempla específicamente una
+                    división dedicada a la medición de calidad, con modelos de
+                    medición y definiciones de medidas de calidad.
+                </p>
 
 
-            <div class="imagen-calidad">
+            </section>
 
-                <img src="../img/calidad-software.png"
-                    alt="Gestión de la calidad del software">
-
-            </div>
 
         </section>
 
 
-        <!-- CARACTERÍSTICAS DE CALIDAD -->
-        <section class="caracteristicas-calidad">
 
-            <h2>Características de calidad</h2>
+        <!-- =====================================================
+             02 - TÉCNICAS DE ASEGURAMIENTO
+        ====================================================== -->
 
-            <p class="descripcion-calidad">
-                Las normas y modelos de calidad permiten analizar diferentes
-                aspectos de un producto de software. De esta manera, la calidad
-                no se evalúa solamente por si el programa funciona, sino también
-                por cómo funciona, qué tan fácil es utilizarlo y mantenerlo,
-                entre otros aspectos.
-            </p>
+        <section
+            class="pagina-tecnicas"
+            id="tecnicas">
 
 
-            <!-- ISO 9126 -->
-            <article class="acordeon-calidad">
+            <!-- ================= INTRODUCCIÓN ================= -->
 
-                <button class="acordeon-titulo">
+            <section class="intro-tecnicas">
 
-                    <div>
 
-                        <i class="fa-regular fa-file-lines"></i>
+                <div class="texto-tecnicas">
+
+
+                    <span class="numero-seccion">
+                        02 — TÉCNICAS
+                    </span>
+
+
+                    <h1>
+                        Técnicas de Aseguramiento de la Calidad
+                    </h1>
+
+
+                    <h2>
+                        ¿Qué es el aseguramiento de la Calidad?
+                    </h2>
+
+
+                    <p>
+                        El Aseguramiento de la Calidad del Software (SQA)
+                        comprende las actividades destinadas a garantizar
+                        que tanto el proceso como el producto cumplan
+                        determinados criterios de calidad.
+                    </p>
+
+
+                    <p>
+                        La idea no es esperar hasta el final para descubrir
+                        errores.
+                    </p>
+
+
+
+                    <!-- PROCESO -->
+
+                    <div class="proceso-calidad">
+
+
+                        <div>
+                            Desarrollo
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div>
+                            Pruebas
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div>
+                            Detección<br>
+                            de problemas
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div>
+                            Corrección
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div>
+                            Nuevas pruebas
+                        </div>
+
+
+                    </div>
+
+
+
+                    <p class="texto-final-tecnicas">
+                        La atención continua a la excelencia permite utilizar
+                        técnicas destinadas a detectar errores anticipadamente.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- ================= PROCESO DE ASEGURAMIENTO ================= -->
+
+
+                <div class="bloque-aseguramiento">
+
+
+                    <h2>
+                        Proceso de aseguramiento
+                    </h2>
+
+
+                    <p>
+                        El Aseguramiento de la Calidad del Software (SQA)
+                        comprende las actividades destinadas a garantizar
+                        que tanto el proceso como el producto cumplan
+                        determinados criterios de calidad.
+                    </p>
+
+
+                    <h3>
+                        Niveles de prueba
+                    </h3>
+
+
+
+                    <div class="niveles-prueba">
+
 
                         <div>
 
-                            <h3>ISO/IEC 9126</h3>
+                            <span>
+                                1
+                            </span>
 
                             <p>
-                                Modelo histórico de calidad del software
+                                Pruebas de componentes o unitarias
                             </p>
 
                         </div>
 
+
+                        <div>
+
+                            <span>
+                                2
+                            </span>
+
+                            <p>
+                                Pruebas de integración de componentes
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                3
+                            </span>
+
+                            <p>
+                                Pruebas del sistema
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                4
+                            </span>
+
+                            <p>
+                                Pruebas de integración de sistemas
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                5
+                            </span>
+
+                            <p>
+                                Pruebas de aceptación
+                            </p>
+
+                        </div>
+
+
                     </div>
 
-                    <span>+</span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TÉCNICAS DE PRUEBA
+            ================================================== -->
+
+            <section class="seccion-pruebas">
+
+
+                <div class="titulo-bloque">
+
+                    <i class="fa-solid fa-vial"></i>
+
+                    <h2>
+                        Técnicas de prueba
+                    </h2>
+
+                </div>
+
+
+
+                <div class="contenedor-tecnicas">
+
+
+                    <!-- ================= CAJA NEGRA ================= -->
+
+
+                    <article class="tecnica-card flip-card">
+
+
+                        <div class="flip-card-interior">
+
+
+                            <!-- FRENTE -->
+
+                            <div class="flip-card-frente">
+
+
+                                <h3>
+                                    Caja Negra
+                                </h3>
+
+
+                                <p>
+                                    La técnica de Caja Negra permite evaluar el
+                                    comportamiento del software sin conocer ni
+                                    analizar cómo está implementado internamente.
+                                </p>
+
+
+                                <p>
+                                    El tester se concentra en las entradas que
+                                    recibe el sistema y en las salidas que produce,
+                                    verificando que el resultado coincida con
+                                    lo esperado.
+                                </p>
+
+
+                                <h4>
+                                    ¿Qué se analiza?
+                                </h4>
+
+
+                                <ul>
+
+                                    <li>
+                                        Entradas y salidas del sistema.
+                                    </li>
+
+                                    <li>
+                                        Comportamiento de las funciones.
+                                    </li>
+
+                                    <li>
+                                        Resultados esperados y obtenidos.
+                                    </li>
+
+                                    <li>
+                                        Casos correctos e incorrectos.
+                                    </li>
+
+                                </ul>
+
+
+
+                                <div class="indicacion-flip">
+
+                                    <i class="fa-solid fa-hand-pointer"></i>
+
+                                    <span>
+                                        Hacé clic para ver el ejemplo
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- DORSO -->
+
+                            <div class="flip-card-dorso">
+
+
+                                <h3>
+                                    Caja Negra
+                                </h3>
+
+
+                                <div class="imagen-tecnica">
+
+                                    <img
+                                        src="../img/cajaNegra.png"
+                                        alt="Gráfico de Caja Negra">
+
+                                </div>
+
+
+                                <h4>
+                                    Ejemplo:
+                                </h4>
+
+
+                                <p>
+                                    Introduzco usuario y contraseña →
+                                    presiono “Ingresar” →
+                                    compruebo si el sistema permite acceder
+                                    correctamente o muestra un mensaje de error.
+                                </p>
+
+
+                                <div class="indicacion-flip">
+
+                                    <i class="fa-solid fa-rotate-left"></i>
+
+                                    <span>
+                                        Hacé clic para volver
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- ================= CAJA BLANCA ================= -->
+
+
+                    <article class="tecnica-card flip-card">
+
+
+                        <div class="flip-card-interior">
+
+
+                            <!-- FRENTE -->
+
+                            <div class="flip-card-frente">
+
+
+                                <h3>
+                                    Caja Blanca
+                                </h3>
+
+
+                                <p>
+                                    La técnica de Caja Blanca analiza la estructura
+                                    interna del software, teniendo en cuenta cómo
+                                    está construido y cómo se ejecutan sus
+                                    instrucciones.
+                                </p>
+
+
+                                <p>
+                                    Para realizar este tipo de prueba es necesario
+                                    conocer el código fuente y su lógica interna.
+                                    Se busca comprobar que los diferentes caminos
+                                    y condiciones del programa funcionen
+                                    correctamente.
+                                </p>
+
+
+                                <h4>
+                                    Se pueden analizar:
+                                </h4>
+
+
+                                <ul>
+
+                                    <li>
+                                        Condiciones.
+                                    </li>
+
+                                    <li>
+                                        Caminos de ejecución.
+                                    </li>
+
+                                    <li>
+                                        Instrucciones.
+                                    </li>
+
+                                    <li>
+                                        Bucles.
+                                    </li>
+
+                                    <li>
+                                        Cobertura de código.
+                                    </li>
+
+                                </ul>
+
+
+                                <div class="indicacion-flip">
+
+                                    <i class="fa-solid fa-hand-pointer"></i>
+
+                                    <span>
+                                        Hacé clic para ver el ejemplo
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- DORSO -->
+
+                            <div class="flip-card-dorso">
+
+
+                                <h3>
+                                    Caja Blanca
+                                </h3>
+
+
+                                <div class="imagen-tecnica">
+
+                                    <img
+                                        src="../img/cajaBlanca.png"
+                                        alt="Gráfico de Caja Blanca">
+
+                                </div>
+
+
+                                <h4>
+                                    Ejemplo:
+                                </h4>
+
+
+                                <p>
+                                    Se analiza el código de un inicio de sesión
+                                    para comprobar qué ocurre cuando los datos
+                                    son correctos, incorrectos o están incompletos.
+                                </p>
+
+
+                                <div class="indicacion-flip">
+
+                                    <i class="fa-solid fa-rotate-left"></i>
+
+                                    <span>
+                                        Hacé clic para volver
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TIPOS DE PRUEBAS
+            ================================================== -->
+
+            <section class="tipos-pruebas">
+
+
+                <div class="titulo-bloque">
+
+                    <i class="fa-solid fa-vial-circle-check"></i>
+
+                    <h2>
+                        Tipos de pruebas
+                    </h2>
+
+                </div>
+
+
+
+                <div class="contenedor-tipos">
+
+
+                    <!-- PRUEBAS FUNCIONALES -->
+
+
+                    <article class="tipo-card">
+
+
+                        <h3>
+                            Pruebas funcionales
+                        </h3>
+
+
+                        <p>
+                            Comprueban que el sistema realice correctamente
+                            sus funciones.
+                        </p>
+
+
+                    </article>
+
+
+
+                    <!-- PRUEBAS NO FUNCIONALES -->
+
+
+                    <article class="tipo-card">
+
+
+                        <h3>
+                            Pruebas no funcionales
+                        </h3>
+
+
+                        <p>
+                            Evalúan características como:
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                Rendimiento.
+                            </li>
+
+                            <li>
+                                Seguridad.
+                            </li>
+
+                            <li>
+                                Usabilidad.
+                            </li>
+
+                            <li>
+                                Compatibilidad.
+                            </li>
+
+                            <li>
+                                Disponibilidad.
+                            </li>
+
+                        </ul>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             03 - HERRAMIENTAS DE CALIDAD
+        ====================================================== -->
+
+        <section
+            class="pagina-herramientas"
+            id="herramientas">
+
+
+            <!-- ================= INTRODUCCIÓN ================= -->
+
+
+            <div class="intro-herramientas">
+
+
+                <span class="numero-seccion">
+                    03 — HERRAMIENTAS
+                </span>
+
+
+                <h1>
+                    Herramientas de Calidad
+                </h1>
+
+
+                <h2>
+                    Herramientas utilizadas en la gestión y evaluación
+                    de la calidad del software
+                </h2>
+
+
+                <p>
+                    Existen diferentes herramientas que permiten gestionar
+                    errores, realizar pruebas, controlar el código y
+                    realizar un seguimiento de la calidad durante el
+                    desarrollo de software.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ================= FILTROS ================= -->
+
+
+            <div class="filtros-herramientas">
+
+
+                <button
+                    class="filtro-herramienta activo"
+                    data-filtro="todas">
+
+                    Ver Todas
 
                 </button>
 
 
-                <div class="acordeon-contenido">
+                <button
+                    class="filtro-herramienta"
+                    data-filtro="bug-trackers">
 
-                    <h4>¿Qué es la ISO/IEC 9126?</h4>
-
-                    <p>
-                        La ISO/IEC 9126 fue una norma internacional utilizada
-                        para establecer un modelo de calidad de los productos
-                        de software. Su objetivo era proporcionar características
-                        que permitieran evaluar y describir la calidad de un
-                        producto de manera organizada.
-                    </p>
-
-                    <p>
-                        El modelo dividía la calidad del software en seis
-                        características principales. Cada una permitía analizar
-                        un aspecto diferente del producto.
-                    </p>
-
-                    <h4>Características principales</h4>
-
-                    <div class="lista-caracteristicas">
-
-                        <div>
-                            <strong>Funcionalidad</strong>
-                            <p>
-                                Evalúa si el software proporciona las funciones
-                                necesarias para cumplir con los requisitos y
-                                necesidades de los usuarios.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Fiabilidad</strong>
-                            <p>
-                                Se relaciona con la capacidad del sistema para
-                                mantener un funcionamiento correcto y estable
-                                durante un período determinado.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Usabilidad</strong>
-                            <p>
-                                Considera qué tan fácil resulta para los usuarios
-                                comprender, aprender y utilizar el software.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Eficiencia</strong>
-                            <p>
-                                Analiza el rendimiento del sistema y la cantidad
-                                de recursos que utiliza para realizar sus funciones.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Mantenibilidad</strong>
-                            <p>
-                                Evalúa qué tan fácil es analizar, corregir,
-                                modificar o actualizar el software.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Portabilidad</strong>
-                            <p>
-                                Se refiere a la facilidad con la que el software
-                                puede trasladarse y adaptarse a diferentes
-                                entornos o plataformas.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <h4>Importancia</h4>
-
-                    <p>
-                        La ISO/IEC 9126 permitió contar con una referencia común
-                        para describir y evaluar la calidad del software.
-                        Actualmente es considerada una norma histórica y su
-                        modelo fue reemplazado por la evolución de la familia
-                        SQuaRE.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- ISO 25000 -->
-            <article class="acordeon-calidad">
-
-                <button class="acordeon-titulo">
-
-                    <div>
-
-                        <i class="fa-regular fa-file-lines"></i>
-
-                        <div>
-
-                            <h3>ISO/IEC 25000 / SQuaRE</h3>
-
-                            <p>
-                                Familia de normas para la calidad del software
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <span>+</span>
+                    Bug Trackers
 
                 </button>
 
 
-                <div class="acordeon-contenido">
+                <button
+                    class="filtro-herramienta"
+                    data-filtro="testing">
 
-                    <h4>¿Qué es ISO/IEC 25000?</h4>
+                    Testing
 
-                    <p>
-                        ISO/IEC 25000 forma parte de la familia SQuaRE
-                        (Systems and software Quality Requirements and Evaluation).
-                        Esta familia reúne normas relacionadas con los requisitos,
-                        modelos, medición y evaluación de la calidad de productos
-                        de software.
-                    </p>
-
-                    <p>
-                        Su objetivo es proporcionar una estructura para especificar
-                        los requisitos de calidad y poder medir y evaluar diferentes
-                        aspectos de un producto de software.
-                    </p>
-
-                    <h4>Modelo de calidad</h4>
-
-                    <p>
-                        Dentro de la familia SQuaRE se encuentra ISO/IEC 25010,
-                        que define un modelo para evaluar la calidad de los
-                        productos de software. La versión actual del modelo
-                        contempla nueve características.
-                    </p>
-
-                    <h4>Características de calidad</h4>
-
-                    <div class="lista-caracteristicas">
-
-                        <div>
-                            <strong>Adecuación funcional</strong>
-                            <p>
-                                Evalúa si el sistema proporciona las funciones
-                                necesarias para satisfacer las necesidades
-                                especificadas.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Eficiencia de desempeño</strong>
-                            <p>
-                                Analiza el rendimiento del sistema en relación
-                                con los recursos que utiliza, como tiempo y memoria.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Compatibilidad</strong>
-                            <p>
-                                Evalúa la capacidad del software para funcionar
-                                junto con otros sistemas y compartir información.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Capacidad de interacción</strong>
-                            <p>
-                                Se relaciona con la facilidad con la que los
-                                usuarios pueden interactuar con el sistema
-                                de forma efectiva.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Fiabilidad</strong>
-                            <p>
-                                Considera la capacidad del sistema para mantener
-                                un funcionamiento correcto bajo determinadas
-                                condiciones.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Seguridad</strong>
-                            <p>
-                                Analiza la capacidad del sistema para proteger
-                                la información y controlar el acceso a los datos
-                                y funciones.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Mantenibilidad</strong>
-                            <p>
-                                Evalúa la facilidad para analizar, modificar,
-                                corregir y mantener el software.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Flexibilidad</strong>
-                            <p>
-                                Se refiere a la capacidad del software para
-                                adaptarse a cambios en diferentes contextos
-                                y necesidades.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>Protección</strong>
-                            <p>
-                                Considera la capacidad del sistema para evitar
-                                situaciones que puedan provocar daños a personas,
-                                bienes o al entorno.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <h4>Importancia</h4>
-
-                    <p>
-                        La familia SQuaRE permite utilizar criterios organizados
-                        para especificar, medir y evaluar la calidad de los
-                        productos de software, facilitando una evaluación más
-                        completa del sistema.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </section>
+                </button>
 
 
-        <!-- MÉTRICAS DE LA CALIDAD -->
-        <section class="metricas-calidad">
+                <button
+                    class="filtro-herramienta"
+                    data-filtro="calidad">
 
-            <h2>Métricas de la calidad</h2>
+                    Calidad de código
 
-            <p>
-                Una métrica de software es una medida que permite obtener
-                información objetiva sobre algún aspecto del software o de
-                su desarrollo.
-            </p>
+                </button>
 
-            <h3>Por ejemplo:</h3>
-
-            <ul>
-                <li>Cantidad de errores encontrados.</li>
-                <li>Cantidad de errores corregidos.</li>
-                <li>Porcentaje de pruebas exitosas.</li>
-                <li>Cobertura de pruebas.</li>
-                <li>Tiempo promedio para corregir un defecto.</li>
-                <li>Cantidad de defectos por tamaño del software.</li>
-                <li>Tiempo de respuesta.</li>
-                <li>Disponibilidad del sistema.</li>
-            </ul>
-
-
-            <div class="ejemplo-metrica">
-
-                <h3>Ejemplo</h3>
-
-                <p>
-                    Supongamos que tenemos:
-                </p>
-
-                <ul>
-                    <li>100 casos de prueba.</li>
-                    <li>90 fueron exitosos.</li>
-                    <li>10 fallaron.</li>
-                </ul>
-
-                <p>
-                    Podemos calcular:
-                </p>
-
-                <div class="formula-metrica">
-
-                    <strong>
-                        Porcentaje de pruebas exitosas =
-                        90 / 100 × 100 = 90 %
-                    </strong>
-
-                </div>
-
-                <p>
-                    Esto nos permite tener una medida objetiva del estado
-                    de las pruebas.
-                </p>
 
             </div>
 
 
-            <p>
-                Las métricas son importantes porque permiten medir, comparar
-                y detectar problemas, en lugar de basarnos solamente en
-                opiniones.
-            </p>
 
-            <p>
-                La familia ISO/IEC 25000 contempla específicamente una
-                división dedicada a la medición de calidad, con modelos de
-                medición y definiciones de medidas de calidad.
-            </p>
+            <!-- ================= TARJETAS ================= -->
+
+
+            <div class="contenedor-herramientas">
+
+
+                <!-- ================= JIRA ================= -->
+
+
+                <article
+                    class="herramienta-card"
+                    data-categoria="bug-trackers">
+
+
+                    <div class="logo-herramienta">
+
+
+                        <img
+                            src="../img/logoJira.png"
+                            alt="Logo de Jira"
+                            class="logo-jira">
+
+
+                    </div>
+
+
+                    <h3>
+                        Jira
+                    </h3>
+
+
+                    <p>
+                        Permite registrar, asignar y hacer seguimiento
+                        de errores o tareas.
+                    </p>
+
+
+                    <p>
+                        Por ejemplo, un bug puede registrarse con:
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Descripción.
+                        </li>
+
+                        <li>
+                            Prioridad.
+                        </li>
+
+                        <li>
+                            Versión.
+                        </li>
+
+                        <li>
+                            Capturas.
+                        </li>
+
+                        <li>
+                            Estado.
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="https://www.atlassian.com/es/software/jira"
+                        target="_blank"
+                        class="boton-herramienta">
+
+                        Ver más
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- ================= GITHUB ISSUES ================= -->
+
+
+                <article
+                    class="herramienta-card"
+                    data-categoria="bug-trackers">
+
+
+                    <div class="logo-herramienta">
+
+
+                        <img
+                            src="../img/logoGithub.png"
+                            alt="Logo de GitHub">
+
+
+                    </div>
+
+
+                    <h3>
+                        GitHub Issues
+                    </h3>
+
+
+                    <p>
+                        Permite registrar y hacer seguimiento de:
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Errores.
+                        </li>
+
+                        <li>
+                            Tareas.
+                        </li>
+
+                        <li>
+                            Mejoras.
+                        </li>
+
+                        <li>
+                            Ideas.
+                        </li>
+
+                        <li>
+                            Solicitudes.
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        También permite organizar el trabajo mediante
+                        proyectos, etiquetas, responsables y otras
+                        características.
+                    </p>
+
+
+                    <a
+                        href="https://github.com/features/issues?locale=es-419"
+                        target="_blank"
+                        class="boton-herramienta">
+
+                        Ver más
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- ================= TESTRAIL ================= -->
+
+
+                <article
+                    class="herramienta-card"
+                    data-categoria="testing">
+
+
+                    <div class="logo-herramienta">
+
+
+                        <img
+                            src="../img/logoTestRail.png"
+                            alt="Logo de TestRail">
+
+
+                    </div>
+
+
+                    <h3>
+                        TestRail
+                    </h3>
+
+
+                    <p>
+                        Está orientado a la gestión de pruebas.
+                    </p>
+
+
+                    <p>
+                        Permite:
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Crear casos de prueba.
+                        </li>
+
+                        <li>
+                            Organizar suites.
+                        </li>
+
+                        <li>
+                            Ejecutar pruebas.
+                        </li>
+
+                        <li>
+                            Registrar resultados.
+                        </li>
+
+                        <li>
+                            Analizar defectos.
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="https://www.testrail.com/"
+                        target="_blank"
+                        class="boton-herramienta">
+
+                        Ver más
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- ================= SONARQUBE ================= -->
+
+
+                <article
+                    class="herramienta-card"
+                    data-categoria="calidad">
+
+
+                    <div class="logo-herramienta">
+
+
+                        <img
+                            src="../img/logoSonarqube.png"
+                            alt="Logo de SonarQube">
+
+
+                    </div>
+
+
+                    <h3>
+                        SonarQube
+                    </h3>
+
+
+                    <p>
+                        Analiza código y permite detectar aspectos como:
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Bugs.
+                        </li>
+
+                        <li>
+                            Vulnerabilidades.
+                        </li>
+
+                        <li>
+                            Code smells.
+                        </li>
+
+                        <li>
+                            Duplicaciones.
+                        </li>
+
+                        <li>
+                            Cobertura de pruebas.
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="https://www.sonarsource.com/es/products/sonarqube/"
+                        target="_blank"
+                        class="boton-herramienta">
+
+                        Ver más
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
 
         </section>
+
 
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <div id="footer"></div>
 
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="../js/script.js"></script>
+
 
 </body>
 

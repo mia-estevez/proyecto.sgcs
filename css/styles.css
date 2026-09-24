@@ -726,6 +726,294 @@ footer {
 }
 
 /* =========================================
+   IMÁGENES - MÉTRICAS DE CALIDAD
+========================================= */
+
+.contenido-metricas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto-metricas {
+    min-width: 0;
+}
+
+
+/* =========================
+   CONTENEDOR IMÁGENES
+========================= */
+
+.contenedor-metricas-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* =========================
+   FLIP CARD
+========================= */
+
+.flip-metrica {
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+
+.flip-metrica-interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.6s ease;
+
+    transform-style: preserve-3d;
+}
+
+
+.flip-metrica.activa .flip-metrica-interior {
+    transform: rotateY(180deg);
+}
+
+
+.flip-metrica-frente,
+.flip-metrica-dorso {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    background-color: #c3c987;
+
+    border: 1px solid #d88180;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.flip-metrica-dorso {
+    transform: rotateY(180deg);
+}
+
+
+.flip-metrica-frente img,
+.flip-metrica-dorso img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================
+   INDICACIÓN
+========================= */
+
+.indicacion-metrica {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    background-color: rgba(117, 66, 31, 0.9);
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================= IMÁGENES - MÉTRICAS DE CALIDAD ========================================= */
+
+.contenido-metricas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+
+/* ========================= TEXTO ========================= */
+
+.texto-metricas {
+    min-width: 0;
+}
+
+
+/* ========================= CONTENEDOR IMÁGENES ========================= */
+
+.contenedor-metricas-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* ========================= FLIP CARD ========================= */
+
+.flip-metrica {
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+
+.flip-metrica-interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.6s ease;
+
+    transform-style: preserve-3d;
+}
+
+
+.flip-metrica.activa .flip-metrica-interior {
+    transform: rotateY(180deg);
+}
+
+
+.flip-metrica-frente,
+.flip-metrica-dorso {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    background-color: #c3c987;
+
+    border: 1px solid #d88180;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.flip-metrica-dorso {
+    transform: rotateY(180deg);
+}
+
+
+.flip-metrica-frente img,
+.flip-metrica-dorso img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========================= INDICACIÓN ========================= */
+
+.indicacion-metrica {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    background-color: rgba(117, 66, 31, 0.9);
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ========================= IMAGEN NORMAL ========================= */
+
+.tarjeta-metrica {
+    width: 100%;
+    height: 300px;
+
+    background-color: #c3c987;
+
+    border: 1px solid #d88180;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tarjeta-metrica img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================
    PÁGINA - TÉCNICAS DE ASEGURAMIENTO
    ========================================= */
 
@@ -1495,6 +1783,31 @@ footer {
 /* =================TARJETAS OCULTAS POR FILTRO ================ */
 .herramienta-card.oculta {
     display: none;
+}
+
+/* =========================================
+   DIVISORES ENTRE SECCIONES
+========================================= */
+
+.pagina-tecnicas,
+.pagina-herramientas,
+.caracteristicas-calidad {
+    position: relative;
+}
+
+.pagina-tecnicas::before,
+.pagina-herramientas::before,
+.caracteristicas-calidad::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+    right: 65px;
+    height: 5px;
+
+    background-color: #d88180;
+
+    border-radius: 10px;
 }
 
 /* =========================================

@@ -163,27 +163,39 @@ function activarMenu() {
     const paginaActual =
         window.location.pathname;
 
+    const hashActual =
+        window.location.hash;
 
     let perteneceAGestionCalidad = false;
 
-
     enlacesMenu.forEach(function (enlace) {
 
+        const urlEnlace =
+            new URL(enlace.href);
+
         const rutaEnlace =
-            new URL(enlace.href).pathname;
+            urlEnlace.pathname;
+
+        const hashEnlace =
+            urlEnlace.hash;
 
 
-        if (rutaEnlace === paginaActual) {
+        // Comprobar página y sección
+
+        if (
+            rutaEnlace === paginaActual &&
+            hashEnlace === hashActual
+        ) {
 
             enlace.classList.add("pagina-activa");
 
 
-            // Comprobar si pertenece a Gestión de la calidad
+            // Si pertenece a Gestión de la calidad
 
             if (
-                rutaEnlace.includes("/paginas/calidad.html") ||
-                rutaEnlace.includes("/paginas/tecnicas-calidad.html") ||
-                rutaEnlace.includes("/paginas/herramientas-calidad.html")
+                hashEnlace === "#fundamentos" ||
+                hashEnlace === "#tecnicas" ||
+                hashEnlace === "#herramientas"
             ) {
 
                 perteneceAGestionCalidad = true;
@@ -199,7 +211,10 @@ function activarMenu() {
     // MARCAR GESTIÓN DE LA CALIDAD
     // =========================================
 
-    if (perteneceAGestionCalidad && botonSubmenu) {
+    if (
+        perteneceAGestionCalidad &&
+        botonSubmenu
+    ) {
 
         botonSubmenu.classList.add("pagina-activa");
 
@@ -324,6 +339,24 @@ botonesFiltro.forEach(function (boton) {
             }
 
         });
+
+    });
+
+});
+
+// =========================================
+// FLIP CARD - MÉTRICAS
+// =========================================
+
+const tarjetasMetrica =
+    document.querySelectorAll(".flip-metrica");
+
+
+tarjetasMetrica.forEach(function (tarjeta) {
+
+    tarjeta.addEventListener("click", function () {
+
+        tarjeta.classList.toggle("activa");
 
     });
 

@@ -1,12 +1,12 @@
 /* =========================================
    RESPONSIVE
-   ========================================= */
+========================================= */
 
 
 /* =========================================
    TABLETS
    Hasta 900px
-   ========================================= */
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -97,7 +97,7 @@
 /* =========================================
    CELULARES
    Hasta 600px
-   ========================================= */
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -478,13 +478,27 @@
 
     }
 
+
+    /* =========================
+       DIVISORES ENTRE SECCIONES
+       ========================= */
+
+    .pagina-tecnicas::before,
+    .pagina-herramientas::before,
+    .caracteristicas-calidad::before {
+
+        left: 20px;
+        right: 20px;
+
+    }
+
 }
 
 
 /* =========================================
    CELULARES MUY PEQUEÑOS
    Hasta 400px
-   ========================================= */
+========================================= */
 
 @media (max-width: 400px) {
 
@@ -559,11 +573,26 @@
 
     }
 
+
+    /* =========================
+       DIVISORES
+       ========================= */
+
+    .pagina-tecnicas::before,
+    .pagina-herramientas::before,
+    .caracteristicas-calidad::before {
+
+        left: 15px;
+        right: 15px;
+
+    }
+
 }
+
 
 /* =========================================
    RESPONSIVE - TÉCNICAS DE ASEGURAMIENTO
-   ========================================= */
+========================================= */
 
 
 /* TABLETS */
@@ -704,7 +733,10 @@
 
 }
 
-/* =============== RESPONSIVE CAJA NEGRA Y BLANCA ======================== */
+
+/* =========================================
+   RESPONSIVE CAJA NEGRA Y BLANCA
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -739,7 +771,9 @@
     .flip-card ul {
         font-size: 14px;
     }
+
 }
+
 
 @media (max-width: 600px) {
 
@@ -765,15 +799,15 @@
 
     .flip-card-dorso .imagen-tecnica img {
         max-width: 260px;
-
         max-height: 200px;
     }
 
 }
 
+
 /* =========================================
    RESPONSIVE - HERRAMIENTAS DE CALIDAD
-   ========================================= */
+========================================= */
 
 
 /* TABLETS */
@@ -784,10 +818,12 @@
         padding: 35px;
     }
 
+
     .filtros-herramientas {
         padding-left: 35px;
         padding-right: 35px;
     }
+
 
     .contenedor-herramientas {
         padding: 0 35px;
@@ -806,21 +842,26 @@
         padding-bottom: 20px;
     }
 
+
     .intro-herramientas {
         padding: 40px 20px 25px;
     }
+
 
     .intro-herramientas h1 {
         font-size: 30px;
     }
 
+
     .intro-herramientas h2 {
         font-size: 21px;
     }
 
+
     .intro-herramientas p {
         font-size: 15px;
     }
+
 
     .filtros-herramientas {
         padding: 5px 20px 25px;
@@ -828,11 +869,13 @@
         gap: 8px;
     }
 
+
     .filtro-herramienta {
         padding: 8px 13px;
 
         font-size: 13px;
     }
+
 
     .contenedor-herramientas {
         padding: 0 20px;
@@ -842,19 +885,23 @@
         gap: 20px;
     }
 
+
     .herramienta-card {
         min-height: 360px;
 
         padding: 18px;
     }
 
+
     .logo-herramienta {
         height: 90px;
     }
 
+
     .herramienta-card h3 {
         font-size: 19px;
     }
+
 
     .herramienta-card p,
     .herramienta-card ul {
@@ -873,15 +920,18 @@
         padding-right: 15px;
     }
 
+
     .filtros-herramientas {
         padding-left: 15px;
         padding-right: 15px;
     }
 
+
     .contenedor-herramientas {
         padding-left: 15px;
         padding-right: 15px;
     }
+
 
     .filtro-herramienta {
         font-size: 12px;
