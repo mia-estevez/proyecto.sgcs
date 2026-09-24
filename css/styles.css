@@ -13,6 +13,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 120px;
+
 }
 
 header,
@@ -35,13 +37,17 @@ header {
     width: 100%;
     height: 120px;
     background-color: #f4a6aa;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 65px;
     box-sizing: border-box;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
