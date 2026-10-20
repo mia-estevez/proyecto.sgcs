@@ -1980,3 +1980,233 @@ footer {
 
     line-height: 1.6;
 }
+
+
+/* ========================================
+   PROCESOS DEL DESARROLLO DEL SOFTWARE
+======================================== */
+
+.pagina-procesos {
+    width: 100%;
+    background-color: #FEEAC7;
+    color: #724319;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+/* TITULO PRINCIPAL */
+
+.encabezado-procesos {
+    padding: 35px 25px 10px;
+    text-align: center;
+}
+
+.encabezado-procesos h1 {
+    margin: 0;
+    color: #724319;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/* INTRODUCCION */
+
+.introduccion-sdlc {
+    padding: 10px 35px 20px;
+}
+
+.introduccion-sdlc h2,
+.importancia-sdlc h2 {
+    margin: 0 0 10px;
+    color: #724319;
+    font-size: 22px;
+}
+
+.introduccion-sdlc p,
+.importancia-sdlc p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ETAPAS DEL SDLC */
+
+.etapas-sdlc {
+    padding: 10px 35px 30px;
+}
+
+.etapas-sdlc > h2 {
+    margin: 0 0 25px;
+    color: #724319;
+    font-size: 27px;
+    text-align: center;
+}
+
+.contenedor-etapas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* TARJETAS */
+
+.tarjeta-etapa {
+    min-width: 0;
+    min-height: 145px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #CAD182;
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.tarjeta-etapa h3 {
+    margin: 0;
+    color: #29251F;
+    font-family: Georgia, serif;
+    font-size: clamp(18px, 2vw, 25px);
+    overflow-wrap: anywhere;
+}
+
+.flecha-etapa {
+    color: #D88180;
+    font-size: 38px;
+    line-height: 1;
+}
+
+/* ANIMACION AL ENTRAR EN PANTALLA */
+
+.tarjeta-etapa.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* BRILLO AL PASAR EL MOUSE */
+
+.tarjeta-etapa.visible:hover .tarjeta-etapa-frente,
+.tarjeta-etapa.visible:hover .tarjeta-etapa-dorso {
+    box-shadow: 0 8px 22px rgba(114, 67, 25, 0.25);
+    filter: brightness(1.06);
+}
+
+/* RESALTADO CON TECLADO */
+
+.tarjeta-etapa:focus-visible .tarjeta-etapa-frente,
+.tarjeta-etapa:focus-visible .tarjeta-etapa-dorso {
+    outline: 3px solid #D88180;
+    outline-offset: -3px;
+}
+
+
+/* IMPORTANCIA */
+
+.importancia-sdlc {
+    padding: 10px 35px 45px;
+    max-width: 850px;
+}
+
+.importancia-sdlc p {
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   FLIP CARDS - ETAPAS DEL SDLC
+======================================== */
+
+.tarjeta-etapa {
+    padding: 0;
+    background: transparent;
+    border: none;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+}
+
+.tarjeta-etapa-interior {
+    position: relative;
+    width: 100%;
+    min-height: 145px;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+    border-radius: 4px;
+}
+
+.tarjeta-etapa.girada .tarjeta-etapa-interior {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-etapa-frente,
+.tarjeta-etapa-dorso {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #CAD182;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.tarjeta-etapa-frente h3 {
+    font-size: clamp(18px, 2vw, 25px);
+    color: #29251F;
+    text-align: center;
+}
+
+.tarjeta-etapa-dorso {
+    transform: rotateY(180deg);
+    background-color: #F7B1B0;
+}
+
+.tarjeta-etapa-dorso h3 {
+    margin: 0;
+    color: #724319;
+    font-size: 18px;
+    text-align: center;
+}
+
+.tarjeta-etapa-dorso p {
+    margin: 0;
+    color: #493426;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.tarjeta-etapa-dorso .flecha-etapa {
+    font-size: 25px;
+}
+
+.tarjeta-etapa:focus-visible .tarjeta-etapa-interior {
+    outline: 3px solid #D88180;
+    outline-offset: 4px;
+}

@@ -1,44 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Procesos del Desarrollo del Software</title>
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
-    <title>Procesos de Desarrollo de Software</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <div id="navbar"></div>
+    <header id="navbar"></header>
 
+    <main class="pagina-procesos">
 
-    <!-- CONTENIDO -->
-    <main>
+        <!-- TITULO PRINCIPAL -->
+        <section class="encabezado-procesos">
+            <h1>PROCESOS DEL DESARROLLO DE SOFTWARE</h1>
+        </section>
 
-        <section class="pagina-construccion">
-
-            <h1>Página en construcción</h1>
+        <!-- INTRODUCCION AL SDLC -->
+        <section class="introduccion-sdlc">
+            <h2>¿Qué es el SDLC?</h2>
 
             <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
+                El SDLC es el conjunto de etapas que se siguen para desarrollar,
+                entregar y mantener un sistema de software.
             </p>
 
+            <p>
+                El ciclo de vida permite organizar el desarrollo y determinar
+                qué se debe hacer, cuándo hacerlo, quién participa, cómo se
+                valida el producto, cómo se controlan los cambios y cómo se
+                mantiene el software.
+            </p>
+        </section>
+
+        <!-- ETAPAS DEL SDLC -->
+        <section class="etapas-sdlc">
+            <h2>Etapas del SDLC</h2>
+
+            <div class="contenedor-etapas">
+
+                <!-- ETAPA 1: REQUISITOS -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Requisitos. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>REQUISITOS</h3>
+                            <span class="flecha-etapa">→</span>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>REQUISITOS</h3>
+                            <p>
+                                Se determinan las necesidades del sistema y
+                                lo que se espera que el software realice.
+                            </p>
+                            <span class="flecha-etapa">→</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- ETAPA 2: DISEÑO -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Diseño. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>DISEÑO</h3>
+                            <span class="flecha-etapa">→</span>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>DISEÑO</h3>
+                            <p>
+                                Se define cómo estará estructurado el sistema
+                                y cómo se llevará a cabo su construcción.
+                            </p>
+                            <span class="flecha-etapa">→</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- ETAPA 3: DESARROLLO -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Desarrollo. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>DESARROLLO</h3>
+                            <span class="flecha-etapa">↓</span>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>DESARROLLO</h3>
+                            <p>
+                                Se construye el software mediante la
+                                programación y se implementa el diseño definido.
+                            </p>
+                            <span class="flecha-etapa">↓</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- ETAPA 4: MANTENIMIENTO -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Mantenimiento. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>MANTENIMIENTO</h3>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>MANTENIMIENTO</h3>
+                            <p>
+                                Se realizan tareas posteriores para mantener,
+                                corregir y mejorar el software.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- ETAPA 5: DESPLIEGUE -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Despliegue. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>DESPLIEGUE</h3>
+                            <span class="flecha-etapa">←</span>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>DESPLIEGUE</h3>
+                            <p>
+                                El software se instala y se pone en
+                                funcionamiento para que los usuarios
+                                puedan utilizarlo.
+                            </p>
+                            <span class="flecha-etapa">←</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- ETAPA 6: PRUEBAS -->
+                <article
+                    class="tarjeta-etapa"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Etapa Pruebas. Mostrar información"
+                    aria-pressed="false">
+
+                    <div class="tarjeta-etapa-interior">
+
+                        <div class="tarjeta-etapa-frente">
+                            <h3>PRUEBAS</h3>
+                            <span class="flecha-etapa">←</span>
+                        </div>
+
+                        <div class="tarjeta-etapa-dorso">
+                            <h3>PRUEBAS</h3>
+                            <p>
+                                Se verifica que el software funcione como
+                                se espera y se detectan posibles fallos.
+                            </p>
+                            <span class="flecha-etapa">←</span>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- IMPORTANCIA DEL SDLC -->
+        <section class="importancia-sdlc">
+            <h2>¿Por qué es importante el SDLC?</h2>
+
+            <p>
+                El ciclo de vida permite organizar el desarrollo del software
+                y establecer qué hacer, cuándo hacerlo, quién participa,
+                cómo validar el producto y cómo controlar los cambios y
+                mantenerlo.
+            </p>
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
-    <div id="footer"></div>
+    <footer id="footer"></footer>
 
-
+    <!-- JAVASCRIPT -->
     <script src="../js/script.js"></script>
 
 </body>

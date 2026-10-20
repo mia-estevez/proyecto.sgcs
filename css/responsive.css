@@ -1006,3 +1006,170 @@
     }
 
 }
+
+
+/* ========================================
+   RESPONSIVE - PROCESOS DEL SOFTWARE
+======================================== */
+
+@media (max-width: 900px) {
+    .encabezado-procesos h1 {
+        font-size: 32px;
+    }
+
+    .contenedor-etapas {
+        gap: 18px;
+    }
+
+    .tarjeta-etapa {
+        min-height: 130px;
+    }
+
+    .tarjeta-etapa h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .encabezado-procesos {
+        padding: 28px 20px 15px;
+    }
+
+    .encabezado-procesos h1 {
+        font-size: 27px;
+        line-height: 1.25;
+    }
+
+    .introduccion-sdlc {
+        padding: 10px 20px 20px;
+    }
+
+    .introduccion-sdlc h2,
+    .importancia-sdlc h2 {
+        font-size: 20px;
+    }
+
+    .introduccion-sdlc p,
+    .importancia-sdlc p {
+        font-size: 14px;
+    }
+
+    .etapas-sdlc {
+        padding: 10px 20px 25px;
+    }
+
+    .etapas-sdlc > h2 {
+        font-size: 24px;
+    }
+
+    .contenedor-etapas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .tarjeta-etapa {
+        min-height: 110px;
+        padding: 18px 12px;
+    }
+
+    .tarjeta-etapa h3 {
+        font-size: 22px;
+    }
+
+    .importancia-sdlc {
+        padding: 10px 20px 35px;
+    }
+}
+
+/* RESPETAR LA PREFERENCIA DE MENOS ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-etapa {
+        transition: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .tarjeta-etapa-interior {
+        min-height: 130px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tarjeta-etapa-interior {
+        min-height: 110px;
+    }
+
+    .tarjeta-etapa-dorso {
+        padding: 12px;
+    }
+
+    .tarjeta-etapa-dorso p {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-etapa-interior {
+        transition: none;
+    }
+}
+
+
+
+/* ========================================
+   ORDEN DE LAS ETAPAS EN CELULARES
+======================================== */
+
+@media (max-width: 767px) {
+
+    .contenedor-etapas {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenedor-etapas .tarjeta-etapa {
+        order: 0;
+        width: 100%;
+    }
+
+    /* Orden del proceso en celular */
+    .contenedor-etapas .tarjeta-etapa:nth-child(1) {
+        order: 1;
+    }
+
+    .contenedor-etapas .tarjeta-etapa:nth-child(2) {
+        order: 2;
+    }
+
+    .contenedor-etapas .tarjeta-etapa:nth-child(3) {
+        order: 3;
+    }
+
+    .contenedor-etapas .tarjeta-etapa:nth-child(6) {
+        order: 4;
+    }
+
+    .contenedor-etapas .tarjeta-etapa:nth-child(5) {
+        order: 5;
+    }
+
+    .contenedor-etapas .tarjeta-etapa:nth-child(4) {
+        order: 6;
+    }
+
+    /* Todas las flechas apuntan hacia abajo */
+    .tarjeta-etapa .flecha-etapa {
+        font-size: 0;
+    }
+
+    .tarjeta-etapa .flecha-etapa::after {
+        content: "↓";
+        display: inline-block;
+        font-size: 38px;
+        line-height: 1;
+    }
+
+}

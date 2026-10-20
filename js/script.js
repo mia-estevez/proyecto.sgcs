@@ -446,3 +446,77 @@ nivelesPrueba.forEach(function (nivel) {
     });
 
 });
+
+
+
+/* =========================================
+   ANIMACIÓN Y FLIP DE LAS ETAPAS DEL SDLC
+========================================= */
+
+const etapasSDLC = document.querySelectorAll(".tarjeta-etapa");
+
+// ANIMACIÓN AL HACER SCROLL
+
+if ("IntersectionObserver" in window) {
+
+    const observadorEtapas = new IntersectionObserver(
+        function (entradas, observador) {
+
+            entradas.forEach(function (entrada) {
+
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add("visible");
+                    observador.unobserve(entrada.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.2
+        }
+    );
+
+    etapasSDLC.forEach(function (etapa) {
+        observadorEtapas.observe(etapa);
+    });
+
+} else {
+
+    etapasSDLC.forEach(function (etapa) {
+        etapa.classList.add("visible");
+    });
+
+}
+
+// GIRAR LAS TARJETAS AL HACER CLIC
+
+etapasSDLC.forEach(function (etapa) {
+
+    function girarTarjeta() {
+        const estaGirada = etapa.classList.toggle("girada");
+
+        etapa.setAttribute("aria-pressed", estaGirada);
+
+        etapa.setAttribute(
+            "aria-label",
+            estaGirada
+                ? "Ocultar información de la etapa"
+                : "Mostrar información de la etapa"
+        );
+    }
+
+    etapa.addEventListener("click", girarTarjeta);
+
+    // Permitir la interacción con Enter y la barra espaciadora
+    etapa.addEventListener("keydown", function (evento) {
+
+        if (evento.key === "Enter" || evento.key === " ") {
+            evento.preventDefault();
+            girarTarjeta();
+        }
+
+    });
+
+});
+
