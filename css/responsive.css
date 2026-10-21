@@ -91,6 +91,17 @@
         padding: 40px 35px;
     }
 
+    /* =========================
+       ETAPAS DE SDLC
+       ========================= */
+    .tarjeta-etapa h3 {
+        font-size: 16px;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+        text-align: center;
+        max-width: 100%;
+    }
+
 }
 
 
@@ -1008,10 +1019,12 @@
 }
 
 
+
 /* ========================================
    RESPONSIVE - PROCESOS DEL SOFTWARE
 ======================================== */
 
+/* TABLETS */
 @media (max-width: 900px) {
     .encabezado-procesos h1 {
         font-size: 32px;
@@ -1027,9 +1040,16 @@
 
     .tarjeta-etapa h3 {
         font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .tarjeta-etapa-interior {
+        min-height: 130px;
     }
 }
 
+/* CELULARES */
 @media (max-width: 767px) {
     .encabezado-procesos {
         padding: 28px 20px 15px;
@@ -1062,68 +1082,7 @@
         font-size: 24px;
     }
 
-    .contenedor-etapas {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 15px;
-    }
-
-    .tarjeta-etapa {
-        min-height: 110px;
-        padding: 18px 12px;
-    }
-
-    .tarjeta-etapa h3 {
-        font-size: 22px;
-    }
-
-    .importancia-sdlc {
-        padding: 10px 20px 35px;
-    }
-}
-
-/* RESPETAR LA PREFERENCIA DE MENOS ANIMACIONES */
-
-@media (prefers-reduced-motion: reduce) {
-    .tarjeta-etapa {
-        transition: none;
-        transform: none;
-    }
-}
-
-@media (max-width: 900px) {
-    .tarjeta-etapa-interior {
-        min-height: 130px;
-    }
-}
-
-@media (max-width: 767px) {
-    .tarjeta-etapa-interior {
-        min-height: 110px;
-    }
-
-    .tarjeta-etapa-dorso {
-        padding: 12px;
-    }
-
-    .tarjeta-etapa-dorso p {
-        font-size: 13px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .tarjeta-etapa-interior {
-        transition: none;
-    }
-}
-
-
-
-/* ========================================
-   ORDEN DE LAS ETAPAS EN CELULARES
-======================================== */
-
-@media (max-width: 767px) {
-
+    /* Organización de las tarjetas */
     .contenedor-etapas {
         display: flex;
         flex-direction: column;
@@ -1133,9 +1092,10 @@
     .contenedor-etapas .tarjeta-etapa {
         order: 0;
         width: 100%;
+        box-sizing: border-box;
     }
 
-    /* Orden del proceso en celular */
+    /* Orden de las etapas en celular */
     .contenedor-etapas .tarjeta-etapa:nth-child(1) {
         order: 1;
     }
@@ -1160,6 +1120,42 @@
         order: 6;
     }
 
+    /* Evitar que el contenido sobresalga al girar */
+    .tarjeta-etapa {
+        min-height: 110px;
+        padding: 0;
+    }
+
+    .tarjeta-etapa-interior {
+        min-height: 110px;
+    }
+
+    .tarjeta-etapa-frente,
+    .tarjeta-etapa-dorso {
+        box-sizing: border-box;
+        padding: 14px;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    /* Títulos de ambas caras */
+    .tarjeta-etapa h3 {
+        max-width: 100%;
+        margin: 0 0 8px;
+        font-size: 17px;
+        line-height: 1.25;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    /* Texto de la parte trasera */
+    .tarjeta-etapa-dorso p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
     /* Todas las flechas apuntan hacia abajo */
     .tarjeta-etapa .flecha-etapa {
         font-size: 0;
@@ -1172,4 +1168,73 @@
         line-height: 1;
     }
 
+    .importancia-sdlc {
+        padding: 10px 20px 35px;
+    }
+}
+
+/* CELULARES MUY PEQUEÑOS */
+@media (max-width: 400px) {
+    .tarjeta-etapa-frente,
+    .tarjeta-etapa-dorso {
+        padding: 10px;
+    }
+
+    .tarjeta-etapa h3 {
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .tarjeta-etapa-dorso p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+}
+
+/* RESPETAR LA PREFERENCIA DE MENOS ANIMACIONES */
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-etapa,
+    .tarjeta-etapa-interior {
+        transition: none;
+    }
+}
+
+
+/* RESPONSIVE - TARJETAS DE MODELOS */
+
+@media (max-width: 767px) {
+    .tarjetas-modelo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .tarjeta-modelo {
+        padding: 18px;
+    }
+
+    .tarjeta-uso {
+        padding: 18px;
+    }
+
+    .tarjeta-modelo h4,
+    .tarjeta-uso h4 {
+        font-size: 19px;
+    }
+}
+
+
+/* RESPONSIVE - NAVEGACIÓN ENTRE MODELOS */
+
+@media (max-width: 767px) {
+    .navegacion-modelos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .boton-modelo {
+        min-height: 44px;
+        padding: 9px;
+        font-size: 14px;
+    }
 }
