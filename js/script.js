@@ -520,7 +520,7 @@ etapasSDLC.forEach(function (etapa) {
 
 });
 
-
+//MOSTRAR SEGUN QUE APRIETES METODOLOGIAS
 document.querySelectorAll(".detalle-metodologias").forEach((seccion) => {
     const botones = seccion.querySelectorAll(".boton-agil");
     const tarjetas = seccion.querySelectorAll(".metodologia-card");
@@ -544,3 +544,78 @@ document.querySelectorAll(".detalle-metodologias").forEach((seccion) => {
     });
 });
 
+
+ // MOSTRAR EL MODELO SELECCIONADO
+document.querySelectorAll(".modelos-tradicionales").forEach((seccion) => {
+    const botones = seccion.querySelectorAll(".boton-modelo");
+    const modelos = seccion.querySelectorAll(".modelo-desarrollo");
+
+    botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+            const seleccionado = boton.dataset.modelo;
+
+            botones.forEach((otroBoton) => {
+                const activo = otroBoton === boton;
+                otroBoton.classList.toggle("activo", activo);
+                otroBoton.setAttribute("aria-pressed", String(activo));
+            });
+
+            modelos.forEach((modelo) => {
+                const mostrar = modelo.id === `modelo-${seleccionado}`;
+                modelo.hidden = !mostrar;
+                modelo.classList.toggle("activa", mostrar);
+            });
+        });
+    });
+});
+
+
+
+ // GRAFICOS DE MODELOS TRADICIONALES
+document.addEventListener("DOMContentLoaded", () => {
+    const visorModelo = document.querySelector("#visor-modelo");
+
+    if (!visorModelo) {
+        console.warn("No se encontró el visor de modelos.");
+        return;
+    }
+
+    const imagenAmpliada = visorModelo.querySelector("figure img");
+    const pieImagen = visorModelo.querySelector("figcaption");
+    const botonCerrar = visorModelo.querySelector(".cerrar-visor-modelo");
+
+    document.querySelectorAll(".lightbox-modelo").forEach((enlace) => {
+        enlace.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            evento.stopPropagation();
+
+            const imagen = enlace.querySelector("img");
+
+            imagenAmpliada.src = enlace.href;
+            imagenAmpliada.alt = imagen.alt;
+            pieImagen.textContent = enlace.dataset.pie || imagen.alt;
+            visorModelo.hidden = false;
+        });
+    });
+
+    function cerrarVisor() {
+        visorModelo.hidden = true;
+        imagenAmpliada.src = "";
+    }
+
+    botonCerrar.addEventListener("click", cerrarVisor);
+
+    visorModelo.addEventListener("click", (evento) => {
+        if (evento.target === visorModelo) {
+            cerrarVisor();
+        }
+    });
+
+    document.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape" && !visorModelo.hidden) {
+            cerrarVisor();
+        }
+    });
+
+    console.log("Lightbox de modelos inicializado correctamente.");
+});

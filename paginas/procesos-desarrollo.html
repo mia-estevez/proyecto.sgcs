@@ -152,14 +152,23 @@
                     </p>
                 </div>
 
+                
                 <nav class="navegacion-modelos" aria-label="Navegación entre modelos">
-                    <a href="#modelo-cascada" class="boton-modelo activo">Cascada</a>
-                    <a href="#modelo-v" class="boton-modelo">Modelo en V</a>
-                    <a href="#modelo-iterativo" class="boton-modelo">Iterativo</a>
-                    <a href="#modelo-incremental" class="boton-modelo">Incremental</a>
+                    <button type="button" class="boton-modelo activo"
+                        data-modelo="cascada" aria-pressed="true">Cascada</button>
+
+                    <button type="button" class="boton-modelo"
+                        data-modelo="v" aria-pressed="false">Modelo en V</button>
+
+                    <button type="button" class="boton-modelo"
+                        data-modelo="iterativo" aria-pressed="false">Iterativo</button>
+
+                    <button type="button" class="boton-modelo"
+                        data-modelo="incremental" aria-pressed="false">Incremental</button>
                 </nav>
 
-                <article class="modelo-desarrollo modelo-cascada" id="modelo-cascada">
+
+                <article class="modelo-desarrollo modelo-cascada activa" id="modelo-cascada">
                     <div class="titulo-modelo">
                         <span class="icono-modelo"><i class="fa-solid fa-layer-group"></i></span>
                         <h2>Modelo en Cascada</h2>
@@ -202,16 +211,21 @@
                                 </p>
                             </div>
                         </div>
+                        
                         <div class="imagen-modelo">
-                            <img src="../img/grafico-cascada.png"
-                                alt="Diagrama de las etapas del modelo en Cascada">
+                            <a href="../img/grafico-cascada.png"
+                            class="lightbox-modelo"
+                            data-pie="Diagrama de las etapas del modelo en Cascada"
+                            aria-label="Ampliar diagrama del modelo en Cascada">
+                                <img src="../img/grafico-cascada.png"
+                                    alt="Diagrama de las etapas del modelo en Cascada">
+                            </a>
                         </div>
+
                     </div>
                 </article>
 
-                <div class="separador-modelos"></div>
-
-                <article class="modelo-desarrollo" id="modelo-v">
+                <article class="modelo-desarrollo" id="modelo-v" hidden>
                     <div class="titulo-modelo">
                         <span class="icono-modelo"><i class="fa-solid fa-v"></i></span>
                         <h2>Modelo en V</h2>
@@ -250,15 +264,21 @@
                                 </p>
                             </div>
                         </div>
+                        
                         <div class="imagen-modelo">
-                            <img src="../img/grafico-v.png" alt="Diagrama del modelo en V">
+                            <a href="../img/grafico-v.png"
+                            class="lightbox-modelo"
+                            data-pie="Diagrama del modelo en V"
+                            aria-label="Ampliar diagrama del modelo en V">
+                                <img src="../img/grafico-v.png"
+                                    alt="Diagrama del modelo en V">
+                            </a>
                         </div>
+
                     </div>
                 </article>
 
-                <div class="separador-modelos"></div>
-
-                <article class="modelo-desarrollo" id="modelo-iterativo">
+                <article class="modelo-desarrollo" id="modelo-iterativo" hidden>
                     <div class="titulo-modelo">
                         <span class="icono-modelo"><i class="fa-solid fa-rotate"></i></span>
                         <h2>Modelo Iterativo</h2>
@@ -298,16 +318,21 @@
                                 </p>
                             </div>
                         </div>
+                        
                         <div class="imagen-modelo">
-                            <img src="../img/grafico-iterativo.png"
-                                alt="Diagrama del ciclo del modelo Iterativo">
+                            <a href="../img/grafico-iterativo.png"
+                            class="lightbox-modelo"
+                            data-pie="Diagrama del ciclo del modelo Iterativo"
+                            aria-label="Ampliar diagrama del modelo Iterativo">
+                                <img src="../img/grafico-iterativo.png"
+                                    alt="Diagrama del ciclo del modelo Iterativo">
+                            </a>
                         </div>
+
                     </div>
                 </article>
 
-                <div class="separador-modelos"></div>
-
-                <article class="modelo-desarrollo" id="modelo-incremental">
+                <article class="modelo-desarrollo" id="modelo-incremental" hidden>
                     <div class="titulo-modelo">
                         <span class="icono-modelo"><i class="fa-solid fa-chart-simple"></i></span>
                         <h2>Modelo Incremental</h2>
@@ -346,15 +371,22 @@
                                 </p>
                             </div>
                         </div>
+                        
                         <div class="imagen-modelo">
-                            <img src="../img/grafico-incremental.png"
-                                alt="Diagrama de los incrementos del software">
+                            <a href="../img/grafico-incremental.png"
+                            class="lightbox-modelo"
+                            data-pie="Diagrama de los incrementos del software"
+                            aria-label="Ampliar diagrama del modelo Incremental">
+                                <img src="../img/grafico-incremental.png"
+                                    alt="Diagrama de los incrementos del software">
+                            </a>
                         </div>
+
                     </div>
                 </article>
             </section>
 
-                    <!-- SEPARADOR ENTRE MODELOS Y METODOLOGÍAS ÁGILES -->
+            <!-- SEPARADOR ENTRE MODELOS Y METODOLOGÍAS ÁGILES -->
             <div class="separador-modelos separador-agiles"></div>
 
             <!-- METODOLOGÍAS ÁGILES -->
@@ -637,36 +669,12 @@
                             <div class="ciclo-xp">
                                 <h4>Bucle de XP</h4>
 
-                                <div class="diagrama-xp">
-                                    <div class="etapa-xp etapa-planificar">
-                                        <strong>Planificar</strong>
-                                        <span>(historias y tareas)</span>
-                                    </div>
-
-                                    <div class="etapa-xp etapa-disenar">
-                                        <strong>Diseñar</strong>
-                                        <span>(solución simple)</span>
-                                    </div>
-
-                                    <div class="etapa-xp etapa-desarrollar">
-                                        <strong>Desarrollar</strong>
-                                        <span>(en pareja)</span>
-                                    </div>
-
-                                    <div class="etapa-xp etapa-probar">
-                                        <strong>Probar</strong>
-                                        <span>(TDD)</span>
-                                    </div>
-
-                                    <div class="etapa-xp etapa-liberar">
-                                        <strong>Liberar</strong>
-                                        <span>(versión)</span>
-                                    </div>
-
-                                    <div class="centro-xp">
-                                        <strong>XP</strong>
-                                        <span>(ciclo continuo)</span>
-                                    </div>
+                                
+                                <div class="diagrama-xp imagen-bucle-xp">
+                                    <img
+                                        src="../img/metodologias-xp.png"
+                                        alt="Bucle de XP: Planificar, Diseñar, Desarrollar, Probar y Liberar, conectados en un ciclo continuo."
+                                    >
                                 </div>
 
                                 <p class="descripcion-ciclo-xp">
@@ -853,6 +861,17 @@
 
         <!-- JAVASCRIPT -->
         <script src="../js/script.js"></script>
+
+        <!-- LIGHTBOX -->
+        <div class="visor-modelo" id="visor-modelo" hidden>
+            <button type="button" class="cerrar-visor-modelo"
+                    aria-label="Cerrar imagen">&times;</button>
+
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </div>
 
     </body>
 </html>

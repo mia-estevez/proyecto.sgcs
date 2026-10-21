@@ -2095,7 +2095,7 @@ footer {
 }
 
 .flecha-etapa {
-    color: #D88180;
+    color: #724319;
     font-size: 38px;
     line-height: 1;
 }
@@ -2228,6 +2228,98 @@ footer {
     box-sizing: border-box;
 }
 
+
+.lightbox-modelo {
+    display: block;
+    cursor: zoom-in;
+}
+
+.lightbox-modelo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.visor-modelo[hidden] {
+    display: none;
+}
+
+.visor-modelo {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px 20px;
+    box-sizing: border-box;
+    background-color: rgba(254, 234, 199, 0.35) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+.visor-modelo figure {
+    margin: 0;
+    max-width: 1000px;
+    max-height: 100%;
+    text-align: center;
+}
+
+.visor-modelo figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    margin: auto;
+    box-shadow: 0 8px 30px rgba(41, 37, 31, 0.2);
+}
+
+.visor-modelo figcaption {
+    margin-top: 12px;
+    color: #724319;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cerrar-visor-modelo {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #724319;
+    color: #FEEAC7;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.cerrar-visor-modelo:hover {
+    background: #D88180;
+    color: #724319;
+}
+
+.volver-visor-modelo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 16px;
+    border: 2px solid #724319;
+    border-radius: 20px;
+    background: #FEEAC7;
+    color: #724319;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.volver-visor-modelo:hover {
+    background: #CAD182;
+}
+
 .encabezado-modelos {
     max-width: 1000px;
     margin-bottom: 40px;
@@ -2247,6 +2339,10 @@ footer {
 
 .modelo-desarrollo {
     padding: 20px 0;
+}
+
+.modelo-desarrollo[hidden] {
+    display: none;
 }
 
 .modelo-desarrollo h3 {
@@ -2302,9 +2398,9 @@ footer {
 /* SEPARADOR ENTRE MODELOS */
 
 .separador-modelos {
-    width: 100%;
+    width: calc(100% - 50px);
     height: 5px;
-    margin: 30px 0;
+    margin: 25px auto;
     background-color: #D88180;
     border-radius: 10px;
 }
@@ -2586,9 +2682,9 @@ h6 {
 }
 
 .separador-agiles {
-    width: 100%;
+    width: calc(100% - 50px);
     height: 5px;
-    margin: 20px 0 35px;
+    margin: 25px auto;
     background-color: #D88180;
     border-radius: 10px;
 }
@@ -3166,6 +3262,7 @@ h6 {
     font-size: 19px;
 }
 
+
 .diagrama-xp {
     position: relative;
     display: grid;
@@ -3175,6 +3272,17 @@ h6 {
     justify-items: center;
     gap: 10px;
     padding: 10px 0;
+}
+
+/* Flechas del recorrido XP */
+.diagrama-xp::before,
+.diagrama-xp::after {
+    position: absolute;
+    z-index: 2;
+    color: #D88180;
+    font-size: 25px;
+    font-weight: bold;
+    pointer-events: none;
 }
 
 .etapa-xp {
@@ -3444,4 +3552,24 @@ h6 {
     .boton-principios {
         transition: none;
     }
+}
+
+/* IMAGEN DEL BUCLE DE XP */
+.imagen-bucle-xp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.imagen-bucle-xp img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
 }
