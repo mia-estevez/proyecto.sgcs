@@ -520,3 +520,27 @@ etapasSDLC.forEach(function (etapa) {
 
 });
 
+
+document.querySelectorAll(".detalle-metodologias").forEach((seccion) => {
+    const botones = seccion.querySelectorAll(".boton-agil");
+    const tarjetas = seccion.querySelectorAll(".metodologia-card");
+
+    botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+            const seleccionada = boton.dataset.metodologia;
+
+            botones.forEach((otroBoton) => {
+                const activo = otroBoton === boton;
+                otroBoton.classList.toggle("activo", activo);
+                otroBoton.setAttribute("aria-pressed", String(activo));
+            });
+
+            tarjetas.forEach((tarjeta) => {
+                const mostrar = tarjeta.id === `metodologia-${seleccionada}`;
+                tarjeta.hidden = !mostrar;
+                tarjeta.classList.toggle("activa", mostrar);
+            });
+        });
+    });
+});
+

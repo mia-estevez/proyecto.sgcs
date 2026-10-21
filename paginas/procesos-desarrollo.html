@@ -1,542 +1,858 @@
-
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Procesos del Desarrollo del Software</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
 
-    <title>Procesos del Desarrollo del Software</title>
+    <body>
+        <header id="navbar"></header>
 
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+        <main class="pagina-procesos">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+            <section class="encabezado-procesos">
+                <h1>PROCESOS DEL DESARROLLO DE SOFTWARE</h1>
+            </section>
 
-<body>
-
-    <!-- NAVBAR -->
-    <header id="navbar"></header>
-
-    <main class="pagina-procesos">
-
-        <!-- TITULO PRINCIPAL -->
-        <section class="encabezado-procesos">
-            <h1>PROCESOS DEL DESARROLLO DE SOFTWARE</h1>
-        </section>
-
-        <!-- INTRODUCCION AL SDLC -->
-        <section class="introduccion-sdlc">
-            <h2>¿Qué es el SDLC?</h2>
-
-            <p>
-                El SDLC es el conjunto de etapas que se siguen para desarrollar,
-                entregar y mantener un sistema de software.
-            </p>
-
-            <p>
-                El ciclo de vida permite organizar el desarrollo y determinar
-                qué se debe hacer, cuándo hacerlo, quién participa, cómo se
-                valida el producto, cómo se controlan los cambios y cómo se
-                mantiene el software.
-            </p>
-        </section>
-
-        <!-- ETAPAS DEL SDLC -->
-        <section class="etapas-sdlc">
-            <h2>Etapas del SDLC</h2>
-
-            <div class="contenedor-etapas">
-
-                <!-- ETAPA 1: REQUISITOS -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Requisitos. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>REQUISITOS</h3>
-                            <span class="flecha-etapa">→</span>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>REQUISITOS</h3>
-                            <p>
-                                Se determinan las necesidades del sistema y
-                                lo que se espera que el software realice.
-                            </p>
-                            <span class="flecha-etapa">→</span>
-                        </div>
-
-                    </div>
-                </article>
-
-                <!-- ETAPA 2: DISEÑO -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Diseño. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>DISEÑO</h3>
-                            <span class="flecha-etapa">→</span>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>DISEÑO</h3>
-                            <p>
-                                Se define cómo estará estructurado el sistema
-                                y cómo se llevará a cabo su construcción.
-                            </p>
-                            <span class="flecha-etapa">→</span>
-                        </div>
-
-                    </div>
-                </article>
-
-                <!-- ETAPA 3: DESARROLLO -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Desarrollo. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>DESARROLLO</h3>
-                            <span class="flecha-etapa">↓</span>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>DESARROLLO</h3>
-                            <p>
-                                Se construye el software mediante la
-                                programación y se implementa el diseño definido.
-                            </p>
-                            <span class="flecha-etapa">↓</span>
-                        </div>
-
-                    </div>
-                </article>
-
-                <!-- ETAPA 4: MANTENIMIENTO -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Mantenimiento. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>MANTENIMIENTO</h3>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>MANTENIMIENTO</h3>
-                            <p>
-                                Se realizan tareas posteriores para mantener,
-                                corregir y mejorar el software.
-                            </p>
-                        </div>
-
-                    </div>
-                </article>
-
-                <!-- ETAPA 5: DESPLIEGUE -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Despliegue. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>DESPLIEGUE</h3>
-                            <span class="flecha-etapa">←</span>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>DESPLIEGUE</h3>
-                            <p>
-                                El software se instala y se pone en
-                                funcionamiento para que los usuarios
-                                puedan utilizarlo.
-                            </p>
-                            <span class="flecha-etapa">←</span>
-                        </div>
-
-                    </div>
-                </article>
-
-                <!-- ETAPA 6: PRUEBAS -->
-                <article
-                    class="tarjeta-etapa"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Etapa Pruebas. Mostrar información"
-                    aria-pressed="false">
-
-                    <div class="tarjeta-etapa-interior">
-
-                        <div class="tarjeta-etapa-frente">
-                            <h3>PRUEBAS</h3>
-                            <span class="flecha-etapa">←</span>
-                        </div>
-
-                        <div class="tarjeta-etapa-dorso">
-                            <h3>PRUEBAS</h3>
-                            <p>
-                                Se verifica que el software funcione como
-                                se espera y se detectan posibles fallos.
-                            </p>
-                            <span class="flecha-etapa">←</span>
-                        </div>
-
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- IMPORTANCIA DEL SDLC -->
-        <section class="importancia-sdlc">
-            <h2>¿Por qué es importante el SDLC?</h2>
-
-            <p>
-                El ciclo de vida permite organizar el desarrollo del software
-                y establecer qué hacer, cuándo hacerlo, quién participa,
-                cómo validar el producto y cómo controlar los cambios y
-                mantenerlo.
-            </p>
-        </section>
-
-        </section>
-
-        <!-- SEPARADOR ENTRE SDLC Y MODELOS TRADICIONALES -->
-        <div class="separador-modelos separador-sdlc-modelos"></div>
-
-        
-        <!-- MODELOS TRADICIONALES -->
-        <section class="modelos-tradicionales" id="modelos-tradicionales">
-
-            <div class="encabezado-modelos">
-                <h1>MODELOS TRADICIONALES</h1>
+            <section class="introduccion-sdlc">
+                <h2>¿Qué es el SDLC?</h2>
                 <p>
-                    Los modelos tradicionales utilizan procesos de desarrollo más
-                    estructurados y planificados. Entre ellos se encuentran Cascada,
-                    Modelo en V, Iterativo e Incremental.
+                    El SDLC es el conjunto de etapas que se siguen para desarrollar,
+                    entregar y mantener un sistema de software.
                 </p>
-            </div>
+                <p>
+                    El ciclo de vida permite organizar el desarrollo y determinar
+                    qué se debe hacer, cuándo hacerlo, quién participa, cómo se
+                    valida el producto, cómo se controlan los cambios y cómo se
+                    mantiene el software.
+                </p>
+            </section>
 
-            
-            <!-- NAVEGACIÓN ENTRE MODELOS -->
-            <nav class="navegacion-modelos" aria-label="Navegación entre modelos">
+            <!-- ETAPAS DEL SDLC -->
+            <section class="etapas-sdlc">
+                <h2>Etapas del SDLC</h2>
 
-                <a href="#modelo-cascada" class="boton-modelo activo">
-                    Cascada
-                </a>
+                <div class="contenedor-etapas">
 
-                <a href="#modelo-v" class="boton-modelo">
-                    Modelo en V
-                </a>
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Requisitos. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>REQUISITOS</h3>
+                                <span class="flecha-etapa">→</span>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>REQUISITOS</h3>
+                                <p>Se determinan las necesidades del sistema y lo que se espera que el software realice.</p>
+                                <span class="flecha-etapa">→</span>
+                            </div>
+                        </div>
+                    </article>
 
-                <a href="#modelo-iterativo" class="boton-modelo">
-                    Iterativo
-                </a>
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Diseño. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>DISEÑO</h3>
+                                <span class="flecha-etapa">→</span>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>DISEÑO</h3>
+                                <p>Se define cómo estará estructurado el sistema y cómo se llevará a cabo su construcción.</p>
+                                <span class="flecha-etapa">→</span>
+                            </div>
+                        </div>
+                    </article>
 
-                <a href="#modelo-incremental" class="boton-modelo">
-                    Incremental
-                </a>
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Desarrollo. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>DESARROLLO</h3>
+                                <span class="flecha-etapa">↓</span>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>DESARROLLO</h3>
+                                <p>Se construye el software mediante la programación y se implementa el diseño definido.</p>
+                                <span class="flecha-etapa">↓</span>
+                            </div>
+                        </div>
+                    </article>
 
-            </nav>
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Mantenimiento. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>MANTENIMIENTO</h3>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>MANTENIMIENTO</h3>
+                                <p>Se realizan tareas posteriores para mantener, corregir y mejorar el software.</p>
+                            </div>
+                        </div>
+                    </article>
 
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Despliegue. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>DESPLIEGUE</h3>
+                                <span class="flecha-etapa">←</span>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>DESPLIEGUE</h3>
+                                <p>El software se instala y se pone en funcionamiento para que los usuarios puedan utilizarlo.</p>
+                                <span class="flecha-etapa">←</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- MODELO EN CASCADA -->
-            <article class="modelo-desarrollo modelo-cascada" id="modelo-cascada">
+                    <article class="tarjeta-etapa" tabindex="0" role="button"
+                        aria-label="Etapa Pruebas. Mostrar información" aria-pressed="false">
+                        <div class="tarjeta-etapa-interior">
+                            <div class="tarjeta-etapa-frente">
+                                <h3>PRUEBAS</h3>
+                                <span class="flecha-etapa">←</span>
+                            </div>
+                            <div class="tarjeta-etapa-dorso">
+                                <h3>PRUEBAS</h3>
+                                <p>Se verifica que el software funcione como se espera y se detectan posibles fallos.</p>
+                                <span class="flecha-etapa">←</span>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="titulo-modelo">
-                    <span class="icono-modelo">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </span>
-                    <h2>Modelo en Cascada</h2>
+                </div>
+            </section>
+
+            <section class="importancia-sdlc">
+                <h2>¿Por qué es importante el SDLC?</h2>
+                <p>
+                    El ciclo de vida permite organizar el desarrollo del software
+                    y establecer qué hacer, cuándo hacerlo, quién participa,
+                    cómo validar el producto y cómo controlar los cambios y mantenerlo.
+                </p>
+            </section>
+
+            <div class="separador-modelos separador-sdlc-modelos"></div>
+
+            <!-- MODELOS TRADICIONALES -->
+            <section class="modelos-tradicionales" id="modelos-tradicionales">
+                <div class="encabezado-modelos">
+                    <h1>MODELOS TRADICIONALES</h1>
+                    <p>
+                        Los modelos tradicionales utilizan procesos de desarrollo más
+                        estructurados y planificados. Entre ellos se encuentran Cascada,
+                        Modelo en V, Iterativo e Incremental.
+                    </p>
                 </div>
 
-                <div class="contenido-modelo">
+                <nav class="navegacion-modelos" aria-label="Navegación entre modelos">
+                    <a href="#modelo-cascada" class="boton-modelo activo">Cascada</a>
+                    <a href="#modelo-v" class="boton-modelo">Modelo en V</a>
+                    <a href="#modelo-iterativo" class="boton-modelo">Iterativo</a>
+                    <a href="#modelo-incremental" class="boton-modelo">Incremental</a>
+                </nav>
 
-                    <div class="texto-modelo">
-                        <h4>¿QUÉ ES?</h4>
-                        <p>
-                            El modelo Waterfall o Cascada es un modelo lineal y
-                            secuencial. Una etapa se completa antes de comenzar
-                            la siguiente.
-                        </p>
+                <article class="modelo-desarrollo modelo-cascada" id="modelo-cascada">
+                    <div class="titulo-modelo">
+                        <span class="icono-modelo"><i class="fa-solid fa-layer-group"></i></span>
+                        <h2>Modelo en Cascada</h2>
+                    </div>
+                    <div class="contenido-modelo">
+                        <div class="texto-modelo">
+                            <h4>¿QUÉ ES?</h4>
+                            <p>
+                                El modelo Waterfall o Cascada es un modelo lineal y
+                                secuencial. Una etapa se completa antes de comenzar la siguiente.
+                            </p>
 
-                        <div class="tarjetas-modelo">
-
-                            <div class="tarjeta-modelo tarjeta-ventajas">
-                                <h4>
-                                    <i class="fa-solid fa-circle-check"></i>
-                                    Ventajas
-                                </h4>
-                                <ul>
-                                    <li>Fácil de comprender.</li>
-                                    <li>Estructura clara.</li>
-                                    <li>Facilita la documentación.</li>
-                                    <li>Permite planificar desde el principio.</li>
-                                    <li>Funciona bien con requisitos estables.</li>
-                                </ul>
+                            <div class="tarjetas-modelo">
+                                <div class="tarjeta-modelo tarjeta-ventajas">
+                                    <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
+                                    <ul>
+                                        <li>Fácil de comprender.</li>
+                                        <li>Estructura clara.</li>
+                                        <li>Facilita la documentación.</li>
+                                        <li>Permite planificar desde el principio.</li>
+                                        <li>Funciona bien con requisitos estables.</li>
+                                    </ul>
+                                </div>
+                                <div class="tarjeta-modelo tarjeta-desventajas">
+                                    <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
+                                    <ul>
+                                        <li>Poco flexible.</li>
+                                        <li>Los cambios pueden ser costosos.</li>
+                                        <li>Los resultados funcionales llegan tarde.</li>
+                                        <li>Los problemas pueden descubrirse cuando el desarrollo está avanzado.</li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <div class="tarjeta-modelo tarjeta-desventajas">
-                                <h4>
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    Desventajas
-                                </h4>
-                                <ul>
-                                    <li>Poco flexible.</li>
-                                    <li>Los cambios pueden ser costosos.</li>
-                                    <li>Los resultados funcionales llegan tarde.</li>
-                                    <li>Los problemas pueden descubrirse cuando el desarrollo está avanzado.</li>
-                                </ul>
+                            <div class="tarjeta-uso">
+                                <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
+                                <p>
+                                    Cuando los requisitos están bien definidos, no se esperan
+                                    grandes cambios y se necesita una planificación estructurada.
+                                </p>
                             </div>
+                        </div>
+                        <div class="imagen-modelo">
+                            <img src="../img/grafico-cascada.png"
+                                alt="Diagrama de las etapas del modelo en Cascada">
+                        </div>
+                    </div>
+                </article>
 
+                <div class="separador-modelos"></div>
+
+                <article class="modelo-desarrollo" id="modelo-v">
+                    <div class="titulo-modelo">
+                        <span class="icono-modelo"><i class="fa-solid fa-v"></i></span>
+                        <h2>Modelo en V</h2>
+                    </div>
+                    <div class="contenido-modelo">
+                        <div class="texto-modelo">
+                            <h4>¿QUÉ ES?</h4>
+                            <p>
+                                El Modelo en V es una evolución del modelo en Cascada que da
+                                especial importancia a la verificación y validación. Cada etapa
+                                de desarrollo tiene una actividad de prueba asociada.
+                            </p>
+                            <div class="tarjetas-modelo">
+                                <div class="tarjeta-modelo tarjeta-ventajas">
+                                    <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
+                                    <ul>
+                                        <li>Da mucha importancia a las pruebas.</li>
+                                        <li>Permite planificar la validación desde el inicio.</li>
+                                        <li>Facilita detectar errores antes de llegar al producto final.</li>
+                                    </ul>
+                                </div>
+                                <div class="tarjeta-modelo tarjeta-desventajas">
+                                    <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
+                                    <ul>
+                                        <li>Sigue siendo bastante rígido.</li>
+                                        <li>Los cambios son costosos.</li>
+                                        <li>No es ideal si los requisitos cambian constantemente.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tarjeta-uso">
+                                <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
+                                <p>
+                                    Cuando los requisitos están bien definidos y es fundamental
+                                    verificar y validar cada etapa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="imagen-modelo">
+                            <img src="../img/grafico-v.png" alt="Diagrama del modelo en V">
+                        </div>
+                    </div>
+                </article>
+
+                <div class="separador-modelos"></div>
+
+                <article class="modelo-desarrollo" id="modelo-iterativo">
+                    <div class="titulo-modelo">
+                        <span class="icono-modelo"><i class="fa-solid fa-rotate"></i></span>
+                        <h2>Modelo Iterativo</h2>
+                    </div>
+                    <div class="contenido-modelo">
+                        <div class="texto-modelo">
+                            <h4>¿QUÉ ES?</h4>
+                            <p>
+                                El modelo iterativo desarrolla el software mediante ciclos o
+                                iteraciones. En cada ciclo se revisa el resultado para identificar
+                                oportunidades de mejora.
+                            </p>
+                            <div class="tarjetas-modelo">
+                                <div class="tarjeta-modelo tarjeta-ventajas">
+                                    <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
+                                    <ul>
+                                        <li>Permite obtener retroalimentación en cada ciclo.</li>
+                                        <li>El producto mejora progresivamente.</li>
+                                        <li>Ayuda a detectar y corregir errores temprano.</li>
+                                        <li>Se adapta mejor a cambios.</li>
+                                    </ul>
+                                </div>
+                                <div class="tarjeta-modelo tarjeta-desventajas">
+                                    <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
+                                    <ul>
+                                        <li>Puede requerir mayor planificación y control.</li>
+                                        <li>Puede aumentar la complejidad de la gestión.</li>
+                                        <li>Si no se gestiona bien, puede extender el tiempo de desarrollo.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tarjeta-uso">
+                                <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
+                                <p>
+                                    Cuando los requisitos pueden cambiar, se necesita flexibilidad
+                                    y se desea mejorar el producto de forma progresiva.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="imagen-modelo">
+                            <img src="../img/grafico-iterativo.png"
+                                alt="Diagrama del ciclo del modelo Iterativo">
+                        </div>
+                    </div>
+                </article>
+
+                <div class="separador-modelos"></div>
+
+                <article class="modelo-desarrollo" id="modelo-incremental">
+                    <div class="titulo-modelo">
+                        <span class="icono-modelo"><i class="fa-solid fa-chart-simple"></i></span>
+                        <h2>Modelo Incremental</h2>
+                    </div>
+                    <div class="contenido-modelo">
+                        <div class="texto-modelo">
+                            <h4>¿QUÉ ES?</h4>
+                            <p>
+                                El modelo incremental divide el producto en partes o incrementos.
+                                Cada incremento agrega nuevas funcionalidades y se entrega de forma progresiva.
+                            </p>
+                            <div class="tarjetas-modelo">
+                                <div class="tarjeta-modelo tarjeta-ventajas">
+                                    <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
+                                    <ul>
+                                        <li>Permite entregar funcionalidades progresivamente.</li>
+                                        <li>Proporciona valor temprano al usuario.</li>
+                                        <li>Facilita la adaptación a cambios.</li>
+                                        <li>Permite priorizar funcionalidades importantes.</li>
+                                    </ul>
+                                </div>
+                                <div class="tarjeta-modelo tarjeta-desventajas">
+                                    <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
+                                    <ul>
+                                        <li>Requiere una buena planificación de los incrementos.</li>
+                                        <li>La integración puede presentar problemas.</li>
+                                        <li>Necesita mantener una arquitectura coherente.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tarjeta-uso">
+                                <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
+                                <p>
+                                    Cuando se necesita entregar valor de manera temprana, los
+                                    requisitos pueden evolucionar y se busca un desarrollo flexible.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="imagen-modelo">
+                            <img src="../img/grafico-incremental.png"
+                                alt="Diagrama de los incrementos del software">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+                    <!-- SEPARADOR ENTRE MODELOS Y METODOLOGÍAS ÁGILES -->
+            <div class="separador-modelos separador-agiles"></div>
+
+            <!-- METODOLOGÍAS ÁGILES -->
+            <section class="metodologias-agiles" id="metodologias-agiles">
+
+                <div class="encabezado-agiles">
+                    <h1>METODOLOGÍAS ÁGILES</h1>
+                    <p>
+                        Las metodologías ágiles son un conjunto de prácticas y principios
+                        que buscan adaptarse a los cambios, entregar valor de forma temprana
+                        y mejorar continuamente el producto.
+                    </p>
+                </div>
+
+                <!-- INTRODUCCIÓN A LA AGILIDAD -->
+                <article class="introduccion-agilidad">
+                    <div class="encabezado-introduccion-agilidad">
+                        <span class="icono-agilidad">
+                            <i class="fa-solid fa-leaf"></i>
+                        </span>
+                        <h2>¿Qué es la agilidad?</h2>
+                    </div>
+
+                    <p>
+                        La agilidad busca adaptarse mejor a entornos donde los requisitos cambian rápidamente y donde es necesario entregar valor de manera temprana y continua.
+                    </p>
+                </article>
+
+                <!-- MANIFIESTO ÁGIL -->
+                <section class="manifiesto-agil">
+                    <h2>Manifiesto Ágil</h2>
+
+                    <div class="contenido-manifiesto">
+
+                        <!-- COLUMNA IZQUIERDA: LOS 4 VALORES -->
+                        <div class="columna-valores-agiles">
+                            <h3 class="subtitulo-manifiesto">Los 4 valores</h3>
+
+                            <div class="lista-valores-agiles">
+
+                                <article class="valor-agil">
+                                    <span class="icono-valor">
+                                        <i class="fa-solid fa-people-group"></i>
+                                    </span>
+                                    <p>
+                                        <strong>1. Individuos e interacciones</strong><br>
+                                        sobre procesos y herramientas.
+                                    </p>
+                                </article>
+
+                                <article class="valor-agil">
+                                    <span class="icono-valor">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </span>
+                                    <p>
+                                        <strong>2. Software funcionando</strong><br>
+                                        sobre documentación exhaustiva.
+                                    </p>
+                                </article>
+
+                                <article class="valor-agil">
+                                    <span class="icono-valor">
+                                        <i class="fa-solid fa-handshake"></i>
+                                    </span>
+                                    <p>
+                                        <strong>3. Colaboración con el cliente</strong><br>
+                                        sobre negociación contractual.
+                                    </p>
+                                </article>
+
+                                <article class="valor-agil">
+                                    <span class="icono-valor">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </span>
+                                    <p>
+                                        <strong>4. Respuesta al cambio</strong><br>
+                                        sobre seguimiento de un plan.
+                                    </p>
+                                </article>
+
+                            </div>
                         </div>
 
-                        <div class="tarjeta-uso">
+                        <!-- COLUMNA DERECHA: FLIP CARD -->
+                        <div class="contenedor-flip-principios">
+                            <div class="flip-principios">
+
+                                <!-- FRENTE -->
+                                <div class="cara-principios frente-principios">
+                                    <span class="icono-principios">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </span>
+
+                                    <h3>Los 12 principios</h3>
+
+                                    <p>
+                                        El Manifiesto Ágil propone 12 principios que orientan
+                                        el trabajo en equipo, la toma de decisiones y la entrega
+                                        de valor. Estos ayudan a mejorar continuamente el
+                                        desarrollo del software.
+                                    </p>
+
+                                    <button type="button" class="boton-principios"
+                                        onclick="this.closest('.flip-principios').classList.add('girada')">
+                                        Ver los 12 principios
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+
+                                <!-- REVERSO -->
+                                <div class="cara-principios reverso-principios">
+                                    <h3>Los 12 principios del Manifiesto Ágil</h3>
+
+                                    <ol>
+                                        <li>Satisfacer al cliente mediante entregas tempranas y continuas de software valioso.</li>
+                                        <li>Aceptar cambios en los requisitos, incluso en etapas avanzadas del desarrollo.</li>
+                                        <li>Entregar software funcional frecuentemente, en períodos cortos.</li>
+                                        <li>Trabajar diariamente en conjunto, desarrolladores y responsables del negocio.</li>
+                                        <li>Construir proyectos alrededor de personas motivadas y brindarles apoyo y confianza.</li>
+                                        <li>Priorizar la comunicación directa para transmitir información de forma eficaz.</li>
+                                        <li>Medir el progreso principalmente mediante software funcionando.</li>
+                                        <li>Mantener un ritmo de trabajo sostenible de manera constante.</li>
+                                        <li>Prestar atención continua a la excelencia técnica y al buen diseño.</li>
+                                        <li>Buscar la simplicidad y reducir el trabajo innecesario.</li>
+                                        <li>Permitir que los equipos se organicen y encuentren las mejores soluciones.</li>
+                                        <li>Reflexionar periódicamente para ajustar y mejorar la forma de trabajar.</li>
+                                    </ol>
+
+                                    <button type="button" class="boton-principios boton-volver"
+                                        onclick="this.closest('.flip-principios').classList.remove('girada')">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                        Volver
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                
+                <!-- DESCRIPCIÓN DE LAS METODOLOGÍAS -->
+                <section class="detalle-metodologias">
+
+                    <h2>Metodologías</h2>
+
+                    <nav class="navegacion-agiles" aria-label="Navegación entre metodologías ágiles">
+                        <button type="button" class="boton-agil activo" data-metodologia="scrum" aria-pressed="true">Scrum</button>
+                        <button type="button" class="boton-agil" data-metodologia="kanban" aria-pressed="false">Kanban</button>
+                        <button type="button" class="boton-agil" data-metodologia="xp" aria-pressed="false">XP</button>
+                    </nav>
+
+                    <article class="metodologia-card activa" id="metodologia-scrum">
+
+                        <div class="cabecera-metodologia">
+                            <span class="icono-metodologia"><i class="fa-solid fa-people-group"></i></span>
+                            <div>
+                                <h3>Scrum</h3>
+                                <p>Scrum es un marco de trabajo ágil basado en la iteración y la colaboración. El trabajo se organiza en períodos cortos llamados Sprints.</p>
+                            </div>
+                        </div>
+
+                        <div class="datos-scrum">
+                            <article class="dato-scrum">
+                                <h4><i class="fa-solid fa-users"></i> Roles</h4>
+                                <ul>
+                                    <li>Product Owner</li>
+                                    <li>Scrum Master</li>
+                                    <li>Desarrolladores</li>
+                                </ul>
+                            </article>
+
+                            <article class="dato-scrum">
+                                <h4><i class="fa-solid fa-box-open"></i> Artefactos</h4>
+                                <ul>
+                                    <li>Product Backlog</li>
+                                    <li>Sprint Backlog</li>
+                                    <li>Incremento</li>
+                                </ul>
+                            </article>
+
+                            <article class="dato-scrum">
+                                <h4><i class="fa-solid fa-calendar-check"></i> Eventos</h4>
+                                <ul>
+                                    <li>Planificación del Sprint</li>
+                                    <li>Scrum Daily</li>
+                                    <li>Revisión del Sprint</li>
+                                    <li>Retrospectiva</li>
+                                </ul>
+                            </article>
+                        </div>
+                        
+                        <div class="ciclo-scrum-resumen">
                             <h4>
-                                <i class="fa-regular fa-calendar-check"></i>
-                                ¿Cuándo utilizarlo?
+                                <i class="fa-solid fa-rotate"></i>
+                                Ciclo de Scrum
                             </h4>
-                            <p>
-                                Cuando los requisitos están bien definidos, no se
-                                esperan grandes cambios y se necesita una planificación
-                                estructurada.
-                            </p>
+
+                            <div class="diagrama-ciclo-scrum">
+                                <div class="etapa-scrum">Product<br>Backlog</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Sprint<br>Backlog</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Sprint</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Scrum<br>Daily</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Incremento</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Review +<br>Retrospectiva</div>
+                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
+
+                                <div class="etapa-scrum">Nuevo<br>Sprint</div>
+                            </div>
                         </div>
+
+
+                    </article>
+
+                    <article class="metodologia-card" id="metodologia-kanban" hidden>
+
+                        <div class="cabecera-metodologia">
+                            <span class="icono-metodologia"><i class="fa-solid fa-table-columns"></i></span>
+                            <div>
+                                <h3>Kanban</h3>
+                                <p>Kanban permite visualizar el flujo de trabajo mediante un tablero. Las tareas avanzan entre columnas según su estado, lo que ayuda a detectar bloqueos y mejorar el proceso.</p>
+                            </div>
+                        </div>
+
+                        <div class="resumen-kanban">
+                            <div class="columna-kanban">
+                                <h4>Por hacer</h4>
+                                <div class="tarea-kanban tarea-verde">Preparar tareas</div>
+                                <div class="tarea-kanban tarea-rosa">Revisar requisitos</div>
+                                <div class="tarea-kanban tarea-amarilla">Organizar trabajo</div>
+                            </div>
+
+                            <div class="columna-kanban">
+                                <h4>En curso</h4>
+                                <div class="tarea-kanban tarea-rosa">Desarrollar funcionalidad</div>
+                                <div class="tarea-kanban tarea-amarilla">Probar cambios</div>
+                            </div>
+
+                            <div class="columna-kanban">
+                                <h4>Terminado</h4>
+                                <div class="tarea-kanban tarea-amarilla">Documentación lista</div>
+                                <div class="tarea-kanban tarea-verde">Tarea completada</div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    
+                    <article class="metodologia-card" id="metodologia-xp" hidden>
+
+                        <div class="cabecera-metodologia">
+                            <span class="icono-metodologia">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                            <div>
+                                <h3>XP (Extreme Programming)</h3>
+                                <p>
+                                    XP es una metodología ágil que se centra en la colaboración,
+                                    la simplicidad y la retroalimentación continua. Su objetivo
+                                    es entregar software de alta calidad mediante prácticas
+                                    técnicas y una comunicación constante con el cliente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contenido-xp">
+
+                            <!-- CICLO DE XP -->
+                            <div class="ciclo-xp">
+                                <h4>Bucle de XP</h4>
+
+                                <div class="diagrama-xp">
+                                    <div class="etapa-xp etapa-planificar">
+                                        <strong>Planificar</strong>
+                                        <span>(historias y tareas)</span>
+                                    </div>
+
+                                    <div class="etapa-xp etapa-disenar">
+                                        <strong>Diseñar</strong>
+                                        <span>(solución simple)</span>
+                                    </div>
+
+                                    <div class="etapa-xp etapa-desarrollar">
+                                        <strong>Desarrollar</strong>
+                                        <span>(en pareja)</span>
+                                    </div>
+
+                                    <div class="etapa-xp etapa-probar">
+                                        <strong>Probar</strong>
+                                        <span>(TDD)</span>
+                                    </div>
+
+                                    <div class="etapa-xp etapa-liberar">
+                                        <strong>Liberar</strong>
+                                        <span>(versión)</span>
+                                    </div>
+
+                                    <div class="centro-xp">
+                                        <strong>XP</strong>
+                                        <span>(ciclo continuo)</span>
+                                    </div>
+                                </div>
+
+                                <p class="descripcion-ciclo-xp">
+                                    El ciclo de XP se repite de forma continua, con entregas
+                                    frecuentes y mejoras constantes.
+                                </p>
+                            </div>
+
+                            <!-- VALORES Y PRÁCTICAS -->
+                            <div class="detalles-xp">
+
+                                <h4>Valores de XP</h4>
+
+                                <div class="valores-xp">
+                                    <article class="valor-xp">
+                                        <h5>Comunicación</h5>
+                                        <p>Escucha activa y colaboración constante.</p>
+                                    </article>
+
+                                    <article class="valor-xp">
+                                        <h5>Simplicidad</h5>
+                                        <p>Soluciones simples y efectivas.</p>
+                                    </article>
+
+                                    <article class="valor-xp">
+                                        <h5>Respeto</h5>
+                                        <p>Valoración del equipo y del cliente.</p>
+                                    </article>
+
+                                    <article class="valor-xp">
+                                        <h5>Coraje</h5>
+                                        <p>Asumir cambios y mejoras.</p>
+                                    </article>
+                                </div>
+
+                                <div class="practicas-principales-xp">
+                                    <h4>
+                                        <i class="fa-solid fa-clipboard-check"></i>
+                                        Prácticas principales
+                                    </h4>
+                                    <ul>
+                                        <li>Programación en pareja.</li>
+                                        <li>Desarrollo guiado por pruebas (TDD).</li>
+                                        <li>Integración continua.</li>
+                                        <li>Refactorización.</li>
+                                        <li>Pequeños lanzamientos.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+            </section>
+
+            <!-- SEPARADOR ENTRE METODOLOGÍAS E ILUSTRACIONES -->
+            <div class="separador-modelos separador-agiles"></div>
+
+            <!-- ILUSTRACIONES DE METODOLOGÍAS ÁGILES -->
+            <section class="ilustraciones-agiles" id="ilustraciones-agiles">
+
+                <div class="encabezado-agiles">
+                    <h1>ILUSTRACIONES DE METODOLOGÍAS ÁGILES</h1>
+                    <p>
+                        Estos gráficos muestran de forma visual el funcionamiento de Scrum,
+                        Kanban y XP. Podés abrir cada imagen para verla con más detalle.
+                    </p>
+                </div>
+
+                <!-- CICLO DE SCRUM -->
+                <article class="ilustracion-principal">
+
+                    <div class="titulo-ilustracion">
+                        <span class="icono-ilustracion">
+                            <i class="fa-solid fa-rotate"></i>
+                        </span>
+                        <h2>Ciclo de Scrum</h2>
                     </div>
 
-                    <div class="imagen-modelo">
-                        <img src="../img/grafico-cascada.png"
-                            alt="Diagrama de las etapas del modelo en Cascada">
-                    </div>
+                    <a href="../img/ciclo-Scrum.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="enlace-imagen-agil"
+                        aria-label="Ampliar el ciclo de Scrum">
 
-                </div>
-            </article>
+                        <img src="../img/ciclo-Scrum.png"
+                            alt="Diagrama del ciclo de Scrum">
+                    </a>
 
-            <div class="separador-modelos"></div>
+                    <p class="descripcion-ilustracion">
+                        El ciclo de Scrum permite iterar, inspeccionar y adaptar el producto
+                        de forma continua durante cada Sprint.
+                    </p>
 
-            <!-- MODELO EN V -->
-            <article class="modelo-desarrollo" id="modelo-v">
+                </article>
 
-                <div class="titulo-modelo">
-                    <span class="icono-modelo">
-                        <i class="fa-solid fa-v"></i>
-                    </span>
-                    <h2>Modelo en V</h2>
-                </div>
+                <!-- KANBAN Y XP -->
+                <div class="rejilla-ilustraciones">
 
-                <div class="contenido-modelo">
+                    <!-- TABLERO KANBAN -->
+                    <article class="ilustracion-secundaria">
 
-                    <div class="texto-modelo">
-                        <h4>¿QUÉ ES?</h4>
-                        <p>
-                            El Modelo en V es una evolución del modelo en Cascada
-                            que da especial importancia a la verificación y validación.
-                            Cada etapa de desarrollo tiene una actividad de prueba asociada.
+                        <div class="titulo-ilustracion">
+                            <span class="icono-ilustracion">
+                                <i class="fa-solid fa-table-columns"></i>
+                            </span>
+                            <h2>Tablero Kanban</h2>
+                        </div>
+
+                        <a href="../img/tablero-kanban.png"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-imagen-agil"
+                            aria-label="Ampliar el tablero Kanban">
+
+                            <img src="../img/tablero-kanban.png"
+                                alt="Diagrama de un tablero Kanban">
+                        </a>
+
+                        <p class="descripcion-ilustracion">
+                            El tablero Kanban visualiza el flujo de trabajo y ayuda a
+                            identificar las tareas pendientes, en curso y terminadas.
                         </p>
 
-                        <div class="tarjetas-modelo">
+                    </article>
 
-                            <div class="tarjeta-modelo tarjeta-ventajas">
-                                <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
-                                <ul>
-                                    <li>Da mucha importancia a las pruebas.</li>
-                                    <li>Permite planificar la validación desde el inicio.</li>
-                                    <li>Facilita detectar errores antes de llegar al producto final.</li>
-                                </ul>
-                            </div>
+                    <!-- BUCLE XP -->
+                    <article class="ilustracion-secundaria">
 
-                            <div class="tarjeta-modelo tarjeta-desventajas">
-                                <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
-                                <ul>
-                                    <li>Sigue siendo bastante rígido.</li>
-                                    <li>Los cambios son costosos.</li>
-                                    <li>No es ideal si los requisitos cambian constantemente.</li>
-                                </ul>
-                            </div>
-
+                        <div class="titulo-ilustracion">
+                            <span class="icono-ilustracion">
+                                <i class="fa-solid fa-gears"></i>
+                            </span>
+                            <h2>Bucle de XP</h2>
                         </div>
 
-                        <div class="tarjeta-uso">
-                            <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
-                            <p>
-                                Cuando los requisitos están bien definidos y es
-                                fundamental verificar y validar cada etapa.
-                            </p>
-                        </div>
-                    </div>
+                        <a href="../img/bucle-xp.png"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-imagen-agil"
+                            aria-label="Ampliar el bucle de XP">
 
-                    <div class="imagen-modelo">
-                        <img src="../img/grafico-v.png"
-                            alt="Diagrama del modelo en V">
-                    </div>
+                            <img src="../img/bucle-xp.png"
+                                alt="Diagrama del ciclo de Extreme Programming">
+                        </a>
 
-                </div>
-            </article>
-
-            <div class="separador-modelos"></div>
-
-            <!-- MODELO ITERATIVO -->
-            <article class="modelo-desarrollo" id="modelo-iterativo">
-
-                <div class="titulo-modelo">
-                    <span class="icono-modelo">
-                        <i class="fa-solid fa-rotate"></i>
-                    </span>
-                    <h2>Modelo Iterativo</h2>
-                </div>
-
-                <div class="contenido-modelo">
-
-                    <div class="texto-modelo">
-                        <h4>¿QUÉ ES?</h4>
-                        <p>
-                            El modelo iterativo desarrolla el software mediante ciclos
-                            o iteraciones. En cada ciclo se revisa el resultado para
-                            identificar oportunidades de mejora.
+                        <p class="descripcion-ilustracion">
+                            XP se basa en la retroalimentación continua, la programación
+                            en parejas y las pruebas frecuentes para mejorar el software.
                         </p>
 
-                        <div class="tarjetas-modelo">
-
-                            <div class="tarjeta-modelo tarjeta-ventajas">
-                                <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
-                                <ul>
-                                    <li>Permite obtener retroalimentación en cada ciclo.</li>
-                                    <li>El producto mejora progresivamente.</li>
-                                    <li>Ayuda a detectar y corregir errores temprano.</li>
-                                    <li>Se adapta mejor a cambios.</li>
-                                </ul>
-                            </div>
-
-                            <div class="tarjeta-modelo tarjeta-desventajas">
-                                <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
-                                <ul>
-                                    <li>Puede requerir mayor planificación y control.</li>
-                                    <li>Puede aumentar la complejidad de la gestión.</li>
-                                    <li>Si no se gestiona bien, puede extender el tiempo de desarrollo.</li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                        <div class="tarjeta-uso">
-                            <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
-                            <p>
-                                Cuando los requisitos pueden cambiar, se necesita
-                                flexibilidad y se desea mejorar el producto de
-                                forma progresiva.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="imagen-modelo">
-                        <img src="../img/grafico-iterativo.png"
-                            alt="Diagrama del ciclo del modelo Iterativo">
-                    </div>
+                    </article>
 
                 </div>
-            </article>
 
-            <div class="separador-modelos"></div>
+                <!-- RESUMEN FINAL -->
+                <aside class="resumen-agiles">
 
-            <!-- MODELO INCREMENTAL -->
-            <article class="modelo-desarrollo" id="modelo-incremental">
-
-                <div class="titulo-modelo">
-                    <span class="icono-modelo">
-                        <i class="fa-solid fa-chart-simple"></i>
+                    <span class="icono-resumen-agil">
+                        <i class="fa-solid fa-lightbulb"></i>
                     </span>
-                    <h2>Modelo Incremental</h2>
-                </div>
 
-                <div class="contenido-modelo">
-
-                    <div class="texto-modelo">
-                        <h4>¿QUÉ ES?</h4>
+                    <div>
+                        <h2>En resumen</h2>
                         <p>
-                            El modelo incremental divide el producto en partes o
-                            incrementos. Cada incremento agrega nuevas funcionalidades
-                            y se entrega de forma progresiva.
+                            Cada metodología tiene su propio enfoque, pero todas buscan
+                            mejorar la calidad del software, adaptarse a las necesidades
+                            y fomentar la colaboración del equipo.
                         </p>
-
-                        <div class="tarjetas-modelo">
-
-                            <div class="tarjeta-modelo tarjeta-ventajas">
-                                <h4><i class="fa-solid fa-circle-check"></i> Ventajas</h4>
-                                <ul>
-                                    <li>Permite entregar funcionalidades progresivamente.</li>
-                                    <li>Proporciona valor temprano al usuario.</li>
-                                    <li>Facilita la adaptación a cambios.</li>
-                                    <li>Permite priorizar funcionalidades importantes.</li>
-                                </ul>
-                            </div>
-
-                            <div class="tarjeta-modelo tarjeta-desventajas">
-                                <h4><i class="fa-solid fa-circle-xmark"></i> Desventajas</h4>
-                                <ul>
-                                    <li>Requiere una buena planificación de los incrementos.</li>
-                                    <li>La integración puede presentar problemas.</li>
-                                    <li>Necesita mantener una arquitectura coherente.</li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                        <div class="tarjeta-uso">
-                            <h4><i class="fa-regular fa-calendar-check"></i> ¿Cuándo utilizarlo?</h4>
-                            <p>
-                                Cuando se necesita entregar valor de manera temprana,
-                                los requisitos pueden evolucionar y se busca un
-                                desarrollo flexible y progresivo.
-                            </p>
-                        </div>
                     </div>
 
-                    <div class="imagen-modelo">
-                        <img src="../img/grafico-incremental.png"
-                            alt="Diagrama de los incrementos del software">
-                    </div>
+                </aside>
 
-                </div>
-            </article>
+            </section>
 
-        </section>
+        </main>
 
+        <!-- FOOTER -->
+        <footer id="footer"></footer>
 
-    </main>
+        <!-- JAVASCRIPT -->
+        <script src="../js/script.js"></script>
 
-    <!-- FOOTER -->
-    <footer id="footer"></footer>
-
-    <!-- JAVASCRIPT -->
-    <script src="../js/script.js"></script>
-
-</body>
-
+    </body>
 </html>

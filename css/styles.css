@@ -2570,3 +2570,878 @@ h6 {
 .encabezado-modelos h2 {
     font-family: 'Roboto Slab', serif;
 }
+
+
+/* =========================================
+   METODOLOGÍAS ÁGILES
+========================================= */
+
+.metodologias-agiles,
+.ilustraciones-agiles {
+    width: 100%;
+    padding: 50px 65px;
+    background-color: #FEEAC7;
+    color: #724319;
+    box-sizing: border-box;
+}
+
+.separador-agiles {
+    width: 100%;
+    height: 5px;
+    margin: 20px 0 35px;
+    background-color: #D88180;
+    border-radius: 10px;
+}
+
+/* ENCABEZADO */
+
+.encabezado-agiles {
+    max-width: 100%;
+    margin: 0 0 14px;
+    text-align: left;
+}
+
+.encabezado-agiles h2,
+.ilustraciones-agiles h2 {
+    margin: 0 0 18px;
+    color: #724319;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.encabezado-agiles p,
+.introduccion-agilidad p {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* INTRODUCCIÓN */
+
+.introduccion-agilidad {
+    max-width: 1000px;
+    margin: 0 auto 35px;
+    padding: 25px;
+    background-color: #cad182;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.encabezado-introduccion-agilidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.introduccion-agilidad h2 {
+    margin: 0;
+    color: #724319;
+    font-size: 23px;
+}
+
+.icono-agilidad {
+    color: #724319;
+    font-size: 28px;
+    margin: 0;
+}
+
+
+/* MANIFIESTO ÁGIL */
+.manifiesto-agil {
+    margin: 35px 0;
+    padding: 30px;
+    background-color: #f5ddb4;
+    border: 1px solid #E8C5B4;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.manifiesto-agil > h2 {
+    margin: 0 0 18px;
+    color: #724319;
+}
+
+.subtitulo-manifiesto {
+    margin: 0 0 12px;
+    color: #724319;
+    font-size: 23px;
+}
+
+.contenido-manifiesto {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: stretch;
+    gap: 22px;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.columna-valores-agiles {
+    min-width: 0;
+}
+
+.lista-valores-agiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.valor-agil {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 72px;
+    padding: 14px 18px;
+    background-color: #cad182;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.icono-valor {
+    flex-shrink: 0;
+    color: #A85F5D;
+    font-size: 23px;
+}
+
+.valor-agil p {
+    margin: 0;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FLIP CARD DE LOS 12 PRINCIPIOS */
+.contenedor-flip-principios {
+.contenedor-flip-principios {
+    min-width: 0;
+    perspective: 1000px;
+}
+
+.flip-principios {
+    display: grid;
+    width: 100%;
+    height: 290px;
+    transform-style: preserve-3d;
+    transition: height 0.5s ease, transform 0.7s ease;
+}
+
+.flip-principios.girada {
+    height: 620px;
+    transform: rotateY(180deg);
+}}
+
+.flip-principios.girada {
+    transform: rotateY(180deg);
+}
+
+.cara-principios {
+    grid-area: 1 / 1;
+    min-width: 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.frente-principios {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F7B1B0;
+}
+
+.icono-principios {
+    display: block;
+    margin-bottom: 10px;
+    color: #724319;
+    font-size: 25px;
+}
+
+.cara-principios h3 {
+    margin: 0 0 12px;
+    color: #724319;
+    font-size: 22px;
+}
+
+.cara-principios p {
+    margin: 0;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.boton-principios {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: #724319;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.boton-principios:hover {
+    background-color: #8B592F;
+    transform: translateY(-2px);
+}
+
+.reverso-principios {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f8bfbe;
+    overflow-y: auto;
+    transform: rotateY(180deg);
+}
+
+.reverso-principios ol {
+    margin: 0 0 18px;
+    padding-left: 24px;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.reverso-principios li {
+    margin-bottom: 10px;
+}
+
+.boton-volver {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+
+/* PRINCIPIOS ÁGILES */
+
+.principios-agiles {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #E8EBC5;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.icono-principios {
+    color: #724319;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.principios-agiles h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.principios-agiles p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.boton-principios {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: #724319;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.boton-principios:hover {
+    background-color: #8B592F;
+    transform: translateY(-2px);
+}
+
+.principios-agiles-completos {
+    margin-top: 20px;
+    padding: 20px 25px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.principios-agiles-completos ol {
+    padding-left: 22px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.principios-agiles-completos li {
+    margin-bottom: 10px;
+}
+
+/* NAVEGACIÓN ENTRE METODOLOGÍAS */
+
+.detalle-metodologias {
+    margin-top: 45px;
+}
+
+.navegacion-agiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.boton-agil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border: 1px solid #D88180;
+    border-radius: 25px;
+    background-color: #F7B1B0;
+    color: #724319;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.boton-agil.activo {
+    background-color: #724319;
+    border-color: #724319;
+    color: #FFFFFF;
+}
+
+.boton-agil:hover {
+    background-color: #E9959A;
+    transform: translateY(-2px);
+}
+
+.boton-agil.activo:hover {
+    background-color: #8B592F;
+}
+
+/* TARJETAS DE METODOLOGÍAS */
+
+.metodologia-card {
+    margin: 30px 0;
+    padding: 28px;
+    background-color: #f5ddb4;
+    border: 1px solid #E8C5B4;
+    border-radius: 12px;
+    box-sizing: border-box;
+    scroll-margin-top: 140px;
+}
+
+.metodologia-card[hidden] {
+    display: none;
+}
+
+.metodologia-card.activa {
+    animation: aparecer-metodologia 0.25s ease;
+}
+
+@keyframes aparecer-metodologia {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cabecera-metodologia {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.icono-metodologia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #F7B1B0;
+    color: #724319;
+    font-size: 25px;
+}
+
+.cabecera-metodologia h3 {
+    margin: 0 0 5px;
+    color: #724319;
+    font-size: 28px;
+}
+
+.cabecera-metodologia p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+.metodologia-card > p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* SCRUM */
+
+.datos-scrum {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.dato-scrum {
+    padding: 18px;
+    background-color: #CAD182;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.dato-scrum h4 {
+    margin: 0 0 8px;
+    color: #724319;
+    font-size: 16px;
+}
+
+.dato-scrum p {
+    margin: 0;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+.ciclo-scrum-resumen {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #CAD182;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.ciclo-scrum-resumen h4 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 18px;
+    color: #724319;
+    font-size: 19px;
+}
+
+.diagrama-ciclo-scrum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.etapa-scrum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 58px;
+    padding: 8px;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+    background-color: #FEEAC7;
+    color: #724319;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.35;
+    box-sizing: border-box;
+}
+
+.flecha-scrum {
+    flex-shrink: 0;
+    color: #D88180;
+    font-size: 16px;
+}
+
+
+/* KANBAN */
+
+.resumen-kanban {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.columna-kanban {
+    min-width: 0;
+    padding: 15px;
+    background-color: #FCE4E6;
+    border-radius: 10px;
+}
+
+.columna-kanban h4 {
+    margin: 0 0 15px;
+    color: #724319;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tarea-kanban {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 7px;
+    color: #493426;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.tarea-kanban:last-child {
+    margin-bottom: 0;
+}
+
+.tarea-verde {
+    background-color: #E4E9B3;
+}
+
+.tarea-rosa {
+    background-color: #F7B1B0;
+}
+
+.tarea-amarilla {
+    background-color: #FEEAC7;
+}
+
+
+/* EXTREME PROGRAMMING - XP */
+
+.contenido-xp {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.ciclo-xp {
+    min-width: 0;
+    padding: 20px;
+    background-color: #FEEAC7;
+    border: 1px solid #E8C5B4;
+    border-radius: 10px;
+}
+
+.ciclo-xp > h4,
+.detalles-xp > h4 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 15px;
+    color: #724319;
+    font-size: 19px;
+}
+
+.diagrama-xp {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(65px, auto));
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.etapa-xp {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 58px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: #CAD182;
+    color: #724319;
+    text-align: center;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.etapa-xp span {
+    font-size: 11px;
+}
+
+.etapa-planificar {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.etapa-disenar {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.etapa-desarrollar {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.etapa-probar {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.etapa-liberar {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.centro-xp {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 1;
+    align-self: center;
+    border: 7px solid #A9B17A;
+    border-radius: 50%;
+    background-color: #FEEAC7;
+    color: #724319;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.centro-xp strong {
+    font-size: 23px;
+}
+
+.centro-xp span {
+    font-size: 10px;
+}
+
+.descripcion-ciclo-xp {
+    margin: 15px 0 0;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.detalles-xp {
+    min-width: 0;
+}
+
+.valores-xp {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.valor-xp {
+    padding: 15px;
+    border-radius: 9px;
+    background-color: #CAD182;
+}
+
+.valor-xp:nth-child(even) {
+    background-color: #CAD182;
+}
+
+.valor-xp h5 {
+    margin: 0 0 8px;
+    color: #724319;
+    font-size: 15px;
+}
+
+.valor-xp p {
+    margin: 0;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.practicas-principales-xp {
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #CAD182;
+}
+
+.practicas-principales-xp h4 {
+    margin: 0 0 10px;
+    color: #724319;
+    font-size: 16px;
+}
+
+.practicas-principales-xp ul {
+    margin: 0;
+    padding-left: 22px;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ILUSTRACIONES */
+
+.ilustraciones-agiles {
+    padding-top: 35px;
+}
+
+.ilustraciones-agiles > h2 {
+    text-align: center;
+}
+
+.ilustracion-principal {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f5ddb4;
+    border: 1px solid #E8C5B4;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+
+.titulo-ilustracion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.titulo-ilustracion .icono-ilustracion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.titulo-ilustracion h2 {
+    margin: 0;
+}
+
+
+.icono-ilustracion {
+    color: #A85F5D;
+    font-size: 24px;
+}
+
+.enlace-imagen-agil {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.enlace-imagen-agil img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    max-height: 480px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.descripcion-ilustracion {
+    margin: 18px 0 0;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.rejilla-ilustraciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.ilustracion-secundaria {
+    min-width: 0;
+    padding: 22px;
+    background-color: #f5ddb4;
+    border: 1px solid #E8C5B4;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.ilustracion-secundaria .titulo-ilustracion h3 {
+    font-size: 20px;
+}
+
+.ilustracion-secundaria .enlace-imagen-agil img {
+    max-height: 350px;
+}
+
+.resumen-agiles {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #CAD182;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.icono-resumen-agil {
+    flex-shrink: 0;
+    color: #724319;
+    font-size: 27px;
+}
+
+.resumen-agiles h3 {
+    margin: 0 0 8px;
+    color: #724319;
+    font-size: 21px;
+}
+
+.resumen-agiles p {
+    margin: 0;
+    color: #493426;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ACCESIBILIDAD Y ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+    .boton-agil,
+    .boton-principios {
+        transition: none;
+    }
+}
