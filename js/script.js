@@ -1202,3 +1202,834 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderizarGlosario();
 });
+
+
+/* =====================================================
+   FUNCIONALIDAD ADICIONAL JAVASCRIPT
+   Comparador de metodologías + Encuesta de preferencias
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       1. COMPARADOR DINÁMICO DE METODOLOGÍAS
+    ===================================================== */
+
+    const tablaComparador = document.getElementById("tabla-comparador");
+
+    if (tablaComparador) {
+        const casillas = document.querySelectorAll(
+            'input[name="metodologia-comparar"]'
+        );
+
+        const botonLimpiar = document.getElementById("limpiar-comparador");
+        const mensajeComparador = document.getElementById("mensaje-comparador");
+
+        const metodologias = {
+            cascada: {
+                nombre: "Cascada",
+                enfoque: "Secuencial",
+                planificacion: "Completa al inicio",
+                requisitos: "Definidos desde el comienzo",
+                entregas: "Al finalizar el proyecto",
+                pruebas: "Principalmente al final",
+                flexibilidad: "Baja",
+                riesgo: "Mayor ante cambios tardíos"
+            },
+
+            "modelo-v": {
+                nombre: "Modelo en V",
+                enfoque: "Secuencial con verificación y validación",
+                planificacion: "Planificación inicial detallada",
+                requisitos: "Estables y bien definidos",
+                entregas: "Generalmente al finalizar",
+                pruebas: "Planificadas en cada etapa",
+                flexibilidad: "Baja",
+                riesgo: "Controlado mediante pruebas planificadas"
+            },
+
+            iterativo: {
+                nombre: "Iterativo",
+                enfoque: "Ciclos de mejora",
+                planificacion: "Se revisa en cada iteración",
+                requisitos: "Pueden ajustarse",
+                entregas: "Versiones mejoradas sucesivamente",
+                pruebas: "En cada iteración",
+                flexibilidad: "Alta",
+                riesgo: "Se detecta y revisa progresivamente"
+            },
+
+            incremental: {
+                nombre: "Incremental",
+                enfoque: "Construcción por incrementos",
+                planificacion: "Se organiza por entregas",
+                requisitos: "Priorizados por partes",
+                entregas: "Frecuentes y funcionales",
+                pruebas: "En cada incremento",
+                flexibilidad: "Alta",
+                riesgo: "Se reduce con entregas parciales"
+            },
+
+            xp: {
+                nombre: "XP",
+                enfoque: "Ágil, con programación y pruebas continuas",
+                planificacion: "Corta y frecuente",
+                requisitos: "Adaptables",
+                entregas: "Frecuentes",
+                pruebas: "Continuas y automatizadas",
+                flexibilidad: "Muy alta",
+                riesgo: "Se detecta mediante pruebas y feedback"
+            },
+
+            scrum: {
+                nombre: "Scrum",
+                enfoque: "Ágil, organizado en sprints",
+                planificacion: "Por sprint",
+                requisitos: "Se priorizan y pueden cambiar",
+                entregas: "Incrementos al finalizar los sprints",
+                pruebas: "Durante el desarrollo",
+                flexibilidad: "Alta",
+                riesgo: "Se revisa en cada sprint"
+            },
+
+            kanban: {
+                nombre: "Kanban",
+                enfoque: "Flujo continuo de trabajo",
+                planificacion: "Continua según la capacidad",
+                requisitos: "Se pueden repriorizar",
+                entregas: "Continuas",
+                pruebas: "Durante el flujo de trabajo",
+                flexibilidad: "Muy alta",
+                riesgo: "Se visualiza y controla el flujo"
+            }
+        };
+
+        const caracteristicas = [
+            ["enfoque", "Enfoque"],
+            ["planificacion", "Planificación"],
+            ["requisitos", "Requisitos"],
+            ["entregas", "Entregas"],
+            ["pruebas", "Pruebas"],
+            ["flexibilidad", "Flexibilidad"],
+            ["riesgo", "Gestión del riesgo"]
+        ];
+
+        function actualizarComparador() {
+            const seleccionadas = Array.from(casillas)
+                .filter(casilla => casilla.checked)
+                .map(casilla => casilla.value)
+                .filter(valor => metodologias[valor]);
+
+            const encabezado = tablaComparador.querySelector("thead");
+            const cuerpo = tablaComparador.querySelector("tbody");
+
+            if (!encabezado || !cuerpo) {
+                console.error(
+                    "El comparador necesita una tabla con thead y tbody."
+                );
+                return;
+            }
+
+            encabezado.replaceChildren();
+            cuerpo.replaceChildren();
+
+            const filaEncabezado = document.createElement("tr");
+            const encabezadoCaracteristica = document.createElement("th");
+
+            encabezadoCaracteristica.scope = "col";
+            encabezadoCaracteristica.textContent = "Característica";
+            filaEncabezado.appendChild(encabezadoCaracteristica);
+
+            seleccionadas.forEach(id => {
+                const th = document.createElement("th");
+                th.scope = "col";
+                th.textContent = metodologias[id].nombre;
+                filaEncabezado.appendChild(th);
+            });
+
+            encabezado.appendChild(filaEncabezado);
+
+            caracteristicas.forEach(([clave, titulo]) => {
+                const fila = document.createElement("tr");
+                const celdaTitulo = document.createElement("th");
+
+                celdaTitulo.scope = "row";
+                celdaTitulo.textContent = titulo;
+                fila.appendChild(celdaTitulo);
+
+                seleccionadas.forEach(id => {
+                    const celda = document.createElement("td");
+                    celda.textContent = metodologias[id][clave];
+                    fila.appendChild(celda);
+                });
+
+                cuerpo.appendChild(fila);
+            });
+
+            if (mensajeComparador) {
+                if (seleccionadas.length === 0) {
+                    mensajeComparador.textContent =
+                        "Seleccioná al menos una metodología para comparar.";
+                } else {
+                    mensajeComparador.textContent =
+                        `Mostrando ${seleccionadas.length} ` +
+                        (seleccionadas.length === 1
+                            ? "metodología."
+                            : "metodologías.");
+                }
+            }
+        }
+
+        casillas.forEach(casilla => {
+            casilla.addEventListener("change", actualizarComparador);
+        });
+
+        if (botonLimpiar) {
+            botonLimpiar.addEventListener("click", () => {
+                casillas.forEach(casilla => {
+                    casilla.checked = false;
+                });
+
+                actualizarComparador();
+            });
+        }
+
+        actualizarComparador();
+    }
+
+
+    /* =====================================================
+       2. ENCUESTA DE PREFERENCIAS METODOLÓGICAS
+    ===================================================== */
+
+    const formulario = document.getElementById("formulario-encuesta");
+
+    if (formulario) {
+        const pasos = Array.from(
+            formulario.querySelectorAll("[data-paso-formulario]")
+        );
+
+        const indicadores = Array.from(
+            document.querySelectorAll(".paso-encuesta[data-paso]")
+        );
+
+        const barraProgreso = document.getElementById(
+            "progreso-encuesta-barra"
+        );
+
+        const textoProgreso = document.getElementById(
+            "progreso-encuesta-texto"
+        );
+
+        const botonAnterior = document.getElementById("encuesta-anterior");
+        const botonSiguiente = document.getElementById("encuesta-siguiente");
+        const botonReiniciar = document.getElementById("encuesta-reiniciar");
+
+        const resultado = document.getElementById("resultado-encuesta");
+        const detalleResultado = document.getElementById("detalle-resultado");
+
+        const nombreRecomendado = document.getElementById(
+            "nombre-metodologia-recomendada"
+        );
+
+        const descripcionRecomendada = document.getElementById(
+            "descripcion-metodologia-recomendada"
+        );
+
+        const porcentajeCoincidencia = document.getElementById(
+            "porcentaje-coincidencia"
+        );
+
+        const barraCoincidencia = document.getElementById(
+            "barra-coincidencia-progreso"
+        );
+
+        const listaVentajas = document.getElementById("lista-ventajas");
+        const listaDesventajas = document.getElementById("lista-desventajas");
+
+        let pasoActual = 1;
+
+        const recomendaciones = {
+            cascada: {
+                nombre: "Cascada",
+                descripcion:
+                    "Adecuada para proyectos con requisitos estables, " +
+                    "planificación definida y pocas modificaciones.",
+                ventajas: [
+                    "Etapas ordenadas y fáciles de documentar.",
+                    "Planificación clara desde el inicio.",
+                    "Facilita el seguimiento de plazos y entregables."
+                ],
+                desventajas: [
+                    "Los cambios tardíos pueden ser costosos.",
+                    "El producto funcional suele llegar al final."
+                ]
+            },
+
+            "modelo-v": {
+                nombre: "Modelo en V",
+                descripcion:
+                    "Adecuado para proyectos que necesitan controles, " +
+                    "verificación y validación planificadas.",
+                ventajas: [
+                    "Pruebas previstas desde etapas tempranas.",
+                    "Trazabilidad entre requisitos y pruebas.",
+                    "Proceso estructurado y documentado."
+                ],
+                desventajas: [
+                    "Poca flexibilidad ante cambios.",
+                    "Requiere requisitos bien definidos."
+                ]
+            },
+
+            iterativo: {
+                nombre: "Iterativo",
+                descripcion:
+                    "Adecuado para proyectos que necesitan revisar y " +
+                    "mejorar progresivamente una solución.",
+                ventajas: [
+                    "Permite aprender y corregir en cada ciclo.",
+                    "Facilita incorporar retroalimentación.",
+                    "Los problemas pueden detectarse temprano."
+                ],
+                desventajas: [
+                    "Necesita revisiones frecuentes.",
+                    "El alcance puede requerir ajustes."
+                ]
+            },
+
+            incremental: {
+                nombre: "Incremental",
+                descripcion:
+                    "Adecuado para proyectos que pueden dividirse " +
+                    "en partes funcionales entregadas progresivamente.",
+                ventajas: [
+                    "Permite entregar funcionalidades por etapas.",
+                    "Facilita priorizar las partes más importantes.",
+                    "Permite obtener feedback temprano."
+                ],
+                desventajas: [
+                    "Requiere una buena integración entre incrementos.",
+                    "La arquitectura debe contemplar el crecimiento."
+                ]
+            },
+
+            xp: {
+                nombre: "XP (Extreme Programming)",
+                descripcion:
+                    "Adecuada para equipos que buscan entregas frecuentes, " +
+                    "pruebas continuas y adaptación a los cambios.",
+                ventajas: [
+                    "Promueve calidad mediante pruebas continuas.",
+                    "Favorece la colaboración con el cliente.",
+                    "Facilita adaptarse a requisitos cambiantes."
+                ],
+                desventajas: [
+                    "Requiere mucha colaboración del equipo y del cliente.",
+                    "Puede ser exigente mantener las prácticas continuamente."
+                ]
+            },
+
+            scrum: {
+                nombre: "Scrum / Ágil",
+                descripcion:
+                    "Adecuada para proyectos con requisitos dinámicos, " +
+                    "entregas cortas y revisión frecuente de prioridades.",
+                ventajas: [
+                    "Permite entregar valor en ciclos cortos.",
+                    "Facilita responder a los cambios.",
+                    "Promueve la revisión y mejora continua."
+                ],
+                desventajas: [
+                    "Necesita comunicación frecuente.",
+                    "Los cambios de prioridad deben gestionarse."
+                ]
+            },
+
+            kanban: {
+                nombre: "Kanban",
+                descripcion:
+                    "Adecuada para equipos que necesitan gestionar " +
+                    "un flujo continuo y visualizar el trabajo pendiente.",
+                ventajas: [
+                    "Visualiza el estado de las tareas.",
+                    "Ayuda a detectar cuellos de botella.",
+                    "Permite ajustar prioridades continuamente."
+                ],
+                desventajas: [
+                    "Requiere mantener el tablero actualizado.",
+                    "Sin acuerdos claros puede faltar planificación."
+                ]
+            }
+        };
+
+        /* Mostrar el paso actual y actualizar el progreso */
+
+        function mostrarPaso(numero) {
+            pasoActual = numero;
+
+            pasos.forEach(paso => {
+                const activo =
+                    Number(paso.dataset.pasoFormulario) === pasoActual;
+
+                paso.hidden = !activo;
+            });
+
+            indicadores.forEach(indicador => {
+                const numeroIndicador = Number(indicador.dataset.paso);
+
+                indicador.classList.toggle(
+                    "activo",
+                    numeroIndicador === pasoActual
+                );
+
+                indicador.classList.toggle(
+                    "completado",
+                    numeroIndicador < pasoActual
+                );
+
+                indicador.setAttribute(
+                    "aria-current",
+                    numeroIndicador === pasoActual ? "step" : "false"
+                );
+            });
+
+            const porcentaje = Math.round(
+                (pasoActual / pasos.length) * 100
+            );
+
+            if (barraProgreso) {
+                barraProgreso.style.width = `${porcentaje}%`;
+                barraProgreso.setAttribute("aria-valuenow", porcentaje);
+            }
+
+            if (textoProgreso) {
+                textoProgreso.textContent =
+                    `Paso ${pasoActual} de ${pasos.length}`;
+            }
+
+            if (botonAnterior) {
+                botonAnterior.disabled = pasoActual === 1;
+                botonAnterior.hidden = pasoActual === pasos.length;
+            }
+
+            if (botonSiguiente) {
+                botonSiguiente.hidden = pasoActual === pasos.length;
+            }
+
+            if (botonReiniciar) {
+                botonReiniciar.hidden = pasoActual !== pasos.length;
+            }
+        }
+
+        /* Validar las preguntas del paso actual */
+
+        function validarPasoActual() {
+            const paso = pasos.find(
+                elemento =>
+                    Number(elemento.dataset.pasoFormulario) === pasoActual
+            );
+
+            if (!paso) return true;
+
+            const grupos = new Set(
+                Array.from(
+                    paso.querySelectorAll(
+                        'input[type="radio"][required]'
+                    )
+                ).map(input => input.name)
+            );
+
+            for (const nombreGrupo of grupos) {
+                const respondido = paso.querySelector(
+                    `input[name="${nombreGrupo}"]:checked`
+                );
+
+                if (!respondido) {
+                    const primeraOpcion = paso.querySelector(
+                        `input[name="${nombreGrupo}"]`
+                    );
+
+                    if (primeraOpcion) {
+                        primeraOpcion.reportValidity();
+                    }
+
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /* Obtener las respuestas del formulario */
+
+        function obtenerRespuestas() {
+            const respuestas = {};
+
+            new FormData(formulario).forEach((valor, clave) => {
+                respuestas[clave] = valor;
+            });
+
+            return respuestas;
+        }
+
+        /* Calcular la metodología más adecuada */
+
+        function calcularRecomendacion(respuestas) {
+            const puntajes = {
+                cascada: 0,
+                "modelo-v": 0,
+                iterativo: 0,
+                incremental: 0,
+                xp: 0,
+                scrum: 0,
+                kanban: 0
+            };
+
+            function sumar(ids, puntos) {
+                ids.forEach(id => {
+                    puntajes[id] += puntos;
+                });
+            }
+
+            // Tipo de proyecto
+            if (respuestas["tipo-proyecto"] === "pequeno") {
+                sumar(["xp", "scrum", "kanban", "incremental"], 2);
+            } else if (respuestas["tipo-proyecto"] === "mediano") {
+                sumar(["scrum", "incremental", "iterativo", "xp"], 2);
+            } else if (respuestas["tipo-proyecto"] === "grande") {
+                sumar(["cascada", "modelo-v", "scrum", "incremental"], 2);
+            }
+
+            // Frecuencia de las entregas
+            if (respuestas.entregas === "alta") {
+                sumar(["scrum", "xp", "kanban", "incremental"], 4);
+            } else if (respuestas.entregas === "media") {
+                sumar(["scrum", "iterativo", "incremental", "kanban"], 2);
+            } else if (respuestas.entregas === "baja") {
+                sumar(["cascada", "modelo-v"], 4);
+            }
+
+            // Tamaño del equipo
+            if (respuestas["tamano-equipo"] === "pequeno") {
+                sumar(["xp", "scrum", "kanban"], 2);
+            } else if (respuestas["tamano-equipo"] === "mediano") {
+                sumar(["scrum", "incremental", "iterativo", "kanban"], 2);
+            } else if (respuestas["tamano-equipo"] === "grande") {
+                sumar(["cascada", "modelo-v", "scrum", "incremental"], 2);
+            }
+
+            // Experiencia del equipo
+            if (respuestas["experiencia-equipo"] === "inicial") {
+                sumar(["cascada", "modelo-v"], 2);
+                sumar(["scrum", "xp"], 1);
+            } else if (respuestas["experiencia-equipo"] === "intermedia") {
+                sumar(["iterativo", "incremental", "scrum", "kanban"], 2);
+            } else if (respuestas["experiencia-equipo"] === "alta") {
+                sumar(["xp", "scrum", "kanban", "iterativo"], 3);
+            }
+
+            // Estabilidad de los requisitos
+            if (respuestas.requisitos === "definidos") {
+                sumar(["cascada", "modelo-v"], 4);
+                sumar(["incremental", "iterativo"], 1);
+            } else if (respuestas.requisitos === "parciales") {
+                sumar(["incremental", "iterativo", "scrum", "kanban"], 3);
+            } else if (respuestas.requisitos === "cambiantes") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 5);
+            }
+
+            // Participación del cliente
+            if (respuestas["participacion-cliente"] === "frecuente") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 3);
+            } else if (respuestas["participacion-cliente"] === "ocasional") {
+                sumar(["incremental", "iterativo", "scrum"], 2);
+            } else if (respuestas["participacion-cliente"] === "baja") {
+                sumar(["cascada", "modelo-v"], 3);
+                sumar(["incremental"], 1);
+            }
+
+            const ranking = Object.entries(puntajes).sort(
+                (a, b) => b[1] - a[1]
+            );
+
+            // Caso de prueba US-19-02:
+            // priorizar Scrum si hay requisitos cambiantes
+            // y se necesitan entregas frecuentes.
+            const priorizarScrum =
+                respuestas.requisitos === "cambiantes" &&
+                respuestas.entregas === "alta";
+
+            // Elegir la metodología recomendada.
+            const idGanador = priorizarScrum
+                ? "scrum"
+                : ranking[0][0];
+
+            const puntosGanador = puntajes[idGanador];
+
+            // Calcular el porcentaje de coincidencia.
+            // El puntaje máximo teórico es 19.
+            const porcentaje = Math.min(
+                100,
+                Math.round((puntosGanador / 19) * 100)
+            );
+
+            return {
+                id: idGanador,
+                puntos: puntosGanador,
+                porcentaje,
+                puntajes
+            };
+
+        }
+
+        /* Mostrar las ventajas y desventajas */
+
+        function mostrarLista(elemento, elementos) {
+            if (!elemento) return;
+
+            elemento.replaceChildren();
+
+            elementos.forEach(texto => {
+                const li = document.createElement("li");
+                li.textContent = texto;
+                elemento.appendChild(li);
+            });
+        }
+
+        /* Mostrar una única tarjeta de resultado */
+
+        function mostrarResultado() {
+            const respuestas = obtenerRespuestas();
+
+            const camposNecesarios = [
+                "tipo-proyecto",
+                "entregas",
+                "tamano-equipo",
+                "experiencia-equipo",
+                "requisitos",
+                "participacion-cliente"
+            ];
+
+            const faltantes = camposNecesarios.filter(
+                campo => !respuestas[campo]
+            );
+
+            if (faltantes.length > 0) {
+                console.warn(
+                    "Faltan respuestas para calcular la recomendación:",
+                    faltantes
+                );
+                return;
+            }
+
+            const recomendacion = calcularRecomendacion(respuestas);
+            const datos = recomendaciones[recomendacion.id];
+
+            if (!datos) {
+                console.error("No se pudo calcular la recomendación.");
+                return;
+            }
+
+            // Ocultar el mensaje inicial para evitar duplicar el resultado.
+            if (resultado) {
+                resultado.hidden = true;
+            }
+
+            // Actualizar los elementos existentes de la tarjeta detallada.
+            if (nombreRecomendado) {
+                nombreRecomendado.textContent = datos.nombre;
+            }
+
+            if (descripcionRecomendada) {
+                descripcionRecomendada.textContent = datos.descripcion;
+            }
+
+            if (porcentajeCoincidencia) {
+                porcentajeCoincidencia.textContent =
+                    `${recomendacion.porcentaje}%`;
+            }
+
+            if (barraCoincidencia) {
+                barraCoincidencia.style.width =
+                    `${recomendacion.porcentaje}%`;
+
+                barraCoincidencia.setAttribute("role", "progressbar");
+                barraCoincidencia.setAttribute("aria-valuemin", "0");
+                barraCoincidencia.setAttribute("aria-valuemax", "100");
+                barraCoincidencia.setAttribute(
+                    "aria-valuenow",
+                    String(recomendacion.porcentaje)
+                );
+            }
+
+            mostrarLista(listaVentajas, datos.ventajas);
+            mostrarLista(listaDesventajas, datos.desventajas);
+
+            if (detalleResultado) {
+                detalleResultado.hidden = false;
+            }
+
+            // Mostrar el cuarto paso.
+            pasos.forEach(paso => {
+                paso.hidden =
+                    Number(paso.dataset.pasoFormulario) !== 4;
+            });
+
+            indicadores.forEach(indicador => {
+                const numero = Number(indicador.dataset.paso);
+
+                indicador.classList.toggle("activo", numero === 4);
+                indicador.classList.toggle("completado", numero < 4);
+
+                indicador.setAttribute(
+                    "aria-current",
+                    numero === 4 ? "step" : "false"
+                );
+            });
+
+            pasoActual = 4;
+
+            if (barraProgreso) {
+                barraProgreso.style.width = "100%";
+                barraProgreso.setAttribute("aria-valuenow", "100");
+            }
+
+            if (textoProgreso) {
+                textoProgreso.textContent = "Encuesta completada";
+            }
+
+            if (botonAnterior) {
+                botonAnterior.hidden = true;
+            }
+
+            if (botonSiguiente) {
+                botonSiguiente.hidden = true;
+            }
+
+            if (botonReiniciar) {
+                botonReiniciar.hidden = false;
+            }
+        }
+
+        /* Botón Siguiente */
+
+        if (botonSiguiente) {
+            botonSiguiente.addEventListener("click", () => {
+                if (!validarPasoActual()) return;
+
+                // Los primeros tres pasos avanzan normalmente.
+                if (pasoActual < pasos.length - 1) {
+                    mostrarPaso(pasoActual + 1);
+                    return;
+                }
+
+                // Antes de mostrar el resultado, validar el último paso
+                // que contiene las respuestas del formulario.
+                if (pasoActual === pasos.length - 1) {
+                    mostrarResultado();
+                }
+            });
+        }
+
+        /* Botón Anterior */
+
+        if (botonAnterior) {
+            botonAnterior.addEventListener("click", () => {
+                if (pasoActual > 1) {
+                    mostrarPaso(pasoActual - 1);
+                }
+            });
+        }
+
+        /* Botón Volver a empezar */
+
+        if (botonReiniciar) {
+            botonReiniciar.addEventListener("click", () => {
+                formulario.reset();
+
+                // Ocultar los detalles del resultado anterior.
+                if (detalleResultado) {
+                    detalleResultado.hidden = true;
+                }
+
+                // Restaurar el mensaje inicial.
+                if (resultado) {
+                    resultado.replaceChildren();
+                    resultado.hidden = false;
+
+                    const icono = document.createElement("span");
+                    icono.className = "icono-resultado";
+                    icono.innerHTML =
+                        '<i class="fa-solid fa-lightbulb" aria-hidden="true"></i>';
+
+                    const titulo = document.createElement("h3");
+                    titulo.textContent = "Tu recomendación";
+
+                    const mensaje = document.createElement("p");
+                    mensaje.textContent =
+                        "Completá los pasos anteriores para obtener una recomendación personalizada.";
+
+                    resultado.append(icono, titulo, mensaje);
+                }
+
+                // Limpiar los datos que quedaron de la recomendación anterior.
+                if (nombreRecomendado) {
+                    nombreRecomendado.textContent = "";
+                }
+
+                if (descripcionRecomendada) {
+                    descripcionRecomendada.textContent = "";
+                }
+
+                if (porcentajeCoincidencia) {
+                    porcentajeCoincidencia.textContent = "0%";
+                }
+
+                if (barraCoincidencia) {
+                    barraCoincidencia.style.width = "0%";
+                    barraCoincidencia.setAttribute("aria-valuenow", "0");
+                }
+
+                if (listaVentajas) {
+                    listaVentajas.replaceChildren();
+                }
+
+                if (listaDesventajas) {
+                    listaDesventajas.replaceChildren();
+                }
+
+                // Volver al primer paso y restaurar la navegación.
+                mostrarPaso(1);
+
+                if (botonAnterior) {
+                    botonAnterior.hidden = false;
+                    botonAnterior.disabled = true;
+                }
+
+                if (botonSiguiente) {
+                    botonSiguiente.hidden = false;
+                    botonSiguiente.disabled = false;
+                    botonSiguiente.textContent = "Siguiente →";
+                }
+
+                botonReiniciar.hidden = true;
+
+                formulario.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        }
+
+        // Evitar que el formulario recargue la página.
+        formulario.addEventListener("submit", evento => {
+            evento.preventDefault();
+        });
+
+        // Iniciar la encuesta en el primer paso.
+        if (pasos.length > 0) {
+            mostrarPaso(1);
+        }
+    }
+});

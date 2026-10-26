@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Metodologías | Comparador y Encuesta</title>
+</head>
+
+<body>
+    <!-- NAVBAR COMPARTIDO -->
+    <div id="navbar"></div>
+
+    <main class="adicional-js">
+
+        <!-- ======================================
+             SECCIÓN 1: COMPARADOR DE METODOLOGÍAS
+        ======================================= -->
+        <section id="comparador-metodologias" class="seccion-comparador">
+
+            <h1>Comparador de metodologías</h1>
+
+            <p>
+                Compará diferentes metodologías de desarrollo de software
+                y descubrí sus principales características.
+            </p>
+
+            <!-- Selección de metodologías -->
+            <div class="comparador-contenido">
+
+                <div class="panel-seleccion">
+                    <h2>Seleccioná las metodologías</h2>
+
+                    <p>
+                        Elegí dos o más metodologías para comparar sus
+                        características.
+                    </p>
+
+                    <div class="opciones-metodologias">
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="cascada"
+                                   checked>
+                            <span>Cascada</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="modelo-v"
+                                   checked>
+                            <span>Modelo en V</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="iterativo">
+                            <span>Iterativo</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="incremental">
+                            <span>Incremental</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="xp">
+                            <span>XP (Extreme Programming)</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="scrum">
+                            <span>Scrum</span>
+                        </label>
+
+                        <label class="opcion-metodologia">
+                            <input type="checkbox"
+                                   name="metodologia-comparar"
+                                   value="kanban">
+                            <span>Kanban</span>
+                        </label>
+
+                    </div>
+
+                    <button type="button"
+                            id="limpiar-comparador"
+                            class="boton-secundario">
+                        <i class="fa-solid fa-rotate-left"
+                           aria-hidden="true"></i>
+                        Restablecer selección
+                    </button>
+                </div>
+
+                <!-- Tabla dinámica -->
+                <div class="panel-tabla-comparador">
+
+                    <div class="encabezado-tabla">
+                        <div>
+                            <h2>Comparación</h2>
+                        </div>
+
+                        <i class="fa-solid fa-table-columns"
+                           aria-hidden="true"></i>
+                    </div>
+
+                    <div class="tabla-scroll">
+                        <table id="tabla-comparador">
+                            <caption>
+                                Comparación de características de las
+                                metodologías de desarrollo de software
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Característica</th>
+                                    <th scope="col" data-metodologia="cascada">
+                                        Cascada
+                                    </th>
+                                    <th scope="col" data-metodologia="modelo-v">
+                                        Modelo en V
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr data-caracteristica="enfoque">
+                                    <th scope="row">Enfoque</th>
+                                    <td data-metodologia="cascada">
+                                        Secuencial
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Secuencial con verificación y validación
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="planificacion">
+                                    <th scope="row">Planificación</th>
+                                    <td data-metodologia="cascada">
+                                        Principalmente inicial
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Planificación por etapas
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="requisitos">
+                                    <th scope="row">Requisitos</th>
+                                    <td data-metodologia="cascada">
+                                        Definidos al inicio
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Definidos al inicio
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="entregas">
+                                    <th scope="row">Entregas</th>
+                                    <td data-metodologia="cascada">
+                                        Principalmente al finalizar
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Principalmente al finalizar
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="pruebas">
+                                    <th scope="row">Pruebas</th>
+                                    <td data-metodologia="cascada">
+                                        Generalmente posteriores al desarrollo
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Planificadas en paralelo con cada etapa
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="flexibilidad">
+                                    <th scope="row">Flexibilidad ante cambios</th>
+                                    <td data-metodologia="cascada">
+                                        Baja
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Baja
+                                    </td>
+                                </tr>
+
+                                <tr data-caracteristica="riesgo">
+                                    <th scope="row">Gestión de riesgos</th>
+                                    <td data-metodologia="cascada">
+                                        Según la planificación del proyecto
+                                    </td>
+                                    <td data-metodologia="modelo-v">
+                                        Se busca detectar errores mediante pruebas
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p id="mensaje-comparador"
+                       class="mensaje-comparador"
+                       aria-live="polite">
+                        Podés seleccionar otras metodologías para compararlas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================
+             SECCIÓN 2: ENCUESTA DE PREFERENCIAS
+        ======================================= -->
+        <section id="encuesta-metodologias" class="seccion-encuesta">
+
+            <span class="etiqueta-seccion">ENCONTRÁ TU METODOLOGÍA</span>
+
+            <h2>Encuesta de preferencias metodológicas</h2>
+
+            <p>
+                Respondé algunas preguntas sobre tu proyecto y tu equipo
+                para conocer qué metodología podría adaptarse mejor.
+            </p>
+
+            <!-- Progreso -->
+            <div class="progreso-encuesta">
+                <div class="pasos-encuesta"
+                     aria-label="Progreso de la encuesta">
+
+                    <div class="paso-encuesta activo" data-paso="1">
+                        <span class="numero-paso">1</span>
+                        <span>Proyecto</span>
+                    </div>
+
+                    <div class="paso-encuesta" data-paso="2">
+                        <span class="numero-paso">2</span>
+                        <span>Equipo</span>
+                    </div>
+
+                    <div class="paso-encuesta" data-paso="3">
+                        <span class="numero-paso">3</span>
+                        <span>Requisitos</span>
+                    </div>
+
+                    <div class="paso-encuesta" data-paso="4">
+                        <span class="numero-paso">4</span>
+                        <span>Resultado</span>
+                    </div>
+
+                </div>
+
+                <div class="barra-progreso">
+                    <div id="progreso-encuesta-barra"></div>
+                </div>
+
+                <p id="progreso-encuesta-texto">
+                    Paso 1 de 4
+                </p>
+            </div>
+
+            <form id="formulario-encuesta">
+
+                <!-- PASO 1 -->
+                <section class="paso-formulario activo"
+                         data-paso-formulario="1">
+
+                    <h3>Sobre tu proyecto</h3>
+
+                    <p>
+                        Primero, contanos un poco sobre el tipo de proyecto
+                        que querés desarrollar.
+                    </p>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>1. ¿Qué tipo de proyecto vas a desarrollar?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tipo-proyecto"
+                                   value="pequeno" required>
+                            <span>
+                                <strong>Proyecto pequeño</strong>
+                                <small>Alcance acotado y pocas funcionalidades.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tipo-proyecto"
+                                   value="mediano">
+                            <span>
+                                <strong>Proyecto mediano</strong>
+                                <small>Varias funcionalidades y cierta complejidad.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tipo-proyecto"
+                                   value="grande">
+                            <span>
+                                <strong>Proyecto grande</strong>
+                                <small>Muchas funcionalidades y mayor complejidad.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>2. ¿Qué tan importante es entregar resultados pronto?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="entregas"
+                                   value="alta" required>
+                            <span>
+                                <strong>Muy importante</strong>
+                                <small>Necesitamos entregar avances frecuentes.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="entregas"
+                                   value="media">
+                            <span>
+                                <strong>Importancia media</strong>
+                                <small>Podemos trabajar con entregas planificadas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="entregas"
+                                   value="baja">
+                            <span>
+                                <strong>Poco importante</strong>
+                                <small>Podemos esperar hasta completar varias etapas.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+                </section>
+
+
+                <!-- PASO 2 -->
+                <section class="paso-formulario"
+                         data-paso-formulario="2"
+                         hidden>
+
+                    <h3>Sobre tu equipo</h3>
+
+                    <p>
+                        Las características del equipo también influyen
+                        en la elección de una metodología.
+                    </p>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>3. ¿Cuántas personas integran el equipo?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tamano-equipo"
+                                   value="pequeno" required>
+                            <span>
+                                <strong>Equipo pequeño</strong>
+                                <small>Entre 1 y 5 personas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tamano-equipo"
+                                   value="mediano">
+                            <span>
+                                <strong>Equipo mediano</strong>
+                                <small>Entre 6 y 10 personas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tamano-equipo"
+                                   value="grande">
+                            <span>
+                                <strong>Equipo grande</strong>
+                                <small>Más de 10 personas.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>4. ¿Cómo es la experiencia del equipo?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="experiencia-equipo"
+                                   value="inicial" required>
+                            <span>
+                                <strong>Inicial</strong>
+                                <small>Tenemos poca experiencia en desarrollo.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="experiencia-equipo"
+                                   value="intermedia">
+                            <span>
+                                <strong>Intermedia</strong>
+                                <small>Conocemos las prácticas de desarrollo.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="experiencia-equipo"
+                                   value="alta">
+                            <span>
+                                <strong>Alta</strong>
+                                <small>Tenemos experiencia trabajando en equipo.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+                </section>
+
+
+                <!-- PASO 3 -->
+                <section class="paso-formulario"
+                         data-paso-formulario="3"
+                         hidden>
+
+                    <h3>Sobre los requisitos</h3>
+
+                    <p>
+                        Por último, necesitamos saber cuánto pueden cambiar
+                        las necesidades del proyecto.
+                    </p>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>5. ¿Los requisitos están definidos?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="requisitos"
+                                   value="definidos" required>
+                            <span>
+                                <strong>Están definidos</strong>
+                                <small>Sabemos claramente qué debemos desarrollar.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="requisitos"
+                                   value="parciales">
+                            <span>
+                                <strong>Están parcialmente definidos</strong>
+                                <small>Algunas características pueden cambiar.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="requisitos"
+                                   value="cambiantes">
+                            <span>
+                                <strong>Son cambiantes</strong>
+                                <small>Esperamos ajustar el proyecto frecuentemente.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-pregunta">
+                        <legend>6. ¿Con qué frecuencia esperás recibir comentarios del cliente?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="participacion-cliente"
+                                   value="frecuente" required>
+                            <span>
+                                <strong>Frecuentemente</strong>
+                                <small>Queremos revisar avances de manera continua.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="participacion-cliente"
+                                   value="ocasional">
+                            <span>
+                                <strong>Ocasionalmente</strong>
+                                <small>Habrá revisiones en momentos determinados.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="participacion-cliente"
+                                   value="baja">
+                            <span>
+                                <strong>Con poca frecuencia</strong>
+                                <small>La participación del cliente será limitada.</small>
+                            </span>
+                        </label>
+                    </fieldset>
+                </section>
+
+
+                <!-- PASO 4 -->
+                <section class="paso-formulario"
+                         data-paso-formulario="4"
+                         hidden>
+
+                    <div id="resultado-encuesta"
+                         class="resultado-encuesta"
+                         aria-live="polite">
+
+                        <span class="icono-resultado">
+                            <i class="fa-solid fa-lightbulb"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <h3>Tu recomendación</h3>
+
+                        <p>
+                            Completá los pasos anteriores para obtener
+                            una recomendación personalizada.
+                        </p>
+
+                    </div>
+
+                    <div id="detalle-resultado" hidden>
+                        <div class="tarjeta-recomendacion">
+                            <span>METODOLOGÍA RECOMENDADA</span>
+                            <h4 id="nombre-metodologia-recomendada"></h4>
+                            <p id="descripcion-metodologia-recomendada"></p>
+
+                            <div class="coincidencia-resultado">
+                                <span>Coincidencia estimada</span>
+                                <strong id="porcentaje-coincidencia">0%</strong>
+                            </div>
+
+                            <div class="barra-coincidencia">
+                                <div id="barra-coincidencia-progreso"></div>
+                            </div>
+                        </div>
+
+                        <div class="detalle-ventajas-desventajas">
+                            <article>
+                                <h4>
+                                    <i class="fa-solid fa-circle-check"
+                                       aria-hidden="true"></i>
+                                    Ventajas
+                                </h4>
+                                <ul id="lista-ventajas"></ul>
+                            </article>
+
+                            <article>
+                                <h4>
+                                    <i class="fa-solid fa-triangle-exclamation"
+                                       aria-hidden="true"></i>
+                                    Aspectos a considerar
+                                </h4>
+                                <ul id="lista-desventajas"></ul>
+                            </article>
+                        </div>
+
+                        <p class="nota-recomendacion">
+                            Esta recomendación es orientativa. La elección
+                            final depende de las necesidades y restricciones
+                            concretas del proyecto.
+                        </p>
+                    </div>
+                </section>
+
+
+                <!-- NAVEGACIÓN -->
+                <div class="navegacion-encuesta">
+
+                    <button type="button"
+                            id="encuesta-anterior"
+                            class="boton-secundario"
+                            disabled>
+                        <i class="fa-solid fa-arrow-left"
+                           aria-hidden="true"></i>
+                        Anterior
+                    </button>
+
+                    <button type="button"
+                            id="encuesta-siguiente"
+                            class="boton-principal">
+                        Siguiente
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button"
+                            id="encuesta-reiniciar"
+                            class="boton-secundario"
+                            hidden>
+                        <i class="fa-solid fa-rotate-left"
+                           aria-hidden="true"></i>
+                        Volver a empezar
+                    </button>
+
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER COMPARTIDO -->
+    <div id="footer"></div>
+
+    <!-- SCRIPT COMPARTIDO -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

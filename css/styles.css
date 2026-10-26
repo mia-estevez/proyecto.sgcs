@@ -4368,85 +4368,6 @@ h6 {
     color: #FFFFFF;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-    #vista-glosario {
-        padding: 20px 20px 35px;
-    }
-}
-
-@media (max-width: 600px) {
-    #vista-glosario {
-        padding: 20px 18px 30px;
-    }
-
-    #vista-glosario h1 {
-        font-size: 28px;
-        line-height: 1.25;
-    }
-
-    #vista-glosario > p {
-        font-size: 14px;
-    }
-
-    #vista-glosario .buscador-glosario {
-        gap: 8px;
-    }
-
-    #vista-glosario .buscador-glosario > i {
-        display: none;
-    }
-
-    #vista-glosario #busqueda-glosario {
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    #vista-glosario #filtros-glosario {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        gap: 6px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 4px 2px 12px;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    #vista-glosario .termino-glosario {
-        gap: 12px;
-        padding: 14px;
-    }
-
-    #vista-glosario .inicial-glosario {
-        flex-basis: 34px;
-        width: 34px;
-        height: 34px;
-    }
-}
-
-@media (max-width: 400px) {
-    #vista-glosario {
-        padding: 18px 13px 25px;
-    }
-
-    #vista-glosario h1 {
-        font-size: 25px;
-    }
-
-    #vista-glosario .termino-glosario {
-        gap: 10px;
-        padding: 12px;
-    }
-
-    #vista-glosario .inicial-glosario {
-        flex-basis: 32px;
-        width: 32px;
-        height: 32px;
-    }
-}
 
 /* Accesibilidad */
 
@@ -4465,3 +4386,577 @@ h6 {
     }
 }
 
+
+/* =====================================================
+   FUNCIONALIDAD ADICIONAL JAVASCRIPT
+===================================================== */
+
+.adicional-js {
+    --ad-nuez: #724319;
+    --ad-coral: #D88180;
+    --ad-colorete: #F7B1B0;
+    --ad-papaya: #FEEAC7;
+    --ad-arena: #CAD182;
+    --ad-texto: #493629;
+    --ad-fondo: #FFFCF8;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 40px 0 70px;
+    color: var(--ad-texto);
+    background: var(--ad-papaya);
+    box-sizing: border-box;
+}
+
+.adicional-js *,
+.adicional-js *::before,
+.adicional-js *::after {
+    box-sizing: border-box;
+}
+
+/* Títulos y textos */
+
+.adicional-js h1,
+.adicional-js h2,
+.adicional-js h3 {
+    color: var(--ad-nuez);
+    line-height: 1.25;
+}
+
+.adicional-js h1 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.adicional-js h2 {
+    margin: 0 0 14px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.adicional-js p {
+    line-height: 1.7;
+}
+
+.adicional-js .intro-adicional {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+/* Tarjetas principales */
+.adicional-js .seccion-comparador,
+.adicional-js #encuesta-metodologias {
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    padding: clamp(24px, 4vw, 42px);
+    border: 1px solid #E8D4B9;
+    border-radius: 18px;
+    background: #F8EDDA;
+    box-shadow: 0 5px 18px rgb(114 67 25 / 5%);
+}
+
+
+/* Comparador de metodologías */
+
+.adicional-js .opciones-metodologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.adicional-js .opciones-metodologias label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 13px 15px;
+    border: 1px solid #E7D2BC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.adicional-js .opciones-metodologias label:hover {
+    border-color: var(--ad-coral);
+    background: #FFF4F0;
+    transform: translateY(-2px);
+}
+
+.adicional-js input[type="checkbox"],
+.adicional-js input[type="radio"] {
+    accent-color: var(--ad-coral);
+    flex-shrink: 0;
+}
+
+.adicional-js .contenedor-tabla-comparador {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 22px;
+    border: 1px solid #E8D6C3;
+    border-radius: 14px;
+    background: #FFFFFF;
+}
+
+.adicional-js #tabla-comparador {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.adicional-js #tabla-comparador th,
+.adicional-js #tabla-comparador td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #EEE1D4;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.adicional-js #tabla-comparador thead th {
+    background: var(--ad-nuez);
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.adicional-js #tabla-comparador tbody th {
+    width: 170px;
+    background: var(--ad-papaya);
+    color: var(--ad-nuez);
+}
+
+.adicional-js #tabla-comparador tbody tr:nth-child(even) td {
+    background: #FFF8EF;
+}
+
+.adicional-js #tabla-comparador tbody tr:last-child th,
+.adicional-js #tabla-comparador tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.adicional-js #mensaje-comparador {
+    min-height: 24px;
+    margin: 15px 0 0;
+    color: var(--ad-nuez);
+    font-size: 0.95rem;
+}
+
+/* Botones */
+
+.adicional-js .acciones-comparador,
+.adicional-js .acciones-encuesta,
+.adicional-js .navegacion-encuesta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.adicional-js button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 12px 21px;
+    border: 2px solid var(--ad-nuez);
+    border-radius: 12px;
+    background: var(--ad-nuez);
+    color: #FFFFFF;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, opacity 0.2s;
+}
+
+.adicional-js button:hover:not(:disabled) {
+    background: #8B582C;
+    transform: translateY(-1px);
+}
+
+.adicional-js button:focus-visible,
+.adicional-js input:focus-visible {
+    outline: 3px solid var(--ad-coral);
+    outline-offset: 3px;
+}
+
+.adicional-js button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.adicional-js #limpiar-comparador,
+.adicional-js #encuesta-anterior,
+.adicional-js #encuesta-reiniciar {
+    background: transparent;
+    color: var(--ad-nuez);
+}
+
+.adicional-js #limpiar-comparador:hover:not(:disabled),
+.adicional-js #encuesta-anterior:hover:not(:disabled),
+.adicional-js #encuesta-reiniciar:hover:not(:disabled) {
+    background: var(--ad-papaya);
+}
+
+.adicional-js button[hidden],
+.adicional-js [hidden] {
+    display: none !important;
+}
+
+/* Encuesta de preferencias metodológicas */
+
+.adicional-js #encuesta-metodologias {
+    background: #F8EDDA;
+    border-color: #E8D4B9;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+.adicional-js #encuesta-metodologias > h2 {
+    max-width: 850px;
+    margin: 12px 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.adicional-js #encuesta-metodologias > p {
+    max-width: 900px;
+    margin-bottom: 28px;
+    color: #796956;
+}
+
+/* Progreso en cuatro etapas */
+
+.adicional-js .progreso-encuesta {
+    margin: 30px 0;
+}
+
+.adicional-js .pasos-encuesta {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.adicional-js .paso-encuesta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #806F5C;
+    font-size: 0.95rem;
+}
+
+.adicional-js .paso-encuesta .numero-paso {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #E9D9C2;
+    color: var(--ad-nuez);
+    font-weight: 700;
+}
+
+.adicional-js .paso-encuesta.activo .numero-paso {
+    background: #A95542;
+    color: #FFFFFF;
+}
+
+.adicional-js .paso-encuesta.activo {
+    color: var(--ad-nuez);
+    font-weight: 700;
+}
+
+.adicional-js .paso-encuesta.completado .numero-paso {
+    background: var(--ad-arena);
+    color: var(--ad-texto);
+}
+
+.adicional-js .barra-progreso {
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #E8D9C4;
+}
+
+.adicional-js #progreso-encuesta-barra {
+    width: 25%;
+    height: 100%;
+    border-radius: inherit;
+    background: #A95542;
+    transition: width 0.3s ease;
+}
+
+.adicional-js #progreso-encuesta-texto {
+    margin-top: 10px;
+    color: var(--ad-nuez);
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* Tarjetas de los pasos */
+
+.adicional-js .paso-formulario {
+    padding: clamp(18px, 3vw, 30px);
+    border: 1px solid #E8D4B9;
+    border-radius: 16px;
+    background: rgb(255 250 242 / 55%);
+}
+
+.adicional-js .paso-formulario > h3 {
+    margin: 0 0 8px;
+    color: var(--ad-nuez);
+    font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+}
+
+.adicional-js .paso-formulario > p {
+    margin-bottom: 24px;
+    color: #796956;
+}
+
+/* Preguntas */
+
+.adicional-js .grupo-pregunta {
+    min-width: 0;
+    margin: 22px 0;
+    padding: 0;
+    border: 0;
+}
+
+.adicional-js .grupo-pregunta legend {
+    width: 100%;
+    margin-bottom: 14px;
+    color: var(--ad-texto);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Opciones de respuesta */
+
+.adicional-js .opcion-encuesta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 74px;
+    margin: 11px 0;
+    padding: 16px 18px;
+    border: 1px solid #E6D5BF;
+    border-radius: 12px;
+    background: #FBF3E7;
+    color: var(--ad-texto);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.adicional-js .opcion-encuesta:hover {
+    border-color: var(--ad-coral);
+    background: #F9E6D9;
+    transform: translateY(-1px);
+}
+
+.adicional-js .opcion-encuesta:has(input:checked) {
+    border-color: #A95542;
+    background: #F2D9C9;
+    box-shadow: inset 4px 0 #A95542;
+}
+
+.adicional-js .opcion-encuesta input[type="radio"] {
+    order: 2;
+    width: 19px;
+    height: 19px;
+    margin: 0 0 0 auto;
+    accent-color: #A95542;
+}
+
+.adicional-js .opcion-encuesta > span {
+    order: 1;
+    flex: 1;
+}
+
+.adicional-js .opcion-encuesta strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ad-nuez);
+    font-size: 1rem;
+}
+
+.adicional-js .opcion-encuesta small {
+    display: block;
+    color: #796956;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Navegación de la encuesta */
+
+.adicional-js .navegacion-encuesta {
+    justify-content: space-between;
+}
+
+.adicional-js #encuesta-siguiente {
+    margin-left: auto;
+    border-color: #A95542;
+    background: #A95542;
+    color: #FFFFFF;
+}
+
+.adicional-js #encuesta-siguiente:hover:not(:disabled) {
+    background: #8E4434;
+}
+
+/* Resultado de la recomendación */
+
+.adicional-js #resultado-encuesta {
+    margin: 0;
+    padding: 24px;
+    border: 1px solid #E8D4B9;
+    border-radius: 14px;
+    background: #FCF5E9;
+}
+
+.adicional-js .icono-resultado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: var(--ad-nuez);
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+.adicional-js #resultado-encuesta h3 {
+    color: var(--ad-nuez);
+    font-size: 1.5rem;
+}
+
+.adicional-js #nombre-metodologia-recomendada {
+    margin: 10px 0;
+    color: var(--ad-nuez);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.adicional-js #descripcion-metodologia-recomendada {
+    line-height: 1.7;
+}
+
+/* Tarjeta de coincidencia */
+
+.adicional-js .tarjeta-recomendacion {
+    margin-top: 18px;
+    padding: 24px;
+    border: 1px solid #E6D5BF;
+    border-radius: 14px;
+    background: #FFFFFF;
+}
+
+.adicional-js .tarjeta-recomendacion > span {
+    color: #806F5C;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.adicional-js .coincidencia-resultado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+    color: var(--ad-texto);
+}
+
+.adicional-js #porcentaje-coincidencia {
+    color: var(--ad-nuez);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.adicional-js .barra-coincidencia {
+    width: 100%;
+    height: 12px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #E8D9C4;
+}
+
+.adicional-js #barra-coincidencia-progreso {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--ad-arena);
+    transition: width 0.5s ease;
+}
+
+/* Ventajas y aspectos a considerar */
+
+.adicional-js .detalle-ventajas-desventajas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.adicional-js .detalle-ventajas-desventajas article {
+    padding: 22px;
+    border-radius: 14px;
+    background: #E5E8CF;
+}
+
+.adicional-js .detalle-ventajas-desventajas article:last-child {
+    background: #F2D5CC;
+}
+
+.adicional-js .detalle-ventajas-desventajas h4 {
+    margin: 0 0 14px;
+    color: var(--ad-nuez);
+    font-size: 1.1rem;
+}
+
+.adicional-js .detalle-ventajas-desventajas h4 i {
+    margin-right: 7px;
+}
+
+.adicional-js .detalle-ventajas-desventajas article:first-child h4 i {
+    color: #77783E;
+}
+
+.adicional-js .detalle-ventajas-desventajas article:last-child h4 i {
+    color: #A95542;
+}
+
+.adicional-js .detalle-ventajas-desventajas ul {
+    padding-left: 22px;
+}
+
+.adicional-js .detalle-ventajas-desventajas li {
+    margin-bottom: 9px;
+    line-height: 1.6;
+}
+
+.adicional-js .nota-recomendacion {
+    margin-top: 20px;
+    color: #796956;
+    font-size: 0.9rem;
+}

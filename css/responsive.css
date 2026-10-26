@@ -1665,3 +1665,426 @@
     }
 
 }
+
+
+/* =====================================================
+   RESPONSIVE - FUNCIONALIDAD ADICIONAL JAVASCRIPT
+   Comparador de metodologías + Encuesta
+===================================================== */
+
+
+/* =========================================
+   TABLETS Y PANTALLAS MEDIANAS
+   Hasta 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* Contenedor general */
+
+    .adicional-js {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    .adicional-js .seccion-comparador,
+    .adicional-js #encuesta-metodologias {
+        width: calc(100% - 36px);
+        padding: 28px 24px;
+    }
+
+    /* Opciones del comparador */
+
+    .adicional-js .opciones-metodologias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .adicional-js .opciones-metodologias label {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    /* Tabla comparativa: usar la clase real del HTML */
+
+    .adicional-js .panel-tabla-comparador {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .adicional-js .tabla-scroll {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+    }
+
+    .adicional-js #tabla-comparador {
+        width: max-content;
+        min-width: 100%;
+        table-layout: auto;
+    }
+
+    .adicional-js #tabla-comparador th,
+    .adicional-js #tabla-comparador td {
+        min-width: 145px;
+        max-width: 260px;
+        padding: 12px 14px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        vertical-align: top;
+    }
+
+    .adicional-js #tabla-comparador th:first-child {
+        min-width: 135px;
+    }
+
+    /* Título del comparador */
+
+    .adicional-js .seccion-comparador > h1 {
+        font-size: clamp(2rem, 4vw, 2.6rem);
+    }
+
+    /* Encuesta: progreso */
+
+    .adicional-js .pasos-encuesta {
+        gap: 5px;
+    }
+
+    .adicional-js .paso-encuesta {
+        font-size: 0.78rem;
+    }
+
+    .adicional-js .paso-encuesta .numero-paso {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Preguntas y opciones */
+
+    .adicional-js .paso-formulario {
+        padding: 22px;
+    }
+
+    .adicional-js .opcion-encuesta {
+        min-height: 68px;
+        gap: 10px;
+    }
+
+    /* Resultado */
+
+    .adicional-js .detalle-ventajas-desventajas {
+        gap: 14px;
+    }
+
+    .adicional-js .detalle-ventajas-desventajas article {
+        min-width: 0;
+        padding: 18px;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+   Hasta 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Contenedores */
+
+    .adicional-js {
+        padding: 22px 0 35px;
+    }
+
+    .adicional-js .seccion-comparador,
+    .adicional-js #encuesta-metodologias {
+        width: calc(100% - 24px);
+        margin-bottom: 22px;
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+
+    /* Títulos y textos */
+
+    .adicional-js .seccion-comparador > h1,
+    .adicional-js #encuesta-metodologias > h2 {
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .adicional-js h2 {
+        font-size: 1.35rem;
+    }
+
+    .adicional-js p {
+        font-size: 0.95rem;
+    }
+
+    /* Opciones del comparador */
+
+    .adicional-js .opciones-metodologias {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 18px 0;
+    }
+
+    .adicional-js .opciones-metodologias label {
+        min-height: 48px;
+        padding: 12px;
+    }
+
+    /* Tabla comparativa */
+
+    .adicional-js .panel-tabla-comparador {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 10px;
+        border-radius: 12px;
+    }
+
+    .adicional-js .tabla-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .adicional-js #tabla-comparador {
+        width: max-content;
+        min-width: 850px;
+        table-layout: auto;
+        font-size: 0.85rem;
+    }
+
+    .adicional-js #tabla-comparador th,
+    .adicional-js #tabla-comparador td {
+        min-width: 145px;
+        max-width: 220px;
+        padding: 11px 12px;
+        line-height: 1.5;
+    }
+
+    .adicional-js #tabla-comparador th:first-child {
+        min-width: 130px;
+    }
+
+    .adicional-js .encabezado-tabla {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .adicional-js .encabezado-tabla h2 {
+        font-size: 1.25rem;
+    }
+
+    .adicional-js #contador-metodologias {
+        font-size: 0.85rem;
+    }
+
+    /* Botones del comparador */
+
+    .adicional-js .acciones-comparador {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .adicional-js .acciones-comparador button {
+        width: 100%;
+    }
+
+    /* Pasos de la encuesta */
+
+    .adicional-js .pasos-encuesta {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .adicional-js .paso-encuesta {
+        min-width: 0;
+        font-size: 0.72rem;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .adicional-js .paso-encuesta .numero-paso {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .adicional-js #progreso-encuesta-texto {
+        font-size: 0.82rem;
+    }
+
+    /* Tarjetas de preguntas */
+
+    .adicional-js .paso-formulario {
+        padding: 17px 12px;
+        border-radius: 12px;
+    }
+
+    .adicional-js .paso-formulario > h3 {
+        font-size: 1.3rem;
+    }
+
+    .adicional-js .grupo-pregunta {
+        margin: 18px 0;
+    }
+
+    .adicional-js .grupo-pregunta legend {
+        font-size: 1rem;
+    }
+
+    /* Opciones de respuesta */
+
+    .adicional-js .opcion-encuesta {
+        gap: 9px;
+        min-height: 64px;
+        margin: 9px 0;
+        padding: 12px 10px;
+        border-radius: 10px;
+    }
+
+    .adicional-js .opcion-encuesta > span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .adicional-js .opcion-encuesta strong {
+        font-size: 0.95rem;
+    }
+
+    .adicional-js .opcion-encuesta small {
+        font-size: 0.82rem;
+    }
+
+    .adicional-js .opcion-encuesta input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+    /* Navegación de la encuesta */
+
+    .adicional-js .navegacion-encuesta {
+        gap: 10px;
+    }
+
+    .adicional-js .navegacion-encuesta button {
+        min-width: 0;
+        flex: 1 1 auto;
+        padding: 11px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* Resultado */
+
+    .adicional-js #resultado-encuesta {
+        padding: 18px 14px;
+    }
+
+    .adicional-js .tarjeta-recomendacion {
+        padding: 17px 13px;
+    }
+
+    .adicional-js #nombre-metodologia-recomendada {
+        font-size: 1.55rem;
+        overflow-wrap: anywhere;
+    }
+
+    .adicional-js .coincidencia-resultado {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .adicional-js #porcentaje-coincidencia {
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+
+    .adicional-js .barra-coincidencia {
+        height: 10px;
+    }
+
+    /* Ventajas y aspectos a considerar */
+
+    .adicional-js .detalle-ventajas-desventajas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .adicional-js .detalle-ventajas-desventajas article {
+        padding: 17px;
+    }
+
+    .adicional-js .detalle-ventajas-desventajas h4 {
+        font-size: 1rem;
+    }
+
+    .adicional-js .detalle-ventajas-desventajas ul {
+        padding-left: 20px;
+    }
+
+    .adicional-js .nota-recomendacion {
+        font-size: 0.82rem;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   Hasta 400px
+========================================= */
+
+@media (max-width: 400px) {
+
+    .adicional-js .seccion-comparador,
+    .adicional-js #encuesta-metodologias {
+        width: calc(100% - 16px);
+        padding: 18px 11px;
+    }
+
+    .adicional-js .seccion-comparador > h1,
+    .adicional-js #encuesta-metodologias > h2 {
+        font-size: 1.65rem;
+    }
+
+    .adicional-js .pasos-encuesta {
+        gap: 2px;
+    }
+
+    .adicional-js .paso-encuesta {
+        font-size: 0.66rem;
+    }
+
+    .adicional-js .paso-encuesta .numero-paso {
+        width: 30px;
+        height: 30px;
+    }
+
+    .adicional-js .opcion-encuesta {
+        padding: 11px 8px;
+    }
+
+    .adicional-js .opcion-encuesta small {
+        font-size: 0.78rem;
+    }
+
+    .adicional-js .navegacion-encuesta button {
+        padding: 10px;
+        font-size: 0.84rem;
+    }
+
+    .adicional-js .panel-tabla-comparador {
+        padding: 12px 8px;
+    }
+}
