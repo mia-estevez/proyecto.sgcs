@@ -1,46 +1,506 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <title>Metodologías Ágiles</title>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
     <div id="navbar"></div>
 
+    <main class="pagina-metodologias">
 
-    <!-- CONTENIDO -->
-    <main>
+        <!-- =========================
+             SCRUM
+        ========================== -->
 
-        <section class="pagina-construccion">
+        <section class="vista-agil" id="vista-scrum">
 
-            <h1>Página en construcción</h1>
+
+            <h1>SCRUM</h1>
+            <p>
+                Scrum es un marco de trabajo ágil que permite
+                desarrollar productos de forma iterativa e
+                incremental. Se basa en la colaboración,
+                la transparencia y la adaptación continua.
+            </p>
+
+
+            <nav class="pestanas-scrum" aria-label="Secciones de Scrum">
+
+                <button type="button"
+                    class="pestana-scrum activa"
+                    data-seccion-scrum="roles"
+                    aria-pressed="true">
+                    Roles
+                </button>
+
+                <button type="button"
+                    class="pestana-scrum"
+                    data-seccion-scrum="eventos"
+                    aria-pressed="false">
+                    Eventos / Ceremonias
+                </button>
+
+                <button type="button"
+                    class="pestana-scrum"
+                    data-seccion-scrum="artefactos"
+                    aria-pressed="false">
+                    Artefactos
+                </button>
+
+            </nav>
+
+            <div class="contenido-vista-agil">
+
+                <!-- ROLES -->
+
+                <section class="card-agil contenido-scrum-seleccionado"
+                    id="scrum-roles">
+
+                    <h2>
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        Roles en Scrum
+                    </h2>
+
+                    <p>
+                        Scrum define tres roles principales,
+                        cada uno con responsabilidades específicas.
+                    </p>
+
+                    <div class="tarjetas-roles-scrum">
+
+                        <article class="tarjeta-rol-scrum">
+                            <h3>Product Owner</h3>
+                            <p>
+                                Representa las necesidades del cliente
+                                y prioriza el Product Backlog.
+                            </p>
+                        </article>
+
+                        <article class="tarjeta-rol-scrum">
+                            <h3>Scrum Master</h3>
+                            <p>
+                                Facilita el trabajo del equipo,
+                                promueve Scrum y ayuda a eliminar
+                                impedimentos.
+                            </p>
+                        </article>
+
+                        <article class="tarjeta-rol-scrum">
+                            <h3>Developers</h3>
+                            <p>
+                                Construyen el producto y generan
+                                un incremento funcional durante
+                                cada Sprint.
+                            </p>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- EVENTOS -->
+
+                <section class="card-agil contenido-scrum-seleccionado"
+                    id="scrum-eventos"
+                    hidden>
+
+                    <h2>
+                        <i class="fa-regular fa-calendar-days"
+                            aria-hidden="true"></i>
+                        Ciclo de un Sprint
+                    </h2>
+
+                    <p>
+                        Durante el Sprint se realizan distintos eventos
+                        con objetivos específicos. Seleccioná un evento
+                        para conocer más.
+                    </p>
+
+                    <div class="ciclo-sprint">
+
+                        <button type="button"
+                            class="evento-sprint interactivo"
+                            data-evento="planning"
+                            aria-pressed="false">
+
+                            <strong>Sprint Planning</strong>
+                            <span>Planificación</span>
+                        </button>
+
+                        <button type="button"
+                            class="evento-sprint interactivo"
+                            data-evento="daily"
+                            aria-pressed="false">
+
+                            <strong>Daily Scrum</strong>
+                            <span>15 minutos</span>
+                        </button>
+
+                        <button type="button"
+                            class="evento-sprint interactivo"
+                            data-evento="review"
+                            aria-pressed="false">
+
+                            <strong>Sprint Review</strong>
+                            <span>Revisión</span>
+                        </button>
+
+                        <button type="button"
+                            class="evento-sprint interactivo"
+                            data-evento="retro"
+                            aria-pressed="false">
+
+                            <strong>Sprint Retrospective</strong>
+                            <span>Retrospectiva</span>
+                        </button>
+
+                    </div>
+
+                    <div class="informacion-evento"
+                        id="informacion-evento"
+                        aria-live="polite"
+                        hidden>
+
+                        <button type="button"
+                            class="cerrar-informacion-evento"
+                            aria-label="Cerrar información">
+                            &times;
+                        </button>
+
+                        <div id="detalle-evento"></div>
+                    </div>
+
+                </section>
+
+                <!-- ARTEFACTOS -->
+
+                <section class="card-agil contenido-scrum-seleccionado estado-construccion"
+                    id="scrum-artefactos"
+                    hidden>
+
+                    <i class="fa-solid fa-person-digging"
+                        aria-hidden="true"></i>
+
+                    <h2>Artefactos de Scrum</h2>
+
+                    <p>
+                        Estamos trabajando en esta sección.
+                        ¡Próximamente estará disponible!
+                    </p>
+
+                </section>
+
+            </div>
+        </section>
+
+        <div class="separador-metodologias"
+            aria-hidden="true"></div>
+
+        <!-- =========================
+             KANBAN
+        ========================== -->
+
+        <section class="vista-agil" id="vista-kanban">
+
+            <h1>KANBAN</h1>
 
             <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
+                Kanban es un método de gestión del trabajo que permite
+                visualizar las tareas, controlar el trabajo en curso
+                y mejorar continuamente el flujo de trabajo.
             </p>
+
+
+            <nav class="pestanas-kanban"
+                aria-label="Secciones de Kanban">
+
+                <button type="button"
+                    class="pestana-kanban activa"
+                    data-seccion-kanban="tablero"
+                    aria-pressed="true">
+                    Tablero Kanban
+                </button>
+
+                <button type="button"
+                    class="pestana-kanban"
+                    data-seccion-kanban="principios"
+                    aria-pressed="false">
+                    Principios
+                </button>
+
+                <button type="button"
+                    class="pestana-kanban"
+                    data-seccion-kanban="buenas-practicas"
+                    aria-pressed="false">
+                    Buenas Prácticas
+                </button>
+
+            </nav>
+
+            <div class="contenido-vista-agil">
+
+                <!-- TABLERO KANBAN -->
+
+                <section class="card-agil contenido-kanban-seleccionado"
+                    id="kanban-tablero">
+
+                    <div class="titulo-tablero-kanban">
+
+                        <div>
+                            <h2>
+                                <i class="fa-solid fa-table-columns"
+                                    aria-hidden="true"></i>
+                                Tablero Kanban
+                            </h2>
+
+                            <p>
+                                El tablero se organiza en columnas que
+                                representan el estado del trabajo.
+                                Cada tarjeta es una tarea o funcionalidad.
+                            </p>
+                        </div>
+
+                        <span class="indicador-wip">
+                            <i class="fa-solid fa-circle-info"
+                                aria-hidden="true"></i>
+                            Límite WIP: 3
+                        </span>
+
+                    </div>
+
+                    <div class="tablero-kanban">
+
+                        <!-- POR HACER -->
+
+                        <section class="columna-kanban columna-pendiente"
+                            data-columna="pendiente">
+
+                            <h3>
+                                <span>＋ Por Hacer</span>
+                                <span class="contador-columna">3</span>
+                            </h3>
+
+                            <div class="tarjetas-kanban">
+
+                                <article class="tarjeta-kanban"
+                                    draggable="true">
+                                    Diseñar interfaz de usuario
+                                </article>
+
+                                <article class="tarjeta-kanban"
+                                    draggable="true">
+                                    Configurar base de datos
+                                </article>
+
+                                <article class="tarjeta-kanban"
+                                    draggable="true">
+                                    Implementar login
+                                </article>
+
+                            </div>
+                        </section>
+
+                        <!-- EN PROCESO -->
+
+                        <section class="columna-kanban columna-proceso"
+                            data-columna="proceso"
+                            data-limite="3">
+
+                            <h3>
+                                <span>⇢ En Proceso</span>
+                                <span class="contador-columna contador-wip">
+                                    0/3
+                                </span>
+                            </h3>
+
+                            <div class="tarjetas-kanban"></div>
+
+                        </section>
+
+                        <!-- HECHO -->
+
+                        <section class="columna-kanban columna-hecho"
+                            data-columna="hecho">
+
+                            <h3>
+                                <span>✓ Hecho</span>
+                                <span class="contador-columna">0</span>
+                            </h3>
+
+                            <div class="tarjetas-kanban"></div>
+
+                        </section>
+
+                    </div>
+
+                    <p class="mensaje-kanban"
+                        id="mensaje-kanban"
+                        aria-live="polite">
+                        Arrastrá las tarjetas entre las columnas para ver
+                        cómo fluye el trabajo y respetar el límite WIP.
+                    </p>
+
+                    <!-- PRUEBA INTERACTIVA -->
+
+                    <div class="prueba-kanban">
+
+                        <div class="encabezado-prueba-kanban">
+
+                            <i class="fa-solid fa-hand-pointer"
+                                aria-hidden="true"></i>
+
+                            <div>
+                                <h3>Prueba interactiva</h3>
+                                <p>
+                                    Agregá una tarea y arrastrala entre
+                                    las columnas para probar el flujo
+                                    de trabajo.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <form id="form-nueva-tarea"
+                            class="form-nueva-tarea">
+
+                            <label for="nueva-tarea">
+                                Nueva tarea
+                            </label>
+
+                            <div class="entrada-nueva-tarea">
+
+                                <input type="text"
+                                    id="nueva-tarea"
+                                    maxlength="90"
+                                    placeholder="Ej. Crear documentación"
+                                    required>
+
+                                <button type="submit">
+                                    Agregar tarea
+                                </button>
+
+                            </div>
+                        </form>
+
+                    </div>
+
+                </section>
+
+                <!-- PRINCIPIOS -->
+
+                <section class="card-agil contenido-kanban-seleccionado estado-construccion"
+                    id="kanban-principios"
+                    hidden>
+
+                    <i class="fa-solid fa-person-digging"
+                        aria-hidden="true"></i>
+
+                    <h2>Principios de Kanban</h2>
+
+                    <p>
+                        Estamos trabajando en esta sección.
+                        ¡Próximamente estará disponible!
+                    </p>
+
+                </section>
+
+                <!-- BUENAS PRÁCTICAS -->
+
+                <section class="card-agil contenido-kanban-seleccionado estado-construccion"
+                    id="kanban-buenas-practicas"
+                    hidden>
+
+                    <i class="fa-solid fa-person-digging"
+                        aria-hidden="true"></i>
+
+                    <h2>Buenas Prácticas de Kanban</h2>
+
+                    <p>
+                        Estamos trabajando en esta sección.
+                        ¡Próximamente estará disponible!
+                    </p>
+
+                </section>
+
+            </div>
+        </section>
+
+        <div class="separador-metodologias"
+            aria-hidden="true"></div>
+
+        <!-- =========================
+             GLOSARIO
+        ========================== -->
+
+        <section class="vista-agil" id="vista-glosario">
+
+            <h1>GLOSARIO</h1>
+
+            <p>
+                Encontrá definiciones de los términos más importantes
+                relacionados con las metodologías ágiles, la calidad
+                del software y su desarrollo.
+            </p>
+
+            <div class="buscador-glosario">
+
+                <i class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"></i>
+
+                <input type="search"
+                    id="busqueda-glosario"
+                    placeholder="Buscar término..."
+                    aria-label="Buscar término en el glosario"
+                    autocomplete="off">
+
+                <button type="button"
+                    id="limpiar-glosario"
+                    aria-label="Limpiar búsqueda">
+
+                    <i class="fa-solid fa-xmark"
+                        aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <nav class="filtros-glosario"
+                id="filtros-glosario"
+                aria-label="Filtrar términos por letra">
+
+                <button type="button"
+                    class="filtro-letra activo"
+                    data-letra="todos"
+                    aria-pressed="true">
+                    Todos
+                </button>
+
+            </nav>
+
+            <div class="lista-glosario"
+                id="lista-glosario"
+                aria-live="polite">
+            </div>
+
+            <nav class="paginacion-glosario"
+                id="paginacion-glosario"
+                aria-label="Páginas del glosario">
+            </nav>
 
         </section>
 
     </main>
 
-
-    <!-- FOOTER -->
     <div id="footer"></div>
-
 
     <script src="../js/script.js"></script>
 
 </body>
-
 </html>

@@ -1634,3 +1634,480 @@
         height: auto;
     }
 }
+
+/* =========================================
+   RESPONSIVE - METODOLOGÍAS ÁGILES
+   ========================================= */
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    .pagina-metodologias .vista-agil {
+        padding: 40px 5%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Roles de Scrum */
+    .pagina-metodologias .tarjetas-roles-scrum {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum {
+        padding: 20px;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    /* Eventos del Sprint */
+    .pagina-metodologias .ciclo-sprint {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .pagina-metodologias .evento-sprint {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    /* Tablero Kanban */
+    .pagina-metodologias .tablero-kanban {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(230px, 1fr));
+        gap: 14px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 4px 2px 14px;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pagina-metodologias .columna-kanban {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Glosario */
+    .pagina-metodologias #lista-glosario {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-metodologias .termino-glosario {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    .pagina-metodologias {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias .vista-agil {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 32px 18px;
+        box-sizing: border-box;
+        scroll-margin-top: 95px;
+    }
+
+    /* Encabezados */
+    .pagina-metodologias .encabezado-vista-agil {
+        margin-bottom: 24px;
+    }
+
+    .pagina-metodologias .encabezado-vista-agil h1,
+    .pagina-metodologias .encabezado-vista-agil h2 {
+        font-size: 28px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .pagina-metodologias .encabezado-vista-agil p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Botones de Scrum y Kanban */
+    .pagina-metodologias .pestanas-scrum,
+    .pagina-metodologias .pestanas-kanban {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin: 22px 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pagina-metodologias .pestana-scrum,
+    .pagina-metodologias .pestana-kanban {
+        min-width: 0;
+        max-width: 100%;
+        padding: 11px 8px;
+        border-radius: 9px;
+        font-size: 13px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
+
+    /* Roles de Scrum */
+    .pagina-metodologias .tarjetas-roles-scrum {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum h3 {
+        font-size: 18px;
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Eventos del Sprint */
+    .pagina-metodologias .ciclo-sprint {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .pagina-metodologias .evento-sprint {
+        min-width: 0;
+        padding: 15px 10px;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias .evento-sprint h3 {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .pagina-metodologias .evento-sprint p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .pagina-metodologias #informacion-evento {
+        max-width: 100%;
+        padding: 16px;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
+
+    /* Tablero Kanban: desplazamiento horizontal */
+    .pagina-metodologias .tablero-kanban {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(230px, 78vw));
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 4px 2px 14px;
+        box-sizing: border-box;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y;
+    }
+
+    .pagina-metodologias .columna-kanban {
+        min-width: 0;
+        max-width: 100%;
+        padding: 14px;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+    }
+
+    .pagina-metodologias .columna-kanban h3 {
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .pagina-metodologias .tarjetas-kanban {
+        min-width: 0;
+    }
+
+    .pagina-metodologias .tarjeta-kanban {
+        max-width: 100%;
+        padding: 13px;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+        touch-action: pan-y;
+    }
+
+    .pagina-metodologias .tarjeta-kanban h4 {
+        font-size: 15px;
+    }
+
+    .pagina-metodologias .tarjeta-kanban p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Formulario para agregar tareas */
+    .pagina-metodologias #form-nueva-tarea {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pagina-metodologias #form-nueva-tarea input {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias #form-nueva-tarea button {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Buscador del glosario */
+    .pagina-metodologias .buscador-glosario {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias .buscador-glosario > i {
+        display: none;
+    }
+
+    .pagina-metodologias #busqueda-glosario {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+        padding: 12px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias #limpiar-glosario {
+        margin-left: auto;
+        padding: 10px 15px;
+    }
+
+    /* Filtros alfabéticos */
+    .pagina-metodologias #filtros-glosario {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 6px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 4px 2px 12px;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pagina-metodologias .filtro-letra {
+        flex: 0 0 auto;
+        min-width: 36px;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    /* Tarjetas del glosario */
+    .pagina-metodologias #lista-glosario {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .pagina-metodologias .termino-glosario {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .pagina-metodologias .texto-termino-glosario {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .pagina-metodologias .termino-glosario strong {
+        overflow-wrap: anywhere;
+    }
+
+    /* Separadores:
+       no agregar bordes a las vistas.
+       El separador existente es el único
+       responsable de dibujar la línea. */
+    .pagina-metodologias #vista-scrum,
+    .pagina-metodologias #vista-kanban {
+        border-bottom: none;
+    }
+
+    .pagina-metodologias .separador-metodologias {
+        width: calc(100% - 40px);
+        max-width: 100%;
+        height: 5px;
+        margin: 32px auto;
+        border: 0;
+        border-radius: 10px;
+        background-color: #e88f9a;
+        box-sizing: border-box;
+    }
+
+    /* ACCESIBILIDAD: REDUCIR ANIMACIONES */
+    @media (prefers-reduced-motion: reduce) {
+
+        .pagina-metodologias *,
+        .pagina-metodologias *::before,
+        .pagina-metodologias *::after {
+            scroll-behavior: auto !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* CONTROLES PARA MOVER TAREAS EN KANBAN */
+
+    /* Ocultos por defecto en computadora */
+    .pagina-metodologias .controles-mover-tarea {
+        display: none;
+    }
+
+    /* Visibles únicamente en celulares y tablets pequeñas */
+    @media (max-width: 600px) {
+
+        .pagina-metodologias .controles-mover-tarea {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(117, 66, 31, 0.12);
+        }
+
+        .pagina-metodologias .controles-mover-tarea label {
+            display: flex;
+            flex: 1 1 100%;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 12px;
+        }
+
+        .pagina-metodologias .selector-mover-tarea {
+            width: 100%;
+            min-width: 0;
+            padding: 8px;
+            border: 1px solid rgba(117, 66, 31, 0.3);
+            border-radius: 8px;
+            background: #fff8eb;
+            color: var(--agil-marron);
+            font: inherit;
+        }
+
+        .pagina-metodologias .boton-mover-tarea {
+            padding: 8px 14px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--agil-rosa);
+            color: var(--agil-marron);
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .pagina-metodologias .boton-mover-tarea:hover {
+            filter: brightness(0.96);
+        }
+}
+}
+
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 400px) {
+
+    .pagina-metodologias .vista-agil {
+        padding: 28px 13px;
+    }
+
+    .pagina-metodologias .encabezado-vista-agil h1,
+    .pagina-metodologias .encabezado-vista-agil h2 {
+        font-size: 25px;
+    }
+
+    .pagina-metodologias .pestanas-scrum,
+    .pagina-metodologias .pestanas-kanban {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-metodologias .ciclo-sprint {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum {
+        padding: 15px;
+    }
+
+    .pagina-metodologias .termino-glosario {
+        padding: 13px;
+    }
+}
+
+
+/* ACCESIBILIDAD: REDUCIR ANIMACIONES */
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-metodologias *,
+    .pagina-metodologias *::before,
+    .pagina-metodologias *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* CORRECCIÓN: ocultar controles Kanban en computadora */
+@media (min-width: 601px) {
+    .pagina-metodologias .columna-kanban .tarjeta-kanban .controles-mover-tarea {
+        display: none !important;
+    }
+}
+
+/* Mostrar controles solo en pantallas pequeñas */
+@media (max-width: 600px) {
+    .pagina-metodologias .columna-kanban .tarjeta-kanban .controles-mover-tarea {
+        display: flex !important;
+    }
+}

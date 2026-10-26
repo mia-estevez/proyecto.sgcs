@@ -3573,3 +3573,669 @@ h6 {
     object-fit: contain;
     margin: 0 auto;
 }
+
+
+/* =========================================
+   METODOLOGÍAS ÁGILES
+   Estilos aislados para esta página
+========================================= */
+
+.pagina-metodologias {
+    --agil-rosa: #f4a6aa;
+    --agil-rosa-linea: #d88180;
+    --agil-beige: #feeac7;
+    --agil-beige-claro: #fff8eb;
+    --agil-marron: #75421f;
+    --agil-oliva: #cad182;
+    --agil-verde: #26634f;
+    --agil-texto: #555555;
+
+    width: 100%;
+    padding: 0 0 50px;
+    box-sizing: border-box;
+    background: var(--agil-beige);
+    color: var(--agil-marron);
+    overflow-wrap: break-word;
+}
+
+.pagina-metodologias *,
+.pagina-metodologias *::before,
+.pagina-metodologias *::after {
+    box-sizing: border-box;
+}
+
+/* Secciones principales */
+
+.pagina-metodologias .vista-agil {
+    display: block;
+    width: 100%;
+    padding: 48px 4.5%;
+    scroll-margin-top: 130px;
+}
+
+.pagina-metodologias .encabezado-vista-agil {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+}
+
+.pagina-metodologias .encabezado-vista-agil h1 {
+    margin: 0 0 14px;
+    color: var(--agil-marron);
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(30px, 3.4vw, 40px);
+    line-height: 1.25;
+}
+
+.pagina-metodologias .encabezado-vista-agil p {
+    max-width: 1100px;
+    margin: 0;
+    color: var(--agil-texto);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Separadores continuos */
+
+.pagina-metodologias .separador-metodologias {
+    width: calc(100% - 46px);
+    height: 4px;
+    margin: 4px auto;
+    border-radius: 10px;
+    background: var(--agil-rosa-linea);
+}
+
+/* Botones de Scrum y Kanban */
+
+.pagina-metodologias .pestanas-scrum,
+.pagina-metodologias .pestanas-kanban {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 28px;
+}
+
+.pagina-metodologias .pestana-scrum,
+.pagina-metodologias .pestana-kanban {
+    min-height: 42px;
+    padding: 12px 20px;
+    border: 1px solid var(--agil-marron);
+    border-radius: 7px;
+    background: #f5ddc8;
+    color: var(--agil-marron);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.pagina-metodologias .pestana-scrum.activa,
+.pagina-metodologias .pestana-kanban.activa {
+    background: var(--agil-marron);
+    color: #fff;
+}
+
+.pagina-metodologias .pestana-scrum:hover:not(.activa),
+.pagina-metodologias .pestana-kanban:hover:not(.activa) {
+    background: #f2d2b4;
+}
+
+/* Cards principales */
+
+.pagina-metodologias .contenido-vista-agil {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.pagina-metodologias .card-agil {
+    position: relative;
+    width: 100%;
+    padding: clamp(22px, 3vw, 34px);
+    border: 1px solid rgba(117, 66, 31, .13);
+    border-radius: 17px;
+    background: rgba(255, 248, 235, .76);
+    box-shadow: 0 5px 18px rgba(117, 66, 31, .07);
+}
+
+.pagina-metodologias .card-agil h2 {
+    margin: 0 0 14px;
+    color: var(--agil-marron);
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(23px, 2.6vw, 30px);
+    line-height: 1.3;
+}
+
+.pagina-metodologias .card-agil h2 i {
+    margin-right: 8px;
+}
+
+.pagina-metodologias .card-agil > p {
+    margin: 0 0 22px;
+    color: var(--agil-texto);
+    line-height: 1.7;
+}
+
+.pagina-metodologias [hidden] {
+    display: none !important;
+}
+
+/* Roles de Scrum */
+
+.pagina-metodologias .tarjetas-roles-scrum {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.pagina-metodologias .tarjeta-rol-scrum {
+    min-width: 0;
+    padding: 24px 22px;
+    border: 1px solid rgba(117, 66, 31, .15);
+    border-radius: 16px;
+    background: var(--agil-beige-claro);
+    box-shadow: 0 4px 12px rgba(117, 66, 31, .06);
+}
+
+.pagina-metodologias .tarjeta-rol-scrum h3 {
+    margin: 0 0 10px;
+    color: var(--agil-marron);
+    font-family: 'Roboto Slab', serif;
+    font-size: 19px;
+}
+
+.pagina-metodologias .tarjeta-rol-scrum p {
+    margin: 0;
+    color: var(--agil-texto);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* Eventos del Sprint */
+
+.pagina-metodologias .ciclo-sprint {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.pagina-metodologias .evento-sprint {
+    display: flex;
+    min-width: 0;
+    min-height: 76px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 12px;
+    border: 1px solid rgba(117, 66, 31, .2);
+    border-radius: 13px;
+    background: var(--agil-beige-claro);
+    color: var(--agil-marron);
+    text-align: center;
+    font: inherit;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.pagina-metodologias .evento-sprint strong {
+    font-size: 14px;
+}
+
+.pagina-metodologias .evento-sprint span {
+    font-size: 13px;
+}
+
+.pagina-metodologias .evento-sprint:hover,
+.pagina-metodologias .evento-sprint.seleccionado {
+    border-color: var(--agil-rosa-linea);
+    background: #f8e1d7;
+}
+
+.pagina-metodologias .informacion-evento {
+    position: relative;
+    margin-top: 20px;
+    padding: 22px 48px 22px 24px;
+    border: 1px solid rgba(117, 66, 31, .12);
+    border-left: 5px solid var(--agil-rosa-linea);
+    border-radius: 12px;
+    background: #f5e3d8;
+    color: var(--agil-texto);
+    line-height: 1.7;
+}
+
+.pagina-metodologias .informacion-evento h3 {
+    margin: 0 0 8px;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .informacion-evento p {
+    margin: 6px 0;
+}
+
+.pagina-metodologias .cerrar-informacion-evento {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: var(--agil-marron);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Secciones en construcción */
+
+.pagina-metodologias .estado-construccion {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pagina-metodologias .estado-construccion > i {
+    margin-bottom: 12px;
+    color: var(--agil-marron);
+    font-size: 32px;
+}
+
+.pagina-metodologias .estado-construccion h2 {
+    margin-bottom: 8px;
+}
+
+.pagina-metodologias .estado-construccion p {
+    margin: 0;
+    color: var(--agil-texto);
+}
+
+/* Encabezado del tablero Kanban */
+
+.pagina-metodologias .titulo-tablero-kanban {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.pagina-metodologias .titulo-tablero-kanban h2 {
+    margin-bottom: 8px;
+}
+
+.pagina-metodologias .titulo-tablero-kanban p {
+    max-width: 850px;
+    margin: 0;
+    color: var(--agil-texto);
+    line-height: 1.6;
+}
+
+.pagina-metodologias .indicador-wip {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #f4e2d7;
+    color: var(--agil-marron);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Columnas Kanban */
+
+.pagina-metodologias .tablero-kanban {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+}
+
+.pagina-metodologias .columna-kanban {
+    min-width: 0;
+    min-height: 230px;
+    padding: 13px;
+    border: 1px solid rgba(117, 66, 31, .08);
+    border-radius: 12px;
+    background: #eee9d5;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.pagina-metodologias .columna-pendiente {
+    background: #e8e9d4;
+}
+
+.pagina-metodologias .columna-proceso {
+    background: #f0ded4;
+}
+
+.pagina-metodologias .columna-hecho {
+    background: #e0e3cc;
+}
+
+.pagina-metodologias .columna-kanban h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    color: var(--agil-marron);
+    font-size: 15px;
+}
+
+.pagina-metodologias .contador-columna {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 23px;
+    min-height: 23px;
+    padding: 3px 6px;
+    border-radius: 20px;
+    background: #c8cc8c;
+    font-size: 11px;
+}
+
+.pagina-metodologias .contador-wip {
+    background: #d8a19a;
+}
+
+.pagina-metodologias .tarjetas-kanban {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-height: 155px;
+}
+
+.pagina-metodologias .tarjeta-kanban {
+    padding: 11px 10px;
+    border: 1px solid rgba(117, 66, 31, .08);
+    border-radius: 7px;
+    background: #fffdf7;
+    box-shadow: 0 2px 5px rgba(117, 66, 31, .05);
+    color: #514638;
+    font-size: 13px;
+    line-height: 1.45;
+    cursor: grab;
+    overflow-wrap: anywhere;
+}
+
+.pagina-metodologias .tarjeta-kanban:active {
+    cursor: grabbing;
+}
+
+.pagina-metodologias .tarjeta-kanban.arrastrando {
+    opacity: .45;
+}
+
+.pagina-metodologias .columna-kanban.arrastrando-sobre {
+    outline: 2px dashed var(--agil-verde);
+    outline-offset: -4px;
+}
+
+.pagina-metodologias .mensaje-kanban {
+    min-height: 24px;
+    margin: 16px 0 25px;
+    color: var(--agil-verde);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Prueba interactiva de Kanban */
+
+.pagina-metodologias .prueba-kanban {
+    padding: 20px;
+    border: 1px solid rgba(117, 66, 31, .12);
+    border-radius: 12px;
+    background: #f5e7d7;
+}
+
+.pagina-metodologias .encabezado-prueba-kanban {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 18px;
+}
+
+.pagina-metodologias .encabezado-prueba-kanban > i {
+    color: var(--agil-marron);
+    font-size: 26px;
+}
+
+.pagina-metodologias .encabezado-prueba-kanban h3 {
+    margin: 0 0 5px;
+    color: var(--agil-marron);
+    font-family: 'Roboto Slab', serif;
+}
+
+.pagina-metodologias .encabezado-prueba-kanban p {
+    margin: 0;
+    color: var(--agil-texto);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.pagina-metodologias .form-nueva-tarea label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--agil-marron);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.pagina-metodologias .entrada-nueva-tarea {
+    display: flex;
+    gap: 9px;
+}
+
+.pagina-metodologias #nueva-tarea {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 13px;
+    border: 1px solid rgba(117, 66, 31, .22);
+    border-radius: 8px;
+    background: #fffdf7;
+    color: var(--agil-marron);
+    font: inherit;
+}
+
+.pagina-metodologias .entrada-nueva-tarea button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--agil-marron);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Buscador del glosario */
+
+.pagina-metodologias .encabezado-glosario {
+    margin-bottom: 20px;
+}
+
+.pagina-metodologias .buscador-glosario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.pagina-metodologias .buscador-glosario > i {
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias #busqueda-glosario {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 1px solid rgba(117, 66, 31, .25);
+    border-radius: 12px;
+    background: var(--agil-beige-claro);
+    color: var(--agil-marron);
+    font: inherit;
+}
+
+.pagina-metodologias #limpiar-glosario {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--agil-rosa);
+    color: var(--agil-marron);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* Abecedario */
+
+.pagina-metodologias .filtros-glosario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    max-width: 1100px;
+    margin: 22px auto 28px;
+}
+
+.pagina-metodologias .filtro-letra {
+    min-width: 34px;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: #f5ddc8;
+    color: var(--agil-marron);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pagina-metodologias .filtro-letra.activo {
+    border-color: var(--agil-marron);
+    background: var(--agil-marron);
+    color: #fff;
+}
+
+/* Tarjetas del glosario */
+
+.pagina-metodologias .lista-glosario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pagina-metodologias .termino-glosario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid rgba(117, 66, 31, .08);
+    border-radius: 12px;
+    background: #eeead9;
+    color: var(--agil-marron);
+    text-align: left;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.pagina-metodologias .termino-glosario:hover,
+.pagina-metodologias .termino-glosario[aria-expanded="true"] {
+    background: #e6e3cd;
+}
+
+.pagina-metodologias .inicial-glosario {
+    display: flex;
+    flex: 0 0 38px;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #85864d;
+    color: #fff8eb;
+    font-size: 17px;
+}
+
+.pagina-metodologias .texto-termino-glosario {
+    flex: 1;
+    min-width: 0;
+}
+
+.pagina-metodologias .texto-termino-glosario strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #4e493c;
+    font-size: 14px;
+}
+
+.pagina-metodologias .texto-termino-glosario span {
+    display: block;
+    color: #6a675e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.pagina-metodologias .flecha-glosario {
+    color: #6b654f;
+    transition: transform .2s ease;
+}
+
+.pagina-metodologias .termino-glosario[aria-expanded="true"] .flecha-glosario {
+    transform: rotate(90deg);
+}
+
+.pagina-metodologias .definicion-completa {
+    display: block;
+    margin-top: 8px;
+    color: var(--agil-texto);
+}
+
+.pagina-metodologias .sin-resultados {
+    padding: 25px;
+    border-radius: 12px;
+    background: var(--agil-beige-claro);
+    color: var(--agil-texto);
+    text-align: center;
+}
+
+/* Paginación */
+
+.pagina-metodologias .paginacion-glosario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.pagina-metodologias .boton-pagina-glosario {
+    min-width: 38px;
+    padding: 9px 12px;
+    border: 1px solid rgba(117, 66, 31, .25);
+    border-radius: 7px;
+    background: #f5ddc8;
+    color: var(--agil-marron);
+    cursor: pointer;
+}
+
+.pagina-metodologias .boton-pagina-glosario.activo {
+    background: var(--agil-marron);
+    color: #fff;
+}
+
+/* Accesibilidad */
+
+.pagina-metodologias button:focus-visible,
+.pagina-metodologias input:focus-visible {
+    outline: 2px solid var(--agil-verde);
+    outline-offset: 3px;
+}
