@@ -3576,8 +3576,7 @@ h6 {
 
 
 /* =========================================
-   METODOLOGÍAS ÁGILES
-   Estilos aislados para esta página
+   PÁGINA METODOLOGÍAS ÁGILES
 ========================================= */
 
 .pagina-metodologias {
@@ -4051,13 +4050,63 @@ h6 {
     cursor: pointer;
 }
 
-/* Buscador del glosario */
+/* Accesibilidad */
 
-.pagina-metodologias .encabezado-glosario {
-    margin-bottom: 20px;
+.pagina-metodologias button:focus-visible,
+.pagina-metodologias input:focus-visible {
+    outline: 2px solid var(--agil-verde);
+    outline-offset: 3px;
 }
 
-.pagina-metodologias .buscador-glosario {
+
+/* =========================================
+   PÁGINA RECURSOS Y APRENDIZAJES
+========================================= */
+
+/* =========================================
+   GLOSARIO
+========================================= */
+
+#vista-glosario {
+    --agil-rosa: #F7B1B0;
+    --agil-coral: #D88180;
+    --agil-beige-claro: #FEEAC7;
+    --agil-marron: #724319;
+    --agil-verde: #CAD182;
+    --agil-texto: #5D4936;
+    --agil-tarjeta: #FFF5E4;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 20px 24px 40px;
+    background: var(--agil-beige-claro);
+    color: var(--agil-marron);
+}
+
+#vista-glosario *,
+#vista-glosario *::before,
+#vista-glosario *::after {
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+
+#vista-glosario h1 {
+    margin-top: 0;
+    color: var(--agil-marron);
+}
+
+#vista-glosario > p {
+    color: var(--agil-texto);
+    line-height: 1.7;
+}
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+#vista-glosario .buscador-glosario {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -4066,93 +4115,155 @@ h6 {
     margin: 20px auto;
 }
 
-.pagina-metodologias .buscador-glosario > i {
+#vista-glosario .buscador-glosario > i {
     color: var(--agil-marron);
 }
 
-.pagina-metodologias #busqueda-glosario {
+#vista-glosario #busqueda-glosario {
     flex: 1;
     min-width: 0;
     padding: 13px 16px;
-    border: 1px solid rgba(117, 66, 31, .25);
+    border: 1px solid rgba(114, 67, 25, 0.25);
     border-radius: 12px;
-    background: var(--agil-beige-claro);
+    background: #FFF9EF;
     color: var(--agil-marron);
     font: inherit;
 }
 
-.pagina-metodologias #limpiar-glosario {
+#vista-glosario #busqueda-glosario:focus {
+    border-color: var(--agil-coral);
+    outline: 2px solid rgba(216, 129, 128, 0.2);
+}
+
+#vista-glosario #limpiar-glosario {
+    display: flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
     width: 42px;
     height: 42px;
-    border: 0;
+    padding: 0;
+    border: none;
     border-radius: 12px;
     background: var(--agil-rosa);
     color: var(--agil-marron);
     font-size: 17px;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
-/* Abecedario */
+#vista-glosario #limpiar-glosario:hover {
+    background: var(--agil-coral);
+}
 
-.pagina-metodologias .filtros-glosario {
+/* =========================================
+   FILTROS ALFABÉTICOS
+========================================= */
+
+#vista-glosario #filtros-glosario {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 7px;
+    width: 100%;
     max-width: 1100px;
     margin: 22px auto 28px;
 }
 
-.pagina-metodologias .filtro-letra {
-    min-width: 34px;
-    padding: 8px 10px;
+#vista-glosario .filtro-letra {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+    min-width: 42px;
+    height: 38px;
+    padding: 0 12px;
+
     border: 1px solid transparent;
-    border-radius: 7px;
-    background: #f5ddc8;
-    color: var(--agil-marron);
-    font: inherit;
+    border-radius: 8px;
+
+    background: #F7B1B0;
+    color: #724319;
+
+    font-family: inherit;
     font-size: 13px;
+    line-height: 1;
+    white-space: nowrap;
+
     cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-.pagina-metodologias .filtro-letra.activo {
-    border-color: var(--agil-marron);
+#vista-glosario .filtro-letra.activo {
+    border-color: #724319;
+    background: #724319;
+    color: #FFFFFF;
+}
+
+
+/* Todas las letras permanecen rosas */
+
+#vista-glosario .filtro-letra:hover {
+    background: var(--agil-coral);
+    border-color: var(--agil-coral);
+    color: var(--agil-marron);
+}
+
+/* La letra seleccionada se vuelve marrón */
+
+#vista-glosario .filtro-letra.activo {
     background: var(--agil-marron);
-    color: #fff;
+    border-color: var(--agil-marron);
+    color: #FFFFFF;
 }
 
-/* Tarjetas del glosario */
+/* =========================================
+   LISTA DE TÉRMINOS
+========================================= */
 
-.pagina-metodologias .lista-glosario {
+#vista-glosario #lista-glosario {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     max-width: 1100px;
+    min-width: 0;
     margin: 0 auto;
 }
 
-.pagina-metodologias .termino-glosario {
+#vista-glosario .termino-glosario {
     display: flex;
     align-items: center;
     gap: 16px;
     width: 100%;
+    min-width: 0;
     padding: 14px 18px;
-    border: 1px solid rgba(117, 66, 31, .08);
+    border: 1px solid rgba(114, 67, 25, 0.12);
     border-radius: 12px;
-    background: #eeead9;
+    background: var(--agil-tarjeta);
     color: var(--agil-marron);
     text-align: left;
     cursor: pointer;
-    transition: background .2s ease;
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
-.pagina-metodologias .termino-glosario:hover,
-.pagina-metodologias .termino-glosario[aria-expanded="true"] {
-    background: #e6e3cd;
+#vista-glosario .termino-glosario:hover {
+    border-color: var(--agil-coral);
+    box-shadow: 0 4px 12px rgba(114, 67, 25, 0.08);
 }
 
-.pagina-metodologias .inicial-glosario {
+#vista-glosario .termino-glosario[aria-expanded="true"] {
+    background: #FBE0D8;
+    border-color: var(--agil-coral);
+}
+
+/* Inicial */
+
+#vista-glosario .inicial-glosario {
     display: flex;
     flex: 0 0 38px;
     align-items: center;
@@ -4160,56 +4271,76 @@ h6 {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: #85864d;
-    color: #fff8eb;
+    background: var(--agil-verde);
+    color: var(--agil-marron);
     font-size: 17px;
 }
 
-.pagina-metodologias .texto-termino-glosario {
+/* Texto */
+
+#vista-glosario .texto-termino-glosario {
     flex: 1;
     min-width: 0;
+    overflow-wrap: anywhere;
 }
 
-.pagina-metodologias .texto-termino-glosario strong {
+#vista-glosario .texto-termino-glosario strong {
     display: block;
     margin-bottom: 4px;
-    color: #4e493c;
+    color: var(--agil-marron);
     font-size: 14px;
+    overflow-wrap: anywhere;
 }
 
-.pagina-metodologias .texto-termino-glosario span {
+#vista-glosario .texto-termino-glosario span {
     display: block;
-    color: #6a675e;
+    color: #725D49;
     font-size: 13px;
     line-height: 1.5;
 }
 
-.pagina-metodologias .flecha-glosario {
-    color: #6b654f;
-    transition: transform .2s ease;
+/* Flecha */
+
+#vista-glosario .flecha-glosario {
+    flex: 0 0 auto;
+    color: var(--agil-marron);
+    transition: transform 0.2s ease;
 }
 
-.pagina-metodologias .termino-glosario[aria-expanded="true"] .flecha-glosario {
+#vista-glosario .termino-glosario[aria-expanded="true"] .flecha-glosario {
     transform: rotate(90deg);
 }
 
-.pagina-metodologias .definicion-completa {
+/* Definición completa */
+
+#vista-glosario .definicion-completa {
     display: block;
     margin-top: 8px;
     color: var(--agil-texto);
+    line-height: 1.6;
 }
 
-.pagina-metodologias .sin-resultados {
+#vista-glosario [hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+#vista-glosario .sin-resultados {
     padding: 25px;
     border-radius: 12px;
-    background: var(--agil-beige-claro);
+    background: var(--agil-tarjeta);
     color: var(--agil-texto);
     text-align: center;
 }
 
-/* Paginación */
+/* =========================================
+   PAGINACIÓN
+========================================= */
 
-.pagina-metodologias .paginacion-glosario {
+#vista-glosario .paginacion-glosario {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -4217,25 +4348,120 @@ h6 {
     margin-top: 25px;
 }
 
-.pagina-metodologias .boton-pagina-glosario {
+#vista-glosario .boton-pagina-glosario {
     min-width: 38px;
     padding: 9px 12px;
-    border: 1px solid rgba(117, 66, 31, .25);
+    border: 1px solid var(--agil-coral);
     border-radius: 7px;
-    background: #f5ddc8;
+    background: var(--agil-beige-claro);
     color: var(--agil-marron);
     cursor: pointer;
 }
 
-.pagina-metodologias .boton-pagina-glosario.activo {
+#vista-glosario .boton-pagina-glosario:hover {
+    background: var(--agil-rosa);
+}
+
+#vista-glosario .boton-pagina-glosario.activo {
     background: var(--agil-marron);
-    color: #fff;
+    border-color: var(--agil-marron);
+    color: #FFFFFF;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    #vista-glosario {
+        padding: 20px 20px 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    #vista-glosario {
+        padding: 20px 18px 30px;
+    }
+
+    #vista-glosario h1 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    #vista-glosario > p {
+        font-size: 14px;
+    }
+
+    #vista-glosario .buscador-glosario {
+        gap: 8px;
+    }
+
+    #vista-glosario .buscador-glosario > i {
+        display: none;
+    }
+
+    #vista-glosario #busqueda-glosario {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #vista-glosario #filtros-glosario {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 6px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 4px 2px 12px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #vista-glosario .termino-glosario {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    #vista-glosario .inicial-glosario {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 400px) {
+    #vista-glosario {
+        padding: 18px 13px 25px;
+    }
+
+    #vista-glosario h1 {
+        font-size: 25px;
+    }
+
+    #vista-glosario .termino-glosario {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    #vista-glosario .inicial-glosario {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
 }
 
 /* Accesibilidad */
 
-.pagina-metodologias button:focus-visible,
-.pagina-metodologias input:focus-visible {
-    outline: 2px solid var(--agil-verde);
+#vista-glosario button:focus-visible,
+#vista-glosario input:focus-visible {
+    outline: 2px solid var(--agil-coral);
     outline-offset: 3px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    #vista-glosario *,
+    #vista-glosario *::before,
+    #vista-glosario *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+

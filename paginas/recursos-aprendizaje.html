@@ -17,20 +17,65 @@
     <!-- NAVBAR -->
     <div id="navbar"></div>
 
-
-    <!-- CONTENIDO -->
     <main>
 
-        <section class="pagina-construccion">
+        <!-- GLOSARIO -->
+        <section class="vista-agil" id="vista-glosario">
 
-            <h1>Página en construcción</h1>
+            <h1>GLOSARIO</h1>
 
             <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
+                Encontrá definiciones de los términos más importantes
+                relacionados con las metodologías ágiles, la calidad
+                del software y su desarrollo.
             </p>
 
+            <div class="buscador-glosario">
+
+                <i class="fa-solid fa-magnifying-glass"
+                aria-hidden="true"></i>
+
+                <input type="search"
+                    id="busqueda-glosario"
+                    placeholder="Buscar término..."
+                    aria-label="Buscar término en el glosario"
+                    autocomplete="off">
+
+                <button type="button"
+                        id="limpiar-glosario"
+                        aria-label="Limpiar búsqueda">
+
+                    <i class="fa-solid fa-xmark"
+                    aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <nav class="filtros-glosario"
+                id="filtros-glosario"
+                aria-label="Filtrar términos por letra">
+
+                <button type="button"
+                        class="filtro-letra activo"
+                        data-letra="todos"
+                        aria-pressed="true">
+                    Todos
+                </button>
+
+            </nav>
+
+            <div class="lista-glosario"
+                id="lista-glosario"
+                aria-live="polite">
+            </div>
+
+            <nav class="paginacion-glosario"
+                id="paginacion-glosario"
+                aria-label="Páginas del glosario">
+            </nav>
+
         </section>
+
 
     </main>
 
