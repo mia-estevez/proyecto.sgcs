@@ -1402,32 +1402,72 @@
 
 
 
-/* CELULARES PEQUEÑOS */
+/* =========================================
+   RESPONSIVE - METODOLOGÍAS ÁGILES
+   CELULARES PEQUEÑOS
+========================================= */
 
 @media (max-width: 400px) {
 
     .pagina-metodologias .vista-agil {
-        padding: 28px 13px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 24px 12px;
+        box-sizing: border-box;
     }
 
     .pagina-metodologias .encabezado-vista-agil h1,
     .pagina-metodologias .encabezado-vista-agil h2 {
         font-size: 25px;
+        line-height: 1.3;
+        overflow-wrap: break-word;
     }
 
+    /* Pestañas Scrum y Kanban */
     .pagina-metodologias .pestanas-scrum,
     .pagina-metodologias .pestanas-kanban {
         grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
     }
 
+    /* Ciclo del sprint */
     .pagina-metodologias .ciclo-sprint {
         grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
     }
 
+    /* Tarjetas de roles de Scrum */
+    .pagina-metodologias .tarjetas-roles-scrum {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pagina-metodologias .tarjetas-roles-scrum > *,
     .pagina-metodologias .tarjeta-rol-scrum {
-        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 16px;
+        box-sizing: border-box;
     }
 
+    .pagina-metodologias .tarjeta-rol-scrum h3 {
+        font-size: 18px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .pagina-metodologias .tarjeta-rol-scrum p {
+        font-size: 14px;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
 }
 
 
@@ -2086,5 +2126,333 @@
 
     .adicional-js .panel-tabla-comparador {
         padding: 12px 8px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - DESARROLLOS
+   Manifiesto Ágil, Scrum, Kanban e ilustraciones
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Evitar que los contenedores se desborden */
+    .pagina-procesos .manifiesto-agil,
+    .pagina-procesos .contenido-manifiesto,
+    .pagina-procesos .datos-scrum,
+    .pagina-procesos .ciclo-scrum-resumen,
+    .pagina-procesos .resumen-kanban,
+    .pagina-procesos .rejilla-ilustraciones,
+    .pagina-procesos .ilustracion-principal,
+    .pagina-procesos .ilustracion-secundaria {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Manifiesto Ágil: tarjetas una debajo de otra */
+    .pagina-procesos .contenido-manifiesto {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .pagina-procesos .contenido-manifiesto > * {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* Scrum: roles, artefactos y eventos */
+    .pagina-procesos .datos-scrum {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .pagina-procesos .dato-scrum {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .pagina-procesos .dato-scrum h4 {
+        font-size: 17px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    .pagina-procesos .dato-scrum p {
+        font-size: 14px;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* Ciclo de Scrum */
+    .pagina-procesos .diagrama-ciclo-scrum {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .pagina-procesos .etapa-scrum {
+        width: 100%;
+        min-width: 0;
+        min-height: 45px;
+        padding: 10px;
+        font-size: 14px;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .pagina-procesos .flecha-scrum {
+        align-self: center;
+    }
+
+    /* Kanban: columnas apiladas */
+    .pagina-procesos .resumen-kanban {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .pagina-procesos .columna-kanban {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .pagina-procesos .columna-kanban h4 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .pagina-procesos .tarea-kanban {
+        padding: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* Tarjetas de Kanban y XP */
+    .pagina-procesos .rejilla-ilustraciones {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .pagina-procesos .ilustracion-principal,
+    .pagina-procesos .ilustracion-secundaria {
+        padding: 18px;
+    }
+
+    .pagina-procesos .titulo-ilustracion {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .pagina-procesos .titulo-ilustracion h2 {
+        min-width: 0;
+        font-size: 21px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .pagina-procesos .enlace-imagen-agil {
+        display: block;
+        max-width: 100%;
+    }
+
+    .pagina-procesos .enlace-imagen-agil img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .pagina-procesos .descripcion-ilustracion {
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - DESARROLLOS
+   Correcciones para celulares
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Evitar desbordamientos en la página */
+    .metodologias-agiles,
+    .metodologias-agiles * {
+        box-sizing: border-box;
+    }
+
+    .metodologias-agiles {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* MANIFIESTO ÁGIL */
+    .metodologias-agiles .manifiesto-agil {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        overflow: visible;
+    }
+
+    .metodologias-agiles .contenido-manifiesto {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .metodologias-agiles .valor-agil {
+        width: 100%;
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .metodologias-agiles .valor-agil p {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* Tarjetas giratorias de los 12 principios */
+    .metodologias-agiles .flip-principios {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 340px;
+    }
+
+    .metodologias-agiles .flip-principios.girada {
+        height: 620px;
+    }
+
+    .metodologias-agiles .cara-principios {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+    }
+
+    /* METODOLOGÍAS: SCRUM, KANBAN Y XP */
+    .metodologias-agiles .detalle-metodologias {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .metodologias-agiles .metodologia-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 18px 0;
+        padding: 16px;
+    }
+
+    .metodologias-agiles .cabecera-metodologia {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .metodologias-agiles .cabecera-metodologia > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .metodologias-agiles .cabecera-metodologia h3 {
+        font-size: 21px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .metodologias-agiles .contenido-scrum,
+    .metodologias-agiles .contenido-kanban,
+    .metodologias-agiles .contenido-xp {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Valores de XP */
+    .metodologias-agiles .valores-xp {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .metodologias-agiles .valor-xp {
+        width: 100%;
+        min-width: 0;
+        padding: 14px;
+        overflow-wrap: break-word;
+    }
+
+    .metodologias-agiles .valor-xp h5,
+    .metodologias-agiles .valor-xp p {
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .metodologias-agiles .practicas-principales-xp {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .metodologias-agiles .practicas-principales-xp ul {
+        padding-left: 20px;
+        overflow-wrap: break-word;
+    }
+}
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .metodologias-agiles .manifiesto-agil,
+    .metodologias-agiles .metodologia-card {
+        padding: 13px;
+    }
+
+    .metodologias-agiles .cabecera-metodologia h3 {
+        font-size: 19px;
+    }
+
+    .metodologias-agiles .valor-xp {
+        padding: 12px;
     }
 }
