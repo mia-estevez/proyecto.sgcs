@@ -164,7 +164,7 @@ header {
 
 /* =========================================
    FOOTER
-   ========================================= */
+========================================= */
 
 #footer {
     width: 100%;
@@ -173,27 +173,77 @@ header {
 
 footer {
     width: 100%;
+    margin-top: 0;
     background-color: #f4a6aa;
     color: #75421f;
-    margin-top: 0;
 }
 
-.footer-contenido {
-    width: 100%;
-    box-sizing: border-box;
+/* Contenido principal */
 
+.footer-contenido {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 145px;
+    padding: 25px 65px;
+    box-sizing: border-box;
+}
 
-    padding: 40px 65px;
+/* Título a la izquierda */
+
+.footer-titulo {
+    flex: 1;
+    text-align: left;
 }
 
 .footer-titulo h2 {
+    margin: 0;
     color: #75421f;
     font-size: 20px;
     font-weight: bold;
 }
+
+/* Botón Contacto centrado */
+
+.footer-acciones {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+.footer-enlace-contacto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1px solid #724319;
+    border-radius: 8px;
+    background-color: #724319;
+    color: #FEEAC7;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-enlace-contacto:hover {
+    background-color: #8b582c;
+    transform: translateY(-2px);
+}
+
+.footer-enlace-contacto:focus-visible {
+    outline: 3px solid #724319;
+    outline-offset: 3px;
+}
+
+/* Redes sociales a la derecha */
 
 .footer-redes {
     display: grid;
@@ -202,17 +252,21 @@ footer {
     gap: 10px;
     justify-items: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .footer-redes a {
     color: #75421f;
     text-decoration: none;
     font-size: 22px;
+    transition: transform 0.2s ease;
 }
 
 .footer-redes a:hover {
     transform: scale(1.15);
 }
+
+/* Enlaces generales del footer */
 
 .footer-enlaces {
     display: flex;
@@ -230,20 +284,19 @@ footer {
     color: #ffffff;
 }
 
+/* Derechos de autor */
+
 .footer-derechos {
-    border-top: 1px solid rgba(117, 66, 31, 0.3);
-
-    text-align: center;
-
     padding: 20px;
-
+    border-top: 1px solid rgba(117, 66, 31, 0.3);
     background-color: #f4a6aa;
+    text-align: center;
 }
 
 .footer-derechos p {
+    margin: 0;
     color: #75421f;
     font-size: 13px;
-    margin: 0;
 }
 
 
