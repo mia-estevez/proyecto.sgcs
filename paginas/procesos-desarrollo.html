@@ -416,7 +416,7 @@
                 </article>
 
                 <!-- MANIFIESTO ÁGIL -->
-                <section class="manifiesto-agil">
+                <section class="manifiesto-agil" id="manifiesto-agil">
                     <h2>Manifiesto Ágil</h2>
 
                     <div class="contenido-manifiesto">
@@ -470,11 +470,10 @@
                             </div>
                         </div>
 
-                        <!-- COLUMNA DERECHA: FLIP CARD -->
+                        <!-- COLUMNA DERECHA: ACCESO A LOS 12 PRINCIPIOS -->
                         <div class="contenedor-flip-principios">
                             <div class="flip-principios">
 
-                                <!-- FRENTE -->
                                 <div class="cara-principios frente-principios">
                                     <span class="icono-principios">
                                         <i class="fa-solid fa-file-lines"></i>
@@ -485,41 +484,13 @@
                                     <p>
                                         El Manifiesto Ágil propone 12 principios que orientan
                                         el trabajo en equipo, la toma de decisiones y la entrega
-                                        de valor. Estos ayudan a mejorar continuamente el
-                                        desarrollo del software.
+                                        de valor para mejorar continuamente el desarrollo del software.
                                     </p>
 
-                                    <button type="button" class="boton-principios"
-                                        onclick="this.closest('.flip-principios').classList.add('girada')">
-                                        Ver los 12 principios
+                                    <a href="#principios-agiles" class="boton-principios">
+                                        Explorar los principios
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
-                                </div>
-
-                                <!-- REVERSO -->
-                                <div class="cara-principios reverso-principios">
-                                    <h3>Los 12 principios del Manifiesto Ágil</h3>
-
-                                    <ol>
-                                        <li>Satisfacer al cliente mediante entregas tempranas y continuas de software valioso.</li>
-                                        <li>Aceptar cambios en los requisitos, incluso en etapas avanzadas del desarrollo.</li>
-                                        <li>Entregar software funcional frecuentemente, en períodos cortos.</li>
-                                        <li>Trabajar diariamente en conjunto, desarrolladores y responsables del negocio.</li>
-                                        <li>Construir proyectos alrededor de personas motivadas y brindarles apoyo y confianza.</li>
-                                        <li>Priorizar la comunicación directa para transmitir información de forma eficaz.</li>
-                                        <li>Medir el progreso principalmente mediante software funcionando.</li>
-                                        <li>Mantener un ritmo de trabajo sostenible de manera constante.</li>
-                                        <li>Prestar atención continua a la excelencia técnica y al buen diseño.</li>
-                                        <li>Buscar la simplicidad y reducir el trabajo innecesario.</li>
-                                        <li>Permitir que los equipos se organicen y encuentren las mejores soluciones.</li>
-                                        <li>Reflexionar periódicamente para ajustar y mejorar la forma de trabajar.</li>
-                                    </ol>
-
-                                    <button type="button" class="boton-principios boton-volver"
-                                        onclick="this.closest('.flip-principios').classList.remove('girada')">
-                                        <i class="fa-solid fa-arrow-left"></i>
-                                        Volver
-                                    </button>
+                                    </a>
                                 </div>
 
                             </div>
@@ -529,57 +500,330 @@
                 </section>
 
                 
+                                
                 <!-- DESCRIPCIÓN DE LAS METODOLOGÍAS -->
-                <section class="detalle-metodologias">
+                <section class="detalle-metodologias" id="detalle-metodologias">
 
                     <h2>Metodologías</h2>
 
+                    <!-- NAVEGACIÓN PRINCIPAL -->
                     <nav class="navegacion-agiles" aria-label="Navegación entre metodologías ágiles">
-                        <button type="button" class="boton-agil activo" data-metodologia="scrum" aria-pressed="true">Scrum</button>
-                        <button type="button" class="boton-agil" data-metodologia="kanban" aria-pressed="false">Kanban</button>
-                        <button type="button" class="boton-agil" data-metodologia="xp" aria-pressed="false">XP</button>
+                        <button type="button" class="boton-agil activo"
+                            data-metodologia="scrum" aria-pressed="true">Scrum</button>
+
+                        <button type="button" class="boton-agil"
+                            data-metodologia="kanban" aria-pressed="false">Kanban</button>
+
+                        <button type="button" class="boton-agil"
+                            data-metodologia="xp" aria-pressed="false">XP</button>
                     </nav>
 
+                    <!-- SCRUM -->
                     <article class="metodologia-card activa" id="metodologia-scrum">
 
                         <div class="cabecera-metodologia">
-                            <span class="icono-metodologia"><i class="fa-solid fa-people-group"></i></span>
+                            <span class="icono-metodologia">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
                             <div>
                                 <h3>Scrum</h3>
-                                <p>Scrum es un marco de trabajo ágil basado en la iteración y la colaboración. El trabajo se organiza en períodos cortos llamados Sprints.</p>
+                                <p>
+                                    Scrum es un marco de trabajo ágil que permite desarrollar
+                                    productos de forma iterativa e incremental. El equipo trabaja
+                                    en períodos llamados Sprints, inspecciona los resultados y
+                                    adapta su forma de trabajo para generar valor continuamente.
+                                </p>
                             </div>
                         </div>
 
-                        <div class="datos-scrum">
-                            <article class="dato-scrum">
-                                <h4><i class="fa-solid fa-users"></i> Roles</h4>
-                                <ul>
-                                    <li>Product Owner</li>
-                                    <li>Scrum Master</li>
-                                    <li>Desarrolladores</li>
-                                </ul>
-                            </article>
-
-                            <article class="dato-scrum">
-                                <h4><i class="fa-solid fa-box-open"></i> Artefactos</h4>
-                                <ul>
-                                    <li>Product Backlog</li>
-                                    <li>Sprint Backlog</li>
-                                    <li>Incremento</li>
-                                </ul>
-                            </article>
-
-                            <article class="dato-scrum">
-                                <h4><i class="fa-solid fa-calendar-check"></i> Eventos</h4>
-                                <ul>
-                                    <li>Planificación del Sprint</li>
-                                    <li>Scrum Daily</li>
-                                    <li>Revisión del Sprint</li>
-                                    <li>Retrospectiva</li>
-                                </ul>
-                            </article>
-                        </div>
                         
+                        <!-- NAVEGACIÓN INTERNA DE SCRUM -->
+                        <nav class="navegacion-contenido-scrum"
+                            aria-label="Secciones de Scrum">
+
+                            <button type="button"
+                                    class="boton-contenido-scrum activo"
+                                    data-seccion-scrum="roles"
+                                    aria-pressed="true">
+                                <i class="fa-solid fa-users"></i>
+                                Roles
+                            </button>
+
+                            <button type="button"
+                                    class="boton-contenido-scrum"
+                                    data-seccion-scrum="artefactos"
+                                    aria-pressed="false">
+                                <i class="fa-solid fa-box-open"></i>
+                                Artefactos
+                            </button>
+
+                            <button type="button"
+                                    class="boton-contenido-scrum"
+                                    data-seccion-scrum="eventos"
+                                    aria-pressed="false">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                Eventos
+                            </button>
+
+                        </nav>
+
+
+                        <!-- CONTENEDOR DINÁMICO: ROLES -->
+                        <section class="contenido-seccion-scrum activa"
+                            id="contenido-roles"
+                            data-contenido-scrum="roles">
+
+                            <div class="encabezado-seccion-scrum">
+                                <h4>Roles en Scrum</h4>
+                                <p>
+                                    En Scrum, las responsabilidades se distribuyen entre los
+                                    integrantes del Scrum Team, que trabajan en conjunto para
+                                    alcanzar el objetivo del producto.
+                                </p>
+                            </div>
+
+                            <div class="tarjetas-info-scrum">
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-compass"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Product Owner</h5>
+                                        <p>
+                                            Es responsable de maximizar el valor del producto
+                                            y gestionar eficazmente el Product Backlog.
+                                        </p>
+                                        <h6>Responsabilidades</h6>
+                                        <ul>
+                                            <li>Definir y comunicar el objetivo del producto.</li>
+                                            <li>Ordenar y priorizar los elementos del Product Backlog.</li>
+                                            <li>Representar las necesidades de los interesados.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-rosa">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-people-arrows-left-right"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Scrum Master</h5>
+                                        <p>
+                                            Ayuda a que Scrum se comprenda y se aplique
+                                            correctamente, favoreciendo la efectividad del equipo.
+                                        </p>
+                                        <h6>Responsabilidades</h6>
+                                        <ul>
+                                            <li>Facilitar la aplicación del marco de trabajo.</li>
+                                            <li>Ayudar a eliminar impedimentos.</li>
+                                            <li>Promover la mejora continua y la autogestión.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-code"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Developers</h5>
+                                        <p>
+                                            Son las personas del equipo que crean un incremento
+                                            utilizable del producto en cada Sprint.
+                                        </p>
+                                        <h6>Responsabilidades</h6>
+                                        <ul>
+                                            <li>Crear un plan de trabajo para el Sprint.</li>
+                                            <li>Desarrollar un incremento que cumpla la Definition of Done.</li>
+                                            <li>Adaptar el plan diariamente hacia el objetivo del Sprint.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </section>
+
+                        <!-- CONTENEDOR DINÁMICO: ARTEFACTOS -->
+                        <section class="contenido-seccion-scrum"
+                        id="contenido-artefactos"
+                        data-contenido-scrum="artefactos"
+                        hidden>
+
+                            <div class="encabezado-seccion-scrum">
+                                <h4>Artefactos de Scrum</h4>
+                                <p>
+                                    Los artefactos representan trabajo o valor y ayudan a
+                                    brindar transparencia sobre el producto y el progreso.
+                                    Cada uno tiene un compromiso asociado.
+                                </p>
+                            </div>
+
+                            <div class="tarjetas-info-scrum">
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-list-check"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Product Backlog</h5>
+                                        <p>
+                                            Es una lista emergente y ordenada de todo lo que
+                                            se necesita para mejorar el producto.
+                                        </p>
+                                        <h6>Compromiso: Product Goal</h6>
+                                        <ul>
+                                            <li>Reúne funcionalidades, mejoras y correcciones.</li>
+                                            <li>Se actualiza a medida que se aprende más del producto.</li>
+                                            <li>Sus elementos se ordenan según su prioridad y valor.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-rosa">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-list-ol"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Sprint Backlog</h5>
+                                        <p>
+                                            Es el conjunto de elementos seleccionados para
+                                            el Sprint, junto con el plan para entregar el incremento.
+                                        </p>
+                                        <h6>Compromiso: Sprint Goal</h6>
+                                        <ul>
+                                            <li>Define por qué el Sprint es valioso.</li>
+                                            <li>Organiza el trabajo que realizará el equipo.</li>
+                                            <li>Se adapta durante el Sprint según lo aprendido.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-cubes-stacked"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Incremento</h5>
+                                        <p>
+                                            Es un paso concreto hacia el objetivo del producto.
+                                            Debe ser utilizable y cumplir la Definition of Done.
+                                        </p>
+                                        <h6>Compromiso: Definition of Done</h6>
+                                        <ul>
+                                            <li>Integra el trabajo terminado durante el Sprint.</li>
+                                            <li>Debe cumplir los criterios de calidad acordados.</li>
+                                            <li>Puede entregarse antes de finalizar el Sprint.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </section>
+
+                        <!-- CONTENEDOR DINÁMICO: EVENTOS -->
+                        <section class="contenido-seccion-scrum"
+                            id="contenido-eventos"
+                            data-contenido-scrum="eventos"
+                            hidden>
+
+                            <div class="encabezado-seccion-scrum">
+                                <h4>Eventos de Scrum</h4>
+                                <p>
+                                    Los eventos permiten inspeccionar el trabajo, adaptar
+                                    los planes y mantener una comunicación frecuente.
+                                    El Sprint contiene a los demás eventos.
+                                </p>
+                            </div>
+
+                            <div class="tarjetas-info-scrum">
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Sprint Planning</h5>
+                                        <p>
+                                            El Scrum Team define el objetivo del Sprint,
+                                            qué trabajo puede realizarse y cómo se llevará a cabo.
+                                        </p>
+                                        <h6>Objetivo</h6>
+                                        <ul>
+                                            <li>Establecer el Sprint Goal.</li>
+                                            <li>Seleccionar elementos del Product Backlog.</li>
+                                            <li>Planificar el trabajo inicial.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-rosa">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-comments"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Daily Scrum</h5>
+                                        <p>
+                                            Es un evento diario de 15 minutos para que los
+                                            Developers inspeccionen el progreso hacia el Sprint Goal.
+                                        </p>
+                                        <h6>Objetivo</h6>
+                                        <ul>
+                                            <li>Identificar obstáculos y necesidades de coordinación.</li>
+                                            <li>Adaptar el plan de trabajo.</li>
+                                            <li>Organizar las próximas 24 horas.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-verde">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Sprint Review</h5>
+                                        <p>
+                                            El equipo y los interesados inspeccionan los
+                                            resultados y conversan sobre los próximos pasos.
+                                        </p>
+                                        <h6>Objetivo</h6>
+                                        <ul>
+                                            <li>Revisar el incremento obtenido.</li>
+                                            <li>Compartir comentarios y aprendizajes.</li>
+                                            <li>Adaptar el Product Backlog cuando sea necesario.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="tarjeta-info-scrum tarjeta-info-rosa">
+                                    <span class="icono-info-scrum">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </span>
+                                    <div>
+                                        <h5>Sprint Retrospective</h5>
+                                        <p>
+                                            El equipo analiza cómo trabajó y define mejoras
+                                            para aumentar la calidad y la efectividad.
+                                        </p>
+                                        <h6>Objetivo</h6>
+                                        <ul>
+                                            <li>Identificar fortalezas y dificultades.</li>
+                                            <li>Analizar procesos, herramientas y colaboración.</li>
+                                            <li>Planificar mejoras concretas.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            <aside class="nota-scrum">
+                                <i class="fa-solid fa-circle-info"></i>
+                                El Sprint es un evento de duración fija de un mes o menos.
+                                Los demás eventos se desarrollan dentro de ese período.
+                            </aside>
+                        </section>
+     
+                        <!-- CICLO DE SCRUM -->
                         <div class="ciclo-scrum-resumen">
                             <h4>
                                 <i class="fa-solid fa-rotate"></i>
@@ -589,36 +833,34 @@
                             <div class="diagrama-ciclo-scrum">
                                 <div class="etapa-scrum">Product<br>Backlog</div>
                                 <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
                                 <div class="etapa-scrum">Sprint<br>Backlog</div>
                                 <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
                                 <div class="etapa-scrum">Sprint</div>
                                 <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
-                                <div class="etapa-scrum">Scrum<br>Daily</div>
+                                <div class="etapa-scrum">Daily Scrum</div>
                                 <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
                                 <div class="etapa-scrum">Incremento</div>
                                 <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
                                 <div class="etapa-scrum">Review +<br>Retrospectiva</div>
-                                <i class="fa-solid fa-arrow-right flecha-scrum"></i>
-
-                                <div class="etapa-scrum">Nuevo<br>Sprint</div>
                             </div>
                         </div>
 
-
                     </article>
 
+                    <!-- KANBAN -->
                     <article class="metodologia-card" id="metodologia-kanban" hidden>
 
                         <div class="cabecera-metodologia">
-                            <span class="icono-metodologia"><i class="fa-solid fa-table-columns"></i></span>
+                            <span class="icono-metodologia">
+                                <i class="fa-solid fa-table-columns"></i>
+                            </span>
                             <div>
                                 <h3>Kanban</h3>
-                                <p>Kanban permite visualizar el flujo de trabajo mediante un tablero. Las tareas avanzan entre columnas según su estado, lo que ayuda a detectar bloqueos y mejorar el proceso.</p>
+                                <p>
+                                    Kanban permite visualizar el flujo de trabajo mediante
+                                    un tablero. Las tareas avanzan entre columnas según su
+                                    estado, lo que ayuda a detectar bloqueos y mejorar el proceso.
+                                </p>
                             </div>
                         </div>
 
@@ -645,7 +887,7 @@
 
                     </article>
 
-                    
+                    <!-- XP -->
                     <article class="metodologia-card" id="metodologia-xp" hidden>
 
                         <div class="cabecera-metodologia">
@@ -655,26 +897,22 @@
                             <div>
                                 <h3>XP (Extreme Programming)</h3>
                                 <p>
-                                    XP es una metodología ágil que se centra en la colaboración,
-                                    la simplicidad y la retroalimentación continua. Su objetivo
-                                    es entregar software de alta calidad mediante prácticas
-                                    técnicas y una comunicación constante con el cliente.
+                                    XP es una metodología ágil centrada en la colaboración,
+                                    la simplicidad y la retroalimentación continua. Busca
+                                    entregar software de calidad mediante prácticas técnicas
+                                    y comunicación constante con el cliente.
                                 </p>
                             </div>
                         </div>
 
                         <div class="contenido-xp">
 
-                            <!-- CICLO DE XP -->
                             <div class="ciclo-xp">
                                 <h4>Bucle de XP</h4>
 
-                                
                                 <div class="diagrama-xp imagen-bucle-xp">
-                                    <img
-                                        src="../img/metodologias-xp.png"
-                                        alt="Bucle de XP: Planificar, Diseñar, Desarrollar, Probar y Liberar, conectados en un ciclo continuo."
-                                    >
+                                    <img src="../img/metodologias-xp.png"
+                                        alt="Bucle de XP: Planificar, Diseñar, Desarrollar, Probar y Liberar, conectados en un ciclo continuo.">
                                 </div>
 
                                 <p class="descripcion-ciclo-xp">
@@ -683,9 +921,7 @@
                                 </p>
                             </div>
 
-                            <!-- VALORES Y PRÁCTICAS -->
                             <div class="detalles-xp">
-
                                 <h4>Valores de XP</h4>
 
                                 <div class="valores-xp">
@@ -723,12 +959,11 @@
                                         <li>Pequeños lanzamientos.</li>
                                     </ul>
                                 </div>
-
                             </div>
+
                         </div>
 
                     </article>
-
 
                 </section>
 

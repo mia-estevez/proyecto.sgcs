@@ -2456,3 +2456,87 @@
         padding: 12px;
     }
 }
+
+/* ========================================
+   RESPONSIVE - NAVEGACIÓN INTERNA DE SCRUM
+======================================== */
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .tarjetas-info-scrum {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tarjetas-principios-scrum {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenido-seccion-scrum {
+        padding: 20px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .navegacion-contenido-scrum {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .boton-contenido-scrum {
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 6px;
+        gap: 6px;
+        font-size: 12px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contenido-seccion-scrum {
+        margin: 18px 0;
+        padding: 15px;
+    }
+
+    .encabezado-seccion-scrum h4 {
+        font-size: 20px;
+    }
+
+    .tarjetas-info-scrum {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .tarjeta-info-scrum {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .icono-info-scrum {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .tarjeta-info-scrum h5 {
+        font-size: 16px;
+    }
+
+    .tarjetas-principios-scrum {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .tarjeta-principio-scrum {
+        padding: 14px;
+    }
+
+    .nota-scrum {
+        padding: 13px;
+        font-size: 13px;
+    }
+}

@@ -10,7 +10,7 @@ html,
 body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 
@@ -3157,34 +3157,296 @@ h6 {
     line-height: 1.7;
 }
 
-/* SCRUM */
 
-.datos-scrum {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
-    margin: 25px 0;
+/* =========================================
+   NAVEGACIÓN INTERNA DE SCRUM
+========================================= */
+
+.navegacion-contenido-scrum {
+    position: static;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    box-sizing: border-box;
+    margin: 24px 0;
+    padding: 12px;
+
+    background-color: #FEEAC7;
+    border: 1px solid #E8C5B4;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(114, 67, 25, 0.10);
 }
 
-.dato-scrum {
-    padding: 18px;
-    background-color: #CAD182;
-    border-radius: 9px;
-    text-align: center;
+.boton-contenido-scrum {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #724319;
+    background-color: #FFFAF2;
+    border: 1px solid #E8C5B4;
+    border-radius: 10px;
+
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
 
-.dato-scrum h4 {
+.boton-contenido-scrum:hover,
+.boton-contenido-scrum.activo {
+    color: #FFFFFF;
+    background-color: #D88180;
+}
+
+/* CONTENIDO DINÁMICO DE SCRUM */
+
+.contenido-seccion-scrum {
+    margin: 24px 0;
+    padding: 24px;
+
+    background-color: #FEEAC7;
+    border: 1px solid #E8C5B4;
+    border-radius: 14px;
+}
+
+.contenido-seccion-scrum[hidden] {
+    display: none;
+}
+
+.contenido-seccion-scrum.activa {
+    animation: aparecer-metodologia 0.25s ease;
+}
+
+.contenido-seccion-scrum {
+    scroll-margin-top: 180px;
+}
+
+#manifiesto-agil {
+    scroll-margin-top: 110px;
+}
+
+.boton-contenido-scrum {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #724319;
+    background-color: #fffaf2;
+    border: 1px solid #E8C5B4;
+    border-radius: 10px;
+
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.boton-contenido-scrum:hover,
+.boton-contenido-scrum.activo {
+    color: #fff;
+    background-color: #D88180;
+}
+
+
+/* CONTENIDO DINÁMICO DE SCRUM */
+.contenido-seccion-scrum {
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #FEEAC7;
+    border: 1px solid #E8C5B4;
+    border-radius: 14px;
+    scroll-margin-top: 180px;
+}
+
+.contenido-seccion-scrum[hidden] {
+    display: none;
+}
+
+.contenido-seccion-scrum.activa {
+    animation: aparecer-metodologia 0.25s ease;
+}
+
+.encabezado-seccion-scrum {
+    margin-bottom: 22px;
+}
+
+.encabezado-seccion-scrum h4 {
     margin: 0 0 8px;
     color: #724319;
-    font-size: 16px;
+    font-size: 23px;
 }
 
-.dato-scrum p {
+.encabezado-seccion-scrum p {
+    margin: 0;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TARJETAS HORIZONTALES: ROLES, ARTEFACTOS Y EVENTOS */
+
+.tarjetas-info-scrum {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.tarjeta-info-scrum {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid rgba(114, 67, 25, 0.12);
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.tarjeta-info-verde {
+    background-color: #CAD182;
+}
+
+.tarjeta-info-rosa {
+    background-color: #F7B1B0;
+}
+
+.icono-info-scrum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    color: #724319;
+    font-size: 20px;
+}
+
+.tarjeta-info-scrum > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.tarjeta-info-scrum h5 {
+    margin: 0 0 9px;
+    color: #724319;
+    font-size: 18px;
+}
+
+.tarjeta-info-scrum p {
+    margin: 0 0 14px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.tarjeta-info-scrum h6 {
+    margin: 14px 0 8px;
+    color: #724319;
+    font-size: 13px;
+}
+
+.tarjeta-info-scrum ul {
+    margin: 0;
+    padding-left: 19px;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.tarjeta-info-scrum li {
+    margin-bottom: 5px;
+}
+
+/* NOTA INFORMATIVA DE SCRUM */
+
+.nota-scrum {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #FEEAC7;
+    border-left: 4px solid #D88180;
+    border-radius: 8px;
+    color: #724319;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.nota-scrum i {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* TARJETAS DE LOS 12 PRINCIPIOS */
+
+.tarjetas-principios-scrum {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.tarjeta-principio-scrum {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid rgba(114, 67, 25, 0.12);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tarjeta-principio-scrum > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    color: #724319;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tarjeta-principio-scrum > div {
+    min-width: 0;
+}
+
+.tarjeta-principio-scrum h5 {
+    margin: 2px 0 7px;
+    color: #724319;
+    font-size: 15px;
+}
+
+.tarjeta-principio-scrum p {
     margin: 0;
     color: #555555;
     font-size: 13px;
     line-height: 1.6;
 }
+
 
 
 .ciclo-scrum-resumen {

@@ -1747,9 +1747,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (respuestas["participacion-cliente"] === "baja") {
                 sumar(["cascada", "modelo-v"], 3);
                 sumar(["incremental"], 1);
-            }
-
-            const ranking = Object.entries(puntajes).sort(
+            }            const ranking = Object.entries(puntajes).sort(
                 (a, b) => b[1] - a[1]
             );
 
@@ -1779,7 +1777,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 puntos: puntosGanador,
                 porcentaje,
                 puntajes
-            };
+            }
+
+;
 
         }
 
@@ -2032,4 +2032,68 @@ document.addEventListener("DOMContentLoaded", () => {
             mostrarPaso(1);
         }
     }
+});
+
+
+/* =========================================
+   PROCESOS DE DESARROLLO: NAVEGACIÓN SCRUM
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const seccionMetodologias = document.querySelector(
+        ".detalle-metodologias"
+    );
+
+    if (!seccionMetodologias) return;
+
+    const tarjetaScrum = seccionMetodologias.querySelector(
+        "#metodologia-scrum"
+    );
+
+    if (!tarjetaScrum) return;
+
+    const menuScrum = tarjetaScrum.querySelector(
+        ".navegacion-contenido-scrum"
+    );
+
+    if (!menuScrum) return;
+
+    const botonesSeccion = menuScrum.querySelectorAll(
+        "[data-seccion-scrum]"
+    );
+
+    const contenidosScrum = tarjetaScrum.querySelectorAll(
+        "[data-contenido-scrum]"
+    );
+
+    function mostrarSeccionScrum(nombre) {
+        const contenidoSeleccionado = Array.from(contenidosScrum).find(
+            contenido => contenido.dataset.contenidoScrum === nombre
+        );
+
+        if (!contenidoSeleccionado) return;
+
+        botonesSeccion.forEach(function (boton) {
+            const activo = boton.dataset.seccionScrum === nombre;
+
+            boton.classList.toggle("activo", activo);
+            boton.setAttribute("aria-pressed", String(activo));
+        });
+
+        contenidosScrum.forEach(function (contenido) {
+            const mostrar = contenido === contenidoSeleccionado;
+
+            contenido.hidden = !mostrar;
+            contenido.classList.toggle("activa", mostrar);
+        });
+    }
+
+    botonesSeccion.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            mostrarSeccionScrum(boton.dataset.seccionScrum);
+        });
+    });
+
+    // Mostrar Roles al cargar la página.
+    mostrarSeccionScrum("roles");
 });
