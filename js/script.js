@@ -2616,3 +2616,32 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar Roles al cargar la página.
     mostrarSeccionScrum("roles");
 });
+
+
+/* Mostrar y ocultar soluciones de ejercicios */
+
+document.querySelectorAll(".boton-solucion").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const idSolucion = boton.getAttribute("aria-controls");
+        const solucion = document.getElementById(idSolucion);
+
+        if (!solucion) return;
+
+        const estaAbierta = boton.getAttribute("aria-expanded") === "true";
+
+        solucion.hidden = estaAbierta;
+        boton.setAttribute("aria-expanded", String(!estaAbierta));
+
+        const icono = boton.querySelector("i");
+
+        boton.firstChild.textContent = estaAbierta
+            ? "Mostrar solución "
+            : "Ocultar solución ";
+
+        if (icono) {
+            icono.className = estaAbierta
+                ? "fa-solid fa-chevron-down"
+                : "fa-solid fa-chevron-up";
+        }
+    });
+});

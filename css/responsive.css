@@ -2778,3 +2778,269 @@
         hyphens: none;
     }
 }
+
+/* =========================================
+   RECURSOS Y APRENDIZAJE - RESPONSIVE GENERAL
+========================================= */
+
+/* Evitar desbordamientos */
+.seccion-faq,
+.seccion-enlaces,
+.seccion-ejercicios {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.seccion-faq *,
+.seccion-enlaces *,
+.seccion-ejercicios * {
+    box-sizing: border-box;
+}
+
+.descripcion-faq,
+.descripcion-enlaces,
+.descripcion-ejercicios {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .seccion-faq,
+    .seccion-enlaces,
+    .seccion-ejercicios {
+        padding: 26px 22px;
+    }
+
+    .seccion-faq > h1,
+    .seccion-enlaces > h1,
+    .seccion-ejercicios > h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .grilla-recursos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .comparacion-modelos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-recurso,
+    .card-ejercicio,
+    .item-faq {
+        min-width: 0;
+    }
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .seccion-faq,
+    .seccion-enlaces,
+    .seccion-ejercicios {
+        padding: 22px 15px;
+    }
+
+    .seccion-faq > h1,
+    .seccion-enlaces > h1,
+    .seccion-ejercicios > h1 {
+        font-size: 22px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .descripcion-faq,
+    .descripcion-enlaces,
+    .descripcion-ejercicios {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    /* Glosario */
+    .buscador-glosario {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .buscador-glosario input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .filtros-glosario {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .lista-glosario {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .paginacion-glosario {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    /* Preguntas frecuentes */
+    .lista-faq {
+        gap: 10px;
+    }
+
+    .item-faq summary {
+        gap: 10px;
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    .item-faq p {
+        padding: 0 14px 15px;
+        font-size: 13px;
+        line-height: 1.65;
+        overflow-wrap: break-word;
+    }
+
+    .aviso-faq {
+        gap: 11px;
+        padding: 15px;
+    }
+
+    /* Enlaces */
+    .grilla-recursos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .card-recurso {
+        padding: 16px;
+    }
+
+    .card-recurso h3 {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .card-recurso p {
+        font-size: 13px;
+    }
+
+    .aviso-recursos {
+        gap: 11px;
+        padding: 15px;
+    }
+
+    /* Ejercicios */
+    .lista-ejercicios {
+        gap: 12px;
+    }
+
+    .card-ejercicio {
+        padding: 14px;
+    }
+
+    .encabezado-ejercicio {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .icono-ejercicio {
+        width: 42px;
+        height: 42px;
+    }
+
+    .titulo-ejercicio {
+        min-width: 0;
+    }
+
+    .titulo-ejercicio h2 {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .titulo-ejercicio p {
+        font-size: 12px;
+    }
+
+    .boton-solucion {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        padding: 11px;
+    }
+
+    .contenido-solucion {
+        min-width: 0;
+    }
+
+    .formula-ejercicio {
+        padding: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .comparacion-modelos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .modelo-ejercicio {
+        min-width: 0;
+    }
+
+    .lista-buenas-practicas {
+        padding-left: 24px;
+        overflow-wrap: break-word;
+    }
+
+    .nota-ejercicio,
+    .resultado-ejercicio,
+    .consejo-ejercicios {
+        gap: 10px;
+        padding: 12px;
+    }
+}
+
+/* =========================================
+   CELULARES MUY ANGOSTOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .seccion-faq,
+    .seccion-enlaces,
+    .seccion-ejercicios {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+
+    .seccion-faq > h1,
+    .seccion-enlaces > h1,
+    .seccion-ejercicios > h1 {
+        font-size: 20px;
+    }
+
+    .card-ejercicio,
+    .card-recurso {
+        padding: 12px;
+    }
+
+    .aviso-faq,
+    .aviso-recursos,
+    .consejo-ejercicios {
+        align-items: flex-start;
+    }
+}
