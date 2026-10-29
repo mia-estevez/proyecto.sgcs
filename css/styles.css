@@ -4068,7 +4068,6 @@ h6 {
 }
 
 /* Eventos del Sprint */
-
 .pagina-metodologias .ciclo-sprint {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -4103,11 +4102,41 @@ h6 {
     font-size: 13px;
 }
 
-.pagina-metodologias .evento-sprint:hover,
-.pagina-metodologias .evento-sprint.seleccionado {
-    border-color: var(--agil-rosa-linea);
-    background: #f8e1d7;
+
+/* Colores alternados para los eventos del Sprint */
+.pagina-metodologias .evento-sprint:nth-child(1),
+.pagina-metodologias .evento-sprint:nth-child(3) {
+    background: #F7B1B0;
+    border-color: #D88180;
 }
+
+.pagina-metodologias .evento-sprint:nth-child(2),
+.pagina-metodologias .evento-sprint:nth-child(4) {
+    background: #CAD182;
+    border-color: #8CAA79;
+}
+
+/* Mantener el color al pasar el mouse o seleccionar */
+.pagina-metodologias .evento-sprint:hover {
+    filter: brightness(0.96);
+}
+
+.pagina-metodologias .evento-sprint.seleccionado {
+    border-width: 2px;
+    filter: brightness(0.96);
+}
+
+/* Panel desplegado: borde según el evento seleccionado */
+.pagina-metodologias .informacion-evento.evento-rosa {
+    border-color: #D88180;
+    border-left: 5px solid #D88180;
+}
+
+.pagina-metodologias .informacion-evento.evento-verde {
+    border-color: #8CAA79;
+    border-left: 5px solid #8CAA79;
+}
+
 
 .pagina-metodologias .informacion-evento {
     position: relative;
@@ -4218,15 +4247,18 @@ h6 {
 }
 
 .pagina-metodologias .columna-pendiente {
-    background: #e8e9d4;
+    background: #CAD182;
+    border-color: #8CAA79;
 }
 
 .pagina-metodologias .columna-proceso {
-    background: #f0ded4;
+    background: #F7B1B0;
+    border-color: #D88180;
 }
 
 .pagina-metodologias .columna-hecho {
-    background: #e0e3cc;
+    background: #CAD182;
+    border-color: #8CAA79;
 }
 
 .pagina-metodologias .columna-kanban h3 {
@@ -4240,19 +4272,12 @@ h6 {
 }
 
 .pagina-metodologias .contador-columna {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 23px;
-    min-height: 23px;
-    padding: 3px 6px;
-    border-radius: 20px;
-    background: #c8cc8c;
-    font-size: 11px;
+    color: #49351F;
 }
 
 .pagina-metodologias .contador-wip {
-    background: #d8a19a;
+    background: #D88180;
+    color: #49351F;
 }
 
 .pagina-metodologias .tarjetas-kanban {
@@ -5275,3 +5300,658 @@ h6 {
     color: #796956;
     font-size: 0.9rem;
 }
+
+
+/* =========================================
+   ACTIVIDAD INTERACTIVA: ROLES DE SCRUM
+========================================= */
+
+.pagina-metodologias .actividad-roles-scrum {
+    margin-top: 24px;
+}
+
+.pagina-metodologias .opciones-roles-scrum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px;
+    background: var(--agil-beige-claro);
+    border: 1px dashed rgba(117, 66, 31, 0.35);
+    border-radius: 14px;
+}
+
+.pagina-metodologias .opcion-rol-scrum {
+    padding: 12px 18px;
+    border: 1px solid rgba(117, 66, 31, 0.2);
+    border-radius: 10px;
+    background: #fffdf7;
+    color: var(--agil-marron);
+    font: inherit;
+    font-weight: 700;
+    cursor: grab;
+    box-shadow: 0 3px 8px rgba(117, 66, 31, 0.08);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pagina-metodologias .opcion-rol-scrum:hover {
+    transform: translateY(-2px);
+}
+
+.pagina-metodologias .opcion-rol-scrum:active {
+    cursor: grabbing;
+}
+
+.pagina-metodologias .opcion-rol-scrum.seleccionada {
+    outline: 3px solid #d88180;
+    background: #f8e0dc;
+}
+
+.pagina-metodologias .instruccion-roles-scrum {
+    margin: 16px 0;
+    text-align: center;
+    color: var(--agil-texto);
+    font-size: 14px;
+}
+
+.pagina-metodologias .tarjetas-definiciones-rol {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid rgba(117, 66, 31, 0.15);
+    border-radius: 16px;
+    background: var(--agil-beige-claro);
+    box-shadow: 0 4px 12px rgba(117, 66, 31, 0.06);
+}
+
+.pagina-metodologias .tarjeta-definicion-rol h3 {
+    margin: 0 0 12px;
+    color: var(--agil-marron);
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol p {
+    min-height: 100px;
+    margin: 0 0 18px;
+    color: var(--agil-texto);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.pagina-metodologias .zona-respuesta-rol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 10px;
+    border: 2px dashed #d88180;
+    border-radius: 10px;
+    background: #fffaf2;
+    color: #8b725e;
+    font-size: 13px;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pagina-metodologias .zona-respuesta-rol.arrastrando-sobre {
+    border-color: var(--agil-marron);
+    background: #f8e0dc;
+}
+
+.pagina-metodologias .zona-respuesta-rol .opcion-rol-scrum {
+    width: 100%;
+    cursor: grab;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol.correcta {
+    border: 2px solid #8caa79;
+    background: #dcebd2;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol.incorrecta {
+    border: 2px solid #d88180;
+    background: #f6d0ce;
+}
+
+.pagina-metodologias .controles-roles-scrum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pagina-metodologias .controles-roles-scrum button {
+    padding: 12px 18px;
+    border: 1px solid var(--agil-marron);
+    border-radius: 10px;
+    background: var(--agil-marron);
+    color: #fffdf7;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.pagina-metodologias .controles-roles-scrum button:hover {
+    transform: translateY(-2px);
+    background: #8b5633;
+}
+
+.pagina-metodologias .controles-roles-scrum #reiniciar-roles-scrum {
+    background: #fffaf2;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .resultado-roles-scrum {
+    margin: 18px 0 0;
+    color: var(--agil-marron);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Colores alternados para las definiciones de Scrum */
+/* Se mantienen mientras las respuestas no estén comprobadas */
+
+.pagina-metodologias .tarjeta-definicion-rol:nth-child(1):not(.correcta):not(.incorrecta) {
+    background-color: #F7B1B0;
+    border-color: #D88180;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol:nth-child(2):not(.correcta):not(.incorrecta) {
+    background-color: #CAD182;
+    border-color: #D88180;
+}
+
+.pagina-metodologias .tarjeta-definicion-rol:nth-child(3):not(.correcta):not(.incorrecta) {
+    background-color: #F7B1B0;
+    border-color: #D88180;
+}
+
+
+
+/* =========================================
+   SCRUM: ARTEFACTOS
+========================================= */
+
+.pagina-metodologias .seccion-artefactos {
+    min-width: 0;
+}
+
+.pagina-metodologias .seccion-artefactos > h2 {
+    margin-bottom: 8px;
+}
+
+.pagina-metodologias .seccion-artefactos > p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.pagina-metodologias .tarjetas-artefactos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+}
+
+.pagina-metodologias .tarjeta-artefacto {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #D88180;
+    border-radius: 15px;
+    color: var(--agil-marron);
+    box-sizing: border-box;
+}
+
+.pagina-metodologias .artefacto-rosa {
+    background: #F7B1B0;
+    border-color: #D88180;
+}
+
+.pagina-metodologias .artefacto-verde {
+    background: #CAD182;
+    border-color: #8CAA79;
+}
+
+/* Encabezado fijo, sin desplegable */
+.pagina-metodologias .encabezado-artefacto {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px 18px 12px;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .icono-artefacto {
+    display: flex;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(117, 66, 31, .15);
+    font-size: 19px;
+}
+
+.pagina-metodologias .texto-artefacto {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pagina-metodologias .texto-artefacto strong {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.pagina-metodologias .texto-artefacto small {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Información siempre visible */
+.pagina-metodologias .detalle-artefacto {
+    display: block;
+    min-width: 0;
+    padding: 0 22px 20px;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+.pagina-metodologias .detalle-artefacto p {
+    margin: 8px 0;
+}
+
+.pagina-metodologias .detalle-artefacto ul {
+    padding-left: 22px;
+}
+
+.pagina-metodologias .nota-artefacto {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .35);
+}
+
+.pagina-metodologias .etiqueta-prioridad,
+.pagina-metodologias .comprobacion-incremento label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.pagina-metodologias .selector-artefacto {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid rgba(117, 66, 31, .35);
+    border-radius: 9px;
+    background: #FFF8ED;
+    color: var(--agil-marron);
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.pagina-metodologias .resultado-artefacto {
+    margin: 10px 0 0;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Lista de tareas del Sprint Backlog */
+.pagina-metodologias .lista-tareas-sprint {
+    display: grid;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.pagina-metodologias .lista-tareas-sprint label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.pagina-metodologias .lista-tareas-sprint input {
+    flex-shrink: 0;
+    margin-top: 6px;
+    accent-color: #75421F;
+}
+
+/* Barra de progreso */
+.pagina-metodologias .barra-progreso-sprint {
+    height: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .6);
+}
+
+.pagina-metodologias #barra-progreso-artefacto {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #75421F;
+    transition: width .25s ease;
+}
+
+.pagina-metodologias .progreso-sprint p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* Lista de funcionalidades del incremento */
+.pagina-metodologias .lista-incremento {
+    display: grid;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pagina-metodologias .lista-incremento li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pagina-metodologias .lista-incremento li i {
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* Actividad final */
+.pagina-metodologias .actividad-artefactos {
+    min-width: 0;
+    margin-top: 30px;
+    padding: 24px;
+    border: 1px solid rgba(117, 66, 31, .2);
+    border-radius: 16px;
+    background: #FFF3E3;
+    box-sizing: border-box;
+}
+
+.pagina-metodologias .titulo-actividad-artefactos {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.pagina-metodologias .titulo-actividad-artefactos > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #75421F;
+    font-size: 25px;
+}
+
+.pagina-metodologias .titulo-actividad-artefactos h3 {
+    margin: 0 0 6px;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .titulo-actividad-artefactos p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pagina-metodologias .pregunta-artefacto {
+    display: grid;
+    gap: 9px;
+    margin: 18px 0;
+}
+
+.pagina-metodologias .pregunta-artefacto label {
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.pagina-metodologias .acciones-actividad-artefactos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pagina-metodologias .boton-corregir-artefactos,
+.pagina-metodologias .boton-reiniciar-artefactos {
+    padding: 11px 18px;
+    border: 1px solid #75421F;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagina-metodologias .boton-corregir-artefactos {
+    background: #75421F;
+    color: #FFF8ED;
+}
+
+.pagina-metodologias .boton-reiniciar-artefactos {
+    background: transparent;
+    color: #75421F;
+}
+
+.pagina-metodologias .boton-corregir-artefactos:hover,
+.pagina-metodologias .boton-reiniciar-artefactos:hover {
+    filter: brightness(.92);
+}
+
+.pagina-metodologias .resultado-actividad-artefactos {
+    margin: 18px 0 0;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.pagina-metodologias .selector-artefacto:focus-visible,
+.pagina-metodologias .boton-corregir-artefactos:focus-visible,
+.pagina-metodologias .boton-reiniciar-artefactos:focus-visible {
+    outline: 3px solid #75421F;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   KANBAN: PRINCIPIOS Y BUENAS PRÁCTICAS
+========================================= */
+
+.pagina-metodologias .encabezado-kanban-extra {
+    margin-bottom: 24px;
+}
+
+.pagina-metodologias .encabezado-kanban-extra h2 {
+    margin-bottom: 8px;
+}
+
+.pagina-metodologias .encabezado-kanban-extra p {
+    margin: 0;
+}
+
+.pagina-metodologias .lista-kanban-extra {
+    display: grid;
+    gap: 13px;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra {
+    overflow: hidden;
+    border: 1px solid #D88180;
+    border-radius: 13px;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .kanban-extra-rosa {
+    background: #F7B1B0;
+    border-color: #D88180;
+}
+
+.pagina-metodologias .kanban-extra-verde {
+    background: #CAD182;
+    border-color: #8CAA79;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary::-webkit-details-marker {
+    display: none;
+}
+
+.pagina-metodologias .icono-kanban-extra {
+    display: flex;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(117, 66, 31, .15);
+    font-size: 18px;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary > span:nth-child(2) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary strong {
+    font-size: 15px;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary small {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.pagina-metodologias .flecha-kanban-extra {
+    transition: transform .2s ease;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra[open] .flecha-kanban-extra {
+    transform: rotate(180deg);
+}
+
+.pagina-metodologias .detalle-kanban-extra {
+    padding: 0 20px 20px;
+    line-height: 1.65;
+}
+
+.pagina-metodologias .detalle-kanban-extra p {
+    margin: 8px 0;
+}
+
+.pagina-metodologias .ejemplo-kanban-extra {
+    padding: 11px 13px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .35);
+}
+
+.pagina-metodologias .cierre-kanban-extra {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid rgba(117, 66, 31, .15);
+    border-radius: 12px;
+    background: #F3E8C9;
+    color: var(--agil-marron);
+}
+
+.pagina-metodologias .cierre-kanban-extra > i {
+    margin-top: 3px;
+    font-size: 22px;
+}
+
+.pagina-metodologias .cierre-kanban-extra p {
+    margin: 5px 0 0;
+    line-height: 1.5;
+}
+
+.pagina-metodologias .actividad-kanban-extra {
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+    padding: 22px;
+    border: 1px solid rgba(117, 66, 31, .2);
+    border-radius: 13px;
+    background: #FFF3E3;
+}
+
+.pagina-metodologias .pregunta-practica-kanban {
+    display: grid;
+    gap: 9px;
+}
+
+.pagina-metodologias .pregunta-practica-kanban label {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.pagina-metodologias .selector-practica-kanban {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid rgba(117, 66, 31, .35);
+    border-radius: 9px;
+    background: #FFF8ED;
+    color: var(--agil-marron);
+    font: inherit;
+}
+
+.pagina-metodologias .acciones-practica-kanban {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagina-metodologias .acciones-practica-kanban button {
+    padding: 11px 16px;
+    border: 1px solid #75421F;
+    border-radius: 9px;
+    background: #75421F;
+    color: #FFF8ED;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagina-metodologias .acciones-practica-kanban button + button {
+    background: transparent;
+    color: #75421F;
+}
+
+.pagina-metodologias #resultado-practica-kanban {
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.pagina-metodologias .tarjeta-kanban-extra summary:focus-visible,
+.pagina-metodologias .selector-practica-kanban:focus-visible,
+.pagina-metodologias .acciones-practica-kanban button:focus-visible {
+    outline: 3px solid #75421F;
+    outline-offset: 3px;
+}
+

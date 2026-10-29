@@ -406,6 +406,280 @@ document.addEventListener("DOMContentLoaded", function () {
     // no ejecutamos estas interacciones.
     if (!paginaAgil) return;
 
+        // =========================================
+    // SCRUM: ACTIVIDAD INTERACTIVA DE ROLES
+    // =========================================
+
+    const actividadRoles = paginaAgil.querySelector(
+        "#actividad-roles-scrum"
+    );
+
+    if (actividadRoles) {
+        const opcionesRoles = actividadRoles.querySelector(
+            "#opciones-roles-scrum"
+        );
+
+        const zonasRespuesta = actividadRoles.querySelectorAll(
+            ".zona-respuesta-rol"
+        );
+
+        const tarjetasDefinicion = actividadRoles.querySelectorAll(
+            ".tarjeta-definicion-rol"
+        );
+
+        const botonComprobar = actividadRoles.querySelector(
+            "#comprobar-roles-scrum"
+        );
+
+        const botonReiniciar = actividadRoles.querySelector(
+            "#reiniciar-roles-scrum"
+        );
+
+        const resultadoRoles = actividadRoles.querySelector(
+            "#resultado-roles-scrum"
+        );
+
+        let rolArrastrado = null;
+        let rolSeleccionado = null;
+
+        function limpiarResultado() {
+            tarjetasDefinicion.forEach(function (tarjeta) {
+                tarjeta.classList.remove("correcta", "incorrecta");
+            });
+
+            if (resultadoRoles) {
+                resultadoRoles.textContent = "";
+            }
+        }
+
+        function devolverRolAlOrigen(zona) {
+            const rol = zona.querySelector(".opcion-rol-scrum");
+
+            if (rol) {
+                opcionesRoles.appendChild(rol);
+            }
+
+            zona.innerHTML = "<span>Soltá el rol acá</span>";
+        }
+
+        function colocarRol(rol, zonaDestino) {
+            if (!rol || !zonaDestino) return;
+
+            const zonaAnterior = rol.parentElement.closest(
+                ".zona-respuesta-rol"
+            );
+
+            if (zonaAnterior === zonaDestino) return;
+
+            // Si el destino ya tiene un rol, devolverlo a las opciones.
+            if (zonaDestino.querySelector(".opcion-rol-scrum")) {
+                devolverRolAlOrigen(zonaDestino);
+            }
+
+            // Si el rol estaba en otra definición, liberar esa zona.
+            if (zonaAnterior) {
+                zonaAnterior.innerHTML =
+                    "<span>Soltá el rol acá</span>";
+            }
+
+            zonaDestino.replaceChildren(rol);
+
+            rol.classList.remove("seleccionada");
+            rolSeleccionado = null;
+
+            limpiarResultado();
+        }
+
+        // Preparar las opciones para arrastrar o seleccionar.
+        opcionesRoles.querySelectorAll(
+            ".opcion-rol-scrum"
+        ).forEach(function (rol) {
+            rol.addEventListener("dragstart", function (evento) {
+                rolArrastrado = rol;
+
+                rol.classList.add("arrastrando");
+
+                if (evento.dataTransfer) {
+                    evento.dataTransfer.effectAllowed = "move";
+                    evento.dataTransfer.setData(
+                        "text/plain",
+                        rol.dataset.rol
+                    );
+                }
+            });
+
+            rol.addEventListener("dragend", function () {
+                rol.classList.remove("arrastrando");
+                rolArrastrado = null;
+
+                zonasRespuesta.forEach(function (zona) {
+                    zona.classList.remove("arrastrando-sobre");
+                });
+            });
+        });
+
+        // Permitir arrastrar los roles aunque ya estén colocados.
+        actividadRoles.addEventListener("dragstart", function (evento) {
+            const rol = evento.target.closest(".opcion-rol-scrum");
+
+            if (!rol) return;
+
+            rolArrastrado = rol;
+
+            if (evento.dataTransfer) {
+                evento.dataTransfer.effectAllowed = "move";
+                evento.dataTransfer.setData(
+                    "text/plain",
+                    rol.dataset.rol
+                );
+            }
+        });
+
+        actividadRoles.addEventListener("dragend", function (evento) {
+            const rol = evento.target.closest(".opcion-rol-scrum");
+
+            if (rol) {
+                rol.classList.remove("arrastrando");
+            }
+
+            rolArrastrado = null;
+
+            zonasRespuesta.forEach(function (zona) {
+                zona.classList.remove("arrastrando-sobre");
+            });
+        });
+
+        // Seleccionar una opción: útil para celulares.
+        actividadRoles.addEventListener("click", function (evento) {
+            const rol = evento.target.closest(".opcion-rol-scrum");
+
+            if (!rol) return;
+
+            evento.stopPropagation();
+
+            actividadRoles.querySelectorAll(
+                ".opcion-rol-scrum"
+            ).forEach(function (otroRol) {
+                otroRol.classList.remove("seleccionada");
+            });
+
+            if (rolSeleccionado === rol) {
+                rolSeleccionado = null;
+            } else {
+                rolSeleccionado = rol;
+                rol.classList.add("seleccionada");
+            }
+        });
+
+        // Configurar las zonas para recibir los roles.
+        zonasRespuesta.forEach(function (zona) {
+            zona.addEventListener("dragover", function (evento) {
+                evento.preventDefault();
+                zona.classList.add("arrastrando-sobre");
+
+                if (evento.dataTransfer) {
+                    evento.dataTransfer.dropEffect = "move";
+                }
+            });
+
+            zona.addEventListener("dragleave", function (evento) {
+                if (!zona.contains(evento.relatedTarget)) {
+                    zona.classList.remove("arrastrando-sobre");
+                }
+            });
+
+            zona.addEventListener("drop", function (evento) {
+                evento.preventDefault();
+                zona.classList.remove("arrastrando-sobre");
+
+                if (rolArrastrado) {
+                    colocarRol(rolArrastrado, zona);
+                }
+            });
+
+            // Alternativa táctil: seleccionar un rol y tocar su destino.
+            zona.addEventListener("click", function () {
+                if (rolSeleccionado) {
+                    colocarRol(rolSeleccionado, zona);
+                }
+            });
+
+            zona.addEventListener("keydown", function (evento) {
+                if (
+                    (evento.key === "Enter" || evento.key === " ") &&
+                    rolSeleccionado
+                ) {
+                    evento.preventDefault();
+                    colocarRol(rolSeleccionado, zona);
+                }
+            });
+        });
+
+        // Comprobar las respuestas.
+        if (botonComprobar) {
+            botonComprobar.addEventListener("click", function () {
+                let aciertos = 0;
+
+                tarjetasDefinicion.forEach(function (tarjeta) {
+                    const zona = tarjeta.querySelector(
+                        ".zona-respuesta-rol"
+                    );
+
+                    const rolColocado = zona.querySelector(
+                        ".opcion-rol-scrum"
+                    );
+
+                    const correcto = rolColocado &&
+                        rolColocado.dataset.rol ===
+                        zona.dataset.destinoRol;
+
+                    tarjeta.classList.toggle("correcta", Boolean(correcto));
+                    tarjeta.classList.toggle("incorrecta", !correcto);
+
+                    if (correcto) {
+                        aciertos++;
+                    }
+                });
+
+                if (resultadoRoles) {
+                    if (aciertos === tarjetasDefinicion.length) {
+                        resultadoRoles.textContent =
+                            "¡Excelente! Todas las respuestas son correctas: " +
+                            aciertos + " de " +
+                            tarjetasDefinicion.length + ".";
+                    } else {
+                        resultadoRoles.textContent =
+                            "Conseguiste " + aciertos + " de " +
+                            tarjetasDefinicion.length +
+                            " respuestas correctas. ¡Podés corregirlas e intentarlo de nuevo!";
+                    }
+                }
+            });
+        }
+
+        // Reiniciar la actividad.
+        if (botonReiniciar) {
+            botonReiniciar.addEventListener("click", function () {
+                actividadRoles.querySelectorAll(
+                    ".opcion-rol-scrum"
+                ).forEach(function (rol) {
+                    opcionesRoles.appendChild(rol);
+                    rol.classList.remove("seleccionada", "arrastrando");
+                });
+
+                zonasRespuesta.forEach(function (zona) {
+                    zona.innerHTML = "<span>Soltá el rol acá</span>";
+                    zona.classList.remove("arrastrando-sobre");
+                });
+
+                rolArrastrado = null;
+                rolSeleccionado = null;
+
+                limpiarResultado();
+            });
+        }
+    }
+
     // =========================================
     // SCRUM: CAMBIAR CONTENIDO
     // =========================================
@@ -493,6 +767,17 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         panelEvento.hidden = false;
+        
+        panelEvento.classList.remove("evento-rosa", "evento-verde");
+
+        const eventoVerde =
+            boton.dataset.evento === "daily" ||
+            boton.dataset.evento === "retro";
+
+        panelEvento.classList.add(
+            eventoVerde ? "evento-verde" : "evento-rosa"
+        );
+
 
         botonesEvento.forEach(function (otro) {
             const activo = otro === boton;
@@ -517,6 +802,170 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    
+    // =========================================
+    // SCRUM: INTERACCIONES DE LOS ARTEFACTOS
+    // =========================================
+    const seccionArtefactos =
+        paginaAgil.querySelector("#scrum-artefactos");
+
+    if (seccionArtefactos) {
+
+        // Elegir la prioridad del Product Backlog.
+        const prioridadProducto =
+            seccionArtefactos.querySelector("#prioridad-producto");
+
+        const resultadoPrioridad =
+            seccionArtefactos.querySelector("#resultado-prioridad");
+
+        if (prioridadProducto && resultadoPrioridad) {
+            prioridadProducto.addEventListener("change", function () {
+                const mensajes = {
+                    turnos: "Es una buena opción para comenzar: permite resolver una necesidad concreta de los clientes. La prioridad real dependerá de las necesidades del producto.",
+                    historial: "Puede ser importante, especialmente si los clientes necesitan consultar atenciones anteriores. Comparala con las demás necesidades.",
+                    vacunas: "Los recordatorios pueden aportar mucho valor. Su prioridad dependerá de las necesidades de los usuarios.",
+                    mascota: "Modificar los datos también puede ser útil. Evaluá su importancia junto con las demás funcionalidades."
+                };
+
+                resultadoPrioridad.textContent =
+                    mensajes[prioridadProducto.value] ||
+                    "Elegí una funcionalidad para ver una sugerencia.";
+            });
+        }
+
+        // Actualizar el progreso de las tareas del Sprint.
+        const tareasSprint =
+            seccionArtefactos.querySelectorAll(
+                ".lista-tareas-sprint input[type='checkbox']"
+            );
+
+        const barraProgreso =
+            seccionArtefactos.querySelector("#barra-progreso-artefacto");
+
+        const textoProgreso =
+            seccionArtefactos.querySelector("#texto-progreso-artefacto");
+
+        function actualizarProgresoSprint() {
+            const completadas = Array.from(tareasSprint)
+                .filter(function (tarea) {
+                    return tarea.checked;
+                }).length;
+
+            const total = tareasSprint.length;
+            const porcentaje = total ? (completadas / total) * 100 : 0;
+
+            if (barraProgreso) {
+                barraProgreso.style.width = porcentaje + "%";
+            }
+
+            if (textoProgreso) {
+                textoProgreso.textContent =
+                    `${completadas} de ${total} tareas completadas`;
+            }
+        }
+
+        tareasSprint.forEach(function (tarea) {
+            tarea.addEventListener("change", actualizarProgresoSprint);
+        });
+
+        // Revisar si el incremento cumple las condiciones.
+        const revisionIncremento =
+            seccionArtefactos.querySelector("#revision-incremento");
+
+        const resultadoIncremento =
+            seccionArtefactos.querySelector("#resultado-incremento");
+
+        if (revisionIncremento && resultadoIncremento) {
+            revisionIncremento.addEventListener("change", function () {
+                if (revisionIncremento.value === "si") {
+                    resultadoIncremento.textContent =
+                        "¡Correcto! Una funcionalidad verificada que cumple los criterios puede formar parte del incremento.";
+                } else if (revisionIncremento.value === "no") {
+                    resultadoIncremento.textContent =
+                        "No exactamente. Antes de considerarla terminada, debe cumplir los criterios acordados y los requisitos de calidad.";
+                } else {
+                    resultadoIncremento.textContent = "";
+                }
+            });
+        }
+
+        // Actividad de clasificación.
+        const botonCorregir =
+            seccionArtefactos.querySelector("#corregir-artefactos");
+
+        const botonReiniciar =
+            seccionArtefactos.querySelector("#reiniciar-artefactos");
+
+        const resultadoActividad =
+            seccionArtefactos.querySelector("#resultado-actividad-artefactos");
+
+        const respuestasCorrectas = {
+            "pregunta-artefacto-1": "product",
+            "pregunta-artefacto-2": "sprint",
+            "pregunta-artefacto-3": "incremento"
+        };
+
+        const nombresArtefactos = {
+            product: "Product Backlog",
+            sprint: "Sprint Backlog",
+            incremento: "Incremento"
+        };
+
+        const preguntasArtefactos = Object.keys(respuestasCorrectas);
+
+        if (botonCorregir && resultadoActividad) {
+            botonCorregir.addEventListener("click", function () {
+                let correctas = 0;
+                let respondidas = 0;
+                let devoluciones = [];
+
+                preguntasArtefactos.forEach(function (id) {
+                    const pregunta = seccionArtefactos.querySelector("#" + id);
+                    const respuestaCorrecta = respuestasCorrectas[id];
+
+                    if (!pregunta) return;
+
+                    if (pregunta.value) {
+                        respondidas++;
+                    }
+
+                    if (pregunta.value === respuestaCorrecta) {
+                        correctas++;
+                        devoluciones.push(
+                            `${id.endsWith("1") ? "1" : id.endsWith("2") ? "2" : "3"}. ¡Correcto!`
+                        );
+                    } else {
+                        devoluciones.push(
+                            `${id.endsWith("1") ? "1" : id.endsWith("2") ? "2" : "3"}. Respuesta correcta: ${nombresArtefactos[respuestaCorrecta]}.`
+                        );
+                    }
+                });
+
+                if (respondidas < preguntasArtefactos.length) {
+                    resultadoActividad.textContent =
+                        `Completaste ${respondidas} de 3 preguntas. Podés responder las que faltan y comprobar nuevamente.`;
+                    return;
+                }
+
+                resultadoActividad.textContent =
+                    `Resultado: ${correctas} de 3 respuestas correctas. ` +
+                    devoluciones.join(" ");
+            });
+        }
+
+        if (botonReiniciar && resultadoActividad) {
+            botonReiniciar.addEventListener("click", function () {
+                preguntasArtefactos.forEach(function (id) {
+                    const pregunta = seccionArtefactos.querySelector("#" + id);
+                    if (pregunta) pregunta.value = "";
+                });
+
+                resultadoActividad.textContent = "";
+            });
+        }
+    }
+
 
     // =========================================
     // KANBAN: CAMBIAR CONTENIDO
@@ -547,6 +996,76 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================================
     // KANBAN: TABLERO, LÍMITE WIP Y MÓVIL
     // =========================================
+
+    
+    // =========================================
+    // KANBAN: ACTIVIDAD DE BUENAS PRÁCTICAS
+    // =========================================
+
+    const seccionBuenasPracticas =
+        paginaAgil.querySelector("#kanban-buenas-practicas");
+
+    if (seccionBuenasPracticas) {
+        const botonCorregirPractica =
+            seccionBuenasPracticas.querySelector("#corregir-practica-kanban");
+
+        const botonReiniciarPractica =
+            seccionBuenasPracticas.querySelector("#reiniciar-practica-kanban");
+
+        const resultadoPractica =
+            seccionBuenasPracticas.querySelector("#resultado-practica-kanban");
+
+        const respuestasPractica = {
+            "practica-kanban-1": "b",
+            "practica-kanban-2": "c",
+            "practica-kanban-3": "a"
+        };
+
+        if (botonCorregirPractica && resultadoPractica) {
+            botonCorregirPractica.addEventListener("click", function () {
+                let correctas = 0;
+                let respondidas = 0;
+
+                Object.keys(respuestasPractica).forEach(function (id) {
+                    const pregunta = seccionBuenasPracticas.querySelector("#" + id);
+
+                    if (!pregunta) return;
+
+                    if (pregunta.value !== "") {
+                        respondidas++;
+                    }
+
+                    if (pregunta.value === respuestasPractica[id]) {
+                        correctas++;
+                    }
+                });
+
+                if (respondidas < 3) {
+                    resultadoPractica.textContent =
+                        `Respondé las tres situaciones antes de corregir. Llevás ${respondidas} de 3.`;
+                    return;
+                }
+
+                resultadoPractica.textContent =
+                    `Obtuviste ${correctas} de 3 respuestas correctas. ` +
+                    (correctas === 3
+                        ? "¡Excelente! Identificaste buenas formas de aplicar Kanban."
+                        : "Revisá las recomendaciones de arriba y volvé a intentarlo.");
+            });
+        }
+
+        if (botonReiniciarPractica && resultadoPractica) {
+            botonReiniciarPractica.addEventListener("click", function () {
+                Object.keys(respuestasPractica).forEach(function (id) {
+                    const pregunta = seccionBuenasPracticas.querySelector("#" + id);
+                    if (pregunta) pregunta.value = "";
+                });
+
+                resultadoPractica.textContent = "";
+            });
+        }
+    }
+
 
     const columnas = Array.from(
         paginaAgil.querySelectorAll(".columna-kanban")

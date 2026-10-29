@@ -2540,3 +2540,241 @@
         font-size: 13px;
     }
 }
+
+
+/* =========================================
+   RESPONSIVE EXTRA - SCRUM Y KANBAN
+========================================= */
+
+/* Evitar desbordes en tarjetas y actividades */
+.pagina-metodologias .seccion-artefactos,
+.pagina-metodologias .seccion-kanban-extra,
+.pagina-metodologias .actividad-artefactos,
+.pagina-metodologias .actividad-kanban-extra {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.pagina-metodologias .tarjeta-artefacto,
+.pagina-metodologias .tarjeta-kanban-extra {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.pagina-metodologias .detalle-artefacto,
+.pagina-metodologias .detalle-kanban-extra {
+    overflow-wrap: anywhere;
+}
+
+.pagina-metodologias .selector-artefacto,
+.pagina-metodologias .selector-practica-kanban {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .pagina-metodologias .tarjetas-artefactos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-metodologias .lista-kanban-extra {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-metodologias .actividad-artefactos,
+    .pagina-metodologias .actividad-kanban-extra {
+        padding: 20px;
+    }
+
+    .pagina-metodologias .detalle-artefacto,
+    .pagina-metodologias .detalle-kanban-extra {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .pagina-metodologias .acciones-actividad-artefactos,
+    .pagina-metodologias .acciones-practica-kanban {
+        flex-wrap: wrap;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .pagina-metodologias .seccion-artefactos,
+    .pagina-metodologias .seccion-kanban-extra {
+        padding: 18px;
+    }
+
+    .pagina-metodologias .encabezado-artefactos h2,
+    .pagina-metodologias .encabezado-kanban-extra h2 {
+        font-size: 22px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .pagina-metodologias .encabezado-artefactos p,
+    .pagina-metodologias .encabezado-kanban-extra p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .pagina-metodologias .tarjeta-artefacto summary,
+    .pagina-metodologias .tarjeta-kanban-extra summary {
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .pagina-metodologias .icono-artefacto,
+    .pagina-metodologias .icono-kanban-extra {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .pagina-metodologias .texto-artefacto strong,
+    .pagina-metodologias .tarjeta-kanban-extra summary strong {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .pagina-metodologias .texto-artefacto small,
+    .pagina-metodologias .tarjeta-kanban-extra summary small {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .pagina-metodologias .detalle-artefacto,
+    .pagina-metodologias .detalle-kanban-extra {
+        padding: 0 14px 16px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .pagina-metodologias .actividad-artefactos,
+    .pagina-metodologias .actividad-kanban-extra {
+        gap: 15px;
+        margin-top: 22px;
+        padding: 15px;
+    }
+
+    .pagina-metodologias .titulo-actividad-artefactos {
+        gap: 10px;
+    }
+
+    .pagina-metodologias .titulo-actividad-artefactos h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .pagina-metodologias .titulo-actividad-artefactos p,
+    .pagina-metodologias .pregunta-artefacto label,
+    .pagina-metodologias .pregunta-practica-kanban label {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .pagina-metodologias .selector-artefacto,
+    .pagina-metodologias .selector-practica-kanban {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .pagina-metodologias .acciones-actividad-artefactos,
+    .pagina-metodologias .acciones-practica-kanban {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .pagina-metodologias .boton-corregir-artefactos,
+    .pagina-metodologias .boton-reiniciar-artefactos,
+    .pagina-metodologias .acciones-practica-kanban button {
+        width: 100%;
+        min-width: 0;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .pagina-metodologias .cierre-kanban-extra {
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .pagina-metodologias .resultado-actividad-artefactos,
+    .pagina-metodologias #resultado-practica-kanban {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Formulario para agregar tareas al tablero */
+    .pagina-metodologias .entrada-nueva-tarea {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .pagina-metodologias .entrada-nueva-tarea input,
+    .pagina-metodologias .entrada-nueva-tarea button {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Encabezado del tablero */
+    .pagina-metodologias .titulo-tablero-kanban {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .pagina-metodologias .indicador-wip {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Ajuste responsive: tarjetas de la actividad de roles Scrum */
+@media (max-width: 600px) {
+    
+    /* Corregir las tarjetas de definiciones de Scrum en celular */
+    .pagina-metodologias .tarjetas-definiciones-rol {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pagina-metodologias .tarjeta-definicion-rol {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .pagina-metodologias .tarjeta-definicion-rol h3 {
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+
+
+    .pagina-metodologias .tarjeta-definicion-rol {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .pagina-metodologias .tarjeta-definicion-rol h3,
+    .pagina-metodologias .tarjeta-definicion-rol strong {
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+}
