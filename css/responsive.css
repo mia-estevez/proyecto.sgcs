@@ -3055,7 +3055,81 @@
    FOOTER RESPONSIVE
 ========================================= */
 
+
+/* =========================================
+   TABLETS Y PANTALLAS MEDIANAS
+   Entre 601px y 900px
+========================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .footer-contenido {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "titulo redes"
+            "contacto contacto";
+        align-items: center;
+        gap: 22px;
+        min-height: auto;
+        padding: 35px 35px;
+    }
+
+    /* Título */
+
+    .footer-titulo {
+        grid-area: titulo;
+        min-width: 0;
+        text-align: left;
+    }
+
+    .footer-titulo h2 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    /* Botón de contacto */
+
+    .footer-acciones {
+        position: static;
+        grid-area: contacto;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        transform: none;
+    }
+
+    /* Redes sociales */
+
+    .footer-redes {
+        grid-area: redes;
+        grid-template-columns: repeat(2, 30px);
+        grid-template-rows: repeat(2, 30px);
+        gap: 8px;
+    }
+
+    .footer-redes a {
+        font-size: 19px;
+    }
+
+    /* Derechos */
+
+    .footer-derechos {
+        padding: 15px 20px;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+   Hasta 600px
+========================================= */
+
 @media (max-width: 600px) {
+
+    /* Contenedor principal */
 
     .footer-contenido {
         display: grid;
@@ -3063,12 +3137,14 @@
         justify-items: center;
         gap: 16px;
         width: 100%;
+        min-height: auto;
         padding: 24px 18px;
         box-sizing: border-box;
         text-align: center;
     }
 
     /* Título */
+
     .footer-titulo {
         width: 100%;
         min-width: 0;
@@ -3084,11 +3160,15 @@
     }
 
     /* Botón de contacto */
+
     .footer-acciones {
+        position: static;
         display: flex;
         justify-content: center;
         width: 100%;
         min-width: 0;
+        margin: 0;
+        transform: none;
     }
 
     .footer-enlace-contacto {
@@ -3102,7 +3182,7 @@
     }
 
     /* Redes sociales */
-   
+
     .footer-redes {
         display: flex;
         flex-wrap: wrap;
@@ -3114,7 +3194,6 @@
         margin-top: 24px;
     }
 
-
     .footer-redes a {
         display: inline-flex;
         align-items: center;
@@ -3124,6 +3203,7 @@
     }
 
     /* Derechos reservados */
+
     .footer-derechos {
         width: 100%;
         padding: 12px 16px;
@@ -3139,7 +3219,11 @@
     }
 }
 
-/* Celulares muy angostos */
+
+/* =========================================
+   CELULARES MUY ANGOSTOS
+   Hasta 380px
+========================================= */
 
 @media (max-width: 380px) {
 
