@@ -1745,14 +1745,10 @@
         overflow-wrap: anywhere;
     }
 
-    /* Tabla comparativa: usar la clase real del HTML */
+    /* Tabla comparativa */
 
-    .adicional-js .panel-tabla-comparador {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
+    .adicional-js .panel-tabla-comparador,
+    .adicional-js .contenedor-tabla-comparador,
     .adicional-js .tabla-scroll {
         display: block;
         width: 100%;
@@ -1766,7 +1762,7 @@
 
     .adicional-js #tabla-comparador {
         width: max-content;
-        min-width: 100%;
+        min-width: 850px;
         table-layout: auto;
     }
 
@@ -1790,14 +1786,17 @@
         font-size: clamp(2rem, 4vw, 2.6rem);
     }
 
-    /* Encuesta: progreso */
+    /* Encuesta: progreso de cinco etapas */
 
     .adicional-js .pasos-encuesta {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 5px;
     }
 
     .adicional-js .paso-encuesta {
+        min-width: 0;
         font-size: 0.78rem;
+        text-align: center;
     }
 
     .adicional-js .paso-encuesta .numero-paso {
@@ -1885,17 +1884,22 @@
 
     .adicional-js .panel-tabla-comparador {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
         padding: 14px 10px;
         border-radius: 12px;
     }
 
+    .adicional-js .contenedor-tabla-comparador,
     .adicional-js .tabla-scroll {
+        display: block;
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
     }
 
     .adicional-js #tabla-comparador {
@@ -1941,10 +1945,10 @@
         width: 100%;
     }
 
-    /* Pasos de la encuesta */
+    /* Pasos de la encuesta: cinco columnas */
 
     .adicional-js .pasos-encuesta {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 4px;
     }
 
@@ -2099,6 +2103,7 @@
     }
 
     .adicional-js .pasos-encuesta {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 2px;
     }
 
@@ -3353,3 +3358,135 @@
         height: 100px;
     }
 }
+
+
+/* =========================================
+   CORRECCIÓN RESPONSIVE - TABLA COMPARATIVA
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* Evitar que el contenido interno ensanche la página */
+
+    .adicional-js .comparador-contenido,
+    .adicional-js .panel-tabla-comparador {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* La tarjeta no debe generar su propio scroll */
+
+    .adicional-js .panel-tabla-comparador {
+        overflow: visible;
+    }
+
+    /* El desplazamiento pertenece solamente a este contenedor */
+
+    .adicional-js .tabla-scroll {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+    }
+
+    /* La tabla conserva su ancho para poder desplazarse */
+
+    .adicional-js .tabla-scroll #tabla-comparador {
+        width: max-content;
+        min-width: 850px;
+        max-width: none;
+        table-layout: auto;
+    }
+
+    .adicional-js .tabla-scroll #tabla-comparador th,
+    .adicional-js .tabla-scroll #tabla-comparador td {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .adicional-js .comparador-contenido {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .adicional-js .panel-tabla-comparador {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 14px 10px;
+    }
+
+    .adicional-js .tabla-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .adicional-js .tabla-scroll #tabla-comparador {
+        min-width: 850px;
+    }
+}
+
+
+/* =========================================
+   TABLA COMPARATIVA - DESPLAZAMIENTO HORIZONTAL
+   Aplicar también en pantallas de 1058px
+========================================= */
+
+.adicional-js .comparador-contenido {
+    width: 100%;
+    min-width: 0;
+}
+
+.adicional-js .panel-tabla-comparador {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.adicional-js .tabla-scroll {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+}
+
+.adicional-js #tabla-comparador {
+    width: max-content;
+    min-width: 850px;
+    max-width: none;
+    table-layout: auto;
+}
+
+/* Hacer visible la barra de desplazamiento */
+
+.adicional-js .tabla-scroll::-webkit-scrollbar {
+    height: 9px;
+}
+
+.adicional-js .tabla-scroll::-webkit-scrollbar-thumb {
+    background: #A95542;
+    border-radius: 10px;
+}
+
+.adicional-js .tabla-scroll::-webkit-scrollbar-track {
+    background: #E8D9C4;
+    border-radius: 10px;
+}
+

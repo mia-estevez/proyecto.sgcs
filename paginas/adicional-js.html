@@ -221,8 +221,9 @@
         </section>
 
 
+        
         <!-- ======================================
-             SECCIÓN 2: ENCUESTA DE PREFERENCIAS
+            SECCIÓN 2: ENCUESTA DE PREFERENCIAS
         ======================================= -->
         <section id="encuesta-metodologias" class="seccion-encuesta">
 
@@ -235,10 +236,10 @@
                 para conocer qué metodología podría adaptarse mejor.
             </p>
 
-            <!-- Progreso -->
+            <!-- PROGRESO -->
             <div class="progreso-encuesta">
-                <div class="pasos-encuesta"
-                     aria-label="Progreso de la encuesta">
+
+                <div class="pasos-encuesta" aria-label="Progreso de la encuesta">
 
                     <div class="paso-encuesta activo" data-paso="1">
                         <span class="numero-paso">1</span>
@@ -260,273 +261,288 @@
                         <span>Resultado</span>
                     </div>
 
+                    <div class="paso-encuesta" data-paso="5">
+                        <span class="numero-paso">5</span>
+                        <span>Recomendación</span>
+                    </div>
+
                 </div>
 
                 <div class="barra-progreso">
                     <div id="progreso-encuesta-barra"></div>
                 </div>
 
-                <p id="progreso-encuesta-texto">
-                    Paso 1 de 4
-                </p>
+                <p id="progreso-encuesta-texto">Paso 1 de 5</p>
+
             </div>
 
             <form id="formulario-encuesta">
 
-                <!-- PASO 1 -->
+                <!-- ======================================
+                    PASO 1: TIPO DE PROYECTO
+                ======================================= -->
                 <section class="paso-formulario activo"
-                         data-paso-formulario="1">
+                        data-paso-formulario="1">
 
                     <h3>Sobre tu proyecto</h3>
 
                     <p>
-                        Primero, contanos un poco sobre el tipo de proyecto
-                        que querés desarrollar.
+                        Primero, contanos qué tipo de proyecto querés desarrollar.
                     </p>
 
                     <fieldset class="grupo-pregunta">
+
                         <legend>1. ¿Qué tipo de proyecto vas a desarrollar?</legend>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tipo-proyecto"
-                                   value="pequeno" required>
+                                value="pequeno" required>
                             <span>
-                                <strong>Proyecto pequeño</strong>
-                                <small>Alcance acotado y pocas funcionalidades.</small>
+                                <strong>Pequeño</strong>
+                                <small>Poca complejidad y corto plazo.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tipo-proyecto"
-                                   value="mediano">
+                                value="mediano">
                             <span>
-                                <strong>Proyecto mediano</strong>
-                                <small>Varias funcionalidades y cierta complejidad.</small>
+                                <strong>Mediano</strong>
+                                <small>Algunos cambios y plazo medio.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tipo-proyecto"
-                                   value="grande">
+                                value="grande">
                             <span>
-                                <strong>Proyecto grande</strong>
-                                <small>Muchas funcionalidades y mayor complejidad.</small>
+                                <strong>Grande</strong>
+                                <small>Alta complejidad y largo plazo.</small>
                             </span>
                         </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tipo-proyecto"
+                                value="cambiante">
+                            <span>
+                                <strong>Muy cambiante</strong>
+                                <small>Requisitos en constante evolución.</small>
+                            </span>
+                        </label>
+
                     </fieldset>
 
-                    <fieldset class="grupo-pregunta">
-                        <legend>2. ¿Qué tan importante es entregar resultados pronto?</legend>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="entregas"
-                                   value="alta" required>
-                            <span>
-                                <strong>Muy importante</strong>
-                                <small>Necesitamos entregar avances frecuentes.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="entregas"
-                                   value="media">
-                            <span>
-                                <strong>Importancia media</strong>
-                                <small>Podemos trabajar con entregas planificadas.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="entregas"
-                                   value="baja">
-                            <span>
-                                <strong>Poco importante</strong>
-                                <small>Podemos esperar hasta completar varias etapas.</small>
-                            </span>
-                        </label>
-                    </fieldset>
                 </section>
 
 
-                <!-- PASO 2 -->
+                <!-- ======================================
+                    PASO 2: TIPO DE EQUIPO
+                ======================================= -->
                 <section class="paso-formulario"
-                         data-paso-formulario="2"
-                         hidden>
+                        data-paso-formulario="2"
+                        hidden>
 
                     <h3>Sobre tu equipo</h3>
 
                     <p>
-                        Las características del equipo también influyen
-                        en la elección de una metodología.
+                        Contanos cómo está conformado el equipo de desarrollo.
                     </p>
 
                     <fieldset class="grupo-pregunta">
-                        <legend>3. ¿Cuántas personas integran el equipo?</legend>
+
+                        <legend>2. ¿Cuántas personas integran el equipo?</legend>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tamano-equipo"
-                                   value="pequeno" required>
+                                value="pequeno" required>
                             <span>
-                                <strong>Equipo pequeño</strong>
-                                <small>Entre 1 y 5 personas.</small>
+                                <strong>Pequeño</strong>
+                                <small>Entre 1 y 3 integrantes.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tamano-equipo"
-                                   value="mediano">
+                                value="mediano">
                             <span>
-                                <strong>Equipo mediano</strong>
-                                <small>Entre 6 y 10 personas.</small>
+                                <strong>Mediano</strong>
+                                <small>Entre 4 y 8 integrantes.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="tamano-equipo"
-                                   value="grande">
+                                value="grande">
                             <span>
-                                <strong>Equipo grande</strong>
-                                <small>Más de 10 personas.</small>
+                                <strong>Grande</strong>
+                                <small>9 o más integrantes.</small>
                             </span>
                         </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="tamano-equipo"
+                                value="cambiante">
+                            <span>
+                                <strong>Muy cambiante</strong>
+                                <small>Se incorporan o retiran integrantes.</small>
+                            </span>
+                        </label>
+
                     </fieldset>
 
-                    <fieldset class="grupo-pregunta">
-                        <legend>4. ¿Cómo es la experiencia del equipo?</legend>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="experiencia-equipo"
-                                   value="inicial" required>
-                            <span>
-                                <strong>Inicial</strong>
-                                <small>Tenemos poca experiencia en desarrollo.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="experiencia-equipo"
-                                   value="intermedia">
-                            <span>
-                                <strong>Intermedia</strong>
-                                <small>Conocemos las prácticas de desarrollo.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="experiencia-equipo"
-                                   value="alta">
-                            <span>
-                                <strong>Alta</strong>
-                                <small>Tenemos experiencia trabajando en equipo.</small>
-                            </span>
-                        </label>
-                    </fieldset>
                 </section>
 
 
-                <!-- PASO 3 -->
+                <!-- ======================================
+                    PASO 3: REQUISITOS
+                ======================================= -->
                 <section class="paso-formulario"
-                         data-paso-formulario="3"
-                         hidden>
+                        data-paso-formulario="3"
+                        hidden>
 
                     <h3>Sobre los requisitos</h3>
 
                     <p>
-                        Por último, necesitamos saber cuánto pueden cambiar
-                        las necesidades del proyecto.
+                        Identificá qué tipo de requisitos tiene tu proyecto.
                     </p>
 
                     <fieldset class="grupo-pregunta">
-                        <legend>5. ¿Los requisitos están definidos?</legend>
+
+                        <legend>3. ¿Qué tipo de requisitos tiene tu proyecto?</legend>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="requisitos"
-                                   value="definidos" required>
+                                value="funcionales" required>
                             <span>
-                                <strong>Están definidos</strong>
-                                <small>Sabemos claramente qué debemos desarrollar.</small>
+                                <strong>Funcionales</strong>
+                                <small>Definen lo que el sistema debe hacer.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="requisitos"
-                                   value="parciales">
+                                value="no-funcionales">
                             <span>
-                                <strong>Están parcialmente definidos</strong>
-                                <small>Algunas características pueden cambiar.</small>
+                                <strong>No funcionales</strong>
+                                <small>Definen cómo debe funcionar el sistema.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
                             <input type="radio" name="requisitos"
-                                   value="cambiantes">
+                                value="ambos">
                             <span>
-                                <strong>Son cambiantes</strong>
-                                <small>Esperamos ajustar el proyecto frecuentemente.</small>
+                                <strong>Ambos</strong>
+                                <small>Incluye requisitos funcionales y no funcionales.</small>
                             </span>
                         </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="requisitos"
+                                value="poco-claros">
+                            <span>
+                                <strong>Poco claros</strong>
+                                <small>Están en proceso de definición o son cambiantes.</small>
+                            </span>
+                        </label>
+
                     </fieldset>
 
-                    <fieldset class="grupo-pregunta">
-                        <legend>6. ¿Con qué frecuencia esperás recibir comentarios del cliente?</legend>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="participacion-cliente"
-                                   value="frecuente" required>
-                            <span>
-                                <strong>Frecuentemente</strong>
-                                <small>Queremos revisar avances de manera continua.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="participacion-cliente"
-                                   value="ocasional">
-                            <span>
-                                <strong>Ocasionalmente</strong>
-                                <small>Habrá revisiones en momentos determinados.</small>
-                            </span>
-                        </label>
-
-                        <label class="opcion-encuesta">
-                            <input type="radio" name="participacion-cliente"
-                                   value="baja">
-                            <span>
-                                <strong>Con poca frecuencia</strong>
-                                <small>La participación del cliente será limitada.</small>
-                            </span>
-                        </label>
-                    </fieldset>
                 </section>
 
 
-                <!-- PASO 4 -->
+                <!-- ======================================
+                    PASO 4: RESULTADO ESPERADO
+                ======================================= -->
                 <section class="paso-formulario"
-                         data-paso-formulario="4"
-                         hidden>
+                        data-paso-formulario="4"
+                        hidden>
+
+                    <h3>Sobre tus prioridades</h3>
+
+                    <p>
+                        Para terminar, necesitamos conocer qué es lo más
+                        importante para tu proyecto.
+                    </p>
+
+                    <fieldset class="grupo-pregunta">
+
+                        <legend>4. ¿Qué resultado es más importante para tu proyecto?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="resultado-esperado"
+                                value="calidad" required>
+                            <span>
+                                <strong>Alta calidad</strong>
+                                <small>Producto estable, confiable y mantenible.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="resultado-esperado"
+                                value="tiempo">
+                            <span>
+                                <strong>Entrega en tiempo</strong>
+                                <small>Cumplir con los plazos establecidos.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="resultado-esperado"
+                                value="cliente">
+                            <span>
+                                <strong>Satisfacción del cliente</strong>
+                                <small>Cumplir con sus necesidades y expectativas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="resultado-esperado"
+                                value="flexibilidad">
+                            <span>
+                                <strong>Flexibilidad y mejora continua</strong>
+                                <small>Adaptarse a cambios y seguir mejorando.</small>
+                            </span>
+                        </label>
+
+                    </fieldset>
+
+                </section>
+
+
+                <!-- ======================================
+                    PASO 5: METODOLOGÍA RECOMENDADA
+                ======================================= -->
+                <section class="paso-formulario"
+                        data-paso-formulario="5"
+                        hidden>
 
                     <div id="resultado-encuesta"
-                         class="resultado-encuesta"
-                         aria-live="polite">
+                        class="resultado-encuesta"
+                        aria-live="polite">
 
                         <span class="icono-resultado">
                             <i class="fa-solid fa-lightbulb"
-                               aria-hidden="true"></i>
+                            aria-hidden="true"></i>
                         </span>
 
                         <h3>Tu recomendación</h3>
 
                         <p>
-                            Completá los pasos anteriores para obtener
-                            una recomendación personalizada.
+                            Estamos analizando tus respuestas para encontrar
+                            la metodología más adecuada.
                         </p>
 
                     </div>
 
                     <div id="detalle-resultado" hidden>
+
                         <div class="tarjeta-recomendacion">
+
                             <span>METODOLOGÍA RECOMENDADA</span>
+
                             <h4 id="nombre-metodologia-recomendada"></h4>
+
                             <p id="descripcion-metodologia-recomendada"></p>
 
                             <div class="coincidencia-resultado">
@@ -537,26 +553,31 @@
                             <div class="barra-coincidencia">
                                 <div id="barra-coincidencia-progreso"></div>
                             </div>
+
                         </div>
 
                         <div class="detalle-ventajas-desventajas">
+
                             <article>
                                 <h4>
                                     <i class="fa-solid fa-circle-check"
-                                       aria-hidden="true"></i>
+                                    aria-hidden="true"></i>
                                     Ventajas
                                 </h4>
+
                                 <ul id="lista-ventajas"></ul>
                             </article>
 
                             <article>
                                 <h4>
                                     <i class="fa-solid fa-triangle-exclamation"
-                                       aria-hidden="true"></i>
+                                    aria-hidden="true"></i>
                                     Aspectos a considerar
                                 </h4>
+
                                 <ul id="lista-desventajas"></ul>
                             </article>
+
                         </div>
 
                         <p class="nota-recomendacion">
@@ -564,42 +585,58 @@
                             final depende de las necesidades y restricciones
                             concretas del proyecto.
                         </p>
+
                     </div>
+
                 </section>
 
 
-                <!-- NAVEGACIÓN -->
+                <!-- ======================================
+                    NAVEGACIÓN
+                ======================================= -->
                 <div class="navegacion-encuesta">
 
                     <button type="button"
                             id="encuesta-anterior"
                             class="boton-secundario"
                             disabled>
+
                         <i class="fa-solid fa-arrow-left"
-                           aria-hidden="true"></i>
+                        aria-hidden="true"></i>
+
                         Anterior
+
                     </button>
 
                     <button type="button"
                             id="encuesta-siguiente"
                             class="boton-principal">
+
                         Siguiente
+
                         <i class="fa-solid fa-arrow-right"
-                           aria-hidden="true"></i>
+                        aria-hidden="true"></i>
+
                     </button>
 
                     <button type="button"
                             id="encuesta-reiniciar"
                             class="boton-secundario"
                             hidden>
+
                         <i class="fa-solid fa-rotate-left"
-                           aria-hidden="true"></i>
+                        aria-hidden="true"></i>
+
                         Volver a empezar
+
                     </button>
 
                 </div>
+
             </form>
+
         </section>
+
 
     </main>
 

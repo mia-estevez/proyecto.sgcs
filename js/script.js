@@ -1919,7 +1919,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       2. ENCUESTA DE PREFERENCIAS METODOLÓGICAS
+        2. ENCUESTA DE PREFERENCIAS METODOLÓGICAS
     ===================================================== */
 
     const formulario = document.getElementById("formulario-encuesta");
@@ -2083,6 +2083,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };
 
+
         /* Mostrar el paso actual y actualizar el progreso */
 
         function mostrarPaso(numero) {
@@ -2142,6 +2143,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+
         /* Validar las preguntas del paso actual */
 
         function validarPasoActual() {
@@ -2181,6 +2183,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return true;
         }
 
+
         /* Obtener las respuestas del formulario */
 
         function obtenerRespuestas() {
@@ -2192,6 +2195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             return respuestas;
         }
+
 
         /* Calcular la metodología más adecuada */
 
@@ -2216,80 +2220,59 @@ document.addEventListener("DOMContentLoaded", () => {
             if (respuestas["tipo-proyecto"] === "pequeno") {
                 sumar(["xp", "scrum", "kanban", "incremental"], 2);
             } else if (respuestas["tipo-proyecto"] === "mediano") {
-                sumar(["scrum", "incremental", "iterativo", "xp"], 2);
+                sumar(["scrum", "incremental", "iterativo"], 3);
             } else if (respuestas["tipo-proyecto"] === "grande") {
-                sumar(["cascada", "modelo-v", "scrum", "incremental"], 2);
+                sumar(["cascada", "modelo-v", "incremental"], 3);
+                sumar(["scrum"], 1);
+            } else if (respuestas["tipo-proyecto"] === "cambiante") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 4);
             }
 
-            // Frecuencia de las entregas
-            if (respuestas.entregas === "alta") {
-                sumar(["scrum", "xp", "kanban", "incremental"], 4);
-            } else if (respuestas.entregas === "media") {
-                sumar(["scrum", "iterativo", "incremental", "kanban"], 2);
-            } else if (respuestas.entregas === "baja") {
-                sumar(["cascada", "modelo-v"], 4);
-            }
-
-            // Tamaño del equipo
+            // Tamaño y composición del equipo
             if (respuestas["tamano-equipo"] === "pequeno") {
-                sumar(["xp", "scrum", "kanban"], 2);
+                sumar(["xp", "scrum", "kanban"], 3);
             } else if (respuestas["tamano-equipo"] === "mediano") {
-                sumar(["scrum", "incremental", "iterativo", "kanban"], 2);
+                sumar(["scrum", "incremental", "iterativo", "kanban"], 3);
             } else if (respuestas["tamano-equipo"] === "grande") {
-                sumar(["cascada", "modelo-v", "scrum", "incremental"], 2);
+                sumar(["cascada", "modelo-v", "incremental"], 3);
+                sumar(["scrum"], 1);
+            } else if (respuestas["tamano-equipo"] === "cambiante") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 4);
             }
 
-            // Experiencia del equipo
-            if (respuestas["experiencia-equipo"] === "inicial") {
-                sumar(["cascada", "modelo-v"], 2);
-                sumar(["scrum", "xp"], 1);
-            } else if (respuestas["experiencia-equipo"] === "intermedia") {
-                sumar(["iterativo", "incremental", "scrum", "kanban"], 2);
-            } else if (respuestas["experiencia-equipo"] === "alta") {
-                sumar(["xp", "scrum", "kanban", "iterativo"], 3);
+            // Tipo de requisitos
+            if (respuestas.requisitos === "funcionales") {
+                sumar(["incremental", "scrum", "xp"], 3);
+            } else if (respuestas.requisitos === "no-funcionales") {
+                sumar(["modelo-v", "cascada"], 3);
+                sumar(["iterativo"], 1);
+            } else if (respuestas.requisitos === "ambos") {
+                sumar(["incremental", "iterativo", "scrum", "modelo-v"], 3);
+            } else if (respuestas.requisitos === "poco-claros") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 4);
             }
 
-            // Estabilidad de los requisitos
-            if (respuestas.requisitos === "definidos") {
-                sumar(["cascada", "modelo-v"], 4);
-                sumar(["incremental", "iterativo"], 1);
-            } else if (respuestas.requisitos === "parciales") {
-                sumar(["incremental", "iterativo", "scrum", "kanban"], 3);
-            } else if (respuestas.requisitos === "cambiantes") {
-                sumar(["scrum", "xp", "kanban", "iterativo"], 5);
+            // Resultado esperado
+            if (respuestas["resultado-esperado"] === "calidad") {
+                sumar(["modelo-v", "xp", "iterativo"], 3);
+                sumar(["cascada"], 2);
+            } else if (respuestas["resultado-esperado"] === "tiempo") {
+                sumar(["scrum", "incremental", "kanban", "xp"], 3);
+            } else if (respuestas["resultado-esperado"] === "cliente") {
+                sumar(["scrum", "xp", "iterativo", "incremental"], 3);
+            } else if (respuestas["resultado-esperado"] === "flexibilidad") {
+                sumar(["scrum", "xp", "kanban", "iterativo"], 4);
             }
 
-            // Participación del cliente
-            if (respuestas["participacion-cliente"] === "frecuente") {
-                sumar(["scrum", "xp", "kanban", "iterativo"], 3);
-            } else if (respuestas["participacion-cliente"] === "ocasional") {
-                sumar(["incremental", "iterativo", "scrum"], 2);
-            } else if (respuestas["participacion-cliente"] === "baja") {
-                sumar(["cascada", "modelo-v"], 3);
-                sumar(["incremental"], 1);
-            }            const ranking = Object.entries(puntajes).sort(
-                (a, b) => b[1] - a[1]
-            );
+            const ranking = Object.entries(puntajes)
+                .sort((a, b) => b[1] - a[1]);
 
-            // Caso de prueba US-19-02:
-            // priorizar Scrum si hay requisitos cambiantes
-            // y se necesitan entregas frecuentes.
-            const priorizarScrum =
-                respuestas.requisitos === "cambiantes" &&
-                respuestas.entregas === "alta";
-
-            // Elegir la metodología recomendada.
-            const idGanador = priorizarScrum
-                ? "scrum"
-                : ranking[0][0];
-
+            const idGanador = ranking[0][0];
             const puntosGanador = puntajes[idGanador];
 
-            // Calcular el porcentaje de coincidencia.
-            // El puntaje máximo teórico es 19.
             const porcentaje = Math.min(
                 100,
-                Math.round((puntosGanador / 19) * 100)
+                Math.round((puntosGanador / 16) * 100)
             );
 
             return {
@@ -2297,11 +2280,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 puntos: puntosGanador,
                 porcentaje,
                 puntajes
-            }
-
-;
-
+            };
         }
+
 
         /* Mostrar las ventajas y desventajas */
 
@@ -2317,18 +2298,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        /* Mostrar una única tarjeta de resultado */
+
+        /* Mostrar la metodología recomendada */
 
         function mostrarResultado() {
             const respuestas = obtenerRespuestas();
 
             const camposNecesarios = [
                 "tipo-proyecto",
-                "entregas",
                 "tamano-equipo",
-                "experiencia-equipo",
                 "requisitos",
-                "participacion-cliente"
+                "resultado-esperado"
             ];
 
             const faltantes = camposNecesarios.filter(
@@ -2351,12 +2331,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Ocultar el mensaje inicial para evitar duplicar el resultado.
+            // Ocultar el mensaje inicial.
             if (resultado) {
                 resultado.hidden = true;
             }
 
-            // Actualizar los elementos existentes de la tarjeta detallada.
+            // Mostrar los datos de la metodología recomendada.
             if (nombreRecomendado) {
                 nombreRecomendado.textContent = datos.nombre;
             }
@@ -2390,33 +2370,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 detalleResultado.hidden = false;
             }
 
-            // Mostrar el cuarto paso.
-            pasos.forEach(paso => {
-                paso.hidden =
-                    Number(paso.dataset.pasoFormulario) !== 4;
-            });
-
-            indicadores.forEach(indicador => {
-                const numero = Number(indicador.dataset.paso);
-
-                indicador.classList.toggle("activo", numero === 4);
-                indicador.classList.toggle("completado", numero < 4);
-
-                indicador.setAttribute(
-                    "aria-current",
-                    numero === 4 ? "step" : "false"
-                );
-            });
-
-            pasoActual = 4;
-
-            if (barraProgreso) {
-                barraProgreso.style.width = "100%";
-                barraProgreso.setAttribute("aria-valuenow", "100");
-            }
+            // Mostrar el paso 5: metodología recomendada.
+            mostrarPaso(5);
 
             if (textoProgreso) {
-                textoProgreso.textContent = "Encuesta completada";
+                textoProgreso.textContent = "¡Encuesta completada!";
             }
 
             if (botonAnterior) {
@@ -2432,25 +2390,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+
         /* Botón Siguiente */
 
         if (botonSiguiente) {
             botonSiguiente.addEventListener("click", () => {
                 if (!validarPasoActual()) return;
 
-                // Los primeros tres pasos avanzan normalmente.
+                // Avanzar por las preguntas.
                 if (pasoActual < pasos.length - 1) {
                     mostrarPaso(pasoActual + 1);
                     return;
                 }
 
-                // Antes de mostrar el resultado, validar el último paso
-                // que contiene las respuestas del formulario.
+                // Al terminar el paso 4, calcular la recomendación.
                 if (pasoActual === pasos.length - 1) {
                     mostrarResultado();
                 }
             });
         }
+
 
         /* Botón Anterior */
 
@@ -2461,6 +2420,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }
+
 
         /* Botón Volver a empezar */
 
@@ -2493,7 +2453,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     resultado.append(icono, titulo, mensaje);
                 }
 
-                // Limpiar los datos que quedaron de la recomendación anterior.
+                // Limpiar los datos de la recomendación anterior.
                 if (nombreRecomendado) {
                     nombreRecomendado.textContent = "";
                 }
@@ -2519,7 +2479,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     listaDesventajas.replaceChildren();
                 }
 
-                // Volver al primer paso y restaurar la navegación.
+                // Volver al primer paso.
                 mostrarPaso(1);
 
                 if (botonAnterior) {
@@ -2542,10 +2502,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+
         // Evitar que el formulario recargue la página.
         formulario.addEventListener("submit", evento => {
             evento.preventDefault();
         });
+
 
         // Iniciar la encuesta en el primer paso.
         if (pasos.length > 0) {

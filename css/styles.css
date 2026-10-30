@@ -4786,6 +4786,7 @@ h6 {
 }
 
 /* Tarjetas principales */
+
 .adicional-js .seccion-comparador,
 .adicional-js #encuesta-metodologias {
     width: calc(100% - 48px);
@@ -4797,7 +4798,6 @@ h6 {
     background: #F8EDDA;
     box-shadow: 0 5px 18px rgb(114 67 25 / 5%);
 }
-
 
 /* Comparador de metodologías */
 
@@ -4951,6 +4951,8 @@ h6 {
 /* Encuesta de preferencias metodológicas */
 
 .adicional-js #encuesta-metodologias {
+    width: calc(100% - 32px);
+    max-width: 1400px;
     background: #F8EDDA;
     border-color: #E8D4B9;
     border-radius: 18px;
@@ -4972,7 +4974,7 @@ h6 {
     color: #796956;
 }
 
-/* Progreso en cuatro etapas */
+/* Progreso en cinco etapas */
 
 .adicional-js .progreso-encuesta {
     margin: 30px 0;
@@ -4981,7 +4983,7 @@ h6 {
 .adicional-js .pasos-encuesta {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px;
     margin-bottom: 22px;
 }
@@ -4996,6 +4998,7 @@ h6 {
     background: transparent;
     color: #806F5C;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .adicional-js .paso-encuesta .numero-paso {
@@ -5300,7 +5303,6 @@ h6 {
     color: #796956;
     font-size: 0.9rem;
 }
-
 
 /* =========================================
    ACTIVIDAD INTERACTIVA: ROLES DE SCRUM
