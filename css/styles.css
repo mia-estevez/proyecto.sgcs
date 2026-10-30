@@ -6170,6 +6170,9 @@ main {
     color: #75421F;
     box-sizing: border-box;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    text-decoration: none;
+    color: #75421F;
 }
 
 .card-recurso:hover {
