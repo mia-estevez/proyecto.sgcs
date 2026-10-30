@@ -46,6 +46,7 @@ if (footer) {
         .then(respuesta => respuesta.text())
         .then(contenido => {
             footer.innerHTML = contenido;
+            configurarRutasNavbar();
         });
 }
 
