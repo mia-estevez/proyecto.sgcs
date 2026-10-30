@@ -3574,3 +3574,46 @@
     border-radius: 10px;
 }
 
+/* =========================================
+   PROGRESO DE ENCUESTA EN CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .adicional-js .pasos-encuesta {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(70px, 1fr));
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .adicional-js .paso-encuesta {
+        min-width: 0;
+        white-space: nowrap;
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .adicional-js .numero-paso {
+        flex-shrink: 0;
+    }
+
+    .adicional-js .pasos-encuesta::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .adicional-js .pasos-encuesta::-webkit-scrollbar-thumb {
+        background: #A95542;
+        border-radius: 10px;
+    }
+
+    .adicional-js .pasos-encuesta::-webkit-scrollbar-track {
+        background: #E8D9C4;
+        border-radius: 10px;
+    }
+}

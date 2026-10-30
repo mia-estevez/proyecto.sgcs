@@ -239,40 +239,45 @@
             <!-- PROGRESO -->
             <div class="progreso-encuesta">
 
-                <div class="pasos-encuesta" aria-label="Progreso de la encuesta">
+               <div class="pasos-encuesta" aria-label="Progreso de la encuesta">
 
-                    <div class="paso-encuesta activo" data-paso="1">
-                        <span class="numero-paso">1</span>
-                        <span>Proyecto</span>
-                    </div>
-
-                    <div class="paso-encuesta" data-paso="2">
-                        <span class="numero-paso">2</span>
-                        <span>Equipo</span>
-                    </div>
-
-                    <div class="paso-encuesta" data-paso="3">
-                        <span class="numero-paso">3</span>
-                        <span>Requisitos</span>
-                    </div>
-
-                    <div class="paso-encuesta" data-paso="4">
-                        <span class="numero-paso">4</span>
-                        <span>Resultado</span>
-                    </div>
-
-                    <div class="paso-encuesta" data-paso="5">
-                        <span class="numero-paso">5</span>
-                        <span>Recomendación</span>
-                    </div>
-
+                <div class="paso-encuesta activo" data-paso="1">
+                    <span class="numero-paso">1</span>
+                    <span>Proyecto</span>
                 </div>
+
+                <div class="paso-encuesta" data-paso="2">
+                    <span class="numero-paso">2</span>
+                    <span>Equipo</span>
+                </div>
+
+                <div class="paso-encuesta" data-paso="3">
+                    <span class="numero-paso">3</span>
+                    <span>Requisitos</span>
+                </div>
+
+                <div class="paso-encuesta" data-paso="4">
+                    <span class="numero-paso">4</span>
+                    <span>Prioridades</span>
+                </div>
+
+                <div class="paso-encuesta" data-paso="5">
+                    <span class="numero-paso">5</span>
+                    <span>Organización</span>
+                </div>
+
+                <div class="paso-encuesta" data-paso="6">
+                    <span class="numero-paso">6</span>
+                    <span>Resultado</span>
+                </div>
+
+            </div>
 
                 <div class="barra-progreso">
                     <div id="progreso-encuesta-barra"></div>
                 </div>
 
-                <p id="progreso-encuesta-texto">Paso 1 de 5</p>
+               <p id="progreso-encuesta-texto">Paso 1 de 6</p>
 
             </div>
 
@@ -452,7 +457,7 @@
 
 
                 <!-- ======================================
-                    PASO 4: RESULTADO ESPERADO
+                    PASO 4: PRIORIDADES DEL DESARROLLO
                 ======================================= -->
                 <section class="paso-formulario"
                         data-paso-formulario="4"
@@ -461,47 +466,74 @@
                     <h3>Sobre tus prioridades</h3>
 
                     <p>
-                        Para terminar, necesitamos conocer qué es lo más
-                        importante para tu proyecto.
+                        Contanos qué aspecto considerás más importante durante
+                        el desarrollo del proyecto.
                     </p>
 
                     <fieldset class="grupo-pregunta">
 
-                        <legend>4. ¿Qué resultado es más importante para tu proyecto?</legend>
+                        <legend>4. ¿Qué aspecto considerás más importante durante el desarrollo?</legend>
 
                         <label class="opcion-encuesta">
-                            <input type="radio" name="resultado-esperado"
-                                value="calidad" required>
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="planificacion" required>
                             <span>
-                                <strong>Alta calidad</strong>
-                                <small>Producto estable, confiable y mantenible.</small>
+                                <strong>Planificación y etapas definidas</strong>
+                                <small>Seguir un plan organizado desde el inicio.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
-                            <input type="radio" name="resultado-esperado"
-                                value="tiempo">
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="verificacion">
                             <span>
-                                <strong>Entrega en tiempo</strong>
-                                <small>Cumplir con los plazos establecidos.</small>
+                                <strong>Verificación y pruebas</strong>
+                                <small>Controlar que cada etapa cumpla con los requisitos.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
-                            <input type="radio" name="resultado-esperado"
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="mejora">
+                            <span>
+                                <strong>Revisión y mejora progresiva</strong>
+                                <small>Evaluar los resultados y realizar ajustes continuamente.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="entregas">
+                            <span>
+                                <strong>Entregas por partes</strong>
+                                <small>Dividir el producto en funcionalidades que se entregan progresivamente.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="prioridad-desarrollo"
                                 value="cliente">
                             <span>
-                                <strong>Satisfacción del cliente</strong>
-                                <small>Cumplir con sus necesidades y expectativas.</small>
+                                <strong>Colaboración con el cliente</strong>
+                                <small>Recibir opiniones y realizar ajustes frecuentes.</small>
                             </span>
                         </label>
 
                         <label class="opcion-encuesta">
-                            <input type="radio" name="resultado-esperado"
-                                value="flexibilidad">
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="sprints">
                             <span>
-                                <strong>Flexibilidad y mejora continua</strong>
-                                <small>Adaptarse a cambios y seguir mejorando.</small>
+                                <strong>Objetivos en ciclos cortos</strong>
+                                <small>Organizar el trabajo en períodos definidos con metas concretas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="prioridad-desarrollo"
+                                value="flujo">
+                            <span>
+                                <strong>Flujo de trabajo continuo</strong>
+                                <small>Visualizar tareas, evitar acumulaciones y mejorar el ritmo de trabajo.</small>
                             </span>
                         </label>
 
@@ -509,12 +541,95 @@
 
                 </section>
 
+                <!-- ======================================
+                    PASO 5: ORGANIZACIÓN DEL EQUIPO
+                ======================================= -->
+                <section class="paso-formulario"
+                        data-paso-formulario="5"
+                        hidden>
+
+                    <h3>Sobre la organización del trabajo</h3>
+
+                    <p>
+                        Ahora queremos conocer cómo preferís que el equipo
+                        organice y lleve adelante sus tareas.
+                    </p>
+
+                    <fieldset class="grupo-pregunta">
+
+                        <legend>5. ¿Cómo preferís organizar las tareas del equipo?</legend>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="etapas" required>
+                            <span>
+                                <strong>Mediante etapas planificadas</strong>
+                                <small>Establecer las actividades y su orden antes de comenzar.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="controles">
+                            <span>
+                                <strong>Con controles y pruebas</strong>
+                                <small>Relacionar cada etapa con actividades de verificación y validación.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="ciclos">
+                            <span>
+                                <strong>Mediante ciclos de revisión</strong>
+                                <small>Desarrollar, evaluar y mejorar el producto en cada iteración.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="incrementos">
+                            <span>
+                                <strong>Mediante entregas progresivas</strong>
+                                <small>Incorporar funcionalidades en diferentes versiones del producto.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="xp-practicas">
+                            <span>
+                                <strong>Con colaboración y prácticas de programación</strong>
+                                <small>Trabajar en pareja, realizar pruebas frecuentes e integrar código continuamente.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="scrum-sprints">
+                            <span>
+                                <strong>Con Sprints y reuniones de seguimiento</strong>
+                                <small>Planificar ciclos de trabajo, revisar avances y realizar retrospectivas.</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-encuesta">
+                            <input type="radio" name="organizacion-trabajo"
+                                value="kanban-flujo">
+                            <span>
+                                <strong>Con un tablero y flujo continuo</strong>
+                                <small>Visualizar tareas, limitar el trabajo en curso y detectar bloqueos.</small>
+                            </span>
+                        </label>
+
+                    </fieldset>
+
+                </section>
 
                 <!-- ======================================
                     PASO 5: METODOLOGÍA RECOMENDADA
                 ======================================= -->
-                <section class="paso-formulario"
-                        data-paso-formulario="5"
+                <section class="paso-formulario" data-paso-formulario="6"
                         hidden>
 
                     <div id="resultado-encuesta"
