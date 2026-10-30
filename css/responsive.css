@@ -3155,3 +3155,150 @@
         padding: 12px;
     }
 }
+
+/* =========================================
+   CONTACTO - RESPONSIVE
+========================================= */
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .seccion-contacto {
+        padding: 26px 22px;
+    }
+
+    .contenido-contacto {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .formulario-contacto {
+        width: 100%;
+    }
+
+    .informacion-contacto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+    }
+
+    .mensaje-enviado,
+    .validaciones-contacto {
+        min-width: 0;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .seccion-contacto {
+        padding: 22px 15px;
+    }
+
+    .seccion-contacto > h1 {
+        font-size: 23px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .descripcion-contacto {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contenido-contacto {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        width: 100%;
+    }
+
+    /* Formulario */
+
+    .formulario-contacto {
+        width: 100%;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .campo-contacto {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .campo-contacto input,
+    .campo-contacto select,
+    .campo-contacto textarea {
+        width: 100%;
+        min-width: 0;
+        font-size: 14px;
+    }
+
+    .campo-contacto textarea {
+        min-height: 120px;
+    }
+
+    .boton-enviar-contacto {
+        width: 100%;
+        padding: 13px;
+    }
+
+    /* Tarjetas laterales */
+
+    .informacion-contacto {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+    }
+
+    .mensaje-enviado,
+    .validaciones-contacto {
+        width: 100%;
+        padding: 16px;
+        min-width: 0;
+    }
+
+    .mensaje-enviado h2,
+    .encabezado-validaciones h2 {
+        font-size: 15px;
+    }
+
+    .mensaje-enviado p,
+    .validaciones-contacto ul {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .error-contacto {
+        font-size: 12px;
+        overflow-wrap: break-word;
+    }
+}
+
+/* CELULARES ANGOSTOS */
+
+@media (max-width: 380px) {
+
+    .seccion-contacto {
+        padding: 18px 11px;
+    }
+
+    .seccion-contacto > h1 {
+        font-size: 20px;
+    }
+
+    .formulario-contacto {
+        padding: 13px;
+    }
+
+    .mensaje-enviado,
+    .validaciones-contacto {
+        padding: 13px;
+    }
+
+    .icono-mensaje-enviado {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}

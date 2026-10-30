@@ -1,15 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Contacto</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Formulario de Contacto</title>
 </head>
 
 <body>
@@ -17,29 +21,171 @@
     <!-- NAVBAR -->
     <div id="navbar"></div>
 
-
-    <!-- CONTENIDO -->
     <main>
 
-        <section class="pagina-construccion">
+        <section class="seccion-contacto" id="contacto">
 
-            <h1>Página en construcción</h1>
+            <h1>FORMULARIO DE CONTACTO</h1>
 
-            <p>
-                Estamos trabajando en esta sección.
-                ¡Próximamente vas a poder encontrar todo el contenido!
+            <p class="descripcion-contacto">
+                ¿Tenés alguna consulta, sugerencia o feedback?
+                Completá el formulario y te responderemos a la brevedad.
             </p>
+
+            <div class="contenido-contacto">
+
+                <!-- FORMULARIO -->
+                <form id="formulario-contacto" class="formulario-contacto"
+                    novalidate>
+
+                    <div class="campo-contacto">
+                        <label for="nombre-contacto">
+                            Nombre completo <span>*</span>
+                        </label>
+
+                        <input type="text"
+                            id="nombre-contacto"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required>
+                    </div>
+
+                    <div class="campo-contacto">
+                        <label for="email-contacto">
+                            Correo electrónico <span>*</span>
+                        </label>
+
+                        <input type="email"
+                            id="email-contacto"
+                            name="email"
+                            placeholder="tu@email.com"
+                            required>
+                    </div>
+
+                    <div class="campo-contacto">
+                        <label for="motivo-contacto">
+                            Motivo de contacto <span>*</span>
+                        </label>
+
+                        <select id="motivo-contacto"
+                            name="motivo"
+                            required>
+
+                            <option value="" selected disabled>
+                                Seleccioná una opción
+                            </option>
+
+                            <option value="Consulta">
+                                Consulta
+                            </option>
+
+                            <option value="Sugerencia">
+                                Sugerencia
+                            </option>
+
+                            <option value="Problema técnico">
+                                Problema técnico
+                            </option>
+
+                            <option value="Feedback">
+                                Feedback
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="campo-contacto">
+                        <label for="mensaje-contacto">
+                            Mensaje <span>*</span>
+                        </label>
+
+                        <textarea id="mensaje-contacto"
+                            name="mensaje"
+                            placeholder="Escribí tu mensaje..."
+                            rows="5"
+                            required></textarea>
+                    </div>
+
+                    <p class="error-contacto"
+                        id="error-contacto"
+                        role="alert"
+                        hidden>
+                    </p>
+
+                    <button type="submit" class="boton-enviar-contacto">
+                        <i class="fa-solid fa-paper-plane"
+                            aria-hidden="true"></i>
+                        Enviar
+                    </button>
+
+                </form>
+
+                <!-- INFORMACIÓN LATERAL -->
+                <aside class="informacion-contacto">
+
+                    <!-- MENSAJE DE ÉXITO -->
+                    <div class="mensaje-enviado"
+                        id="mensaje-enviado"
+                        role="status"
+                        hidden>
+
+                        <div class="icono-mensaje-enviado">
+                            <i class="fa-solid fa-check"
+                                aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h2>¡Formulario validado!</h2>
+                            <p>
+                                Los datos se completaron correctamente.
+                                Para enviar el mensaje al equipo es necesario
+                                conectar un servicio de envío.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- VALIDACIONES -->
+                    <div class="validaciones-contacto">
+
+                        <div class="encabezado-validaciones">
+                            <i class="fa-solid fa-circle-info"
+                                aria-hidden="true"></i>
+
+                            <h2>Validaciones</h2>
+                        </div>
+
+                        <ul>
+                            <li>Todos los campos son obligatorios.</li>
+                            <li>
+                                El correo electrónico debe tener un
+                                formato válido.
+                            </li>
+                            <li>
+                                No se permiten caracteres especiales
+                                en el nombre.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+            </div>
 
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <div id="footer"></div>
 
-
     <script src="../js/script.js"></script>
+    <script src="../js/contacto.js"></script>
 
 </body>
 

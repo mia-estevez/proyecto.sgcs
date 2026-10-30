@@ -2645,3 +2645,109 @@ document.querySelectorAll(".boton-solucion").forEach((boton) => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const formulario = document.getElementById("formulario-contacto");
+    const nombre = document.getElementById("nombre-contacto");
+    const email = document.getElementById("email-contacto");
+    const motivo = document.getElementById("motivo-contacto");
+    const mensaje = document.getElementById("mensaje-contacto");
+
+    const error = document.getElementById("error-contacto");
+    const mensajeEnviado = document.getElementById("mensaje-enviado");
+
+    if (!formulario) return;
+
+    // Validar nombre: letras, espacios y acentos.
+    function nombreValido(valor) {
+        return /^[\p{L}\s]+$/u.test(valor.trim());
+    }
+
+    // Validar formato del correo electrónico.
+    function emailValido(valor) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim());
+    }
+
+    function mostrarError(texto, campo) {
+        error.textContent = texto;
+        error.hidden = false;
+        mensajeEnviado.hidden = true;
+
+        if (campo) campo.focus();
+    }
+
+    formulario.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const nombreValor = nombre.value.trim();
+        const emailValor = email.value.trim();
+        const motivoValor = motivo.value;
+        const mensajeValor = mensaje.value.trim();
+
+        error.hidden = true;
+        mensajeEnviado.hidden = true;
+
+        // Campos obligatorios.
+        if (!nombreValor || !emailValor || !motivoValor || !mensajeValor) {
+            mostrarError(
+                "Por favor, completá todos los campos obligatorios.",
+                !nombreValor ? nombre :
+                !emailValor ? email :
+                !motivoValor ? motivo : mensaje
+            );
+            return;
+        }
+
+        // Validar nombre.
+        if (!nombreValido(nombreValor)) {
+            mostrarError(
+                "El nombre no puede contener números ni caracteres especiales.",
+                nombre
+            );
+            return;
+        }
+
+        // Validar correo.
+        if (!emailValido(emailValor)) {
+            mostrarError(
+                "Ingresá un correo electrónico con un formato válido.",
+                email
+            );
+            return;
+        }
+
+        // Validar mensaje.
+        if (mensajeValor.length < 10) {
+            mostrarError(
+                "El mensaje debe tener al menos 10 caracteres.",
+                mensaje
+            );
+            return;
+        }
+
+        // Validación completada.
+        error.hidden = true;
+        mensajeEnviado.hidden = false;
+
+        mensajeEnviado.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+
+    });
+
+    // Ocultar mensajes anteriores cuando se modifican los campos.
+    formulario.addEventListener("input", () => {
+        error.hidden = true;
+        mensajeEnviado.hidden = true;
+    });
+
+    formulario.addEventListener("change", () => {
+        error.hidden = true;
+        mensajeEnviado.hidden = true;
+    });
+
+});
